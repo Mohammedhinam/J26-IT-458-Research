@@ -1,0 +1,13 @@
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 6
+names: ['calculus', 'caries', 'gingivitis', 'hypodontia', 'tooth_discolation', 'ulcer']
+
+roboflow:
+  workspace: gilang-pappa-tanto-pambua-zplqr
+  project: oral-diseases-rmzuw
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/gilang-pappa-tanto-pambua-zplqr/oral-diseases-rmzuw/dataset/1
