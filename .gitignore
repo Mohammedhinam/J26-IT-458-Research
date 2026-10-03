@@ -1,0 +1,27 @@
+# Large/raw dental datasets
+train/
+valid/
+test/
+train_clean/
+valid_clean/
+test_clean/
+
+# Calculus/Tartar image datasets
+Tarter_Only/
+Tarter_Segmentation/
+
+# Plaque source and generated datasets
+Plaque_Segmentation/dental-plaque.v1i.coco-segmentation/
+Plaque_Segmentation/dental-plaque.v2i.coco-segmentation/
+Plaque_Segmentation/PLAK test.v2i.coco-segmentation/
+Plaque_Segmentation/Plaque_YOLO/
+Plaque_Segmentation/Plaque_YOLO_Clean/
+
+# Python temporary files
+__pycache__/
+*.pyc
+
+# Model outputs/weights
+runs/
+*.pt
+*.onnx
