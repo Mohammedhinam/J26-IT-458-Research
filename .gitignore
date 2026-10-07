@@ -25,3 +25,13 @@ __pycache__/
 runs/
 *.pt
 *.onnx
+
+# Component 2: local data, environments, and model artifacts
+/data/
+/models/
+*.xpt
+.venv/
+venv/
+*.pth
+*.pkl
+.env
