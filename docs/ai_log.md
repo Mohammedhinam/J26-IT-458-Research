@@ -33,3 +33,13 @@ Prompt summary: Follow attached AGENTS.md section 9; document actual repository 
 What was accepted / rejected: Accepted plain templates and factual setup entries; no invented results or owner-understanding claims.
 How I verified it (row counts, output check, docs): Compared template fields with section 9; reviewed both Markdown files and staged diff; checked branch before commit.
 What I changed myself: Codex wrote the diary and expanded its own AI log. Owner's personal edits and understanding are pending owner input.
+
+## 2026-10-07 — Step 3: Python requirements
+
+Date: 2026-10-07
+Tool: Codex
+Task: Record the initial tabular Python dependencies.
+Prompt summary: Add pandas, numpy, scikit-learn, xgboost and shap; no torch; owner performs installation.
+What was accepted / rejected: Accepted the five initial libraries from AGENTS.md; deferred optional pyreadstat until an actual need is identified. No version pins were specified or tested.
+How I verified it (row counts, output check, docs): Compared requirements with the authorised list; checked exact file contents and whitespace; no dependency installation or runtime compatibility test performed.
+What I changed myself: Codex created requirements.txt and supplied python -m pip install -r requirements.txt. Owner installation and personal edits are pending.
