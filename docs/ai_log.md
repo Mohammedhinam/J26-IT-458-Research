@@ -55,3 +55,5 @@ How I verified it (row counts, output check, docs): Compared October 7–21 task
 What I changed myself: Codex wrote docs/planner_tasks.md and appended task records to its AI log and diary. Owner understanding and future task evidence remain pending.
 
 Date: 2026-10-07 | Tool: Codex | Task: Revise step 2 diary format | Prompt summary: Use exact requested headings and leave owner understanding blank | Accepted/rejected: Accepted headings; no owner-understanding text invented; preserved step 1 entry and section 9 template | How verified: Reviewed diary headings, blank line and retained AI entries; git diff --check | What I changed: Codex revised its own diary; no teammate files changed.
+
+Date: 2026-10-07 | Tool: Codex | Task: Complete step 3 environment instructions | Prompt summary: Exact venv/install commands, five libraries, no torch | Accepted/rejected: Accepted commands as comments; deferred pyreadstat; no installation | How verified: Confirmed five package lines and command comments; git diff --check; runtime compatibility untested | What I changed: Codex documented commands in its requirements.txt.
