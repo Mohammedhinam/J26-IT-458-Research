@@ -23,7 +23,11 @@ Before cloning, Git detected an unrelated parent repository on master with an LM
 ### Next step
 
 Record Python requirements, prepare the October 7–22 Planner table, and let the owner install dependencies. NHANES audit is scheduled for October 8, subject to confirming the join plan before use.
-- What I understood (my own words):
+- What I understood (my own words): (DRAFT - owner to review and edit)
+  1. The photo and questionnaire branches use different people, so we keep them separate and never combine their scores.
+  2. OHQ850 means self-reported previous gum treatment; it is the label the questionnaire model will learn, never an input predictor.
+  3. Today we set up folders, ignore rules, requirements, logs and the Planner plan, then installed packages in .venv and checked that imports work.
+  4. No model was built or trained yet, and no NHANES audit script was run today.
 
 ### Task record
 
@@ -34,3 +38,5 @@ Record Python requirements, prepare the October 7–22 Planner table, and let th
 - Revised step 2: Updated diary headings to What was done / Problems faced / Decisions made / Next step and left the owner-understanding line blank. Preserved the original step 1 AI record and full section 9 template.
 - Revised step 3: Recorded exact .venv creation, activation and installation commands in requirements.txt comments; owner will execute them. Packages remain unchanged and no environment was created.
 - Revised step 4: Expanded Planner table with priorities, start/due/status, requested buckets, checklists, daily recurring tasks and copy-paste notes using real GitHub commit URLs. Future work and owner installation remain Not started.
+- Task A completed: Created local ignored .venv with Python 3.13.5 and installed pandas 3.0.6, numpy 2.5.3, scikit-learn 1.9.1, xgboost 3.4.1 and shap 0.52.0. First install timed out downloading llvmlite; retry with longer timeout and resume succeeded. Import test printed ok; pip check found no broken requirements; Git status remained clean and .venv was ignored. No requirements change and no torch installation. Earlier installation-pending notes above describe the earlier setup stages.
+- Task B completed: Codex drafted four reflection lines from the attached AGENTS.md and verified setup work, explicitly marked for owner review and editing; this does not claim owner understanding.
