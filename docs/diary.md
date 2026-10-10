@@ -69,6 +69,10 @@ What I understood (my own words):
 
 Read the attached AGENTS.md sections 5, 6.2 and 12 and the existing audit/checklist. Confirmed the research remote and vinuthan branch. Copied the four named XPT files from Downloads into ignored data/ without overwriting existing different files or changing originals; source/copy SHA-256 hashes matched. The extra P_DEMO (1).xpt matched P_DEMO.xpt and was not copied. Ran the existing audit, fixed confirmed reader/code-classification issues and added focused synthetic-data tests. All 6 tests passed; the revised audit completed successfully.
 
+Saved the generated results to docs/nhanes_audit.md. File sizes were P_DEMO 15,560 rows/29 columns, P_OHQ 14,986/39, P_SMQ 11,137/16 and P_DIQ 14,986/28; none had duplicate or missing SEQN. OHQ850 had 1,941 Yes (24.83%), 5,876 No (75.17%), 36 don't-know and 7,133 missing responses. All four reference counts MATCH. All three joins retained 7,817 unique respondents, all aged at least 30; age range was 30–80 (80 means 80+).
+
+All 13 predictors were present. INDFMPIR had 1,186 missing responses and SMQ040 had 4,373; other predictors had no NaNs. The missing SMQ040 rows comprised 4,369 SMQ020=No and 4 SMQ020=refused/don't know, matching the documented skip pattern. OHQ870 included three responses of 9 and two don't-know responses of 99; they were flagged/recorded and retained. Full source-file zero repairs were 142 INDFMPIR cells and 2,620 OHQ870 cells; the report records them separately from cohort statistics. No cleaned modelling sample or training results were produced.
+
 ### Problems faced
 
 Pandas 3.0.6 decoded exact IBM zero bytes as 5.397605346934028e-79. Source-byte checks confirmed the issue in INDFMPIR and OHQ870. Also, the original script incorrectly included 8/9 as OHQ870 special codes and 7/9 as RIAGENDR special codes. CDC lists OHQ870 responses through 9, while the project rule allows only 0–7; the discrepancy is reported rather than hidden.
@@ -79,6 +83,6 @@ Restore only the exact zero artifact in the two affected predictors after verify
 
 ### Next step
 
-Save and review the generated report and document remaining preprocessing decisions before modelling.
+Review the three OHQ870=9 records against the project's 0–7 rule and the CDC released range of 0–9 before preprocessing. Then plan field-specific missing/special-code handling and smoking derivation. Modelling remains unstarted.
 
 What I understood (my own words):
