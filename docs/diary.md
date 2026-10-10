@@ -86,3 +86,23 @@ Restore only the exact zero artifact in the two affected predictors after verify
 Review the three OHQ870=9 records against the project's 0–7 rule and the CDC released range of 0–9 before preprocessing. Then plan field-specific missing/special-code handling and smoking derivation. Modelling remains unstarted.
 
 What I understood (my own words):
+
+## 2026-10-10 — Tabular cleaning and preprocessing
+
+### What was done
+
+Reviewed attached AGENTS.md and the supplied proposal RP-IT23311022 (2).pdf, pages 19–20 and 22. Added field-specific cleaning rules, smoking derivation and a reusable sklearn preprocessing transformer. Reused the audited loader and zero-decoding correction without rerunning the audit report generator. Nine new preprocessing tests and six existing audit tests passed. Ran preprocessing on the local files; recorded real results, with no classifier training or held-out evaluation.
+
+### Problems faced
+
+The CDC released OHQ870 range includes 9 while the proposal's main-analysis rule is integer 0–7. The owner explicitly authorised excluding the three flagged records and retaining them separately for sensitivity review. Direct Microsoft Planner access is blocked by a locked Mac/browser-access error; repository Planner notes will be updated separately.
+
+### Decisions made
+
+Keep 7,817 valid source labels as preserved audit evidence. Convert only each field's refused/don't-know codes to missing; preserve OHQ030=7, DIQ010=3 and INDFMPIR=0. Known fewer-than-100 lifetime respondents retain a derived smoking category, with skipped SMQ040 tracked separately rather than imputed. Unknown or inconsistent smoking responses are marked unknown and tracked. Use a seed-42 stratified participant split before fitting medians/scaling/encoding. Codebook-defined categories and fixed numeric missing flags ensure stable outputs. No identifiers, outcomes, survey design fields or review metadata enter predictors.
+
+### Next step
+
+Record aggregate cleaning/preprocessing results and Planner evidence, then propose a regularised logistic regression versus training-rate baseline using development-only validation and fresh preprocessing within each fold. Keep the final held-out set reserved.
+
+What I understood (my own words):
