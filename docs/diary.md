@@ -108,3 +108,25 @@ Keep 7,817 valid source labels as preserved audit evidence. Convert only each fi
 Propose a regularised logistic regression versus training-rate baseline using development-only validation and fresh preprocessing within each fold. Keep the final held-out set reserved. Copy the prepared Planner update to the board when browser access is available.
 
 What I understood (my own words):
+
+## 2026-10-10 — First development-only baseline experiment
+
+### What was done
+
+Read the attached AGENTS.md, existing preprocessing code/rules/tests and supplied proposal pages 19–22. Reused the frozen 6,251 development participants: 1,553 Yes (24.844025%) and 4,698 No. Added selective XPT loading that scans SEQN bytes and decodes only development records, reusing the audited zero fix. Audit/preprocessing reports and split-manifest hashes remained unchanged. Compared a training-fold prior DummyClassifier with fixed L2 logistic regression in identical shuffled seed-42 five-fold stratified cross-validation. Every training fold fitted its own fresh preprocessing/classifier Pipeline; each participant received one out-of-fold prediction. Eight new synthetic tests and the 15 existing tests passed (23 total).
+
+Actual pooled OOF results: Dummy AUROC 0.499486, trapezoidal PR-AUC 0.398258, average precision 0.248216, Brier 0.186718, sensitivity 0 and specificity 1. Logistic regression AUROC 0.736721, trapezoidal PR-AUC 0.512827, average precision 0.513089, Brier 0.157823, sensitivity 0.292981 and specificity 0.936143. At threshold 0.50, logistic regression had TN=4,398, FP=300, FN=1,098, TP=455. Each fitted fold produced 47 encoded columns from 12 inputs. Saved the aggregate experiment design, measurements and fold class balance in docs/tabular_baseline.md; no participant predictions, models or datasets were committed.
+
+### Problems faced
+
+The original loader reads every participant, so a narrow selective reader was needed to respect the held-out predictor boundary. It depends on the installed pandas XPORT metadata/private IBM decoder; a synthetic XPT test verifies selection and original-row zero repair, and unsupported layouts fail explicitly. No install, fit or convergence failure occurred. The first logistic AUROC is below the proposal's 0.80 feasibility target, and sensitivity at 0.50 is low. The dummy's slightly varying fold priors and PR-curve interpolation mean pooled ranking/area figures are not identical to simple chance/prevalence references; average precision is reported separately.
+
+### Decisions made
+
+Predefined threshold 0.50 before running; classify positive at probability >=0.50. Fixed logistic C=1.0, default L2, lbfgs, max_iter=1000, class_weight=None, seed 42. No hyperparameter search, post-hoc calibration or threshold optimisation in this first experiment. These are unweighted internal development results for self-reported previous gum treatment; no diagnosis, current-risk, external-validation or final-test claim. Confidence intervals, calibration slope/intercept, survey-weighted sensitivity and awareness-feature ablation remain pending.
+
+### Next step
+
+Review the first baseline, then predefine development-only regularisation/class-weight and calibration/threshold comparisons, including the proposal's awareness-feature ablation. Keep the 1,563 final held-out participants reserved until all choices are fixed.
+
+What I understood (my own words):
