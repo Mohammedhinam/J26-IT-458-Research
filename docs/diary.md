@@ -62,3 +62,23 @@ Confirm the local data copies and pytest installation, then implement and run th
 What I understood (my own words):
 
 - Prepared next-session handover with source locations, missing pytest and next actions. Both October 8 tasks are documentation only; audit execution remains Not started.
+
+## 2026-10-10 — NHANES audit execution and validation
+
+### What was done
+
+Read the attached AGENTS.md sections 5, 6.2 and 12 and the existing audit/checklist. Confirmed the research remote and vinuthan branch. Copied the four named XPT files from Downloads into ignored data/ without overwriting existing different files or changing originals; source/copy SHA-256 hashes matched. The extra P_DEMO (1).xpt matched P_DEMO.xpt and was not copied. Ran the existing audit, fixed confirmed reader/code-classification issues and added focused synthetic-data tests. All 6 tests passed; the revised audit completed successfully.
+
+### Problems faced
+
+Pandas 3.0.6 decoded exact IBM zero bytes as 5.397605346934028e-79. Source-byte checks confirmed the issue in INDFMPIR and OHQ870. Also, the original script incorrectly included 8/9 as OHQ870 special codes and 7/9 as RIAGENDR special codes. CDC lists OHQ870 responses through 9, while the project rule allows only 0–7; the discrepancy is reported rather than hidden.
+
+### Decisions made
+
+Restore only the exact zero artifact in the two affected predictors after verifying every corresponding source cell is all-zero bytes. Keep missing and other numeric values unchanged. Enforce one-to-one joins so duplicate keys cannot inflate the cohort. Keep the requested valid-OHQ850 audit view, reporting age eligibility and cleaning-day anomalies without further exclusions. Historical October 8 handover notes describe their original preparation date.
+
+### Next step
+
+Save and review the generated report and document remaining preprocessing decisions before modelling.
+
+What I understood (my own words):
