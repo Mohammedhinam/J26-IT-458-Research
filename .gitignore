@@ -37,3 +37,5 @@ Malocclusion-Detection/evaluation/reports/
 **/.venv/
 **/__pycache__/
 **/*.pyc
+# Trained model weights
+**/best_model.keras

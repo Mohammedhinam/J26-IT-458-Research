@@ -1,0 +1,57 @@
+{
+  "experiment": "crossbite_vs_normal_binary",
+  "model": "MobileNetV2",
+  "threshold": 0.5,
+  "split_sizes": {
+    "train": 88,
+    "valid": 17,
+    "test": 13
+  },
+  "split_stats": {
+    "train": {
+      "crossbite": 45,
+      "normal": 43,
+      "excluded_other_conditions": 133,
+      "excluded_duplicate": 0,
+      "unlabeled": 1
+    },
+    "valid": {
+      "crossbite": 6,
+      "normal": 11,
+      "excluded_other_conditions": 45,
+      "excluded_duplicate": 1,
+      "unlabeled": 0
+    },
+    "test": {
+      "crossbite": 5,
+      "normal": 8,
+      "excluded_other_conditions": 18,
+      "excluded_duplicate": 1,
+      "unlabeled": 0
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.6153846383094788,
+    "auc": 0.6000000238418579,
+    "loss": 0.650231659412384,
+    "precision": 0.5,
+    "recall": 0.6000000238418579
+  },
+  "confusion_matrix": {
+    "tp": 3,
+    "fp": 3,
+    "fn": 2,
+    "tn": 5
+  },
+  "precision": 0.5,
+  "recall": 0.6,
+  "f1": 0.5454545454545454,
+  "limitations": [
+    "Uses original public dataset annotations.",
+    "Labels were not clinically revalidated.",
+    "Only clean Crossbite and Normal examples are used.",
+    "Small test set limits reliability.",
+    "This is an experimental research baseline.",
+    "Not suitable for clinical diagnosis."
+  ]
+}

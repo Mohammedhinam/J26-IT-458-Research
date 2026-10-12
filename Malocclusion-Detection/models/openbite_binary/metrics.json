@@ -1,0 +1,57 @@
+{
+  "experiment": "openbite_vs_normal_binary",
+  "model": "MobileNetV2",
+  "threshold": 0.5,
+  "split_sizes": {
+    "train": 77,
+    "valid": 26,
+    "test": 13
+  },
+  "split_stats": {
+    "train": {
+      "openbite": 34,
+      "normal": 43,
+      "excluded_other_conditions": 144,
+      "excluded_duplicate": 0,
+      "unlabeled": 1
+    },
+    "valid": {
+      "openbite": 15,
+      "normal": 11,
+      "excluded_other_conditions": 36,
+      "excluded_duplicate": 1,
+      "unlabeled": 0
+    },
+    "test": {
+      "openbite": 5,
+      "normal": 8,
+      "excluded_other_conditions": 18,
+      "excluded_duplicate": 1,
+      "unlabeled": 0
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.38461539149284363,
+    "auc": 0.5,
+    "loss": 0.7785250544548035,
+    "precision": 0.3333333432674408,
+    "recall": 0.6000000238418579
+  },
+  "confusion_matrix": {
+    "tp": 3,
+    "fp": 6,
+    "fn": 2,
+    "tn": 2
+  },
+  "precision": 0.3333333333333333,
+  "recall": 0.6,
+  "f1": 0.42857142857142855,
+  "limitations": [
+    "Uses original public dataset annotations.",
+    "Labels were not clinically revalidated.",
+    "Only clean Open Bite and Normal examples are used.",
+    "Small test set limits reliability.",
+    "This is an experimental research baseline.",
+    "Not suitable for clinical diagnosis."
+  ]
+}
