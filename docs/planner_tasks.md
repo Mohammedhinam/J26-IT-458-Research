@@ -2,7 +2,7 @@
 
 Source: attached AGENTS.md section 11 (October 7–21) and section 1 (October 22 PP1 deadline). Owner for every task: Vinuthan T (IT23311022). Dates are in 2026. This file is ready to copy into Planner; no Planner tasks have been created externally.
 
-Buckets and priorities below follow the requested organisation; priority assignments are planning choices, not research results. Set the three daily tasks to repeat every day through October 22. Original setup notes describe October 7; the audit/preprocessing status below was updated on October 10. Planned dates are retained so schedule delays remain visible.
+Buckets and priorities below follow the requested organisation; priority assignments are planning choices, not research results. Set the three daily tasks to repeat every day through October 22. Original setup notes describe October 7; the baseline evidence/status below was updated on October 12 using the October 10 experiment. Planned dates are retained so schedule delays remain visible.
 
 | Task | Bucket | Priority | Start | Due | Status | Deliverable | Evidence | Checklist (2–3 items) |
 |---|---|---|---|---|---|---|---|---|
@@ -12,7 +12,7 @@ Buckets and priorities below follow the requested organisation; priority assignm
 | Planner task plan | Evidence and Docs | High | 2026-10-07 | 2026-10-07 | Completed | October 7–22 table, recurrence and copy-paste notes | [799cedf](https://github.com/Mohammedhinam/J26-IT-458-Research/commit/799cedf85d56d22c041191c7b9367ac14c797c00) (original plan); latest format is the commit containing this file, hash lookup below | Review dates/buckets; check evidence links; copy into Planner |
 | Create virtual environment and install packages (owner) | Setup | High | 2026-10-07 | 2026-10-07 | Not started | Local .venv and installed dependencies | Pending owner confirmation; commands provided, not executed | Create .venv; activate it; install requirements |
 | NHANES audit | Tabular | High | 2026-10-08 | 2026-10-08 | Completed (Oct 10) | Verified 7,817 valid labels, row-preserving joins and aggregate audit report | [b6abe80](https://github.com/Mohammedhinam/J26-IT-458-Research/commit/b6abe80f74e97108c23ba19794c72e846c3a4c49); 6 audit tests passed | Confirm join plan; check SEQN/counts; save exclusion log |
-| Preprocessing and logistic regression baseline | Tabular | High | 2026-10-09 | 2026-10-09 | In progress | Preprocessing complete Oct 10; classifier training and baseline validation Not started | [9dc73ec](https://github.com/Mohammedhinam/J26-IT-458-Research/commit/9dc73ec70c10939334e8f27b1b15fd8126c7ea26); docs/tabular_preprocessing.md | Freeze stratified split (done); fit preprocessing on development only (done); validate baseline in development data (pending) |
+| Preprocessing and logistic regression baseline | Tabular | High | 2026-10-09 | 2026-10-09 | Completed (Oct 10; evidence updated Oct 12) | Frozen development-only preprocessing and first measured Dummy/logistic comparison | [5dccc4b](https://github.com/Mohammedhinam/J26-IT-458-Research/commit/5dccc4b222e455eb834a1ff46c371215c27a48d1); docs/tabular_baseline.md; 23 tests passed Oct 10 | Freeze split (done); fresh preprocessing in each fold (done); record OOF baseline metrics (done) |
 | NHANES cleaning and preprocessing verification | Tabular | High | 2026-10-10 | 2026-10-10 | Completed | 7,814 cleaned participants; frozen 6,251/1,563 split; 12 inputs and 47 encoded columns | [9dc73ec](https://github.com/Mohammedhinam/J26-IT-458-Research/commit/9dc73ec70c10939334e8f27b1b15fd8126c7ea26); 15 total tests passed | Preserve audit and track 3 exclusions; verify split/no leakage; check finite development matrix |
 | XGBoost and comparison table | Tabular | High | 2026-10-10 | 2026-10-10 | Not started | Measured XGBoost/logistic/training-rate comparison | Pending: actual outputs, checks and commit links | Train on development data; compare metrics; inspect calibration |
 | SHAP and constrained what-if functions | Explainability and Simulator | High | 2026-10-11 | 2026-10-11 | Not started | SHAP output and basic Python simulator | Pending: actual outputs, checks and commit links | Verify SHAP reconstruction; restrict smoking/cleaning changes; test reset/validation |
@@ -162,6 +162,24 @@ Checklist:
 
 Evidence: [9dc73ec](https://github.com/Mohammedhinam/J26-IT-458-Research/commit/9dc73ec70c10939334e8f27b1b15fd8126c7ea26), docs/tabular_preprocessing.md and tests/test_preprocess_nhanes.py.
 
-Existing combined task “Preprocessing and logistic regression baseline”: set In progress. Preprocessing is completed; baseline training/validation is Not started. Final held-out evaluation remains deferred.
+At this preprocessing-stage update, the combined task was In progress and baseline validation was pending. The later baseline completion is recorded in the October 12 update below. Final held-out evaluation remains deferred.
 
 External board update: not performed in this session. Browser access reported the Mac locked and a browser request-header-policy error. This file contains the prepared update; it does not prove an external Planner task was changed.
+
+## Copy-paste for Planner — October 12 evidence update
+
+Title: First development-only baseline comparison
+
+Bucket: Tabular. Priority: High. Status: Completed. Experiment completed: October 10; evidence notes updated: October 12.
+
+Notes: Compared a training-rate DummyClassifier with fixed L2 Logistic Regression using 6,251 development participants (1,553 Yes / 4,698 No). Both models used identical five-fold stratified validation, seed 42, with fresh preprocessing inside each training fold. Logistic OOF AUROC 0.736721, trapezoidal PR-AUC 0.512827, average precision 0.513089 and Brier 0.157823. At predefined threshold 0.50, sensitivity was 29.30% and specificity 93.61%. Dummy AUROC 0.499486 and Brier 0.186718. The October 10 verification passed 23 tests. AUROC remains below the 0.80 feasibility target; sensitivity at 0.50 is low. Final held-out predictors/evaluation remained untouched. This update documents existing results; the experiment was not rerun today.
+
+Checklist:
+
+- [x] Compare both models on identical folds with fresh preprocessing
+- [x] Record measured metrics, class balance and limitations
+- [x] Link the report, tests and implementation commit
+
+Evidence: [5dccc4b](https://github.com/Mohammedhinam/J26-IT-458-Research/commit/5dccc4b222e455eb834a1ff46c371215c27a48d1), docs/tabular_baseline.md and tests/test_baseline_nhanes.py.
+
+Set the combined “Preprocessing and logistic regression baseline” task to Completed for the first baseline milestone. Further tuning, calibration, awareness-feature ablation and final evaluation remain separate pending work. These are prepared repository notes; this edit does not update the external MS Planner board.

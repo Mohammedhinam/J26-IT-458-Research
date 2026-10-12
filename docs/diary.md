@@ -130,3 +130,23 @@ Predefined threshold 0.50 before running; classify positive at probability >=0.5
 Review the first baseline, then predefine development-only regularisation/class-weight and calibration/threshold comparisons, including the proposal's awareness-feature ablation. Keep the 1,563 final held-out participants reserved until all choices are fixed.
 
 What I understood (my own words):
+
+## 2026-10-12 — Baseline Planner evidence update
+
+### What was done
+
+Updated the local Planner table and copy-paste notes using the completed October 10 baseline report and verified commit 5dccc4b. Marked the first preprocessing/baseline milestone Completed; retained the actual metrics, low sensitivity and below-target AUROC. Existing 23-test evidence is from October 10, not a new run today.
+
+### Problems faced
+
+The local Planner table still showed baseline validation pending after the measured experiment had been completed. No external board update is claimed.
+
+### Decisions made
+
+Keep completion dates and evidence-update dates separate. Mark further tuning/calibration as pending; preserve reports and all untracked files.
+
+### Next step
+
+Write a bounded development-only comparison plan with explicit pending status and verification checks.
+
+What I understood (my own words):
