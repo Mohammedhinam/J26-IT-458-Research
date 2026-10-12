@@ -25,3 +25,15 @@ __pycache__/
 runs/
 *.pt
 *.onnx
+
+# Malocclusion datasets and generated outputs
+Malocclusion-Detection/data/
+Malocclusion-Detection/models/crooked_baseline/
+Malocclusion-Detection/models/crooked_baseline_v2/
+Malocclusion-Detection/explainability/outputs/
+Malocclusion-Detection/evaluation/reports/
+
+# Python environment and cache
+**/.venv/
+**/__pycache__/
+**/*.pyc
