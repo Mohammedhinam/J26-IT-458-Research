@@ -150,3 +150,23 @@ Keep completion dates and evidence-update dates separate. Mark further tuning/ca
 Write a bounded development-only comparison plan with explicit pending status and verification checks.
 
 What I understood (my own words):
+
+## 2026-10-12 — Next development experiment plan
+
+### What was done
+
+Wrote docs/tabular_development_plan.md with a proposed six-configuration L2/class-weight comparison, frozen development membership, identical five-fold validation, fresh fold preprocessing, metric outputs and focused verification checks. Included separate future calibration, threshold-selection and awareness-feature ablation stages. The plan is ready for owner review; the experiment is Not started.
+
+### Problems faced
+
+The first baseline's low sensitivity at 0.50 motivates further comparisons, but improved metrics cannot be assumed. Choosing a candidate using the same OOF results can make its selected score optimistic.
+
+### Decisions made
+
+Proposed C=0.1/1/10 and class_weight=None/balanced, with pooled average precision as the provisional selection metric and documented tie-breaks. Keep the current 12-input baseline unchanged. Calibration must be evaluated on participants whose labels were not used to fit the calibrator. Preserve final held-out data and original results.
+
+### Next step
+
+Review the specification, then implement and run the bounded comparison with focused tests. No training or new metrics were produced today.
+
+What I understood (my own words):
