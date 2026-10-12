@@ -1,0 +1,50 @@
+{
+  "experiment": "crowding_vs_normal_stratified",
+  "source_dataset": "smile_spacing",
+  "model": "MobileNetV2",
+  "threshold": 0.5,
+  "seed": 42,
+  "split_sizes": {
+    "train": 56,
+    "valid": 11,
+    "test": 15
+  },
+  "class_counts": {
+    "train": {
+      "crowding": 16,
+      "normal": 40
+    },
+    "valid": {
+      "crowding": 3,
+      "normal": 8
+    },
+    "test": {
+      "crowding": 5,
+      "normal": 10
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.6666666865348816,
+    "auc": 0.8199999928474426,
+    "loss": 0.5313927531242371,
+    "precision": 0.5,
+    "recall": 0.20000000298023224
+  },
+  "confusion_matrix": {
+    "tp": 1,
+    "fp": 1,
+    "fn": 4,
+    "tn": 9
+  },
+  "precision": 0.5,
+  "recall": 0.2,
+  "f1": 0.28571428571428575,
+  "limitations": [
+    "Only the smile_spacing dataset is used.",
+    "The dataset contains only 82 usable images.",
+    "The test set contains only 5 Crowding positives.",
+    "The split is class-stratified but not confirmed patient-level.",
+    "Labels were not clinically revalidated.",
+    "This is a preliminary research baseline."
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "experiment": "crowding_vs_normal_binary",
+  "source_dataset": "smile_spacing",
+  "model": "MobileNetV2",
+  "threshold": 0.5,
+  "split_sizes": {
+    "train": 54,
+    "valid": 20,
+    "test": 8
+  },
+  "split_stats": {
+    "train": {
+      "crowding": 21,
+      "normal": 33,
+      "excluded_mixed_or_other": 30,
+      "missing_file": 0
+    },
+    "valid": {
+      "crowding": 2,
+      "normal": 18,
+      "excluded_mixed_or_other": 4,
+      "missing_file": 0
+    },
+    "test": {
+      "crowding": 1,
+      "normal": 7,
+      "excluded_mixed_or_other": 4,
+      "missing_file": 0
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.875,
+    "auc": 0.2857142686843872,
+    "loss": 0.5038126111030579,
+    "precision": 0.0,
+    "recall": 0.0
+  },
+  "confusion_matrix": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 1,
+    "tn": 7
+  },
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "limitations": [
+    "This experiment uses only the smile_spacing dataset.",
+    "Crowding and Normal examples come from the same source dataset.",
+    "Mixed Crowding, Spacing and Overbite images are excluded.",
+    "The dataset is small, especially the validation and test splits.",
+    "Labels were not clinically revalidated.",
+    "This is a preliminary research baseline, not a clinical model."
+  ]
+}
