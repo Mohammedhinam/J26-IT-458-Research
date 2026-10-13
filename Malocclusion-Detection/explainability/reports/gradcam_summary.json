@@ -1,0 +1,41 @@
+{
+  "component": "Malocclusion Detection",
+  "method": "Grad-CAM layer comparison",
+  "architecture": "MobileNetV2",
+  "conditions": {
+    "crossbite": {
+      "selected_layer": "block_14_expand_relu",
+      "status": "usable_but_imperfect",
+      "interpretation": "The intermediate MobileNetV2 layer provided more visible activation over the dental region than the final convolutional layer. However, some attention was also observed near image boundaries.",
+      "report_use": "exploratory_only"
+    },
+    "crowding": {
+      "selected_layer": "block_14_expand_relu",
+      "status": "best_available_localization",
+      "interpretation": "The selected intermediate layer showed the clearest attention across the teeth region among the tested MobileNetV2 layers. Localization remains preliminary and is not clinically validated.",
+      "report_use": "preliminary_explainability"
+    },
+    "open_bite": {
+      "selected_layer": "block_13_expand_relu",
+      "status": "weak_inconsistent",
+      "interpretation": "Some activation appeared over dental regions, but attention was inconsistent and also appeared in image corners, lips and boundary areas. This may indicate shortcut learning.",
+      "report_use": "limitation_evidence"
+    }
+  },
+  "layers_compared": [
+    "block_13_expand_relu",
+    "block_14_expand_relu",
+    "block_15_project",
+    "block_16_project",
+    "Conv_1"
+  ],
+  "overall_finding": "Intermediate MobileNetV2 layers produced more informative Grad-CAM visualizations than the final convolutional layer for some conditions. However, attention was not consistently limited to clinically relevant dental regions.",
+  "research_interpretation": "The Grad-CAM analysis suggests possible shortcut learning and limited localization reliability. The visual explanations should therefore be used as exploratory model-inspection evidence rather than clinical explanations.",
+  "limitations": [
+    "The underlying binary models were trained using small and imbalanced datasets.",
+    "The selected Grad-CAM layers were chosen through visual comparison rather than clinical expert validation.",
+    "No dental expert independently verified whether highlighted regions correspond to clinically relevant malocclusion features.",
+    "Some activation maps highlighted image borders, lips or other non-dental regions.",
+    "Grad-CAM attention does not prove causal or clinical reasoning by the model."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "experiment": "spacing_vs_normal_stratified",
+  "source_dataset": "smile_spacing",
+  "model": "MobileNetV2",
+  "threshold": 0.5,
+  "seed": 42,
+  "split_sizes": {
+    "train": 47,
+    "valid": 9,
+    "test": 13
+  },
+  "class_counts": {
+    "train": {
+      "spacing": 7,
+      "normal": 40
+    },
+    "valid": {
+      "spacing": 1,
+      "normal": 8
+    },
+    "test": {
+      "spacing": 3,
+      "normal": 10
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.7692307829856873,
+    "auc": 0.3333333432674408,
+    "loss": 0.7037184834480286,
+    "precision": 0.0,
+    "recall": 0.0
+  },
+  "confusion_matrix": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 3,
+    "tn": 10
+  },
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "limitations": [
+    "Only the smile_spacing dataset is used.",
+    "Only 11 usable Spacing-positive images are available.",
+    "The validation split contains only 1 Spacing-positive image.",
+    "The test split contains only 3 Spacing-positive images.",
+    "The split is class-stratified but not confirmed patient-level.",
+    "Labels were not clinically revalidated.",
+    "This is a preliminary research baseline."
+  ]
+}
