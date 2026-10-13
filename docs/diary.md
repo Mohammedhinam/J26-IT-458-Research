@@ -212,3 +212,63 @@ Preserved all original archives, images, captions, annotations and published spl
 Request owner/supervisor approval for label adjudication and a duplicate/group-handling plan, including absent-grade-0 feasibility and mapping verification. Do not train until these blockers are resolved, a proposal-aligned manifest is approved, and separate training approval is given.
 
 What I understood (my own words):
+
+## 2026-10-13 — Focused Vision label verification and duplicate-handling plan
+
+### What was done
+
+Read proposal pages 17–18/22, supplied AGENTS.md and existing Vision evidence. Reused extracted CSV/TXT and cached inventory; visually inspected three original training photos. Technical mapping 0/1 ROI and 2–6 MGI 0–4 is corroborated by spatial/caption examples, especially 00029. Computed separate raw tooth-box and diagnostic image-maximum frequencies from cached evidence. Reconciled historical needs_review union: 113 caption conflicts + 7 caption–TXT discrepancies + 28 duplicate entries + 13 other tooth-count issues = 161, with secondary overlaps accounted for.
+
+### Problems faced
+
+All three variants of the seven caption–TXT discrepancies were inspected. Four have empty tooth lists for their numeric maximum-grade phrases; three are substantive source disagreements. Current numeric parsing does not prove the phrase describes an actual tooth. One sampled provisionally unflagged photo also has tooth-level source differences despite equal maxima; historical inventory stays unchanged and is not an exhaustive adjudication queue. There are 309 raw normal-tooth boxes but no supported image maximum-0 examples. Clinical grade correctness and participant independence remain unverified. Live paper refresh hit CAPTCHA/403; used signed proposal and previously recorded source content.
+
+### Decisions made
+
+Prepared docs/vision_label_verification_duplicate_plan.md with decision table and approval checklist only. Proposed a versioned non-destructive group-aware analysis manifest, original-test reservation and label-blind duplicate representative rules. Known-duplicates-only scenario gives 718/182/182 unique contents; this is not an implemented split or final eligible sample. Supervisor must approve content-group versus participant-group limitations and absent-class-0 scope. Maximum remains the proposal target provisionally; no placeholder repair, new class mapping, label edit, data/code change, exclusion, resplit, training, installation, commit or push occurred. No new tests or full audits run; read-only ledger/count assertions passed. Historical code/reports/data and dirty work preserved.
+
+### Next step
+
+Wait for qualified reviewer/supervisor approval on mapping, caption adjudication/parser rules, MGI-0 feasibility and duplicate/group policy. Implementation and later training require separate authorization.
+
+What I understood (my own words):
+
+## 2026-10-13 — Read-only evidence review of 161 flagged Vision records
+
+### What was done
+
+Compared 483 original CSV captions, 161 original TXT files and 161 original RGB sources. Prepared an ignored local HTML case report, full-evidence reviewer CSV/JSON, exact referral lists, duplicate-group comparisons and 27 final RGB contact sheets. Visually screened all 27 source/overlay sheets; full-resolution originals remain linked for qualified review. Filename/variant checks passed. No source or approved target was changed.
+
+### Problems faced
+
+All 113 caption-conflict cases have twelve supported sites in captions 1/2 and only the six upper sites in caption 3; lower-jaw descriptions are omitted. Four maximum-grade discrepancy cases have empty tooth lists. Duplicate-companion review found eleven pairs with different complete positional tooth-grade maps and three pairs with ambiguous/incomplete box coverage. Seventeen records are individually source-consistent but none is cleared group-wide. A footer-layout clipping issue was corrected only in newly generated contact sheets. Positional sorting/parsing is a screening hypothesis, not verified tooth identity or clinical diagnosis.
+
+### Decisions made
+
+All 161 remain needs_review; resolved count zero. Forty-eight image records (34 distinct cached photo contents, not verified people) are listed for qualified dental/tooth-annotation adjudication: 28 duplicate entries + 13 other box-count issues + 3 substantive caption–TXT disputes + 4 unsupported maximum-grade phrase cases. The other 113 require incomplete-caption policy approval and dental escalation if needed. No automatic first-caption selection, majority voting, missing-to-zero assignment, new grade, exclusion, resplit or training. Final-test cases were audit-only, never development/model selection. Preserved original RGB colours, source files/manifests, splits and prior working-tree content.
+
+### Next step
+
+Owner approves qualified reviewer involvement and annotation-policy adjudication using the case report, source photos and provenance. Label changes, duplicate/group handling and any training still require separate explicit authorization.
+
+What I understood (my own words):
+
+## 2026-10-13 — Focused 113-caption reconciliation and Vision publication
+
+### What was done
+
+Reused the existing 113-record reviewer list and caption evidence. Caption 1/2 source text agrees at all twelve positions in each case (1,356 paired positions); Caption 3 equals the upper-jaw prefix and agrees at all six shared positions (678 positions). Recorded split counts and independent raw-clause checks in docs/vision_incomplete_caption_reconciliation.md. Owner subsequently requested publication of the existing Vision audit/review work as scoped commits. Publication verification: 35 synthetic Vision tests passed, zero failed; no real-data audit or extraction rerun.
+
+### Problems faced
+
+Historical 81 maximum differences and 32 same-maximum grade-set differences reflect lower-jaw omission in this subset. Double commas in 35 records did not prevent explicit-site parsing. An initial auxiliary numeric-only parser did not cover non-inflamed wording in eight records; adding literal source-wording handling to the in-memory check resolved that check limitation without modifying source evidence or grades.
+
+### Decisions made
+
+All 113 remain needs_review, with no approved grade. Zero source-position disagreements or remaining unparseable cases were identified under the stated checks, not a clinical validation claim. All 113 may be considered under a supervisor-approved incomplete-caption policy; uncertainty requires qualified review. Criteria must be predefined and must not be tuned against final-test outcomes. TXT is verification evidence only. Raw images, CSV/TXT and local reviewer artifacts remain ignored. Unrelated pending tabular work and original split/label evidence are preserved.
+
+### Next step
+
+Obtain supervisor/qualified reviewer approval for annotation policy, the separate 48 adjudication cases, duplicate/group handling and absent image-level MGI 0 before any training. No policy implementation or training is authorized by publication.
+
+What I understood (my own words):
