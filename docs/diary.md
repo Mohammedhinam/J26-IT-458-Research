@@ -170,3 +170,23 @@ Proposed C=0.1/1/10 and class_weight=None/balanced, with pooled average precisio
 Review the specification, then implement and run the bounded comparison with focused tests. No training or new metrics were produced today.
 
 What I understood (my own words):
+
+## 2026-10-13 — Vision archive/caption precheck and extraction plan
+
+### What was done
+
+Prepared a read-only gingivitis archive/caption audit and a safe extraction plan. The primary archive contains 1,096 image entries, split 732/182/182, matching the proposal; captions contain 2,196/546/546 rows with three variants per image. Saved provisional maximum-grade distributions and all review filenames. Focused synthetic tests: 16 passed, zero failed.
+
+### Problems faced
+
+113 images have inconsistent explicit caption grade sets (47 validation, 66 test); 81 also disagree on the maximum (34/47). No provisional image-level MGI 0 labels were found. Unique filenames do not prove unique content or participant independence. Image hashing/decoding, near-duplicate review, participant metadata and YOLO mapping remain unverified.
+
+### Decisions made
+
+Kept ambiguous records as needs_review without dropping, relabelling or changing published splits. Streamed CSVs to memory only. Proposed ignored raw/staging locations and local manifests; no image extraction, resizing, upload, package installation or training. Preserved existing work and historical evidence; no commit or push.
+
+### Next step
+
+Owner reviews the extraction/full-content audit plan and the label/grade-0 blockers before approving further dataset preparation. Training requires separate approval after audit and label/split validation.
+
+What I understood (my own words):
