@@ -344,8 +344,8 @@ function renderResults(
             >
               ${
                 detected
-                  ? "Detected"
-                  : "Not Detected"
+                    ? "Above Screening Threshold"
+                    : "Below Screening Threshold"
               }
             </span>
 

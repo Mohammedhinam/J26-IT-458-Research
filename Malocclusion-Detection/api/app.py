@@ -273,9 +273,10 @@ async def predict(
 
         "interpretation":
             (
-                "A detected result means the model "
-                "probability exceeded the configured "
-                "research threshold."
+                "An above-threshold result means the model "
+                "probability exceeded the configured research "
+                "screening threshold. This does not represent "
+                "a clinical diagnosis."
             ),
 
         "disclaimer":
