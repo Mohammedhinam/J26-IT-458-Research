@@ -190,3 +190,25 @@ Kept ambiguous records as needs_review without dropping, relabelling or changing
 Owner reviews the extraction/full-content audit plan and the label/grade-0 blockers before approving further dataset preparation. Training requires separate approval after audit and label/split validation.
 
 What I understood (my own words):
+
+## 2026-10-13 — Safe Vision extraction and dataset-integrity audit
+
+### What was done
+
+Compared primary/backup archive SHA-256: both 16669f74665ff0deca6ddd25feb0d233e52fdc2313265465bf91731af1e8956b. Checked safe paths, links, advertised extraction sizes and disk reserve. Successful full regular-file integrity read covered 6,556,351,198 bytes; extracted only to new ignored staging. Verified 2,195 regular-file paths/sizes and all 1,096 RGB JPEG decodes, dimensions, byte/pixel hashes and caption/annotation references. Kept local per-image manifests/review records in ignored staging and added aggregate integrity report plus proposed label-review options. Final focused tests: 35 passed, zero failed.
+
+### Problems faced
+
+First all-entry integrity read failed because bsdtar tried to decompress ten directory entries; no extraction occurred in that failed attempt. Explicit regular-member selection passed on retry without ignoring errors. An annotation blank line was initially misflagged as invalid; minimally fixed parser and refreshed annotation-only evidence without repeating image decoding/hashing. Preserved the initial audit snapshot; audit_verified is the current evidence.
+
+Found 14 exact duplicate pairs (28 entries, 1,082 unique byte contents): six within training, seven train-test and one train-validation. Three pairs disagree on caption maxima. Caption variants conflict for 113 images, including 81 maximum disagreements; seven caption-versus-mapping-hypothesis discrepancies and sixteen non-12 tooth-box annotations remain unresolved. Final needs_review union: 161 images (34/53/74), with overlapping reasons. All published tooth-code count comparisons (codes 2–6) mismatch local counts. No supported image-level maximum-0 example; code-2 normal tooth boxes do not establish whole-image MGI 0. Participant identifiers are not supplied/documented locally; paper's independence claim does not establish clean splits in the presence of exact duplicates.
+
+### Decisions made
+
+Preserved all original archives, images, captions, annotations and published split memberships. No target repair, automatic missing-to-zero rule, final class mapping, record exclusion, resplit, training, package installation, commit or push. Raw/pixel hashes and exact dHash equality identify duplicates; transformed near duplicates are not comprehensively ruled out. Final-test images were accessed only for the approved integrity/label audit, with no fitting or model selection. Historical evidence and prior work preserved.
+
+### Next step
+
+Request owner/supervisor approval for label adjudication and a duplicate/group-handling plan, including absent-grade-0 feasibility and mapping verification. Do not train until these blockers are resolved, a proposal-aligned manifest is approved, and separate training approval is given.
+
+What I understood (my own words):
