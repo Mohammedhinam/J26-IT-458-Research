@@ -1,0 +1,17 @@
+metric,value
+images_evaluated,19
+confidence_threshold,0.25
+image_size,640
+macro_mean_iou,0.40814393530529225
+macro_mean_dice,0.5300137919600267
+macro_mean_precision,0.6022390926975035
+macro_mean_recall,0.5017622185656564
+macro_mean_f1,0.5300137919600267
+micro_iou,0.46709810039813554
+micro_dice,0.6367646448064737
+micro_precision,0.6966664833180676
+micro_recall,0.5863483481911924
+micro_f1,0.6367646448064737
+total_tp,291309
+total_fp,126838
+total_fn,205510
