@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "zip_path": "/Users/vinuthanvinuthan/Downloads/vision_b1_pilot_runtime_evidence_v1.zip",
+  "bytes": 5136,
+  "sha256": "8627aff3e7dfd744924aaa855661bf016e35043d407bdee99066bbb55384d11e",
+  "evidence_payload_hashes_verified": 5,
+  "source_files_verified": 20,
+  "unique_junit_cases": 71,
+  "counts": {
+    "total": 71,
+    "passed": 71,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "reported_pytest_seconds": 128.35,
+  "junit_seconds": 128.353,
+  "backend_tests": {
+    "test_resnet50_four_output_optimization_and_frozen_batchnorm_weights_none": "passed",
+    "test_four_class_gradcam_geometry_and_hook_cleanup_weights_none": "passed",
+    "test_four_class_synthetic_checkpoint_loading_and_reproducibility": "passed"
+  },
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux",
+    "numpy": "2.1.3",
+    "Pillow": "11.3.0",
+    "pytest": "8.4.2",
+    "torch": "2.11.0+cpu",
+    "torchvision": "0.26.0+cpu",
+    "cuda_available": false,
+    "gpu": null
+  },
+  "summary": {
+    "status": "PASS",
+    "scope": "generated-only local-export and four-grade pilot runtime verification",
+    "local_diagnostic": false,
+    "environment": {
+      "python": "3.13.16",
+      "platform": "Linux",
+      "numpy": "2.1.3",
+      "Pillow": "11.3.0",
+      "pytest": "8.4.2",
+      "torch": "2.11.0+cpu",
+      "torchvision": "0.26.0+cpu",
+      "cuda_available": false,
+      "gpu": null
+    },
+    "dependency_error": null,
+    "counts": {
+      "total": 71,
+      "passed": 71,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "backend_tests": {
+      "test_resnet50_four_output_optimization_and_frozen_batchnorm_weights_none": "passed",
+      "test_four_class_gradcam_geometry_and_hook_cleanup_weights_none": "passed",
+      "test_four_class_synthetic_checkpoint_loading_and_reproducibility": "passed"
+    },
+    "pytest_exit_code": 0,
+    "source_unchanged": true,
+    "RUN_PILOT": false,
+    "dental_images_accessed": false,
+    "dental_training_performed": false,
+    "synthetic_optimizer_checks_requested": true,
+    "synthetic_optimizer_checks_executed": true,
+    "pretrained_weights": null,
+    "acceptance_passed": true
+  },
+  "source_files": {
+    "src/vision/b1_development_bundle_v1.py": "7ad20bcafce99797164239275954809cc11a7750922d6998443387aa91c7119c",
+    "src/vision/b1_jpeg_source_v1.py": "5f28c0deb73f74a10afb8720300866877602e1c012ddecec092d46d23a1deefb",
+    "src/vision/colour_b1_iccv2_generated.py": "6c611e1c9d77e7af1122d835cc7ce4d17699cbbb8497a6c279b32cd81a58c45c",
+    "src/vision/colour_b1_prototype.py": "d3108ea3bf7f310f1b46960174d4936299ece19d762f4ca1ee9d900572b90856",
+    "src/vision/colour_b1_streaming.py": "5b3a6bc893d1f6fc451c74e69f4865de00565b91bd19dc935baee6476cc5ec67",
+    "src/vision/colour_policy.py": "2bba567545143687f49b6e3ae63fdd72d1eacc10977d5ec373f00a4b5451a97b",
+    "src/vision/colour_qa.py": "4ad2b81c715b01e624b527d1971cc303740ddf559461f2d953c831956c1e82e3",
+    "src/vision/exploratory_bundle.py": "dda776ca1558ed4da795df7cee47c0fe19d382cf32c37ca89d22f4141974b615",
+    "src/vision/exploratory_bundle_b1.py": "01b20dc64f82c9d6d4108ba847f28073bdd7fe8fc4ccd4255119a2fe219d896b",
+    "src/vision/exploratory_bundle_v4.py": "c914cc05ad2be4ff08873a5d2270b5836e0f84219a539435beeca09b57ad76cd",
+    "src/vision/exploratory_pilot.py": "c5bf6cba173390f914a44c4537b91d4f2a8e150aa0f5e4842c2ca94bb1a4d535",
+    "src/vision/exploratory_pilot_b1_v1.py": "876ec09dd7e9766bbc847416398e78d1ce320fa38a20bbaa952d35750eb5be05",
+    "src/vision/gamut_mapping_feasibility.py": "41cd1d49fcebbb08d45fa1951755d4141a4611630ed9b081f26e5a9b273f368a",
+    "src/vision/model_pipeline.py": "c11ad18912575f3567d0baf0eefb1bfbb5eb00fbfa075880fe84aef1ccd34b3c",
+    "src/vision/train_pipeline.py": "e7a979b0875af0e459496bca79ce3c80e594acf2639ea7dc9d8659ec75ffc695",
+    "src/vision/verify_b1_pilot_runtime_v1.py": "2bb4b58567db50df72eefa7535d3c739e36bd8c214b4e5199899c3c9c6267538",
+    "tests/test_b1_local_export_v1.py": "e91ced7446b64eadcb2a4f4d1ca5282e04d8c842033a627559400b488977906d",
+    "tests/test_colour_b1_iccv2_generated.py": "fb110d8f7dc27bef91e055e5ef257ca7f05d4a895822b223e66763096421e9d8",
+    "tests/test_exploratory_bundle_b1.py": "a577869587a3eb516ead83ba2f1fa6832a699781a91a406c2325b710dc596068",
+    "tests/test_exploratory_pilot_b1_v1.py": "e666a5ae9f7c0a45ce9abca649981455df2992d2e01b78be25ccdf718d84dfc3"
+  },
+  "review_date": "2026-10-15",
+  "code_zip_sha256": "eba79c8f5539edf5014546986466157688f261397c05d9a63437ef768c40de30",
+  "colab_pass_verified": true,
+  "full_repository_run": false,
+  "gpu_verified": false,
+  "real_dental_training_authorized": false,
+  "cloud_upload_authorized": false,
+  "pretrained_download_authorized": false,
+  "tests_rerun_during_review": false
+}

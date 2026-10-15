@@ -1,0 +1,17 @@
+# Add ONE new cell below the completed run. Do NOT rerun training or reconnect/reset.
+# Reads saved checkpoint tensors only; no model construction, images, inference or downloads.
+assert all(n in globals() for n in ('output','root','WEIGHT_RECORD','files')), "STOP: original completed runtime required; do not rerun training"
+from pathlib import Path
+import hashlib,json
+assert Path(output).name=="pp1_b1_mgi1to4_20261015T135216375748Z"
+diagnostic_upload=files.upload()  # Select diagnose_b1_pilot_v1.py ONLY.
+assert set(diagnostic_upload)=={'diagnose_b1_pilot_v1.py'}
+helper_bytes=diagnostic_upload['diagnose_b1_pilot_v1.py']
+assert hashlib.sha256(helper_bytes).hexdigest()=="a31d37dd7cf84b49a9b66b9f471fcd45883935ccf223fdb6709ae732076cffca"
+namespace={'__name__':'b1_readonly_checkpoint_diagnostic'}
+exec(compile(helper_bytes,'diagnose_b1_pilot_v1.py','exec'),namespace)
+checkpoint_report=namespace['inspect_saved_checkpoints'](output,WEIGHT_RECORD['expected_path'],root)
+report_path=Path('/content/pp1_b1_checkpoint_diagnostic_v1.json')
+with report_path.open('x') as handle: json.dump(checkpoint_report,handle,indent=2,allow_nan=False)
+print(json.dumps(checkpoint_report,indent=2))
+files.download(str(report_path))

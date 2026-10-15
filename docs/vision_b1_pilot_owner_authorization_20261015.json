@@ -1,0 +1,26 @@
+{
+  "status": "owner_confirmed",
+  "authorizer": "Vinuthan T (project owner)",
+  "date": "2026-10-15",
+  "scope": "upload_exploratory_b1_development_v1",
+  "evidence_reference": "Owner explicit YES in this Codex conversation on 2026-10-15: verified 733-image bundle upload, official ResNet50 V2 download, max5epoch MGI1–4 head-only GPU pilot, Validation and three Grad-CAM outputs;181holds/Test excluded.",
+  "archive_sha256": "a8a4f7f339c589f81335d7afb663f4cf62d30e217f65bc480683d0a770afed70",
+  "bundle_manifest_sha256": "8e7ff195009a5e781c216795fd2a943db17a0b3ec8fd1c84760f3bf9878a4c9f",
+  "code_zip_sha256": "eba79c8f5539edf5014546986466157688f261397c05d9a63437ef768c40de30",
+  "verified_cpu_runtime_evidence_sha256": "8627aff3e7dfd744924aaa855661bf016e35043d407bdee99066bbb55384d11e",
+  "cloud_upload_authorized": true,
+  "official_resnet50_v2_download_authorized": true,
+  "training_authorized": true,
+  "max_epochs": 5,
+  "final_research_approved": false,
+  "clinical_labels_approved": false,
+  "participant_independence_verified": false,
+  "acknowledgements": {
+    "provisional_labels": true,
+    "non_clinical_non_final": true,
+    "participant_independence_unverified": true,
+    "no_test_access": true,
+    "missing_mgi0_scarce_mgi1": true,
+    "no_final_approval_or_promotion": true
+  }
+}

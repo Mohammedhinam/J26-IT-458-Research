@@ -1,0 +1,144 @@
+{
+  "scope": "historical measured reference, not another training run",
+  "source_run": "pp1_b1_mgi1to4_20261015T135216375748Z",
+  "source_archive_sha256": "4aa51bc52b3f313363dd88c3e56a299fb8c48a9c27f53bb1ae5114cf7f3181c4",
+  "best_epoch": 1,
+  "validation": {
+    "loss": 1.1739498354353994,
+    "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+    "mgi_grades": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "n": 53,
+    "support": [
+      1,
+      13,
+      22,
+      17
+    ],
+    "accuracy": 0.32075471698113206,
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        13
+      ],
+      [
+        0,
+        0,
+        0,
+        22
+      ],
+      [
+        0,
+        0,
+        0,
+        17
+      ]
+    ],
+    "macro_f1_four_grades": 0.12142857142857143,
+    "per_grade_f1": [
+      0.0,
+      0.0,
+      0.0,
+      0.4857142857142857
+    ],
+    "per_grade_recall": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "per_grade_auroc": [
+      0.8461538461538461,
+      0.573076923076923,
+      0.5219941348973607,
+      0.6977124183006536
+    ],
+    "macro_auroc": 0.6597343306071959,
+    "multiclass_brier": 0.6887510384854312,
+    "ordinal_mae": 0.9622641509433962,
+    "quadratic_weighted_kappa": 0.0,
+    "clinical_validation": false,
+    "healthy_mgi0_supported": false
+  },
+  "majority_baseline": {
+    "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+    "mgi_grades": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "n": 53,
+    "support": [
+      1,
+      13,
+      22,
+      17
+    ],
+    "accuracy": 0.32075471698113206,
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        13
+      ],
+      [
+        0,
+        0,
+        0,
+        22
+      ],
+      [
+        0,
+        0,
+        0,
+        17
+      ]
+    ],
+    "macro_f1_four_grades": 0.12142857142857143,
+    "per_grade_f1": [
+      0.0,
+      0.0,
+      0.0,
+      0.4857142857142857
+    ],
+    "per_grade_recall": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "per_grade_auroc": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "macro_auroc": 0.5,
+    "multiclass_brier": 1.3584905660377358,
+    "ordinal_mae": 0.9622641509433962,
+    "quadratic_weighted_kappa": 0.0,
+    "clinical_validation": false,
+    "healthy_mgi0_supported": false
+  },
+  "notice": "Provisional labels; non-clinical; non-final; participant independence unverified."
+}

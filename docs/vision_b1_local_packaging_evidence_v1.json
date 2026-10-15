@@ -1,0 +1,260 @@
+{
+  "date": "2026-10-15",
+  "branch": "vinuthan",
+  "local_package": {
+    "directory": "data/vision/pp1_b1_dev_v1_20261015T085436527238Z",
+    "manifest_sha256": "8e7ff195009a5e781c216795fd2a943db17a0b3ec8fd1c84760f3bf9878a4c9f",
+    "verification": {
+      "status": "PASS",
+      "records": 733,
+      "model_arrays": 733,
+      "full_cam_arrays": 3,
+      "files": 737,
+      "manifest_sha256": "8e7ff195009a5e781c216795fd2a943db17a0b3ec8fd1c84760f3bf9878a4c9f"
+    },
+    "archive_pending_independent_verification": false,
+    "peak_rss_bytes": 216186880,
+    "archive": "data/vision/pp1_b1_dev_v1_20261015T085436527238Z.zip",
+    "bytes": 732575501,
+    "sha256": "a8a4f7f339c589f81335d7afb663f4cf62d30e217f65bc480683d0a770afed70",
+    "status": "PASS",
+    "elapsed_seconds": 104.57531945899245,
+    "source_hashes_verified_before_and_after": 733,
+    "held_excluded": 181,
+    "test_payloads_accessed": false,
+    "training_performed": false,
+    "cloud_upload_performed": false
+  },
+  "package_mib": 698.6384401321411,
+  "package_peak_rss_mib": 206.171875,
+  "source_compatibility": {
+    "compatible": 733,
+    "incompatible": 0,
+    "unknown": 0,
+    "source_headers_and_sha_matches": 733,
+    "profile_families": 1,
+    "profile_qualification": {
+      "2b8daf8cabe783b17f801e6687f57016b53c775a826269e21c51313083c9fefc": {
+        "profile_sha256": "2b8daf8cabe783b17f801e6687f57016b53c775a826269e21c51313083c9fefc",
+        "codes_checked": 16777216,
+        "xyz_max_abs": 1.0266460404029232e-7,
+        "lab_max_delta_e76": 0.000014583714298036063,
+        "lcms_lab_delta_e76": 0.000027880253137618567,
+        "minimum": -0.6639457941055298,
+        "maximum": 1.1581836938858032
+      }
+    }
+  },
+  "source_plan_sha256": "7f7600b03ab209995324b53926bc283e6194bd65c381db73ecb5920958bcbf59",
+  "contract_sha256": "81c5f2179ab3827fdf543a140fa4e616a8031e76aa02882c573c5100d3e438ef",
+  "independent_verification": {
+    "files": 737,
+    "full_cam_arrays": 3,
+    "manifest_sha256": "8e7ff195009a5e781c216795fd2a943db17a0b3ec8fd1c84760f3bf9878a4c9f",
+    "model_arrays": 733,
+    "records": 733,
+    "status": "PASS"
+  },
+  "local_isolated_runtime": {
+    "status": "INCOMPLETE",
+    "scope": "generated-only local-export and four-grade pilot runtime verification",
+    "local_diagnostic": true,
+    "environment": {
+      "python": "3.12.14",
+      "platform": "Darwin",
+      "numpy": "2.3.5",
+      "Pillow": "12.3.0",
+      "pytest": "9.1.1",
+      "torch": null,
+      "torchvision": null
+    },
+    "dependency_error": "ModuleNotFoundError: No module named 'torch'",
+    "counts": {
+      "total": 71,
+      "passed": 68,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 3
+    },
+    "backend_tests": {
+      "test_resnet50_four_output_optimization_and_frozen_batchnorm_weights_none": "skipped",
+      "test_four_class_gradcam_geometry_and_hook_cleanup_weights_none": "skipped",
+      "test_four_class_synthetic_checkpoint_loading_and_reproducibility": "skipped"
+    },
+    "pytest_exit_code": 0,
+    "source_unchanged": true,
+    "RUN_PILOT": false,
+    "dental_images_accessed": false,
+    "dental_training_performed": false,
+    "synthetic_optimizer_checks_requested": true,
+    "synthetic_optimizer_checks_executed": false,
+    "pretrained_weights": null,
+    "acceptance_passed": false
+  },
+  "local_runtime_evidence_directory": "/Users/vinuthanvinuthan/Desktop/RP-J26-IT-458/data/vision/b1_local_attempt_v1_20261015T085436527238Z/code_handoff_preparation",
+  "code_zip": {
+    "path": "/Users/vinuthanvinuthan/Desktop/RP-J26-IT-458/docs/vision_b1_pilot_code_v1.zip",
+    "bytes": 101516,
+    "sha256": "eba79c8f5539edf5014546986466157688f261397c05d9a63437ef768c40de30",
+    "source_files": 20
+  },
+  "notebook": {
+    "path": "/Users/vinuthanvinuthan/Desktop/RP-J26-IT-458/docs/vision_b1_pilot_colab_v1.ipynb",
+    "sha256": "29c84909b4beba0b9766756544611f2f2bb23b2a4087cba86ed4a9b67b978f29",
+    "json_and_python_cells_checked": true,
+    "formal_nbformat_validator_available": false
+  },
+  "weights": {
+    "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+    "weight_enum": "ResNet50_Weights.IMAGENET1K_V2",
+    "official_url": "https://download.pytorch.org/models/resnet50-11ad3fa6.pth",
+    "expected_path": "/Users/vinuthanvinuthan/.cache/torch/hub/checkpoints/resnet50-11ad3fa6.pth",
+    "sha256": null,
+    "status": "missing_or_invalid",
+    "torch_installed": false,
+    "torchvision_installed": false,
+    "download_attempted": false
+  },
+  "protocol": {
+    "version": "pp1-b1-mgi1to4-pilot-v1",
+    "grades": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "research_schema_unchanged": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "training": {
+      "architecture": "resnet50",
+      "batch_size": 16,
+      "epochs": 5,
+      "learning_rate": 0.001,
+      "patience": 2,
+      "seed": 42,
+      "min_delta": 0,
+      "freeze_backbone": true,
+      "unfreeze_prefixes": [],
+      "batchnorm": "frozen",
+      "class_weight": "none",
+      "weight_decay": 0,
+      "device": "cuda"
+    },
+    "early_stopping": "Validation_four_grade_macro_F1",
+    "augmentation": "none_for_bounded_initial_head_only_pilot",
+    "weights": "ResNet50_Weights.IMAGENET1K_V2",
+    "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+    "healthy_mgi0_supported": false,
+    "final_research": false
+  },
+  "training_derived_majority_baseline": {
+    "derived_from": "Training_only",
+    "majority_mgi_grade": 4,
+    "training_support": [
+      12,
+      84,
+      223,
+      361
+    ],
+    "validation": {
+      "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+      "mgi_grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "n": 53,
+      "support": [
+        1,
+        13,
+        22,
+        17
+      ],
+      "accuracy": 0.32075471698113206,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          13
+        ],
+        [
+          0,
+          0,
+          0,
+          22
+        ],
+        [
+          0,
+          0,
+          0,
+          17
+        ]
+      ],
+      "macro_f1_four_grades": 0.12142857142857143,
+      "per_grade_f1": [
+        0,
+        0,
+        0,
+        0.4857142857142857
+      ],
+      "per_grade_recall": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "per_grade_auroc": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "macro_auroc": 0.5,
+      "multiclass_brier": 1.3584905660377358,
+      "ordinal_mae": 0.9622641509433962,
+      "quadratic_weighted_kappa": 0,
+      "clinical_validation": false,
+      "healthy_mgi0_supported": false
+    }
+  },
+  "clinical_or_final_training_approval": false,
+  "real_training_performed": false,
+  "cloud_upload_performed": false,
+  "next_action": "Owner runs code-only Colab generated verification, leaves RUN_PILOT=False, returns actual evidence ZIP.",
+  "preservation": {
+    "branch": "vinuthan",
+    "original_code_and_instructions_unchanged": 12,
+    "existing_log_prefixes_preserved": 2,
+    "frozen_draft_unchanged": true,
+    "data_outputs_ignored": true,
+    "new_status_entries": [
+      "?? docs/vision_b1_local_export_contract_v1.md",
+      "?? docs/vision_b1_local_packaging_evidence_v1.json",
+      "?? docs/vision_b1_local_packaging_results_v1.md",
+      "?? docs/vision_b1_pilot_code_v1.zip",
+      "?? docs/vision_b1_pilot_colab_handoff_v1.md",
+      "?? docs/vision_b1_pilot_colab_v1.ipynb",
+      "?? src/vision/b1_development_bundle_v1.py",
+      "?? src/vision/b1_jpeg_source_v1.py",
+      "?? src/vision/build_b1_pilot_handoff_v1.py",
+      "?? src/vision/exploratory_pilot_b1_v1.py",
+      "?? src/vision/verify_b1_pilot_runtime_v1.py",
+      "?? tests/test_b1_local_export_v1.py",
+      "?? tests/test_exploratory_pilot_b1_v1.py"
+    ],
+    "removed_status_entries": []
+  }
+}

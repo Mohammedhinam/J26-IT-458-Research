@@ -1,0 +1,182 @@
+{
+  "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+  "epochs": [
+    {
+      "epoch": 1,
+      "training": {
+        "loss": 1.0699452806921566,
+        "predicted_counts": [
+          11,
+          1,
+          10,
+          658
+        ],
+        "macro_f1": 0.18130204231195274
+      },
+      "validation": {
+        "loss": 1.1739498354353994,
+        "predicted_counts": [
+          0,
+          0,
+          0,
+          53
+        ],
+        "macro_f1": 0.12142857142857143
+      }
+    },
+    {
+      "epoch": 2,
+      "training": {
+        "loss": 0.9849036349969752,
+        "predicted_counts": [
+          0,
+          1,
+          62,
+          617
+        ],
+        "macro_f1": 0.22879130341190398
+      },
+      "validation": {
+        "loss": 1.204403283461085,
+        "predicted_counts": [
+          0,
+          0,
+          0,
+          53
+        ],
+        "macro_f1": 0.12142857142857143
+      }
+    },
+    {
+      "epoch": 3,
+      "training": {
+        "loss": 0.9407684564590454,
+        "predicted_counts": [
+          0,
+          2,
+          99,
+          579
+        ],
+        "macro_f1": 0.2669213936892443
+      },
+      "validation": {
+        "loss": 1.226433646004155,
+        "predicted_counts": [
+          0,
+          0,
+          0,
+          53
+        ],
+        "macro_f1": 0.12142857142857143
+      }
+    }
+  ],
+  "best_epoch": 1,
+  "references": {
+    "grades": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "training_priors": [
+      0.01764705882352941,
+      0.12352941176470589,
+      0.32794117647058824,
+      0.5308823529411765
+    ],
+    "proposed_training_only_balanced_weights": [
+      14.166666984558105,
+      2.0238094329833984,
+      0.7623318433761597,
+      0.4709141254425049
+    ],
+    "proposal_activated": false,
+    "training_prior_baseline": {
+      "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+      "mgi_grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "n": 53,
+      "support": [
+        1,
+        13,
+        22,
+        17
+      ],
+      "accuracy": 0.32075471698113206,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          13
+        ],
+        [
+          0,
+          0,
+          0,
+          22
+        ],
+        [
+          0,
+          0,
+          0,
+          17
+        ]
+      ],
+      "macro_f1_four_grades": 0.12142857142857143,
+      "per_grade_f1": [
+        0.0,
+        0.0,
+        0.0,
+        0.4857142857142857
+      ],
+      "per_grade_recall": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "per_grade_auroc": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "macro_auroc": 0.5,
+      "multiclass_brier": 0.730868071423908,
+      "ordinal_mae": 0.9622641509433962,
+      "quadratic_weighted_kappa": 0.0,
+      "clinical_validation": false,
+      "healthy_mgi0_supported": false
+    }
+  },
+  "validation_all_grade4_each_epoch": true,
+  "training_metrics_are_online": true,
+  "root_cause_established": false,
+  "limitations": [
+    "Training metrics accumulate changing weights within each epoch, not one frozen checkpoint.",
+    "No per-image logits/features or initial-head snapshot exist in these aggregate results.",
+    "Imbalance and pretrained-input domain shift are hypotheses, not proven causes.",
+    "The four-output pilot currently ignores class_weight in its loss; recorded mode was none."
+  ],
+  "scope": "existing aggregate results and source review; no image arrays or checkpoints loaded",
+  "focused_tests": {
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0
+  },
+  "checkpoint_inspection_executed": false,
+  "source_result_archive_sha256": "4aa51bc52b3f313363dd88c3e56a299fb8c48a9c27f53bb1ae5114cf7f3181c4",
+  "historical_source_files_preserved": 20
+}

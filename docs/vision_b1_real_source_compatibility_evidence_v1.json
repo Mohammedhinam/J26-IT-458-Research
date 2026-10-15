@@ -1,0 +1,173 @@
+{
+  "schema": "b1-real-source-header-compatibility-preflight-v1",
+  "date": "2026-10-15",
+  "branch": "vinuthan",
+  "status": "FAIL",
+  "scope": "Read-only development JPEG headers and ICC structures; no RGB decoding",
+  "classification": {
+    "total": 733,
+    "compatible": 0,
+    "incompatible": 733,
+    "unknown": 0,
+    "original_split_counts": {
+      "Training": 680,
+      "Validation": 53
+    },
+    "newly_inspected": {
+      "Training": 679,
+      "Validation": 53,
+      "total": 732
+    },
+    "cached_only": {
+      "Training": 1,
+      "Validation": 0,
+      "total": 1,
+      "source_id": "Training/00004"
+    },
+    "classification_caveat": "Compatibility with the current frozen B1 profile contract, not clinical quality or completed real-source conversion."
+  },
+  "cached_evidence": {
+    "prior_full_source_sha256_matches": 733,
+    "fresh_full_source_hashes_this_preflight": 0,
+    "prior_header_checks_passed": 733,
+    "source_inventory_records_matching_plan": 733,
+    "source_plan_digest": "7f7600b03ab209995324b53926bc283e6194bd65c381db73ecb5920958bcbf59",
+    "training_00004": {
+      "original_sha256": "7f77c3c96c9fa924b8c35eec3e3074d9f10ddb525b3ebd2bae1f567b62c35e7e",
+      "evidence": "Existing hash-bound detailed diagnostic establishes curv single-gamma TRCs, unsupported by frozen B1.",
+      "reopened_this_preflight": false,
+      "profile_identity_with_newly_inspected_sources": "Not established; not assumed"
+    },
+    "source_selection": {
+      "selected": 733,
+      "held_development_excluded": 181,
+      "np015_selected": 0,
+      "protected_or_uncertain_selected": 0,
+      "test_selected": 0,
+      "known_cross_split_content_collisions": 0,
+      "provenance": "Reused pinned source plan and existing split/group evidence"
+    }
+  },
+  "newly_inspected_headers": {
+    "count": 732,
+    "jpeg": {
+      "sof_marker_decimal": {
+        "192": 732
+      },
+      "precision_bits": {
+        "8": 732
+      },
+      "components": {
+        "3": 732
+      },
+      "orientation": {
+        "1": 732
+      },
+      "geometry_matches_cached_inventory": 732,
+      "malformed_exif_structures": 0,
+      "exif_colour_space_enum": {
+        "65535": 732
+      },
+      "decoder_compatibility": "Baseline sequential 8-bit three-component JPEG headers; actual decoding not performed"
+    },
+    "icc": {
+      "unique_profiles": 1,
+      "sha256": "2b8daf8cabe783b17f801e6687f57016b53c775a826269e21c51313083c9fefc",
+      "bytes": 480,
+      "major_version": 2,
+      "profile_class": "mntr",
+      "colour_space": "RGB",
+      "pcs": "XYZ",
+      "tags": [
+        "bTRC",
+        "bXYZ",
+        "cprt",
+        "desc",
+        "gTRC",
+        "gXYZ",
+        "rTRC",
+        "rXYZ",
+        "wtpt"
+      ],
+      "trcs": {
+        "channels": 3,
+        "type": "curv",
+        "count": 1,
+        "gamma": 2.19921875
+      },
+      "chad_present": false,
+      "header_illuminant_d50": true,
+      "wtpt_approximately_d50": false,
+      "wtpt_approximately_d65": true,
+      "rgb_matrix_present_positive_stable": true,
+      "matrix_row_sums_approximately_d50": true,
+      "disallowed_extra_tag_signatures": [],
+      "frozen_b1_parser_rejections": 732,
+      "frozen_b1_parser_first_error": "Unsupported ICC header/PCS",
+      "independently_identified_support_mismatches": [
+        "ICC_version_2_not_v4",
+        "unsupported_TRC_type",
+        "required_chad_missing",
+        "required_D50_wtpt_mismatch"
+      ]
+    },
+    "metadata_presence_only": {
+      "exif": 732,
+      "datetime": 732,
+      "gps_ifd": 732,
+      "makernote": 732,
+      "xmp": 732,
+      "jpeg_comment": 0,
+      "app13_opaque": 0,
+      "private_metadata_values_extracted_or_saved": false,
+      "gps_coordinates_examined": false,
+      "caveat": "GPS IFD presence does not establish a location leak; no coordinates were traversed."
+    }
+  },
+  "cached_selected_geometry": [
+    {
+      "count": 731,
+      "width": 7286,
+      "height": 4863
+    },
+    {
+      "count": 2,
+      "width": 6969,
+      "height": 4641
+    }
+  ],
+  "source_preservation": {
+    "selected_live_stat_identities_unchanged": 733,
+    "stat_fields": [
+      "device",
+      "inode",
+      "size",
+      "mtime_ns",
+      "ctime_ns"
+    ],
+    "newly_inspected_header_digests_unchanged_on_second_read": 732,
+    "first_pass_header_bytes_read": 18770890,
+    "preservation_aggregate_sha256": "0cade979dc19aac495af0f0f892d9c04dcab00da20cce6c8955716cf7126255c",
+    "scan_entropy_bytes_read": 0,
+    "rgb_pixel_decodes": 0,
+    "source_writes": 0,
+    "caveat": "Full-source SHA evidence is cached. Current preservation uses live stat identities and repeated header digests; entropy-coded payloads were not rehashed."
+  },
+  "remaining_unknowns": [
+    "Real JPEG decoding and memory behaviour in a future B1 adapter",
+    "Independent numerical qualification of observed ICCv2 matrix/single-gamma and D50/D65 adaptation semantics",
+    "Actual real-source extended-float conversion and full-cohort colour precision",
+    "Real packaging permissions and all existing non-final label/training gates"
+  ],
+  "next_action": "Separately authorize a generated-only versioned ICCv2 matrix/single-gamma support qualification with independent white-point/adaptation references; do not remove frozen checks or activate real processing.",
+  "prohibited_actions_performed": {
+    "real_rgb_decode": false,
+    "test_payload_access": false,
+    "image_export": false,
+    "packaging": false,
+    "training": false,
+    "policy_changes": false,
+    "install_or_download": false,
+    "commit_or_push": false
+  }
+}

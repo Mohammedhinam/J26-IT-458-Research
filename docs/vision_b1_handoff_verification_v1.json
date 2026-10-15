@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-15",
+  "branch": "vinuthan",
+  "scope": "code-only handoff preparation; no Colab run",
+  "zip_sha256": "d848e87d49c32f259c20ec1127bc6aab0e22e4a825df34dc4bf86522109324ba",
+  "zip_bytes": 60800,
+  "notebook_sha256": "b74f84e0737694700344e7b479b42dbcac6f21b94eea923bd2d3d667b7d0fc95",
+  "manifest_sha256": "5eea8d5689bfd705689f99fbc41cb64a80074f4b52c26b475ff0a485f8af9c19",
+  "code_and_test_file_count": 11,
+  "files_sha256": {
+    "src/vision/colour_b1_prototype.py": "d3108ea3bf7f310f1b46960174d4936299ece19d762f4ca1ee9d900572b90856",
+    "src/vision/colour_policy.py": "2bba567545143687f49b6e3ae63fdd72d1eacc10977d5ec373f00a4b5451a97b",
+    "src/vision/colour_qa.py": "4ad2b81c715b01e624b527d1971cc303740ddf559461f2d953c831956c1e82e3",
+    "src/vision/exploratory_bundle.py": "dda776ca1558ed4da795df7cee47c0fe19d382cf32c37ca89d22f4141974b615",
+    "src/vision/exploratory_bundle_v4.py": "c914cc05ad2be4ff08873a5d2270b5836e0f84219a539435beeca09b57ad76cd",
+    "src/vision/exploratory_pilot.py": "c5bf6cba173390f914a44c4537b91d4f2a8e150aa0f5e4842c2ca94bb1a4d535",
+    "src/vision/gamut_mapping_feasibility.py": "41cd1d49fcebbb08d45fa1951755d4141a4611630ed9b081f26e5a9b273f368a",
+    "src/vision/model_pipeline.py": "c11ad18912575f3567d0baf0eefb1bfbb5eb00fbfa075880fe84aef1ccd34b3c",
+    "src/vision/train_pipeline.py": "e7a979b0875af0e459496bca79ce3c80e594acf2639ea7dc9d8659ec75ffc695",
+    "src/vision/verify_b1_runtime.py": "bc5f2a2fe17f4e4321d80680b821d93c1b576c607440e29c6331bfe6de3e52f5",
+    "tests/test_colour_b1_prototype.py": "db9fb9307b6453f0252ff9d1aef6c2541ca1ec829930e8f803818af122f63e85"
+  },
+  "fresh_isolation_result": {
+    "status": "INCOMPLETE",
+    "scope": "generated-only B1 runtime verification",
+    "local_diagnostic": true,
+    "RUN_PILOT": false,
+    "real_images_accessed": false,
+    "training_performed": false,
+    "pretrained_weights": null,
+    "production_active": false,
+    "colab_execution_claimed_by_this_preparation": false,
+    "counts": {
+      "total": 77,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 2,
+      "passed": 75
+    },
+    "backend_tests": {
+      "test_resnet50_unclipped_forward_weights_none": "skipped",
+      "test_resnet50_gradcam_frozen_backbone_hooks_and_alignment_weights_none": "skipped"
+    },
+    "pytest_exit_code": 0,
+    "imports_isolated": true,
+    "source_unchanged": true,
+    "acceptance_passed": false
+  },
+  "source_hashes_before": {
+    "src/vision/colour_b1_prototype.py": "d3108ea3bf7f310f1b46960174d4936299ece19d762f4ca1ee9d900572b90856",
+    "src/vision/colour_policy.py": "2bba567545143687f49b6e3ae63fdd72d1eacc10977d5ec373f00a4b5451a97b",
+    "src/vision/colour_qa.py": "4ad2b81c715b01e624b527d1971cc303740ddf559461f2d953c831956c1e82e3",
+    "src/vision/exploratory_bundle.py": "dda776ca1558ed4da795df7cee47c0fe19d382cf32c37ca89d22f4141974b615",
+    "src/vision/exploratory_bundle_v4.py": "c914cc05ad2be4ff08873a5d2270b5836e0f84219a539435beeca09b57ad76cd",
+    "src/vision/exploratory_pilot.py": "c5bf6cba173390f914a44c4537b91d4f2a8e150aa0f5e4842c2ca94bb1a4d535",
+    "src/vision/gamut_mapping_feasibility.py": "41cd1d49fcebbb08d45fa1951755d4141a4611630ed9b081f26e5a9b273f368a",
+    "src/vision/model_pipeline.py": "c11ad18912575f3567d0baf0eefb1bfbb5eb00fbfa075880fe84aef1ccd34b3c",
+    "src/vision/train_pipeline.py": "e7a979b0875af0e459496bca79ce3c80e594acf2639ea7dc9d8659ec75ffc695",
+    "src/vision/verify_b1_runtime.py": "bc5f2a2fe17f4e4321d80680b821d93c1b576c607440e29c6331bfe6de3e52f5",
+    "tests/test_colour_b1_prototype.py": "db9fb9307b6453f0252ff9d1aef6c2541ca1ec829930e8f803818af122f63e85"
+  },
+  "source_hashes_after": {
+    "src/vision/colour_b1_prototype.py": "d3108ea3bf7f310f1b46960174d4936299ece19d762f4ca1ee9d900572b90856",
+    "src/vision/colour_policy.py": "2bba567545143687f49b6e3ae63fdd72d1eacc10977d5ec373f00a4b5451a97b",
+    "src/vision/colour_qa.py": "4ad2b81c715b01e624b527d1971cc303740ddf559461f2d953c831956c1e82e3",
+    "src/vision/exploratory_bundle.py": "dda776ca1558ed4da795df7cee47c0fe19d382cf32c37ca89d22f4141974b615",
+    "src/vision/exploratory_bundle_v4.py": "c914cc05ad2be4ff08873a5d2270b5836e0f84219a539435beeca09b57ad76cd",
+    "src/vision/exploratory_pilot.py": "c5bf6cba173390f914a44c4537b91d4f2a8e150aa0f5e4842c2ca94bb1a4d535",
+    "src/vision/gamut_mapping_feasibility.py": "41cd1d49fcebbb08d45fa1951755d4141a4611630ed9b081f26e5a9b273f368a",
+    "src/vision/model_pipeline.py": "c11ad18912575f3567d0baf0eefb1bfbb5eb00fbfa075880fe84aef1ccd34b3c",
+    "src/vision/train_pipeline.py": "e7a979b0875af0e459496bca79ce3c80e594acf2639ea7dc9d8659ec75ffc695",
+    "src/vision/verify_b1_runtime.py": "bc5f2a2fe17f4e4321d80680b821d93c1b576c607440e29c6331bfe6de3e52f5",
+    "tests/test_colour_b1_prototype.py": "db9fb9307b6453f0252ff9d1aef6c2541ca1ec829930e8f803818af122f63e85"
+  },
+  "module_origins": {
+    "src.vision.model_pipeline": "/private/var/folders/c1/fl3y9gyx70n_tqh_56lc_k0w0000gn/T/rp_b1_isolated_v1_ida2oem0/src/vision/model_pipeline.py",
+    "src.vision.colour_b1_prototype": "/private/var/folders/c1/fl3y9gyx70n_tqh_56lc_k0w0000gn/T/rp_b1_isolated_v1_ida2oem0/src/vision/colour_b1_prototype.py",
+    "src.vision.exploratory_bundle": "/private/var/folders/c1/fl3y9gyx70n_tqh_56lc_k0w0000gn/T/rp_b1_isolated_v1_ida2oem0/src/vision/exploratory_bundle.py",
+    "src.vision.colour_qa": "/private/var/folders/c1/fl3y9gyx70n_tqh_56lc_k0w0000gn/T/rp_b1_isolated_v1_ida2oem0/src/vision/colour_qa.py",
+    "src.vision.colour_policy": "/private/var/folders/c1/fl3y9gyx70n_tqh_56lc_k0w0000gn/T/rp_b1_isolated_v1_ida2oem0/src/vision/colour_policy.py",
+    "src.vision.gamut_mapping_feasibility": "/private/var/folders/c1/fl3y9gyx70n_tqh_56lc_k0w0000gn/T/rp_b1_isolated_v1_ida2oem0/src/vision/gamut_mapping_feasibility.py",
+    "test_colour_b1_prototype": "/private/var/folders/c1/fl3y9gyx70n_tqh_56lc_k0w0000gn/T/rp_b1_isolated_v1_ida2oem0/tests/test_colour_b1_prototype.py",
+    "src.vision.exploratory_bundle_v4": "/private/var/folders/c1/fl3y9gyx70n_tqh_56lc_k0w0000gn/T/rp_b1_isolated_v1_ida2oem0/src/vision/exploratory_bundle_v4.py"
+  },
+  "local_environment": {
+    "python": "3.12.14",
+    "platform": "macOS-26.1-arm64-arm-64bit",
+    "executable": "/Users/vinuthanvinuthan/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "execution_device": "cpu",
+    "numpy": "2.3.5",
+    "Pillow": "12.3.0",
+    "pytest": "9.1.1",
+    "torch": null,
+    "torchvision": null,
+    "littlecms2": "2.19",
+    "cpu_binary_compatibility": "FAIL",
+    "backend_errors": [
+      "ModuleNotFoundError: No module named 'torch'"
+    ],
+    "dependency_errors": []
+  },
+  "acceptance_checks": {
+    "all_77_and_both_backends_required": true,
+    "skipped_rejects_pass": true,
+    "failed_rejects_pass": true,
+    "errors_rejects_pass": true,
+    "backend_missing_rejects_pass": true,
+    "backend_duplicate_rejects_pass": true,
+    "backend_skipped_rejects_pass": true,
+    "wrong_case_count_rejected": true,
+    "process_failure_rejected": true,
+    "source_change_rejected": true,
+    "import_escape_rejected": true,
+    "dependency_failure_rejected": true
+  },
+  "missing_dependency_detected_before_zip": true,
+  "notebook_failure_evidence_simulation": true,
+  "colab_executed": false,
+  "real_data_accessed": false,
+  "packages_installed": false,
+  "local_dependency_note": "Only existing pure pytest dependency path appended after bundled runtime site-packages; no repo source path used."
+}
