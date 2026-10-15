@@ -607,3 +607,176 @@ function formatBytes(
   );
 
 }
+
+
+const EXPLAIN_API_URL = "http://127.0.0.1:8000/explain";
+
+const explainCondition = document.getElementById(
+  "explainCondition"
+);
+
+const generateGradcamBtn = document.getElementById(
+  "generateGradcamBtn"
+);
+
+const gradcamLoading = document.getElementById(
+  "gradcamLoading"
+);
+
+const gradcamError = document.getElementById(
+  "gradcamError"
+);
+
+const gradcamResults = document.getElementById(
+  "gradcamResults"
+);
+
+const gradcamOriginal = document.getElementById(
+  "gradcamOriginal"
+);
+
+const gradcamHeatmap = document.getElementById(
+  "gradcamHeatmap"
+);
+
+const gradcamOverlay = document.getElementById(
+  "gradcamOverlay"
+);
+
+let explainRequestId = 0;
+
+
+function clearGradcam() {
+  explainRequestId++;
+
+  gradcamResults.classList.add("hidden");
+  gradcamError.classList.add("hidden");
+  gradcamLoading.classList.add("hidden");
+
+  gradcamOriginal.removeAttribute("src");
+  gradcamHeatmap.removeAttribute("src");
+  gradcamOverlay.removeAttribute("src");
+
+  generateGradcamBtn.disabled = !currentFile;
+}
+
+
+generateGradcamBtn.addEventListener(
+  "click",
+  async function () {
+    if (!currentFile) {
+      gradcamError.textContent =
+        "Please upload a dental image first.";
+
+      gradcamError.classList.remove("hidden");
+      return;
+    }
+
+    const requestId = ++explainRequestId;
+
+    const fileToExplain = currentFile;
+    const selectedCondition = explainCondition.value;
+
+    gradcamResults.classList.add("hidden");
+    gradcamError.classList.add("hidden");
+    gradcamLoading.classList.remove("hidden");
+
+    generateGradcamBtn.disabled = true;
+
+    const formData = new FormData();
+
+    formData.append("condition", selectedCondition);
+    formData.append("file", fileToExplain);
+
+    try {
+      const response = await fetch(
+        EXPLAIN_API_URL,
+        {
+          method: "POST",
+          body: formData
+        }
+      );
+
+      const data = await response.json();
+
+      if (requestId !== explainRequestId) {
+        return;
+      }
+
+      if (!response.ok) {
+        throw new Error(
+          typeof data.detail === "string"
+            ? data.detail
+            : "Grad-CAM generation failed."
+        );
+      }
+
+      if (
+        !data.images ||
+        !data.images.original ||
+        !data.images.heatmap ||
+        !data.images.overlay
+      ) {
+        throw new Error(
+          "The API did not return all three images."
+        );
+      }
+
+      gradcamOriginal.src = data.images.original;
+      gradcamHeatmap.src = data.images.heatmap;
+      gradcamOverlay.src = data.images.overlay;
+
+      document.getElementById(
+        "gradcamConditionText"
+      ).textContent =
+        displayNames[data.condition] || data.condition;
+
+      document.getElementById(
+        "gradcamProbability"
+      ).textContent =
+        (Number(data.probability) * 100).toFixed(2) + "%";
+
+      document.getElementById(
+        "gradcamLayer"
+      ).textContent = data.target_layer;
+
+      document.getElementById(
+        "gradcamStatus"
+      ).textContent = data.status;
+
+      document.getElementById(
+        "gradcamLimitation"
+      ).textContent =
+        data.limitations ||
+        "Grad-CAM is exploratory and not clinically validated.";
+
+      gradcamResults.classList.remove("hidden");
+
+    } catch (error) {
+      if (requestId !== explainRequestId) {
+        return;
+      }
+
+      gradcamError.textContent =
+        error.message || "Unable to generate Grad-CAM.";
+
+      gradcamError.classList.remove("hidden");
+
+    } finally {
+      if (requestId === explainRequestId) {
+        gradcamLoading.classList.add("hidden");
+        generateGradcamBtn.disabled = !currentFile;
+      }
+    }
+  }
+);
+
+
+// Clear old explanations when the user changes an image.
+imageInput.addEventListener("change", clearGradcam);
+
+// Clear old explanations when the condition changes.
+explainCondition.addEventListener("change", clearGradcam);
+
+// Clear explanation results when the existing reset button is used.
+resetBtn.addEventListener("click", clearGradcam);

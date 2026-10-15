@@ -315,74 +315,91 @@
     </section>
 
 
-    <section class="conditions-section">
+    
+<section class="explainability-section" id="explainabilitySection">
+  <div class="panel">
+    <div class="panel-heading">
+      <span class="step-number">03</span>
+      <div>
+        <h3>AI Explainability — Grad-CAM</h3>
+        <p>
+          Explore which image regions influence the
+          selected preliminary AI model output.
+        </p>
+      </div>
+    </div>
 
-      <div class="section-title">
+    <div class="explain-controls">
+      <label for="explainCondition">Select Condition</label>
 
-        <span>
-          TARGET CONDITIONS
-        </span>
+      <select id="explainCondition">
+        <option value="open_bite">Open Bite</option>
+        <option value="crossbite">Crossbite</option>
+        <option value="crowding">Crowding</option>
+      </select>
 
-        <h3>
-          Malocclusion categories included
-          in the research
-        </h3>
+      <button
+        type="button"
+        id="generateGradcamBtn"
+        class="primary-btn"
+        disabled
+      >
+        Generate Grad-CAM
+      </button>
+    </div>
 
+    <div id="gradcamLoading" class="hidden gradcam-message">
+      <div class="spinner"></div>
+      <p>Generating Grad-CAM visualization...</p>
+    </div>
+
+    <div id="gradcamError" class="error-box hidden"></div>
+
+    <div id="gradcamResults" class="hidden">
+      <div class="gradcam-grid">
+        <div class="gradcam-image-card">
+          <h4>Original Dental Image</h4>
+          <img id="gradcamOriginal" alt="Original dental image" />
+        </div>
+
+        <div class="gradcam-image-card">
+          <h4>Grad-CAM Heatmap</h4>
+          <img id="gradcamHeatmap" alt="Grad-CAM activation heatmap" />
+        </div>
+
+        <div class="gradcam-image-card">
+          <h4>Grad-CAM Overlay</h4>
+          <img id="gradcamOverlay" alt="Grad-CAM overlay" />
+        </div>
       </div>
 
-
-      <div class="condition-info-grid">
-
-        <article>
-          <h4>
-            Crossbite
-          </h4>
-
-          <p>
-            Abnormal relationship where upper
-            teeth may bite inside lower teeth.
-          </p>
-        </article>
-
-
-        <article>
-          <h4>
-            Open Bite
-          </h4>
-
-          <p>
-            Upper and lower teeth fail to make
-            normal contact in part of the bite.
-          </p>
-        </article>
-
-
-        <article>
-          <h4>
-            Crowding
-          </h4>
-
-          <p>
-            Limited dental arch space may cause
-            displacement or overlapping of teeth.
-          </p>
-        </article>
-
-
-        <article>
-          <h4>
-            Spacing
-          </h4>
-
-          <p>
-            Visible or excessive spaces occur
-            between teeth.
-          </p>
-        </article>
-
+      <div class="gradcam-details">
+        <p>
+          <strong>Condition:</strong>
+          <span id="gradcamConditionText"></span>
+        </p>
+        <p>
+          <strong>Model probability:</strong>
+          <span id="gradcamProbability"></span>
+        </p>
+        <p>
+          <strong>Feature layer:</strong>
+          <span id="gradcamLayer"></span>
+        </p>
+        <p>
+          <strong>Generation status:</strong>
+          <span id="gradcamStatus"></span>
+        </p>
       </div>
 
-    </section>
+      <div class="gradcam-notice">
+        <strong>Explainability Limitation</strong>
+        <p id="gradcamLimitation"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   </main>
 

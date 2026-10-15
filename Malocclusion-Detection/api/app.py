@@ -2,11 +2,12 @@ from pathlib import Path
 
 import numpy as np
 import tensorflow as tf
-from fastapi import FastAPI, File, UploadFile, HTTPException
+from fastapi import FastAPI, File, Form, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
 import io
 from api.severity import attach_severity_to_prediction
+from api.gradcam_service import generate_explanation
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -286,3 +287,84 @@ async def predict(
                 "not be interpreted as a dental diagnosis."
             ),
     }
+
+
+
+@app.post("/explain")
+async def explain(
+    condition: str = Form(...),
+    file: UploadFile = File(...)
+):
+    allowed_conditions = {
+        "crossbite",
+        "open_bite",
+        "crowding",
+    }
+
+    if condition not in allowed_conditions:
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                "Unsupported condition for Grad-CAM. "
+                "Choose crossbite, open_bite or crowding."
+            )
+        )
+
+    if condition not in models:
+        raise HTTPException(
+            status_code=503,
+            detail="Requested model is not loaded."
+        )
+
+    if file.content_type not in {
+        "image/jpeg",
+        "image/png",
+    }:
+        raise HTTPException(
+            status_code=400,
+            detail="Only JPEG and PNG images are supported."
+        )
+
+    max_size = 5 * 1024 * 1024
+
+    image_bytes = await file.read(max_size + 1)
+
+    if not image_bytes:
+        raise HTTPException(
+            status_code=400,
+            detail="Uploaded image is empty."
+        )
+
+    if len(image_bytes) > max_size:
+        raise HTTPException(
+            status_code=413,
+            detail="Maximum image size is 5 MB."
+        )
+
+    try:
+        explanation = generate_explanation(
+            model=models[condition],
+            condition=condition,
+            image_bytes=image_bytes
+        )
+
+        return explanation
+
+    except (ValueError, OSError) as error:
+        raise HTTPException(
+            status_code=400,
+            detail=str(error)
+        )
+
+    except Exception as error:
+        print(
+            f"[GRADCAM ERROR] {condition}: {error}"
+        )
+
+        raise HTTPException(
+            status_code=500,
+            detail=(
+                "Grad-CAM generation failed. "
+                "Check the backend logs."
+            )
+        )

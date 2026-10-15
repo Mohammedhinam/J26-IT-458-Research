@@ -1176,3 +1176,141 @@ footer {
   }
 
 }
+
+
+/* Grad-CAM Explainability Section */
+
+.explainability-section {
+  padding: 24px 0 50px;
+}
+
+.explain-controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.explain-controls label {
+  width: 100%;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 13px;
+}
+
+.explain-controls select {
+  min-width: 230px;
+  flex: 1;
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: white;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.explain-controls .primary-btn {
+  margin-top: 0;
+  width: auto;
+  min-width: 200px;
+}
+
+.gradcam-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.gradcam-image-card {
+  min-width: 0;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.gradcam-image-card h4 {
+  font-size: 14px;
+  color: var(--primary);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.gradcam-image-card img {
+  display: block;
+  width: 100%;
+  height: 225px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #0f172a;
+}
+
+.gradcam-details {
+  margin-top: 20px;
+  padding: 18px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.gradcam-details p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.gradcam-details p:last-child {
+  margin-bottom: 0;
+}
+
+.gradcam-details strong {
+  color: var(--primary-dark);
+}
+
+.gradcam-notice {
+  margin-top: 18px;
+  background: var(--warning-bg);
+  border: 1px solid #f1d28a;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.gradcam-notice strong {
+  color: var(--warning);
+}
+
+.gradcam-notice p {
+  margin-top: 8px;
+  color: #715717;
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+.gradcam-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 10px;
+  color: var(--muted);
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .gradcam-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gradcam-image-card img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .explain-controls select,
+  .explain-controls .primary-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
