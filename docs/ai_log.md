@@ -352,3 +352,12 @@ Prompt summary: Owner authorized committing and pushing pending Component 2 work
 What was accepted / rejected: feat: add weighted B1 pilot and verified comparison evidence. Raw datasets, model weights, environments, OS files and unrelated root diagram excluded; original code/evidence unchanged.
 How I verified it: Current branch vinuthan and matching remote baseline confirmed; explicit path staging, source AST/JSON-notebook parsing, 18 archive CRC/content checks and staged data/model exclusion checks. Existing measured test/evidence records reused; no new experiment or test-performance claim.
 What I changed myself: Versioned this logical batch plus factual logs; no implementation, dataset, label, split or research-gate change. Commit and push outcomes are reported from actual Git commands.
+
+
+Date: 2026-10-15
+Tool: Codex
+Task: Publish existing Component 2 work, scoped batch 10/10
+Prompt summary: Owner authorized committing and pushing pending Component 2 work only on vinuthan.
+What was accepted / rejected: feat: add bounded B1 fine-tuning and verified v3 results. Raw datasets, model weights, environments, OS files and unrelated root diagram excluded; original code/evidence unchanged.
+How I verified it: Current branch vinuthan and matching remote baseline confirmed; explicit path staging, source AST/JSON-notebook parsing, 18 archive CRC/content checks and staged data/model exclusion checks. Existing measured test/evidence records reused; no new experiment or test-performance claim.
+What I changed myself: Versioned this logical batch plus factual logs; no implementation, dataset, label, split or research-gate change. Commit and push outcomes are reported from actual Git commands.

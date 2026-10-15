@@ -1,0 +1,41 @@
+# Execute ONCE only after the preceding exact33-case generated PASS.
+assert lastblock_verify.require_pass(lastblock_root/'lastblock_synthetic_evidence_v3')==lastblock_proof
+owner_v3=json.loads((lastblock_root/lastblock_manifest['owner_record']).read_text())
+assert lastblock.trainer.digest(lastblock.protocol())==owner_v3['protocol_sha256']
+assert lastblock.trainer.digest(lastblock.code_hashes())==owner_v3['code_sha256']
+from datetime import datetime,timezone
+import gc,shutil
+lastblock_run_id='pp1_b1_lastblock_v3_'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
+lastblock_output=Path('/content/b1_pp1_pilot/results')/lastblock_run_id
+lastblock_auth={**owner_v3,'verification_sha256':lastblock_proof,'output_run_id':lastblock_run_id}
+lastblock_auth.pop('runtime_bindings_pending',None)
+gc.collect();torch.cuda.empty_cache()
+print(lastblock.legacy.NOTICE,flush=True)
+print('ONE stage from verified v2 best: final bottleneck convs+head, ALL BatchNorm frozen; max5 additional epochs, patience2.',flush=True)
+lastblock_results=lastblock.run_pilot(data_root,Path(balanced_output)/'best.pt',lastblock_auth,lastblock_output,
+                                     lastblock_root/'lastblock_synthetic_evidence_v3',opt_in=True)
+assert lastblock_verify.snapshot(lastblock_root,lastblock_manifest['files'])==lastblock_manifest['files']
+unweighted_ref=json.loads((lastblock_root/lastblock_manifest['references'][0]).read_text())
+weighted_ref=json.loads((lastblock_root/lastblock_manifest['references'][1]).read_text())
+lastblock_comparison={'notice':lastblock.legacy.NOTICE,'unweighted_historical_validation':unweighted_ref['validation'],
+    'weighted_historical_validation':weighted_ref['independent_probability_metric_calculations'],
+    'new_stage_best_epoch':lastblock_results['best_epoch'],'new_stage_validation':lastblock_results['best_validation'],
+    'optimizer_groups':lastblock_results['optimizer_groups'],'frozen_tensor_checks':lastblock_results['frozen_tensor_checks'],
+    'measured_runtime':lastblock_results['measured_runtime'],
+    'selection_optimism':'Repeated Validation/checkpoint selection; not final held-out or clinical evaluation',
+    'participant_independence_verified':False,'qualified_labels_approved':False,'test_used':False}
+lastblock.base.bundle.write_json(lastblock_output/'comparison.json',lastblock_comparison)
+shutil.copyfile(lastblock_root/lastblock_manifest['owner_record'],lastblock_output/'owner_record.json')
+shutil.copytree(lastblock_root/'lastblock_synthetic_evidence_v3',lastblock_output/'synthetic_verification')
+for name in ('source_hashes_before.json','source_hashes_after.json'):
+    lastblock.base.bundle.write_json(lastblock_output/name,lastblock_manifest['files'])
+assert len(list((lastblock_output/'gradcam').glob('*/*.png')))==9
+assert len(json.loads((lastblock_output/'validation_predictions_best.json').read_text())['records'])==53
+for name in ('best.pt','last.pt','initial_tensor_hashes.json','selected_tensor_hashes.json','pilot_results.json'):
+    assert (lastblock_output/name).is_file()
+lastblock_hashes={str(p.relative_to(lastblock_output)):lastblock.legacy.sha256(p) for p in sorted(lastblock_output.rglob('*')) if p.is_file()}
+lastblock.base.bundle.write_json(lastblock_output/'results_file_hashes.json',lastblock_hashes)
+print(json.dumps(lastblock_comparison,indent=2,allow_nan=False))
+lastblock_results_zip=shutil.make_archive('/content/'+lastblock_run_id+'_results','zip',lastblock_output)
+print('Actual new-stage results ZIP:',lastblock_results_zip,'SHA256:',lastblock.legacy.sha256(lastblock_results_zip))
+files.download(lastblock_results_zip)

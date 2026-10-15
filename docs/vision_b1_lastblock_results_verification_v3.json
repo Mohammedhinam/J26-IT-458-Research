@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-15",
+  "scope": "actual owner-run ONE last-bottleneck v3 results evidence review",
+  "original_archive": "/Users/vinuthanvinuthan/Downloads/pp1_b1_lastblock_v3_20261015T155608744170Z_results.zip",
+  "archive_bytes": 252199944,
+  "sha256": "c79f16cf59b268f86a5a4c4b6a3482636e374cb67629895f38e55dbb1eaf0d70",
+  "crc_passed": true,
+  "unique_file_entries": 27,
+  "directory_entries": 5,
+  "payload_hashes_verified": 26,
+  "source_hashes_verified": 22,
+  "owner_code_protocol_initial_checkpoint_weights_manifest_runtime_output_bindings_passed": true,
+  "embedded_generated_qualification": {
+    "total": 33,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 33
+  },
+  "epochs_completed": 5,
+  "best_epoch": 5,
+  "validation_records_matched_to_pinned_manifest": 53,
+  "independent_probability_metrics": {
+    "accuracy": 0.5094339622641509,
+    "macro_f1_four_grades": 0.3258723683251985,
+    "macro_auroc": 0.627263982328024,
+    "multiclass_brier": 0.6593119656006611,
+    "ordinal_mae": 0.5849056603773585,
+    "quadratic_weighted_kappa": 0.2549852893102321
+  },
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      10,
+      2
+    ],
+    [
+      0,
+      0,
+      15,
+      7
+    ],
+    [
+      1,
+      0,
+      5,
+      11
+    ]
+  ],
+  "per_grade_recall": [
+    0.0,
+    0.07692307692307693,
+    0.6818181818181818,
+    0.6470588235294118
+  ],
+  "per_grade_f1": [
+    0.0,
+    0.14285714285714285,
+    0.5660377358490566,
+    0.5945945945945946
+  ],
+  "per_grade_auroc": [
+    0.6538461538461539,
+    0.6711538461538461,
+    0.47653958944281527,
+    0.7075163398692811
+  ],
+  "predicted_grade_counts": [
+    1,
+    1,
+    31,
+    20
+  ],
+  "unweighted_ce_probability_recalculation_difference": 1.080741207637459e-08,
+  "weighted_ce_probability_recalculation": 1.6807530920795966,
+  "frozen_hash_evidence": {
+    "frozen_tensors_compared": 315,
+    "unexpected_changes": [],
+    "changed_trainable_names": [
+      "fc.bias",
+      "fc.weight",
+      "layer4.2.conv1.weight",
+      "layer4.2.conv2.weight",
+      "layer4.2.conv3.weight"
+    ],
+    "all_frozen_tensors_unchanged": true
+  },
+  "initial_model_tensor_hash_count": 320,
+  "checkpoint_payload_hashes": {
+    "best.pt": "36dd33662e277d3770995bf406f714b71231e77846a4a6a01ef418864259b2ee",
+    "last.pt": "019c1de23d6ce72e98de16135dbb2064f72711de64642d7cd85f9f6e6bfe47e9"
+  },
+  "checkpoint_internal_zip_crc_passed": true,
+  "local_checkpoint_tensor_deserialization_performed": false,
+  "optimizer_groups": [
+    {
+      "name": "head",
+      "lr": 0.001,
+      "parameters": 8196
+    },
+    {
+      "name": "last_bottleneck",
+      "lr": 1e-05,
+      "parameters": 4456448
+    }
+  ],
+  "measured_runtime": {
+    "fit_and_cam_seconds": 41.786847899998975,
+    "peak_gpu_allocated_bytes": 395552768
+  },
+  "gradcam": [
+    {
+      "source_record_id": "Validation/00733",
+      "predicted_mgi_grade": 4,
+      "explanation_status": "ok",
+      "view_dimensions": [
+        1200,
+        801
+      ],
+      "original_preview_byte_identical_to_v2": true
+    },
+    {
+      "source_record_id": "Validation/00734",
+      "predicted_mgi_grade": 3,
+      "explanation_status": "ok",
+      "view_dimensions": [
+        1200,
+        801
+      ],
+      "original_preview_byte_identical_to_v2": true
+    },
+    {
+      "source_record_id": "Validation/00766",
+      "predicted_mgi_grade": 4,
+      "explanation_status": "ok",
+      "view_dimensions": [
+        1200,
+        801
+      ],
+      "original_preview_byte_identical_to_v2": true
+    }
+  ],
+  "no_new_tests_training_inference_or_test_access_during_review": true,
+  "limitations": [
+    "Repeated development Validation/checkpoint selection optimism",
+    "Labels provisional; participant independence unverified",
+    "No whole-image MGI0 support",
+    "Grade1 Validation support only1 and recall0; grade2 recall1/13",
+    "AUROC declined despite better argmax classification and Brier; no final-model or clinical-success claim"
+  ],
+  "paired_v2_v3_correctness": {
+    "both_correct": 7,
+    "v2_only_correct": 11,
+    "v3_only_correct": 20,
+    "both_wrong": 15
+  },
+  "peak_gpu_allocated_mib": 377.228515625
+}
