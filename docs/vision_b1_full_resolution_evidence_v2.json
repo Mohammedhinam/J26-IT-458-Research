@@ -1,0 +1,226 @@
+{
+  "date": "2026-10-15",
+  "branch": "vinuthan",
+  "scope": "generated-only full-resolution B1 v2 qualification",
+  "prior_colab": {
+    "evidence_zip_sha256": "5e9b8f6e1e35f370455fc90250bd1fe2d8bcf5d7afa14317d487a218ddb06845",
+    "evidence_zip_bytes": 7759,
+    "verification": {
+      "status": "PASS",
+      "scope": "generated-only B1 runtime verification",
+      "local_diagnostic": false,
+      "RUN_PILOT": false,
+      "real_images_accessed": false,
+      "training_performed": false,
+      "pretrained_weights": null,
+      "production_active": false,
+      "colab_execution_claimed_by_this_preparation": false,
+      "counts": {
+        "total": 77,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 77
+      },
+      "backend_tests": {
+        "test_resnet50_unclipped_forward_weights_none": "passed",
+        "test_resnet50_gradcam_frozen_backbone_hooks_and_alignment_weights_none": "passed"
+      },
+      "pytest_exit_code": 0,
+      "imports_isolated": true,
+      "source_unchanged": true,
+      "acceptance_passed": true
+    },
+    "environment": {
+      "python": "3.13.16",
+      "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+      "executable": "/usr/bin/python3",
+      "execution_device": "cpu",
+      "numpy": "2.1.3",
+      "Pillow": "11.3.0",
+      "pytest": "8.4.2",
+      "torch": "2.11.0+cpu",
+      "torchvision": "0.26.0+cpu",
+      "littlecms2": "2.17",
+      "torch_runtime": "2.11.0+cpu",
+      "torchvision_runtime": "0.26.0+cpu",
+      "cpu_binary_compatibility": "PASS",
+      "backend_errors": [],
+      "dependency_errors": []
+    },
+    "eleven_current_source_hashes_match": true,
+    "evidence_payload_hashes_verified": 10
+  },
+  "new_focused_tests": {
+    "tests": 57,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 57
+  },
+  "new_runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pillow": "12.3.0",
+    "platform": "macOS-26.1-arm64-arm-64bit"
+  },
+  "stream_contract": {
+    "version": "b1-generated-full-v2",
+    "scope": "generated_only_not_production",
+    "base_contract_sha256": "bc5e3dde1dfc0baed568ab428bcc73c16c2af50270d85ec34402626a268a313b",
+    "max_side": 16384,
+    "max_pixels": 40000000,
+    "tile_pixels": 65536,
+    "full_dtype": "<f4",
+    "layout": "HWC_C",
+    "npy_version": [
+      1,
+      0
+    ],
+    "source_hash": "generated_uint8_rgb_row_major_bytes",
+    "model_sampling": "same_v1_float32_before_bilinear",
+    "stress_peak_rss_limit_bytes": 536870912
+  },
+  "stream_contract_sha256": "5396d9aa77989dedba702e28ba1fa1ee3970d073da1b226bb6a35c3b1855d761",
+  "stress_measurements": [
+    {
+      "generated_only": true,
+      "dimensions_wh": [
+        1024,
+        768
+      ],
+      "pixels": 786432,
+      "full_payload_bytes": 9437184,
+      "baseline_post_import_peak_rss_bytes": 38912000,
+      "peak_rss_bytes": 58245120,
+      "incremental_high_water_bytes": 19333120,
+      "rss_units": "ru_maxrss bytes on macOS, KiB converted to bytes on Linux",
+      "rss_scope": "process peak incl Python/imports; not current baseline RSS",
+      "wall_seconds": 0.1208322079910431,
+      "memory_budget_pass": true,
+      "tile_pixel_cap": 65536,
+      "numeric": {
+        "xyz_max_abs": 8.330094258823806e-08,
+        "lab_max_delta_e76": 5.356925272809683e-06,
+        "peak_chunk_pixels": 65536
+      },
+      "full_array_evidence": {
+        "sha256": "ac16c5750535d6c1fa534843f6e471897a33e7cb7abbce8030137b98f291f895",
+        "bytes": 9437312,
+        "shape": [
+          768,
+          1024,
+          3
+        ],
+        "minimum": -0.13156165182590485,
+        "maximum": 1.006840467453003,
+        "negative_samples": 39652,
+        "above_one_samples": 19827
+      },
+      "model_array_evidence": {
+        "sha256": "4face6ed22327aae5d6010ce64d73f24e90f7b7d641bc3ccb8341f3ca1f108d7",
+        "bytes": 602240,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "minimum": -0.11229155957698822,
+        "maximum": 0.8752793073654175,
+        "negative_samples": 2612,
+        "above_one_samples": 0
+      },
+      "original_size_wh": [
+        1024,
+        768
+      ],
+      "valid_box": [
+        0,
+        28,
+        224,
+        168
+      ],
+      "normalized_shape": [
+        3,
+        224,
+        224
+      ],
+      "verified": true,
+      "real_data_accessed": false
+    },
+    {
+      "generated_only": true,
+      "dimensions_wh": [
+        4096,
+        3072
+      ],
+      "pixels": 12582912,
+      "full_payload_bytes": 150994944,
+      "baseline_post_import_peak_rss_bytes": 38748160,
+      "peak_rss_bytes": 59817984,
+      "incremental_high_water_bytes": 21069824,
+      "rss_units": "ru_maxrss bytes on macOS, KiB converted to bytes on Linux",
+      "rss_scope": "process peak incl Python/imports; not current baseline RSS",
+      "wall_seconds": 1.634834750002483,
+      "memory_budget_pass": true,
+      "tile_pixel_cap": 65536,
+      "numeric": {
+        "xyz_max_abs": 8.330094258823806e-08,
+        "lab_max_delta_e76": 5.356925272809683e-06,
+        "peak_chunk_pixels": 65536
+      },
+      "full_array_evidence": {
+        "sha256": "a7e8fe04c1b7be332113940c338d6c06c2be5b2655017f5f4e5137c9091c9567",
+        "bytes": 150995072,
+        "shape": [
+          3072,
+          4096,
+          3
+        ],
+        "minimum": -0.13156165182590485,
+        "maximum": 1.006840467453003,
+        "negative_samples": 634433,
+        "above_one_samples": 317217
+      },
+      "model_array_evidence": {
+        "sha256": "73a45278d451ccbd6204774aef54e58aef2fe59f903c2d3b5ceaf314a4efeb49",
+        "bytes": 602240,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "minimum": -0.1121787577867508,
+        "maximum": 0.875024676322937,
+        "negative_samples": 2228,
+        "above_one_samples": 0
+      },
+      "original_size_wh": [
+        4096,
+        3072
+      ],
+      "valid_box": [
+        0,
+        28,
+        224,
+        168
+      ],
+      "normalized_shape": [
+        3,
+        224,
+        224
+      ],
+      "verified": true,
+      "real_data_accessed": false
+    }
+  ],
+  "new_files_sha256": {
+    "src/vision/colour_b1_streaming.py": "5b3a6bc893d1f6fc451c74e69f4865de00565b91bd19dc935baee6476cc5ec67",
+    "src/vision/measure_b1_streaming.py": "6e37c4d3087cea5d4c1d327502d6ba3e701a61a654ae64c2767bb7f9de0e12d4",
+    "tests/test_colour_b1_streaming.py": "7fd706e5e923f98444856fca5dcb95436c88670018d35ba0de2deba410abd54f"
+  },
+  "real_data_accessed": false,
+  "packaging_performed": false,
+  "prior_colab_repeated": false,
+  "production_activated": false
+}

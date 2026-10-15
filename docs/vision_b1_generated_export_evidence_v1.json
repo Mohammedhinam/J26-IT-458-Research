@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-15",
+  "branch": "vinuthan",
+  "status": "PASS_generated_only_integration",
+  "focused_counts": {
+    "tests": 48,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 48
+  },
+  "pytest_seconds": 24.538,
+  "generated_complete_case": {
+    "records": 733,
+    "payload_files": 1469,
+    "archive_bytes": 3746909,
+    "archive_sha256": "90593a7b42024e0ca3f7feeca7250e635c7024c09be5ffba1048af9761a5a1e7",
+    "manifest_sha256": "947c68e053efcc67478d7742797472fa327ac6b8154446fe0e06cdcb09226e5b",
+    "counts": {
+      "Training": 680,
+      "Validation": 53
+    },
+    "holds": 181,
+    "full_cam_count": 3,
+    "model_min": -0.13156165182590485,
+    "model_max": 1.0068248510360718,
+    "real_packaging_authorized": false
+  },
+  "contract": {
+    "version": "pp1-b1-generated-export-v1",
+    "scope": "generated_only_not_production",
+    "base": "bc5e3dde1dfc0baed568ab428bcc73c16c2af50270d85ec34402626a268a313b",
+    "streaming": "5396d9aa77989dedba702e28ba1fa1ee3970d073da1b226bb6a35c3b1855d761",
+    "counts": {
+      "Training": 680,
+      "Validation": 53
+    },
+    "holds": 181,
+    "cam_ids": [
+      "Validation/00733",
+      "Validation/00734",
+      "Validation/00766"
+    ],
+    "mgi_schema": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "pilot": "supported_grades_1_to_4_exploration_only_no_model_change",
+    "real_source_enabled": false,
+    "research_training_gate_changed": false
+  },
+  "contract_sha256": "048d3ef1237cdbe1365be751c7435517655c6709c7b98ba923edd8f00db81517",
+  "bound_code_sha256": "128b05ee426b39127050583fc3f6b9dfb2922e105bc97a31d27226df106bd1d9",
+  "source_code_hashes": {
+    "exploratory_bundle_b1.py": "01b20dc64f82c9d6d4108ba847f28073bdd7fe8fc4ccd4255119a2fe219d896b",
+    "colour_b1_streaming.py": "5b3a6bc893d1f6fc451c74e69f4865de00565b91bd19dc935baee6476cc5ec67",
+    "colour_b1_prototype.py": "d3108ea3bf7f310f1b46960174d4936299ece19d762f4ca1ee9d900572b90856",
+    "model_pipeline.py": "c11ad18912575f3567d0baf0eefb1bfbb5eb00fbfa075880fe84aef1ccd34b3c",
+    "train_pipeline.py": "e7a979b0875af0e459496bca79ce3c80e594acf2639ea7dc9d8659ec75ffc695",
+    "exploratory_bundle.py": "dda776ca1558ed4da795df7cee47c0fe19d382cf32c37ca89d22f4141974b615",
+    "exploratory_bundle_v4.py": "c914cc05ad2be4ff08873a5d2270b5836e0f84219a539435beeca09b57ad76cd",
+    "exploratory_pilot.py": "c5bf6cba173390f914a44c4537b91d4f2a8e150aa0f5e4842c2ca94bb1a4d535",
+    "gamut_mapping_feasibility.py": "41cd1d49fcebbb08d45fa1951755d4141a4611630ed9b081f26e5a9b273f368a",
+    "colour_qa.py": "4ad2b81c715b01e624b527d1971cc303740ddf559461f2d953c831956c1e82e3",
+    "colour_policy.py": "2bba567545143687f49b6e3ae63fdd72d1eacc10977d5ec373f00a4b5451a97b"
+  },
+  "new_files_sha256": {
+    "src/vision/exploratory_bundle_b1.py": "01b20dc64f82c9d6d4108ba847f28073bdd7fe8fc4ccd4255119a2fe219d896b",
+    "tests/test_exploratory_bundle_b1.py": "a577869587a3eb516ead83ba2f1fa6832a699781a91a406c2325b710dc596068"
+  },
+  "runtime_python": "3.12.14",
+  "old_77_colab_repeated": false,
+  "old_57_fullres_repeated": false,
+  "data_scope": "generated_only_not_production",
+  "real_dataset_or_ICC_accessed": false,
+  "real_packaging_authorized": false,
+  "model_schema": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "four_output_model_approved": false,
+  "production_activation": false
+}
