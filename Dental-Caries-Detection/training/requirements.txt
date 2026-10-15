@@ -1,0 +1,15 @@
+# Optional future training environment. Not needed to run the web application.
+# Installing dependencies does not download pretrained model weights.
+# YOLOv8 localization
+ultralytics>=8.3,<9.0
+# MobileNetV2, EfficientNet-B0, and Grad-CAM
+torch>=2.6,<3.0
+torchvision>=0.21,<1.0
+grad-cam>=1.5,<2.0
+# Data processing, evaluation, and notebooks
+numpy>=1.26,<3.0
+pandas>=2.2,<3.0
+scikit-learn>=1.6,<2.0
+matplotlib>=3.9,<4.0
+Pillow>=11.0,<13.0
+jupyterlab>=4.3,<5.0

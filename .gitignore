@@ -25,3 +25,28 @@ __pycache__/
 runs/
 *.pt
 *.onnx
+
+# Python environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Node.js
+node_modules/
+dist/
+
+# Environment secrets
+.env
+.env.local
+
+# Dental Caries datasets
+Dental-Caries-Detection/datasets/raw/
+Dental-Caries-Detection/datasets/processed/
+
+# Dental Caries model weights
+Dental-Caries-Detection/models/*.pth
+Dental-Caries-Detection/models/*.ckpt
+
+# Local training outputs
+Dental-Caries-Detection/results/
