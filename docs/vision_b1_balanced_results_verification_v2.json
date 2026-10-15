@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-15",
+  "scope": "actual owner-run single weighted comparison evidence verification",
+  "original_archive": "/Users/vinuthanvinuthan/Downloads/pp1_b1_balanced_v2_20261015T150352287886Z_results.zip",
+  "archive_bytes": 185389594,
+  "sha256": "ab9d61f3d59c807b9181e6937f1099364f3cc06dda6607745bdf5fc11cae8a82",
+  "crc_passed": true,
+  "unique_file_entries": 26,
+  "payload_hashes_verified": 25,
+  "source_hashes_verified": 19,
+  "owner_code_protocol_weights_manifest_verification_bindings_passed": true,
+  "embedded_synthetic_qualification": {
+    "passed": 27,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "epochs_completed": 3,
+  "best_epoch": 1,
+  "validation_records_matched_to_pinned_manifest": 53,
+  "independent_probability_metric_calculations": {
+    "accuracy": 0.33962264150943394,
+    "macro_f1_four_grades": 0.22935407296351823,
+    "macro_auroc": 0.6700157224706561,
+    "multiclass_brier": 0.7004947088114788,
+    "ordinal_mae": 0.9056603773584906,
+    "quadratic_weighted_kappa": 0.16730360934182598
+  },
+  "per_grade_auroc_recomputed": [
+    0.7884615384615384,
+    0.698076923076923,
+    0.47947214076246336,
+    0.7140522875816994
+  ],
+  "confusion_matrix": [
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      12,
+      0,
+      1
+    ],
+    [
+      0,
+      20,
+      1,
+      1
+    ],
+    [
+      0,
+      12,
+      0,
+      5
+    ]
+  ],
+  "predicted_counts_mgi1_to4": [
+    0,
+    45,
+    1,
+    7
+  ],
+  "true_support_mgi1_to4": [
+    1,
+    13,
+    22,
+    17
+  ],
+  "per_grade_precision": [
+    null,
+    0.26666666666666666,
+    1.0,
+    0.7142857142857143
+  ],
+  "ce_from_probabilities": 1.267956827933765,
+  "ce_abs_difference": 4.260876540485015e-09,
+  "weighted_ce_from_probabilities": 1.321022409552846,
+  "probability_sum_max_error": 6.705522537231445e-08,
+  "gradcam_triplets": {
+    "Validation/00733": {
+      "files": 3,
+      "dimensions": [
+        1200,
+        801
+      ],
+      "metadata_keys": []
+    },
+    "Validation/00734": {
+      "files": 3,
+      "dimensions": [
+        1200,
+        801
+      ],
+      "metadata_keys": []
+    },
+    "Validation/00766": {
+      "files": 3,
+      "dimensions": [
+        1200,
+        801
+      ],
+      "metadata_keys": []
+    }
+  },
+  "checkpoint_hashes": {
+    "initial_head.pt": "e224857fa5d938fbac8ed14745a723142f7a1a030cae890b9122e8fc70d9a97e",
+    "best.pt": "c84936ad7af7366e44e4ae2456c00ba748bae47b983ef9e0df204ce80c386dbf",
+    "last.pt": "a25009d5e3d7e99453e701b922fc4082cc91095f41962478926071f6ce5f2398"
+  },
+  "checkpoint_tensors_loaded_locally": false,
+  "test_used_reported": false,
+  "new_tests_or_training_run_locally": false,
+  "limitations": [
+    "Provisional labels and participant independence unverified.",
+    "One MGI1Validation record and no whole-imageMGI0.",
+    "Repeated Validation-based early stopping/comparison introduces selection optimism.",
+    "Actual weighted backbone tensors not reloaded independently;source/config/generator tests verified instead."
+  ]
+}

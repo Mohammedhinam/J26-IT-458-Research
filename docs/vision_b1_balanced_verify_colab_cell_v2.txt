@@ -1,0 +1,38 @@
+# ONE new cell in the EXISTING completed Colab GPU notebook. No dataset upload.
+from pathlib import Path
+assert all(n in globals() for n in ('data_root','WEIGHT_RECORD','files')), 'STOP: original completed runtime/cache required; do not rerun old training'
+assert Path(data_root)==Path('/content/b1_pp1_pilot/development') and Path(data_root).is_dir()
+import torch,hashlib,json,zipfile,io,tempfile,sys,os,stat,importlib
+assert torch.cuda.is_available(), 'STOP: compatible existing CUDA GPU required'
+assert not Path('/content/drive').exists(), 'STOP: isolated runtime without Drive required'
+weighted_upload=files.upload()  # ONLY vision_b1_balanced_code_v2.zip (code, tests and aggregate reference).
+assert set(weighted_upload)=={'vision_b1_balanced_code_v2.zip'}
+weighted_raw=weighted_upload['vision_b1_balanced_code_v2.zip']
+assert hashlib.sha256(weighted_raw).hexdigest()=='698782ceaf3f387e22a9803036c02cd9188f5184680f16c439684e8b738f0221'
+weighted_archive=zipfile.ZipFile(io.BytesIO(weighted_raw))
+assert weighted_archive.testzip() is None
+balanced_manifest=json.loads(weighted_archive.read('verification_manifest.json'))
+assert len(weighted_archive.namelist())==len(balanced_manifest['files'])+1
+assert set(weighted_archive.namelist())==set(balanced_manifest['files'])|{'verification_manifest.json'}
+weighted_root=Path(tempfile.mkdtemp(prefix='b1_balanced_v2_',dir='/content'))
+for info in weighted_archive.infolist():
+    name=info.filename; relative=Path(name)
+    assert not relative.is_absolute() and '..' not in relative.parts and '\\' not in name
+    assert not info.is_dir() and not stat.S_ISLNK(info.external_attr>>16) and info.file_size<=1024*1024
+    payload=weighted_archive.read(name)
+    if name in balanced_manifest['files']: assert hashlib.sha256(payload).hexdigest()==balanced_manifest['files'][name]
+    target=weighted_root/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(payload)
+sys.path.insert(0,str(weighted_root));os.chdir(weighted_root);importlib.invalidate_caches()
+os.environ['PYTHONDONTWRITEBYTECODE']='1';sys.dont_write_bytecode=True
+from src.vision import exploratory_pilot_b1_balanced_v2 as balanced
+from src.vision import verify_b1_balanced_runtime_v2 as balanced_verify
+for name,digest in balanced.code_hashes().items(): assert digest==balanced_manifest['files']['src/vision/'+name]
+print('Fresh code-only extraction:',weighted_root,'verified files:',len(balanced_manifest['files']))
+balanced_summary=balanced_verify.run(weighted_root)
+print(json.dumps(balanced_summary,indent=2))
+balanced_runtime_zip=balanced_verify.evidence_zip(weighted_root)
+print('Generated evidence SHA256:',balanced.legacy.sha256(balanced_runtime_zip))
+files.download(str(balanced_runtime_zip))
+assert balanced_summary['status']=='PASS', 'STOP: all27 tests must pass, zero skips/errors/failures; do not run next cell'
+balanced_proof=balanced_verify.require_pass(weighted_root/'balanced_synthetic_evidence_v2')
+print('ALL27 SYNTHETIC CASES PASSED. Next cell is the separately authorized ONE weighted real pilot.')

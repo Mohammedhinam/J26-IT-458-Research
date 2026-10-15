@@ -1,0 +1,38 @@
+# Run only AFTER the preceding exact27-case synthetic PASS. This is the ONE authorized real comparison.
+assert balanced_verify.require_pass(weighted_root/'balanced_synthetic_evidence_v2')==balanced_proof
+owner_v2=json.loads((weighted_root/balanced_manifest['owner_record']).read_text())
+assert balanced.trainer.digest(balanced.protocol())==owner_v2['protocol_sha256']
+assert balanced.trainer.digest(balanced.code_hashes())==owner_v2['code_sha256']
+weight_v2=balanced.base.original_pilot.pretrained_status()
+assert weight_v2['status']=='documented_cache_present' and weight_v2['sha256']==owner_v2['weights_sha256'], 'STOP: reuse official existing cache only; do not download'
+from datetime import datetime,timezone
+import gc,shutil
+balanced_run_id='pp1_b1_balanced_v2_'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
+balanced_output=Path('/content/b1_pp1_pilot/results')/balanced_run_id
+balanced_auth={**owner_v2,'verification_sha256':balanced_proof,'output_run_id':balanced_run_id}
+balanced_auth.pop('runtime_bindings_pending',None)
+gc.collect();torch.cuda.empty_cache()
+print(balanced.legacy.NOTICE,flush=True)
+print('Starting ONE class-weighted head-only comparison: max5epochs,patience2; old run remains untouched.',flush=True)
+balanced_results=balanced.run_pilot(data_root,balanced_auth,balanced_output,weighted_root/'balanced_synthetic_evidence_v2',opt_in=True)
+assert balanced_verify.snapshot(weighted_root,balanced_manifest['files'])==balanced_manifest['files']
+reference=json.loads((weighted_root/balanced_manifest['reference']).read_text())
+comparison={'notice':balanced.legacy.NOTICE,'unweighted_historical_reference':reference,
+            'balanced_best_epoch':balanced_results['best_epoch'],'balanced_validation':balanced_results['best_validation'],
+            'selection_optimism':'Repeated Validation selection; not final held-out or clinical evaluation',
+            'participant_independence_verified':False,'qualified_labels_approved':False,'test_used':False}
+balanced.base.bundle.write_json(balanced_output/'comparison.json',comparison)
+shutil.copyfile(weighted_root/balanced_manifest['owner_record'],balanced_output/'owner_record.json')
+shutil.copytree(weighted_root/'balanced_synthetic_evidence_v2',balanced_output/'synthetic_verification')
+for name in ('source_hashes_before.json','source_hashes_after.json'):
+    balanced.base.bundle.write_json(balanced_output/name,balanced_manifest['files'])
+assert len(list((balanced_output/'gradcam').glob('*/*.png')))==9
+assert len(json.loads((balanced_output/'validation_predictions_best.json').read_text())['records'])==53
+for n in ('initial_head.pt','best.pt','last.pt','pilot_results.json'):assert (balanced_output/n).is_file()
+result_hashes={str(p.relative_to(balanced_output)):balanced.legacy.sha256(p) for p in sorted(balanced_output.rglob('*')) if p.is_file()}
+balanced.base.bundle.write_json(balanced_output/'results_file_hashes.json',result_hashes)
+print(json.dumps(comparison,indent=2,allow_nan=False))
+balanced_zip=shutil.make_archive('/content/'+balanced_run_id+'_results','zip',balanced_output)
+print('Actual weighted results ZIP:',balanced_zip)
+print('SHA256:',balanced.legacy.sha256(balanced_zip))
+files.download(balanced_zip)

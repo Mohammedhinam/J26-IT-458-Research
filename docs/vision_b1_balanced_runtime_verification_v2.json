@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-15",
+  "scope": "actual owner-run generated-only weighted comparison verification",
+  "original_path": "/Users/vinuthanvinuthan/Downloads/vision_b1_balanced_runtime_evidence_v2.zip",
+  "retained_path": "/Users/vinuthanvinuthan/Desktop/RP-J26-IT-458/docs/vision_b1_balanced_runtime_evidence_v2.zip",
+  "archive_bytes": 4375,
+  "sha256": "c0f249b67b58f0c408579d02162f0c963dfba12cdad64ee2c83c433527180cda",
+  "crc_passed": true,
+  "evidence_payload_hashes_verified": 5,
+  "exact_junit_cases_verified": 27,
+  "source_hashes_before_after_code_archive_current": 19,
+  "summary": {
+    "status": "PASS",
+    "scope": "generated-only balanced-loss qualification",
+    "environment": {
+      "python": "3.13.15",
+      "platform": "Linux",
+      "torch": "2.11.0+cu130",
+      "torchvision": "0.26.0+cu130",
+      "numpy": "2.1.3",
+      "Pillow": "11.3.0",
+      "pytest": "8.4.2",
+      "cuda_available": true,
+      "gpu": "Tesla T4"
+    },
+    "counts": {
+      "total": 27,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 27
+    },
+    "backend_checks": {
+      "test_weighted_mean_matches_independent_reference_and_all_one_gradients": true,
+      "test_weighted_resnet_step_keeps_initialization_backbone_and_batchnorm": true,
+      "test_generated_weighted_fit_checkpoint_probabilities_and_reproducibility": true,
+      "test_weighted_epoch_uses_weight_sum_and_validation_does_not_update": true
+    },
+    "pytest_exit_code": 0,
+    "source_unchanged": true,
+    "dental_images_accessed": false,
+    "real_training_performed": false,
+    "pretrained_weights": null
+  },
+  "no_local_rerun": true,
+  "real_weighted_training_completed": false,
+  "next_action": "Execute already authorized ONE weighted run cell in same verified runtime."
+}

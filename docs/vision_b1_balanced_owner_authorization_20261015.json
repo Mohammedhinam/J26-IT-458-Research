@@ -1,0 +1,36 @@
+{
+  "status": "owner_confirmed",
+  "scope": "run_cloud_exploratory_b1_balanced_v2",
+  "authorizer": "Vinuthan T (project owner)",
+  "date": "2026-10-15",
+  "evidence_reference": "Owner answered yes in this Codex conversation to implementing the specified single Training-balanced comparison and executing ONE run after synthetic checks pass, following the completed checkpoint diagnostic.",
+  "acknowledgements": {
+    "provisional_labels": true,
+    "non_clinical_non_final": true,
+    "participant_independence_unverified": true,
+    "no_test_access": true,
+    "missing_mgi0_scarce_mgi1": true,
+    "no_final_approval_or_promotion": true
+  },
+  "cloud_upload_authorized": true,
+  "training_authorized": true,
+  "bundle_manifest_sha256": "8e7ff195009a5e781c216795fd2a943db17a0b3ec8fd1c84760f3bf9878a4c9f",
+  "weights_sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+  "protocol_sha256": "37f04194ce87d9122c9dd9fc104c5467ef347d204e2172c7adabd8f6ef489f18",
+  "code_sha256": "1dc2be59546ba819a468ce11d538f294120cdf3d42e1f1e20d507f8a62b2e3a0",
+  "max_epochs": 5,
+  "cohort": {
+    "Training": 680,
+    "Validation": 53
+  },
+  "single_change": "Training-only balanced cross-entropy; existing B1/frozen BN/head-only settings unchanged",
+  "existing_cache_only": true,
+  "new_download_authorized": false,
+  "qualified_labels_approved": false,
+  "participant_independence_verified": false,
+  "final_research_approved": false,
+  "runtime_bindings_pending": [
+    "verification_sha256",
+    "output_run_id"
+  ]
+}
