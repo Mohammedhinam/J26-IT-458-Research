@@ -1,5 +1,6 @@
-
+﻿
 from pathlib import Path
+import os
 import base64
 
 import cv2
@@ -9,14 +10,15 @@ from fastapi.middleware.cors import CORSMiddleware
 from ultralytics import YOLO
 
 BASE_DIR = Path(__file__).resolve().parent
+MODEL_DIR = Path(os.environ.get("DENTAL_MODEL_DIR", str(BASE_DIR)))
 
 PLAQUE_MODEL_PATH = (
-    BASE_DIR / "runs" / "segment"
+    MODEL_DIR / "runs" / "segment"
     / "plaque_yolov8n_baseline" / "weights" / "best.pt"
 )
 
 TARTAR_MODEL_PATH = (
-    BASE_DIR / "runs" / "detect" / "runs" / "detect"
+    MODEL_DIR / "runs" / "detect" / "runs" / "detect"
     / "tartar_yolov8n_baseline" / "weights" / "best.pt"
 )
 
@@ -244,3 +246,4 @@ async def analyze_dental_image(file: UploadFile = File(...)):
             "Not intended for clinical diagnosis."
         )
     }
+
