@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-16",
+  "status": "SOURCE_INTEGRITY_AND_HEADER_PASS_EXTERNAL_RELEASE_BLOCKED",
+  "scope": "Owner-authorized local read-only172candidate preflight; no pixel decoding or packaging",
+  "actual": {
+    "status": "READ_ONLY_COMPLETE_EXTERNAL_RELEASE_BLOCKED",
+    "counts": {
+      "cached_image_sha_matches": {
+        "pass": 172,
+        "fail": 0
+      },
+      "caption_matching": {
+        "pass": 172,
+        "fail": 0
+      },
+      "caption_parser_matches_cached_evidence": {
+        "pass": 172,
+        "fail": 0
+      },
+      "TXT_matches_cached_histogram": {
+        "pass": 172,
+        "fail": 0
+      },
+      "TXT_geometry_in_image": {
+        "pass": 172,
+        "fail": 0
+      },
+      "ROI_counts_valid": {
+        "pass": 172,
+        "fail": 0
+      },
+      "header_supported": {
+        "pass": 172,
+        "fail": 0
+      },
+      "ICC_structure_supported": {
+        "pass": 172,
+        "fail": 0
+      },
+      "as_is_privacy_clear": {
+        "pass": 0,
+        "fail": 172
+      },
+      "source_bytes_and_stat_unchanged": {
+        "pass": 172,
+        "fail": 0
+      }
+    },
+    "selected": 172,
+    "split_counts": {
+      "Training": 43,
+      "Validation": 129
+    },
+    "protected_aliases_excluded": 9,
+    "metadata_presence_counts": {
+      "EXIF": 172,
+      "DateTime": 172,
+      "GPSInfo": 172,
+      "GPS_version_only": 172,
+      "MakerNote": 172,
+      "XMP": 172,
+      "GPS_coordinates_fields": 0,
+      "identity_serial_or_owner_tags": 0,
+      "artist_or_description_tags": 0,
+      "JPEG_comment": 0,
+      "opaque_APP13": 0
+    },
+    "unique_ICC_profiles": {
+      "2b8daf8cabe783b17f801e6687f57016b53c775a826269e21c51313083c9fefc": 172
+    },
+    "dimensions_wh_counts": {
+      "[7286, 4863]": 172
+    },
+    "parsed_caption_variants": 516,
+    "CSV_hashes_unchanged": {
+      "Training": "6f073e3a939e77fa076e3a8d233d45d783beeb86e5760158d13dd0852ec42f63",
+      "Validation": "cf4b695743469b8722738570fb1bca8f2a93fae6a6461619a837eedb27487649"
+    },
+    "cached_inventory_sha256": "0c420ca47fe63f6eeb0a9b613286c6329490eb0a9fecd163671a49760cd0f969",
+    "cached_inventory_usage": "Selected development image hashes/dimensions only; Test/annotation bodies not decoded",
+    "new_RGB_decodes": 0,
+    "colour_conversion_or_export": false,
+    "export_colour_equivalence": "NOT_MEASURED",
+    "case_count": 172,
+    "duration_seconds": 1.3085318329976872,
+    "private_metadata_values_or_ICC_bytes_saved": false,
+    "external_upload_authorized": false,
+    "external_package_created": false,
+    "personal_Gemini_risks_accepted": false,
+    "permission_status": "UNRESOLVED_NO_UPLOAD_AUTHORIZATION",
+    "annotations_historic_bytehash_reference": "Not available here; live hashes/stat preservation and cached semantic evidence checked, not publisher authenticity",
+    "current_read_scope": "172selectedJPEGs/TXTs;two shared developmentCSVs filename-filtered before caption parsing;9protectedaliases not inspected",
+    "labels_or_eligibility_changed": false,
+    "training_commit_push": false
+  },
+  "independent_saved_evidence_verification": {
+    "passed": 14,
+    "failed": 0,
+    "checks": [
+      "172unique matching selected IDs",
+      "43Training129Validation",
+      "all9protectedaliases excluded",
+      "516selectedcaptionvariants",
+      "alltechnical checks exact172pass0fail",
+      "as-isprivacy0pass172fail",
+      "allGPSversiononlynoCoordinates",
+      "all172sameknownICCstructure",
+      "sourceheadersgeometryunchanged",
+      "decisionsunchanged",
+      "mastertracker unchanged",
+      "cachedsourceevidence unchanged",
+      "noexportpayload innewdiagnostics",
+      "owner risk acceptance remains false"
+    ]
+  },
+  "permission_evidence": {
+    "dataset_licence": "CC BY 4.0 confirmed on official version1 record",
+    "licence_source": "https://data.mendeley.com/datasets/3253gj88rr/1",
+    "licence_not_full_privacy_permission": "https://creativecommons.org/licenses/by/4.0/",
+    "personal_Gemini_notice": "https://support.google.com/gemini/answer/13594961?hl=en",
+    "specific_external_processing_consent_or_institutional_permission": "not established from reviewed evidence",
+    "permission_confirmed_candidates": 0,
+    "permission_unknown_candidates": 172,
+    "permission_denied_candidates": 0,
+    "owner_risks_accepted": false,
+    "upload_authorized": false,
+    "local_preflight_authorized": true
+  },
+  "safe_ICC_structure_summary": [
+    {
+      "bytes": 480,
+      "white_family": "D65",
+      "gamma": [
+        2.19921875,
+        2.19921875,
+        2.19921875
+      ],
+      "sources": 172
+    }
+  ],
+  "retained_QA_flags_overlap": {
+    "caption_txt_grade_histogram_disagreement": 16,
+    "annotation_tooth_count_review": 12,
+    "declared_tooth_count_mismatch": 6,
+    "unsupported_grade_clause": 6,
+    "incomplete_caption_positions": 121,
+    "lower_jaw_omission_policy_pending": 121
+  },
+  "diagnostic_artifact_hashes": {
+    "aggregate.json": "696fcfd4efaaa605a71d1b19fe70b84626cce80d25ba2f50c8dfd367504f3ad2",
+    "owner_scope.json": "02ae18fbcdb2e8ebd21e0367adc029c4d75167dbd12589c39296555386f96936",
+    "case_checks.json": "2cc5fbc6229f678459bcbbccd631126e33a74dfac980dbaa9fb5ae73d074c5b0",
+    "failure.json": "ba3334384ddbffc875e228cddd3b8b492d6ec8943d4cd43146afe790fef378c1",
+    "run_preflight.py": "610f7aef5f1ae98aae0d10914ecd058a11dbc94db232ee252f904e2fcb57bea2"
+  },
+  "setup_issue": "Validation CSV has extra V\u00f9ng column. Initial helper stopped before image checks; existing source header inspected, selector adjusted to documented original layout, no source/safety limits changed. Initial failure record retained.",
+  "colour_fidelity_limit": "ICC structure and original byte preservation verified; actual decode/display/export perceptual equivalence and clinical colour validity not evaluated.",
+  "cached_versus_new": "Existing development-only audit hashes/dimensions,held/group evidence,parser/math qualification reused. Fresh172sourcefile hashes before/after,headers/ICC/metadata-presence,172TXTand516caption association/reproduction checks. No new dataset audit.",
+  "no_tests_rerun": true,
+  "no_training_commit_push": true,
+  "report_sha256": "ca589a30be0efef548875e00f662a394676b6e2befc14a45d22efee7993ae9f7"
+}

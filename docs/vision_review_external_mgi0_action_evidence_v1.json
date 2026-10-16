@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-16",
+  "scope": "cached Training52 review checklist plus current public MIO metadata only",
+  "status": "preparation_complete_approvals_pending",
+  "assertions_passed": 14,
+  "assertions_failed": 0,
+  "checks": [
+    "branch",
+    "existing package hash development121_partial_policy_links.csv",
+    "existing package hash index.html",
+    "existing package hash reviewer_instructions.md",
+    "existing package hash training52_cached_evidence.json",
+    "existing package hash training52_review_decisions.csv",
+    "existing package hash build_review_recipe.py",
+    "existing package hash external_metadata_research.json",
+    "52 unique Training IDs",
+    "all cached label/eligibility gates false",
+    "cache remains inactive",
+    "disjoint 2/45/4/1 partition",
+    "nine protected aliases present",
+    "prior conditional recovery bounds retained"
+  ],
+  "cached_evidence_sha256": "65ab81bc6ed28687b7e8ef2a5630de20fe7353212c15b3b3c83277a519b83c20",
+  "cached_verification_sha256": "13662b5b1b8ca9c2059c1cca0db83f0cfa7ec21e5789cc9296fc42da3fbc99bb",
+  "source_records": 52,
+  "queue_counts": {
+    "Annotation referral": 45,
+    "Group companion": 4,
+    "NP015 identity": 1,
+    "Partial caption": 2
+  },
+  "held_development": {
+    "Training": 52,
+    "Validation": 129,
+    "total": 181
+  },
+  "new_eligible": 0,
+  "mio_public_api_observed": {
+    "record_id": 22047269,
+    "doi": "10.5281/zenodo.22047269",
+    "publication_date": "2026-08-21",
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "access_right": "open",
+    "reported_images": 765,
+    "categories": [
+      "Healthy gingiva",
+      "Gingivitis",
+      "Periodontitis"
+    ],
+    "healthy_archive": {
+      "name": "SANO.zip",
+      "size_bytes": 433825820,
+      "published_md5": "bf581c25aa846037b0cac4673de9df90"
+    },
+    "qualified_whole_image_mgi0_count": null,
+    "unknowns": [
+      "MGI rubric equivalence",
+      "healthy archive count/contents",
+      "participant grouping",
+      "actual privacy/metadata",
+      "cross-source comparability"
+    ],
+    "sources": [
+      "https://zenodo.org/records/22047269",
+      "https://zenodo.org/api/records/22047269"
+    ]
+  },
+  "original_images_opened": false,
+  "annotations_opened": false,
+  "Test_payload_access": false,
+  "external_dataset_downloaded": false,
+  "Gemini_used": false,
+  "labels_approved": false,
+  "training_performed": false,
+  "report_sha256": "0739678c68cc71c76cc914379b99092eea0c9bd2afd75365a93dbc1b4259e5a3"
+}

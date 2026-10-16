@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-16",
+  "status": "PASS_LOCAL_PREPARATION_ONLY_EXTERNAL_PACKAGING_BLOCKED",
+  "account_context": {
+    "service": "Personal Gemini web/app",
+    "confirmation_source": "Owner explicit answer to account/service question in this chat",
+    "date": "2026-10-16",
+    "external_upload_approved_by_this_answer": false,
+    "privacy_notice": "https://support.google.com/gemini/answer/13594961?hl=en",
+    "retention_or_human_review_not_eliminated_by_activity_off": true
+  },
+  "local_root": "/Users/vinuthanvinuthan/Desktop/RP-J26-IT-458/data/vision/gingivitis/staging-16669f74665ff0deca6ddd25feb0d233e52fdc2313265465bf91731af1e8956b/gemini_review_preparation_v1_20261016T164212810635Z",
+  "local_master_tracking_rows": 181,
+  "original_splits": {
+    "Training": 52,
+    "Validation": 129
+  },
+  "upload_candidate_records_pending_approval": 172,
+  "protected_Test_aliases_local_only": 9,
+  "proposed_batches": {
+    "Training/batch_01": 15,
+    "Training/batch_02": 14,
+    "Training/batch_03": 14,
+    "Validation/batch_01": 15,
+    "Validation/batch_02": 15,
+    "Validation/batch_03": 15,
+    "Validation/batch_04": 14,
+    "Validation/batch_05": 14,
+    "Validation/batch_06": 14,
+    "Validation/batch_07": 14,
+    "Validation/batch_08": 14,
+    "Validation/batch_09": 14
+  },
+  "actual_images_packaged": 0,
+  "original_caption_or_TXT_payloads_packaged": 0,
+  "upload_ready": false,
+  "focused_tests": {
+    "passed": 8,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "saved_artifact_assertions": {
+    "passed": 59,
+    "failed": 0
+  },
+  "original_source_path_exists_checks": 344,
+  "source_cached_evidence_sha256": "791da6a5fa667962207b01cb7463f643e6e35fcf409351eab2f6f23366d31eac",
+  "master_csv_sha256": "621dbf1b5191a3f1066be06344aacafdbcd0c168f0e45d37951f1ab8aa46115d",
+  "report_sha256": "3e26acfd0a93e3b3a3d50473f804b324d9f374f9e2cf7d7066bb524648850ad4",
+  "code_sha256": "c02cd0f2276e74585d97df2b25401d7e4bad976b5c09a8ad18ee69b8448a06c6",
+  "tests_sha256": "0fc005d809f4d1c91ace9bc7fb27b1ac8318bc65d654701bdd55de7a94e1ad0a",
+  "no_new_labels_eligibility_training_or_cloud_actions": true,
+  "before_after_cached_input_hashes_match": true,
+  "remaining_blockers": [
+    "Owner confirmation of permitted Personal Gemini processing and informed privacy acceptance",
+    "Metadata/privacy and lossless colour/filename-preservation qualification before any real external image export",
+    "Nine protected Test-content aliases must remain outside every upload",
+    "Original three captions and TXT must be selectively copied only after release conditions pass; cached parsed summaries are not original texts"
+  ]
+}
