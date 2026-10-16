@@ -1468,3 +1468,5 @@ What I understood (my own words):
 2026-10-16 — Saved completed vision milestone in a scoped commit at owner request; original data and approval gates preserved.
 
 2026-10-16 — Saved completed tabular milestone in a scoped commit at owner request; original data and approval gates preserved.
+
+2026-10-16 — Saved completed demo milestone in a scoped commit at owner request; original data and approval gates preserved.

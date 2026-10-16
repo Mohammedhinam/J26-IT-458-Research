@@ -583,3 +583,11 @@ Prompt summary: Save completed work in scoped commits and push vinuthan before c
 What was accepted / rejected: Completed code, focused tests and aggregate documentation accepted; datasets, weights, private local evidence and unfinished JPEG helper excluded.
 How I verified it (row counts, output check, docs): Reviewed explicit staging paths, Python AST syntax and existing recorded verification; no model experiments or final evaluation repeated.
 What I changed myself: Owner requested commit/push; owner understanding remains to be filled.
+
+Date: 2026-10-16
+Tool: Codex
+Task: Commit completed demo work on owner request
+Prompt summary: Save completed work in scoped commits and push vinuthan before continuing generated JPEG qualification.
+What was accepted / rejected: Completed code, focused tests and aggregate documentation accepted; datasets, weights, private local evidence and unfinished JPEG helper excluded.
+How I verified it (row counts, output check, docs): Reviewed explicit staging paths, Python AST syntax and existing recorded verification; no model experiments or final evaluation repeated.
+What I changed myself: Owner requested commit/push; owner understanding remains to be filled.

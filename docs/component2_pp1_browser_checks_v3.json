@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "passed": 17,
+  "failed": 0,
+  "checks": {
+    "final_card": true,
+    "three_models": true,
+    "cutoffs_and_limits": true,
+    "original_probability": true,
+    "twelve_shap": true,
+    "scenario": true,
+    "noncausal": true,
+    "reset": true,
+    "vision_population_separate": true,
+    "five_oof_rows": true,
+    "nine_saved_views": true,
+    "photo_disabled": true,
+    "holds_and_missing_class": true,
+    "footer_accurate": true,
+    "mobile_no_page_overflow": true,
+    "mobile_questionnaire_no_page_overflow": true,
+    "no_page_errors": true
+  },
+  "errors": [],
+  "dental_inference": false,
+  "new_training": false,
+  "new_final_evaluation": false
+}

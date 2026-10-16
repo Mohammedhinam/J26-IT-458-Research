@@ -1,0 +1,7 @@
+{
+  "name": "component2-local-demo",
+  "private": true,
+  "version": "2.0.0",
+  "dependencies": {"react": "19.2.0", "react-dom": "19.2.0"},
+  "devDependencies": {"esbuild": "0.25.10"}
+}

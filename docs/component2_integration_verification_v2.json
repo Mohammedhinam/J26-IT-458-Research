@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-16",
+  "scope": "focused local integration/generated Vision checks; not full repository or clinical validation",
+  "counts": {
+    "passed": 98,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "python": "3.13.5",
+  "packages": {
+    "torch": "2.11.0",
+    "torchvision": "0.26.0",
+    "Pillow": "11.3.0",
+    "fastapi": "0.143.2",
+    "uvicorn": "0.54.0",
+    "numpy": "2.5.3",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "shap": "0.52.0",
+    "pytest": "9.1.1"
+  },
+  "MPS_available_and_generated_GradCAM_test_passed": true,
+  "real_vision_inference": false,
+  "real_probe_executed": false,
+  "source_hashes": {
+    "src/tabular/api.py": "ff22afcc5169c8cd079ecf4d59bf8c91a1ad878c8b1d0f5172c9b72d3ea8170d",
+    "src/tabular/subgroup_evidence.py": "e7188351e13fc35c6f50aa535f97046b5f008ab642fe2d95d7f2de43c53ceae0",
+    "src/tabular/local_demo.py": "b6a18aa8c364b386234450308929909172bd3bf99dc7d7a6977dc004d04e6ead",
+    "src/vision/photo_explanation.py": "55ba4c542f4a22586d191d9c1a346e30f26d782879c45a809c5a38ce1fdd27c1",
+    "src/vision/frozen_feature_probe.py": "066747fedc12c77bca129f38705fc7cdc98d829e6e38355226bee8d85b7c6ede",
+    "tests/test_component2_api.py": "3dfcc177dc2bb3e941db8ea4271914e751ad6049ffa6a4aaae1c8bb9b6cb9d91",
+    "tests/test_photo_explanation.py": "ac16a29ace089e2233912a2e839062deee1a041170df63ba09d4e0d65e50c41e",
+    "tests/test_frozen_feature_probe.py": "6ed31a19a16ff608f7a6733532095016cc55a7781722ed61cc3efbc6abc40f82",
+    "tests/test_subgroup_evidence.py": "5c3643ac16aaa2b82b9aff65ce182723c842a585880db11170c4f7334c13d6ab",
+    "src/tabular/ui/App.jsx": "719ab30d74d17a45131d19a11fee70891a2e1b58f22fbbdb1989944ae70355aa",
+    "src/tabular/ui/index.html": "ae309db72cc092609ebc2618306b6097dfe875d19b43380f418887de00d58ffb",
+    "src/tabular/ui/style.css": "fde3a36a5be40abf2758844f17e16cec017387fc6fadaefd569f72866541cf56",
+    "src/tabular/ui/app.js": "758a1c17a5fcb80bad5bacb813d48f5815811f20cd1bfa9ed9f7200af0e03259",
+    "src/tabular/ui/app.js.LEGAL.txt": "573cc95a6417c69a6ca44804f440f00965283c8cdcc50025305a7a50f53940ac",
+    "src/tabular/ui/package.json": "162f2993ad11d54fa5962866a94d18f6034fcb0778a0c47aac96dadf7dadcab4",
+    "src/tabular/ui/package-lock.json": "3733fd530b8f5da9f18f2e000dc1c859d23658ac93d2627e31b8dd2f4546245c",
+    "src/tabular/ui/build.sh": "0c8df683bda9271bba37ce165040098d82486939fd282c14284502e36cd9aa51"
+  },
+  "junit_sha256": "d72ded22df780bb69fa8c1ed408e496df43428912fe7903cf8e92301d3ac2d42",
+  "browser": {
+    "questionnaire_probability_display": "21.41%",
+    "cleaning_7_days_scenario_display": "24.41%",
+    "reset_display": "21.41%",
+    "shap_rows": 12,
+    "saved_views_loaded": 9,
+    "default_new_photo_disabled": true,
+    "mobile_horizontal_overflow": false,
+    "desktop_horizontal_overflow": false,
+    "observed_page_errors": [],
+    "synthetic_photo_prediction_display": "MGI 4",
+    "synthetic_views_dimensions": [
+      [
+        40,
+        24
+      ],
+      [
+        40,
+        24
+      ],
+      [
+        40,
+        24
+      ]
+    ],
+    "synthetic_photo_error_alert": false,
+    "screenshots_visually_checked": [
+      "data/pp1_demo_ui_evidence_v2/questionnaire.png",
+      "data/pp1_demo_ui_evidence_v2/generated_photo.png"
+    ],
+    "initial_automation_retry": "Selector timeout from preselected Vision tab; explicit fresh navigation then passed."
+  },
+  "public_deployment": false,
+  "held_out_payload_access": false,
+  "committed": false,
+  "pushed": false
+}

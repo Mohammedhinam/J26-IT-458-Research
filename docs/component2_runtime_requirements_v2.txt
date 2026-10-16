@@ -1,0 +1,7 @@
+# Optional local Vision + FastAPI demo dependencies; installed with owner permission.
+# Existing tabular requirements remain unchanged.
+torch==2.11.0
+torchvision==0.26.0
+Pillow==11.3.0
+fastapi==0.143.2
+uvicorn==0.54.0

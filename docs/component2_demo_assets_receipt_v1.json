@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-15",
+  "scope": "copy nine previously verified saved v3 RGB display/Grad-CAM views for local-only demo",
+  "source_archive_sha256": "c79f16cf59b268f86a5a4c4b6a3482636e374cb67629895f38e55dbb1eaf0d70",
+  "saved_vision_manifest_sha256": "dfc22bf27d38960fd79e5e9eb268b2818fa45149a51f8f21ea7270826a0de1d7",
+  "files_copied": 9,
+  "case_ids": [
+    "Validation/00733",
+    "Validation/00734",
+    "Validation/00766"
+  ],
+  "source_images_decoded": false,
+  "new_inference": false,
+  "new_training": false,
+  "test_accessed": false,
+  "files": {
+    "00733_original.png": "0246fa006b5b2cd2c33f47f31db92067137a9f6265a8dc9f3743a440387ffbc4",
+    "00733_heatmap.png": "ed3160a8647338aca1404552d6997abb024a0b0b03a8100d976c94d05fbe734f",
+    "00733_overlay.png": "13951d6e65f295cd775e57cae3c4d556a186371a2504487fe0d60e2dc4e79929",
+    "00734_original.png": "f7a8543a17c0f4feec4e47b1c908877d7030456eda15346604a0f023bbfc60bf",
+    "00734_heatmap.png": "96c4831b6e0a5f2583ae9db6f5029c91a4c464410dfba39f647a1b8d1752a516",
+    "00734_overlay.png": "25be1926d80fb0c2f5d20dcc318239a96780e69bbdbc6e532323d8d08cd62638",
+    "00766_original.png": "528d81f7e5984c2d1dfd635ef56666335d48a3a7d77d545be5ccb55c1b86d64c",
+    "00766_heatmap.png": "b75250cc65434f3c42a171a6fa47fdf73bedbcba3b003bab63f6e4ff8fc125cd",
+    "00766_overlay.png": "ab258b1700265d72b567009918f87fc8484aec9b63329cdbbafcd00dd83c1062"
+  }
+}
