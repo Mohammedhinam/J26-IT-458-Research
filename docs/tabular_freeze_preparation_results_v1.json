@@ -1,0 +1,395 @@
+{
+  "date": "2026-10-16",
+  "status": "PREPARED_PENDING_OWNER_NUMERICAL_FREEZE_REVIEW",
+  "scope": "Completed owner-authorized development preparation; not final Test authorization or clinical approval",
+  "receipt_path": "data/tabular_final_freeze_v1_20261016T143007292661Z/freeze_receipt.json",
+  "receipt_sha256": "e08073b43e89ba99982483344e2612f577f46ae8ee0988b2458e5cfc2b8c6e0c",
+  "receipt": {
+    "status": "PREPARED_PENDING_OWNER_NUMERICAL_FREEZE_REVIEW",
+    "protocol": {
+      "version": "tabular-final-preparation-v1",
+      "positive_label": 1,
+      "outcome": "self_reported_previous_gum_treatment",
+      "seed": 42,
+      "source_label_mapping": {
+        "OHQ850=1": 1,
+        "OHQ850=2": 0
+      },
+      "feature_order": [
+        "RIDAGEYR",
+        "INDFMPIR",
+        "OHQ870",
+        "RIAGENDR",
+        "DMDEDUC2",
+        "DMDMARTZ",
+        "OHQ030",
+        "OHQ845",
+        "OHQ860",
+        "OHQ835",
+        "DIQ010",
+        "SMOKING_STATUS"
+      ],
+      "development_n": 6251,
+      "development_yes": 1553,
+      "held_out_n": 1563,
+      "logistic_fits": 6,
+      "xgboost_fits": 0,
+      "calibration": "none_raw",
+      "threshold_grid": "0.00..1.00 step0.01",
+      "threshold_selection": "max_Youden_J_then_higher_sensitivity_then_larger_threshold",
+      "positive_decision": "probability>=threshold",
+      "clinical_cutoff": false,
+      "evaluation_metrics": [
+        "AUROC",
+        "trapezoidal_PR_AUC",
+        "AP",
+        "Brier",
+        "calibration_slope_intercept",
+        "reliability",
+        "sensitivity_specificity_confusion"
+      ],
+      "future_test_bootstrap": {
+        "draws": 1000,
+        "seed": 42,
+        "paired_participant_resamples": true,
+        "complex_survey_uncertainty": false
+      },
+      "test_access_authorized": false,
+      "demo_activation_authorized": false
+    },
+    "bindings": {
+      "review_sha256": "494c4636bbbaa11ad0d5b12e4784875acb4847d0df5e038fef6ae42ea954eca7",
+      "code_sha256": "9a1581d9e032515312a54d5937b5c18640dac51d6f119060361ae92fc682d74d",
+      "protocol_sha256": "9a8040ebc91a85b1805969de78e1f218075ba31cc7e9c6244c81a14988a3b769",
+      "output_path_sha256": "eb83210426e25d80792adab56117f66399faf054999db36203aa5170539252b8"
+    },
+    "manifest_sha256": "4d0f82149cb20485186ad929fca0a070a72fe4e4a3032b1cf8da37954c131551",
+    "fold_sha256": "0822ca63d5ffa57375141ae15d97ca08333a207463eae909237892dbe9e3adb0",
+    "encoded_features": 47,
+    "logistic_reproduction": [
+      [
+        "AUROC",
+        "0.736721",
+        "0.736721",
+        "MATCH"
+      ],
+      [
+        "PR-AUC (trapezoidal)",
+        "0.512827",
+        "0.512827",
+        "MATCH"
+      ],
+      [
+        "Average precision",
+        "0.513089",
+        "0.513089",
+        "MATCH"
+      ],
+      [
+        "Brier",
+        "0.157823",
+        "0.157823",
+        "MATCH"
+      ],
+      [
+        "Sensitivity @0.50",
+        "0.292981",
+        "0.292981",
+        "MATCH"
+      ],
+      [
+        "Specificity @0.50",
+        "0.936143",
+        "0.936143",
+        "MATCH"
+      ],
+      [
+        "TN",
+        "4398",
+        "4398",
+        "MATCH"
+      ],
+      [
+        "FP",
+        "300",
+        "300",
+        "MATCH"
+      ],
+      [
+        "FN",
+        "1098",
+        "1098",
+        "MATCH"
+      ],
+      [
+        "TP",
+        "455",
+        "455",
+        "MATCH"
+      ]
+    ],
+    "decisions": {
+      "XGBoost_A_raw": {
+        "decision": {
+          "threshold": 0.26,
+          "J": 0.35169656115397024,
+          "useful": true
+        },
+        "oof_reference_050": {
+          "AUROC": 0.7393983602508445,
+          "PR-AUC (trapezoidal)": 0.5159877106189455,
+          "Average precision": 0.5162632921058167,
+          "Brier": 0.1572683624653453,
+          "Sensitivity @0.50": 0.2640051513200258,
+          "Specificity @0.50": 0.9444444444444444,
+          "TN": 4437,
+          "FP": 261,
+          "FN": 1143,
+          "TP": 410
+        },
+        "apparent_oof_at_selected_threshold": {
+          "Sensitivity": 0.54539600772698,
+          "Specificity": 0.8063005534269903,
+          "TN": 3788,
+          "FP": 910,
+          "FN": 706,
+          "TP": 847
+        },
+        "optimism_warning": "Same OOF labels selected this threshold; operating performance is apparent, not independent validation.",
+        "clinical_cutoff": false
+      },
+      "Logistic_C1_raw": {
+        "decision": {
+          "threshold": 0.28,
+          "J": 0.35714530466993255,
+          "useful": true
+        },
+        "oof_reference_050": {
+          "AUROC": 0.7367206579391377,
+          "PR-AUC (trapezoidal)": 0.5128270997469258,
+          "Average precision": 0.5130893737990546,
+          "Brier": 0.15782284705840274,
+          "Sensitivity @0.50": 0.29298132646490666,
+          "Specificity @0.50": 0.9361430395913155,
+          "TN": 4398,
+          "FP": 300,
+          "FN": 1098,
+          "TP": 455
+        },
+        "apparent_oof_at_selected_threshold": {
+          "Sensitivity": 0.5350933676754669,
+          "Specificity": 0.8220519369944658,
+          "TN": 3862,
+          "FP": 836,
+          "FN": 722,
+          "TP": 831
+        },
+        "optimism_warning": "Same OOF labels selected this threshold; operating performance is apparent, not independent validation.",
+        "clinical_cutoff": false
+      }
+    },
+    "baseline": {
+      "strategy": "constant_training_rate",
+      "probability": 0.24844024956007038,
+      "development_n": 6251,
+      "yes_n": 1553,
+      "calibration": "none"
+    },
+    "baseline_oof_reference_050": {
+      "AUROC": 0.49948588225264434,
+      "PR-AUC (trapezoidal)": 0.39825785027268884,
+      "Average precision": 0.24821647422187149,
+      "Brier": 0.18671776757566333,
+      "Sensitivity @0.50": 0.0,
+      "Specificity @0.50": 1.0,
+      "TN": 4698,
+      "FP": 0,
+      "FN": 1553,
+      "TP": 0
+    },
+    "primary_artifact": {
+      "path": "models/questionnaire_pp1_v1/model.joblib",
+      "sha256": "c3f7458d1f6681fb4db18aa9d064a9d69baa75b16e634daa262210cbd91a9213",
+      "type": "QuestionnairePrototype",
+      "predictor_attribute": "model"
+    },
+    "output_files_sha256": {
+      "development_oof.npz": "9e8ea53b39300fa3a5c7036eb152ce9f676718a0146f0af406ecdfca4f340204",
+      "logistic_model.joblib": "eedae6a35b5caad15ee400327db141753226165e5d858c939d9e1ec12ba75a94",
+      "protocol.json": "c64eadb2a145ba2697fb014161e7a78340a9e784e711b62655c6ff65787dcdad",
+      "training_rate.json": "34befdc38f68a5f783133c116b75ed837b9dc0db4ade300f2216945ea07c6e58"
+    },
+    "new_logistic_fits": 6,
+    "new_xgboost_fits": 0,
+    "test_evaluated": false,
+    "candidate_configurations": {
+      "XGBoost_A_raw": {
+        "booster": "gbtree",
+        "objective": "binary:logistic",
+        "tree_method": "hist",
+        "device": "cpu",
+        "random_state": 42,
+        "n_jobs": 1,
+        "eval_metric": "logloss",
+        "reg_alpha": 0.0,
+        "gamma": 0.0,
+        "min_child_weight": 1.0,
+        "max_delta_step": 0.0,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "colsample_bylevel": 1.0,
+        "colsample_bynode": 1.0,
+        "scale_pos_weight": 1.0,
+        "grow_policy": "depthwise",
+        "max_bin": 256,
+        "base_score": null,
+        "early_stopping_rounds": null,
+        "validate_parameters": true,
+        "verbosity": 1,
+        "max_depth": 2,
+        "learning_rate": 0.05,
+        "n_estimators": 200,
+        "reg_lambda": 1.0
+      },
+      "Logistic_C1_raw": {
+        "C": 1.0,
+        "class_weight": null,
+        "solver": "lbfgs",
+        "max_iter": 1000,
+        "random_state": 42
+      }
+    },
+    "runtime": {
+      "python": "3.13.5",
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "sklearn": "1.9.1",
+      "xgboost": "3.4.1",
+      "joblib": "1.6.0"
+    },
+    "demo_changed": false,
+    "calibration": "none_raw",
+    "clinical_validation": false
+  },
+  "execution": {
+    "status": "completed_one_authorized_preparation",
+    "output": "data/tabular_final_freeze_v1_20261016T143007292661Z",
+    "record": "data/tabular_final_preparation_execution_v1_20261016T143007292661Z",
+    "duration_seconds": 0.2731087499996647,
+    "peak_rss_mib": 210.03125,
+    "thread_limit": 2,
+    "observed_logistic_fits": 6,
+    "new_xgboost_fits": 0,
+    "read_checks": [
+      {
+        "file": "P_DEMO.xpt",
+        "decoded_development_rows": 6251,
+        "all_returned_SEQN_in_development": true
+      },
+      {
+        "file": "P_OHQ.xpt",
+        "decoded_development_rows": 6251,
+        "all_returned_SEQN_in_development": true
+      },
+      {
+        "file": "P_SMQ.xpt",
+        "decoded_development_rows": 6251,
+        "all_returned_SEQN_in_development": true
+      },
+      {
+        "file": "P_DIQ.xpt",
+        "decoded_development_rows": 6251,
+        "all_returned_SEQN_in_development": true
+      }
+    ],
+    "opened_input_files": [
+      "data/P_DEMO.xpt",
+      "data/P_DIQ.xpt",
+      "data/P_OHQ.xpt",
+      "data/P_SMQ.xpt",
+      "data/preprocessing/split_manifest.json",
+      "data/tabular_pp1_v1/development_oof.npz",
+      "models/questionnaire_pp1_v1/model.joblib"
+    ],
+    "test_payloads_decoded": false,
+    "test_inference": false,
+    "demo_changed": false,
+    "one_run_preparation_scope_consumed": true,
+    "receipt_sha256": "e08073b43e89ba99982483344e2612f577f46ae8ee0988b2458e5cfc2b8c6e0c"
+  },
+  "verification": {
+    "assertions_passed": 63,
+    "checks": [
+      "receipt_trusted_sha",
+      "output_hash_development_oof.npz",
+      "output_hash_logistic_model.joblib",
+      "output_hash_protocol.json",
+      "output_hash_training_rate.json",
+      "current_scope_bindings",
+      "reviewed_sources_and_inputs_unchanged",
+      "support",
+      "unique_ids",
+      "same_ids",
+      "same_labels",
+      "same_primary_probabilities",
+      "six_observed_fits",
+      "zero_xgb_fits",
+      "fold0_fit_membership",
+      "fold0_isolated",
+      "fold0_medians_scale",
+      "fold0_converged",
+      "fold1_fit_membership",
+      "fold1_isolated",
+      "fold1_medians_scale",
+      "fold1_converged",
+      "fold2_fit_membership",
+      "fold2_isolated",
+      "fold2_medians_scale",
+      "fold2_converged",
+      "fold3_fit_membership",
+      "fold3_isolated",
+      "fold3_medians_scale",
+      "fold3_converged",
+      "fold4_fit_membership",
+      "fold4_isolated",
+      "fold4_medians_scale",
+      "fold4_converged",
+      "full_development_fit",
+      "XGBoost_A_raw_finite_probability",
+      "XGBoost_A_raw_AUROC",
+      "XGBoost_A_raw_PR-AUC (trapezoidal)",
+      "XGBoost_A_raw_Average precision",
+      "XGBoost_A_raw_Brier",
+      "XGBoost_A_raw_independent_threshold_grid",
+      "XGBoost_A_raw_chosen_confusion",
+      "XGBoost_A_raw_sensitivity",
+      "XGBoost_A_raw_specificity",
+      "Logistic_C1_raw_finite_probability",
+      "Logistic_C1_raw_AUROC",
+      "Logistic_C1_raw_PR-AUC (trapezoidal)",
+      "Logistic_C1_raw_Average precision",
+      "Logistic_C1_raw_Brier",
+      "Logistic_C1_raw_independent_threshold_grid",
+      "Logistic_C1_raw_chosen_confusion",
+      "Logistic_C1_raw_sensitivity",
+      "Logistic_C1_raw_specificity",
+      "prior_finite_probability",
+      "fold0_prior",
+      "fold1_prior",
+      "fold2_prior",
+      "fold3_prior",
+      "fold4_prior",
+      "prior_frozen",
+      "ten_reproduced_reference_metrics",
+      "no_test_or_demo_activation",
+      "development_only_decode"
+    ],
+    "new_model_fits_during_verification": 0,
+    "test_payload_access": false
+  },
+  "original_labels_splits_models_reports_unchanged": true,
+  "clinical_approval": false,
+  "test_authorization": false,
+  "committed": false,
+  "pushed": false
+}

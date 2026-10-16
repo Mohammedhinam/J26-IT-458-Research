@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-16",
+  "selected_test_counts": {
+    "passed": 13,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "full_repository_run": false
+  },
+  "source_and_report_sha256": {
+    "src/tabular/finalise_development.py": "9a1581d9e032515312a54d5937b5c18640dac51d6f119060361ae92fc682d74d",
+    "tests/test_finalise_development.py": "bfed2e0e3291aa9e7cab77ae51c4613a07d444fc7cf0096f6e66de93339bef0c",
+    "docs/tabular_final_preparation_tests_v1.xml": "5d34a76c321b58ae603542f14f6930c62580f046c7965c7c8189cd56ff808d23",
+    "docs/tabular_freeze_preparation_results_v1.md": "ff7e19ebb4ed733a41eaea7ba2d8f8af129a2b559566950e98ebc8ba9ee5a5b9",
+    "docs/tabular_freeze_preparation_results_v1.json": "699e2452f39793a4429879ac52d8907a21f45f605aff2b8f267febc6acd3072d"
+  },
+  "independent_artifact_assertions_passed": 63,
+  "actual_new_fits": {
+    "logistic": 6,
+    "xgboost": 0
+  },
+  "scope_consumed": true,
+  "test_payloads_decoded": false,
+  "test_evaluation": false,
+  "demo_activation": false,
+  "next_permission": "Owner numerical freeze review; subsequent Test authorization separate",
+  "commit": false,
+  "push": false
+}

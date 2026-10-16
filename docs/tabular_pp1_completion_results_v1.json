@@ -1,0 +1,823 @@
+{
+  "date": "2026-10-15",
+  "notice": "Development-only prototype: probability of self-reported previous gum treatment. Not current disease, diagnosis, future risk or a treatment-effect estimate. NHANES US definitions; use fictional profiles for demonstrations.",
+  "development_n": 6251,
+  "positive_n": 1553,
+  "scores": {
+    "A_reference": {
+      "AUROC": 0.7393983602508445,
+      "PR-AUC (trapezoidal)": 0.5159877106189455,
+      "Average precision": 0.5162632921058167,
+      "Brier": 0.1572683624653453,
+      "Sensitivity @0.50": 0.2640051513200258,
+      "Specificity @0.50": 0.9444444444444444,
+      "TN": 4437,
+      "FP": 261,
+      "FN": 1143,
+      "TP": 410
+    },
+    "A_short": {
+      "AUROC": 0.7358946567116145,
+      "PR-AUC (trapezoidal)": 0.5107150925614433,
+      "Average precision": 0.5107072296104797,
+      "Brier": 0.15831762112242664,
+      "Sensitivity @0.50": 0.23631680618158404,
+      "Specificity @0.50": 0.954661558109834,
+      "TN": 4485,
+      "FP": 213,
+      "FN": 1186,
+      "TP": 367
+    },
+    "A_long": {
+      "AUROC": 0.7382978248063252,
+      "PR-AUC (trapezoidal)": 0.514803469456171,
+      "Average precision": 0.5150738831009496,
+      "Brier": 0.15750187570118956,
+      "Sensitivity @0.50": 0.28396651641983256,
+      "Specificity @0.50": 0.9382716049382716,
+      "TN": 4408,
+      "FP": 290,
+      "FN": 1112,
+      "TP": 441
+    },
+    "A_long_regularized": {
+      "AUROC": 0.7394546925340124,
+      "PR-AUC (trapezoidal)": 0.5137957559931734,
+      "Average precision": 0.5140716526704231,
+      "Brier": 0.1574640689546171,
+      "Sensitivity @0.50": 0.28203477141017386,
+      "Specificity @0.50": 0.9393358876117497,
+      "TN": 4413,
+      "FP": 285,
+      "FN": 1115,
+      "TP": 438
+    },
+    "A_long_child5": {
+      "AUROC": 0.7379024708627775,
+      "PR-AUC (trapezoidal)": 0.5132600570080293,
+      "Average precision": 0.5135269514054699,
+      "Brier": 0.1577326578317397,
+      "Sensitivity @0.50": 0.2897617514488088,
+      "Specificity @0.50": 0.9389101745423585,
+      "TN": 4411,
+      "FP": 287,
+      "FN": 1103,
+      "TP": 450
+    },
+    "A_balanced": {
+      "AUROC": 0.7400413158234505,
+      "PR-AUC (trapezoidal)": 0.5158120053146941,
+      "Average precision": 0.5160876384003747,
+      "Brier": 0.20124347326988473,
+      "Sensitivity @0.50": 0.5692208628461043,
+      "Specificity @0.50": 0.779906343124734,
+      "TN": 3664,
+      "FP": 1034,
+      "FN": 669,
+      "TP": 884
+    }
+  },
+  "bootstrap": {
+    "repetitions": 1000,
+    "method": "paired outcome-stratified prediction-only",
+    "deltas": {
+      "A_short": {
+        "delta_auroc_95": [
+          -0.005947176286055181,
+          -0.0010646116211171428
+        ],
+        "delta_brier_95": [
+          0.0005570423738788209,
+          0.001554452708578024
+        ]
+      },
+      "A_long": {
+        "delta_auroc_95": [
+          -0.0033947276409493606,
+          0.0012725647800697361
+        ],
+        "delta_brier_95": [
+          -0.00024560261600268044,
+          0.000679527696157639
+        ]
+      },
+      "A_long_regularized": {
+        "delta_auroc_95": [
+          -0.002070338188326387,
+          0.0020747824079898275
+        ],
+        "delta_brier_95": [
+          -0.0002461042462232256,
+          0.0006234988160631878
+        ]
+      },
+      "A_long_child5": {
+        "delta_auroc_95": [
+          -0.004416750822437626,
+          0.0016186502483418344
+        ],
+        "delta_brier_95": [
+          -8.878828138906072e-05,
+          0.0010213887738596125
+        ]
+      },
+      "A_balanced": {
+        "delta_auroc_95": [
+          -0.0005246406452635771,
+          0.0018747428383303177
+        ],
+        "delta_brier_95": [
+          0.04165582196372215,
+          0.04593875978662971
+        ]
+      }
+    }
+  },
+  "shap": {
+    "rows": 6251,
+    "input_count": 12,
+    "encoded_count": 47,
+    "units": "raw log-odds",
+    "fold_checks": [
+      {
+        "margin_max_abs_error": 1.9207072909921408e-06,
+        "probability_max_abs_error": 2.048862676740093e-07,
+        "native_shap_max_abs_error": 0.0,
+        "native_base_max_abs_error": 0.0
+      },
+      {
+        "margin_max_abs_error": 1.3227690942585468e-06,
+        "probability_max_abs_error": 1.9841743081894236e-07,
+        "native_shap_max_abs_error": 0.0,
+        "native_base_max_abs_error": 0.0
+      },
+      {
+        "margin_max_abs_error": 1.4681427273899317e-06,
+        "probability_max_abs_error": 1.65076233127337e-07,
+        "native_shap_max_abs_error": 0.0,
+        "native_base_max_abs_error": 0.0
+      },
+      {
+        "margin_max_abs_error": 2.32479942496866e-06,
+        "probability_max_abs_error": 2.5283373045192903e-07,
+        "native_shap_max_abs_error": 0.0,
+        "native_base_max_abs_error": 0.0
+      },
+      {
+        "margin_max_abs_error": 2.6289199013262987e-06,
+        "probability_max_abs_error": 1.452327030582179e-07,
+        "native_shap_max_abs_error": 0.0,
+        "native_base_max_abs_error": 0.0
+      }
+    ],
+    "mean_absolute_grouped_contribution": {
+      "RIDAGEYR": 0.06924253953142448,
+      "INDFMPIR": 0.040009608860501776,
+      "OHQ870": 0.17240319516181216,
+      "RIAGENDR": 0.0024710452544994647,
+      "DMDEDUC2": 0.06830766460674621,
+      "DMDMARTZ": 0.03718801469726756,
+      "OHQ030": 0.2286986208402822,
+      "OHQ845": 0.142674183056207,
+      "OHQ860": 0.42408555392906,
+      "OHQ835": 0.2661752917816041,
+      "DIQ010": 0.04477793081881667,
+      "SMOKING_STATUS": 0.027050681708780167
+    }
+  },
+  "calibration_diagnostics": {
+    "A_reference": {
+      "intercept": 0.06028764492355534,
+      "slope": 1.0619950755298389,
+      "clipped": 0,
+      "status": "OK"
+    },
+    "A_short": {
+      "intercept": 0.18296912055811784,
+      "slope": 1.1821520807605739,
+      "clipped": 0,
+      "status": "OK"
+    },
+    "A_long": {
+      "intercept": -0.02548321237182568,
+      "slope": 0.9747153421132494,
+      "clipped": 0,
+      "status": "OK"
+    },
+    "A_long_regularized": {
+      "intercept": -0.014580547754098727,
+      "slope": 0.9869894655533987,
+      "clipped": 0,
+      "status": "OK"
+    },
+    "A_long_child5": {
+      "intercept": -0.02988368815374467,
+      "slope": 0.9713995277895204,
+      "clipped": 0,
+      "status": "OK"
+    },
+    "A_balanced": {
+      "intercept": -1.0859098238952376,
+      "slope": 1.0650583186901255,
+      "clipped": 0,
+      "status": "OK"
+    }
+  },
+  "reference_reliability_bins": [
+    [
+      1,
+      626,
+      32,
+      0.06501924003453587,
+      0.051118210862619806
+    ],
+    [
+      2,
+      625,
+      63,
+      0.11003268762826919,
+      0.1008
+    ],
+    [
+      3,
+      625,
+      85,
+      0.14239524536132814,
+      0.136
+    ],
+    [
+      4,
+      625,
+      100,
+      0.16768274648189543,
+      0.16
+    ],
+    [
+      5,
+      626,
+      125,
+      0.19187427823916792,
+      0.19968051118210864
+    ],
+    [
+      6,
+      624,
+      129,
+      0.21409856112530598,
+      0.20673076923076922
+    ],
+    [
+      7,
+      625,
+      143,
+      0.23712964239120482,
+      0.2288
+    ],
+    [
+      8,
+      625,
+      182,
+      0.29077640352249146,
+      0.2912
+    ],
+    [
+      9,
+      625,
+      310,
+      0.4390723052978516,
+      0.496
+    ],
+    [
+      10,
+      625,
+      384,
+      0.6284100989341735,
+      0.6144
+    ]
+  ],
+  "fictional_example": {
+    "notice": "Development-only prototype: probability of self-reported previous gum treatment. Not current disease, diagnosis, future risk or a treatment-effect estimate. NHANES US definitions; use fictional profiles for demonstrations.",
+    "model_id": "d70458a47011e8332c4911effc768c4efdf642a62384f97557d8295ab238e078",
+    "model_role": "Full XGBoost A development reference; not final model selection",
+    "outcome": "self_reported_previous_gum_treatment",
+    "probability": 0.21408095955848694,
+    "calibration": "raw, not separately calibrated",
+    "base_log_odds": -1.1116950511932373,
+    "raw_log_odds": -1.3004995584487915,
+    "contributions": [
+      {
+        "field": "RIDAGEYR",
+        "label": "Age (80 means 80 or older)",
+        "value": 55,
+        "contribution_log_odds": 0.03396184369921684
+      },
+      {
+        "field": "INDFMPIR",
+        "label": "US family income-to-poverty ratio",
+        "value": 2.0,
+        "contribution_log_odds": 0.006397847086191177
+      },
+      {
+        "field": "OHQ870",
+        "label": "Interdental-cleaning days in the past week",
+        "value": 2,
+        "contribution_log_odds": 0.0066454350017011166
+      },
+      {
+        "field": "RIAGENDR",
+        "label": "Recorded sex category",
+        "value": "1",
+        "contribution_log_odds": -3.944219497498125e-05
+      },
+      {
+        "field": "DMDEDUC2",
+        "label": "Adult education (NHANES categories)",
+        "value": "4",
+        "contribution_log_odds": 0.03149515838595107
+      },
+      {
+        "field": "DMDMARTZ",
+        "label": "Marital status",
+        "value": "1",
+        "contribution_log_odds": 0.03011899720877409
+      },
+      {
+        "field": "OHQ030",
+        "label": "Time since last dental visit",
+        "value": "1",
+        "contribution_log_odds": 0.19718475158151705
+      },
+      {
+        "field": "OHQ845",
+        "label": "Self-rated teeth and gum health",
+        "value": "3",
+        "contribution_log_odds": 0.07590450532734394
+      },
+      {
+        "field": "OHQ860",
+        "label": "Previously told of bone loss around teeth",
+        "value": "2",
+        "contribution_log_odds": -0.29062846302986145
+      },
+      {
+        "field": "OHQ835",
+        "label": "Thinks they might have gum disease",
+        "value": "2",
+        "contribution_log_odds": -0.18145592510700226
+      },
+      {
+        "field": "DIQ010",
+        "label": "Self-reported diabetes category",
+        "value": "2",
+        "contribution_log_odds": -0.03574454225599766
+      },
+      {
+        "field": "SMOKING_STATUS",
+        "label": "Smoking status",
+        "value": "current",
+        "contribution_log_odds": -0.06264489330351353
+      }
+    ],
+    "checks": {
+      "margin_max_abs_error": 2.2034510038793087e-07,
+      "probability_max_abs_error": 4.253786931029957e-08,
+      "native_shap_max_abs_error": 0.0,
+      "native_base_max_abs_error": 0.0
+    },
+    "shap_method": "exact tree-path-dependent, encoded columns summed by original input",
+    "support": {
+      "warnings": [],
+      "smoking_cleaning_pair_count": 84,
+      "warning_count_threshold": 20,
+      "scope": "Marginal and two-input pair coverage only; full-profile reliability is unvalidated"
+    },
+    "profile": {
+      "RIDAGEYR": 55,
+      "INDFMPIR": 2.0,
+      "OHQ870": 2,
+      "RIAGENDR": "1",
+      "DMDEDUC2": "4",
+      "DMDMARTZ": "1",
+      "OHQ030": "1",
+      "OHQ845": "3",
+      "OHQ860": "2",
+      "OHQ835": "2",
+      "DIQ010": "2",
+      "SMOKING_STATUS": "current"
+    }
+  },
+  "fictional_scenario": {
+    "notice": "Changing an answer changes the model output, not a person's actual treatment history. This is model sensitivity, not evidence that a behaviour improves health.",
+    "original": {
+      "notice": "Development-only prototype: probability of self-reported previous gum treatment. Not current disease, diagnosis, future risk or a treatment-effect estimate. NHANES US definitions; use fictional profiles for demonstrations.",
+      "model_id": "d70458a47011e8332c4911effc768c4efdf642a62384f97557d8295ab238e078",
+      "model_role": "Full XGBoost A development reference; not final model selection",
+      "outcome": "self_reported_previous_gum_treatment",
+      "probability": 0.21408095955848694,
+      "calibration": "raw, not separately calibrated",
+      "base_log_odds": -1.1116950511932373,
+      "raw_log_odds": -1.3004995584487915,
+      "contributions": [
+        {
+          "field": "RIDAGEYR",
+          "label": "Age (80 means 80 or older)",
+          "value": 55,
+          "contribution_log_odds": 0.03396184369921684
+        },
+        {
+          "field": "INDFMPIR",
+          "label": "US family income-to-poverty ratio",
+          "value": 2.0,
+          "contribution_log_odds": 0.006397847086191177
+        },
+        {
+          "field": "OHQ870",
+          "label": "Interdental-cleaning days in the past week",
+          "value": 2,
+          "contribution_log_odds": 0.0066454350017011166
+        },
+        {
+          "field": "RIAGENDR",
+          "label": "Recorded sex category",
+          "value": "1",
+          "contribution_log_odds": -3.944219497498125e-05
+        },
+        {
+          "field": "DMDEDUC2",
+          "label": "Adult education (NHANES categories)",
+          "value": "4",
+          "contribution_log_odds": 0.03149515838595107
+        },
+        {
+          "field": "DMDMARTZ",
+          "label": "Marital status",
+          "value": "1",
+          "contribution_log_odds": 0.03011899720877409
+        },
+        {
+          "field": "OHQ030",
+          "label": "Time since last dental visit",
+          "value": "1",
+          "contribution_log_odds": 0.19718475158151705
+        },
+        {
+          "field": "OHQ845",
+          "label": "Self-rated teeth and gum health",
+          "value": "3",
+          "contribution_log_odds": 0.07590450532734394
+        },
+        {
+          "field": "OHQ860",
+          "label": "Previously told of bone loss around teeth",
+          "value": "2",
+          "contribution_log_odds": -0.29062846302986145
+        },
+        {
+          "field": "OHQ835",
+          "label": "Thinks they might have gum disease",
+          "value": "2",
+          "contribution_log_odds": -0.18145592510700226
+        },
+        {
+          "field": "DIQ010",
+          "label": "Self-reported diabetes category",
+          "value": "2",
+          "contribution_log_odds": -0.03574454225599766
+        },
+        {
+          "field": "SMOKING_STATUS",
+          "label": "Smoking status",
+          "value": "current",
+          "contribution_log_odds": -0.06264489330351353
+        }
+      ],
+      "checks": {
+        "margin_max_abs_error": 2.2034510038793087e-07,
+        "probability_max_abs_error": 4.253786931029957e-08,
+        "native_shap_max_abs_error": 0.0,
+        "native_base_max_abs_error": 0.0
+      },
+      "shap_method": "exact tree-path-dependent, encoded columns summed by original input",
+      "support": {
+        "warnings": [],
+        "smoking_cleaning_pair_count": 84,
+        "warning_count_threshold": 20,
+        "scope": "Marginal and two-input pair coverage only; full-profile reliability is unvalidated"
+      },
+      "profile": {
+        "RIDAGEYR": 55,
+        "INDFMPIR": 2.0,
+        "OHQ870": 2,
+        "RIAGENDR": "1",
+        "DMDEDUC2": "4",
+        "DMDMARTZ": "1",
+        "OHQ030": "1",
+        "OHQ845": "3",
+        "OHQ860": "2",
+        "OHQ835": "2",
+        "DIQ010": "2",
+        "SMOKING_STATUS": "current"
+      }
+    },
+    "scenario": {
+      "notice": "Development-only prototype: probability of self-reported previous gum treatment. Not current disease, diagnosis, future risk or a treatment-effect estimate. NHANES US definitions; use fictional profiles for demonstrations.",
+      "model_id": "d70458a47011e8332c4911effc768c4efdf642a62384f97557d8295ab238e078",
+      "model_role": "Full XGBoost A development reference; not final model selection",
+      "outcome": "self_reported_previous_gum_treatment",
+      "probability": 0.2584925591945648,
+      "calibration": "raw, not separately calibrated",
+      "base_log_odds": -1.1116950511932373,
+      "raw_log_odds": -1.0538183450698853,
+      "contributions": [
+        {
+          "field": "RIDAGEYR",
+          "label": "Age (80 means 80 or older)",
+          "value": 55,
+          "contribution_log_odds": 0.03335871174931526
+        },
+        {
+          "field": "INDFMPIR",
+          "label": "US family income-to-poverty ratio",
+          "value": 2.0,
+          "contribution_log_odds": 0.015791548416018486
+        },
+        {
+          "field": "OHQ870",
+          "label": "Interdental-cleaning days in the past week",
+          "value": 7,
+          "contribution_log_odds": 0.1503777801990509
+        },
+        {
+          "field": "RIAGENDR",
+          "label": "Recorded sex category",
+          "value": "1",
+          "contribution_log_odds": -3.944219497498125e-05
+        },
+        {
+          "field": "DMDEDUC2",
+          "label": "Adult education (NHANES categories)",
+          "value": "4",
+          "contribution_log_odds": 0.03405295900302008
+        },
+        {
+          "field": "DMDMARTZ",
+          "label": "Marital status",
+          "value": "1",
+          "contribution_log_odds": 0.03011899720877409
+        },
+        {
+          "field": "OHQ030",
+          "label": "Time since last dental visit",
+          "value": "1",
+          "contribution_log_odds": 0.2087758454872528
+        },
+        {
+          "field": "OHQ845",
+          "label": "Self-rated teeth and gum health",
+          "value": "3",
+          "contribution_log_odds": 0.08091735281050205
+        },
+        {
+          "field": "OHQ860",
+          "label": "Previously told of bone loss around teeth",
+          "value": "2",
+          "contribution_log_odds": -0.29062846302986145
+        },
+        {
+          "field": "OHQ835",
+          "label": "Thinks they might have gum disease",
+          "value": "2",
+          "contribution_log_odds": -0.18944714963436127
+        },
+        {
+          "field": "DIQ010",
+          "label": "Self-reported diabetes category",
+          "value": "2",
+          "contribution_log_odds": -0.03574454225599766
+        },
+        {
+          "field": "SMOKING_STATUS",
+          "label": "Smoking status",
+          "value": "former",
+          "contribution_log_odds": 0.02034287853166461
+        }
+      ],
+      "checks": {
+        "margin_max_abs_error": 2.2983294911682606e-07,
+        "probability_max_abs_error": 5.511793010892774e-08,
+        "native_shap_max_abs_error": 0.0,
+        "native_base_max_abs_error": 0.0
+      },
+      "shap_method": "exact tree-path-dependent, encoded columns summed by original input",
+      "support": {
+        "warnings": [],
+        "smoking_cleaning_pair_count": 573,
+        "warning_count_threshold": 20,
+        "scope": "Marginal and two-input pair coverage only; full-profile reliability is unvalidated"
+      },
+      "profile": {
+        "RIDAGEYR": 55,
+        "INDFMPIR": 2.0,
+        "OHQ870": 7,
+        "RIAGENDR": "1",
+        "DMDEDUC2": "4",
+        "DMDMARTZ": "1",
+        "OHQ030": "1",
+        "OHQ845": "3",
+        "OHQ860": "2",
+        "OHQ835": "2",
+        "DIQ010": "2",
+        "SMOKING_STATUS": "former"
+      }
+    },
+    "changed_fields": [
+      "OHQ870",
+      "SMOKING_STATUS"
+    ],
+    "probability_difference": 0.04441159963607788,
+    "is_reset": false
+  },
+  "reset_exact": true,
+  "saved_model_reload_exact": true,
+  "model_sha256": "c3f7458d1f6681fb4db18aa9d064a9d69baa75b16e634daa262210cbd91a9213",
+  "oof_sha256": "704d1ac914a95b300306d5ba75a8cd2cbe6d1afd9c3841899e1487d97bd57502",
+  "provenance": {
+    "role": "development reference only",
+    "manifest_sha256": "4d0f82149cb20485186ad929fca0a070a72fe4e4a3032b1cf8da37954c131551",
+    "fold_sha256": "0822ca63d5ffa57375141ae15d97ca08333a207463eae909237892dbe9e3adb0",
+    "plan_sha256": "675ce5fde6da5e27ef0ff44b524e41ebcfba6a883e1f0eff0af4ce7a57463e25",
+    "source_hashes": {
+      "src/tabular/audit_nhanes.py": "0ffe3839a5ed9f9e100dea13cb1e6a954acbbe3d74b13c34c514524daf5b82ab",
+      "src/tabular/baseline_nhanes.py": "1e1f1758e0e4db39233330608cf66938da0dfee09aa63ef67c284f75ea992d3a",
+      "src/tabular/calibration_threshold_nhanes.py": "02173b6e68298fb68614bf7fe50c526334590bb75b03e44a1a3a0731c9b6a1c8",
+      "src/tabular/logistic_comparison_nhanes.py": "f62d78cc021996178d417b20b4f0e28fb3b6abd128b23e1a4523be022186bc01",
+      "src/tabular/pp1_questionnaire_workflow.py": "0b00b92e8f9af0d3bf5891413866f8ef72745ee01270b9706f7afe445cc8ee64",
+      "src/tabular/preprocess_nhanes.py": "ab4e76eca3dd2b0f0e2863cd41a85234c2f45125cc7f4fbb5bcc3cc256359207",
+      "src/tabular/questionnaire_explain.py": "5107f295aee6d1d4432c8084ac28dd7c41f9f393761c1c5c399f95a80abd7469",
+      "src/tabular/xgboost_comparison_nhanes.py": "5d5feead570517602cad157eedfb173974c4d99297f3f6648d7156bc55976bd6"
+    },
+    "final_model": false,
+    "held_out_evaluated": false
+  },
+  "protected_evidence_unchanged": true,
+  "fold_settings": [
+    {
+      "configuration": "A_reference",
+      "fold": 1,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_reference",
+      "fold": 2,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_reference",
+      "fold": 3,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_reference",
+      "fold": 4,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_reference",
+      "fold": 5,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_short",
+      "fold": 1,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_short",
+      "fold": 2,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_short",
+      "fold": 3,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_short",
+      "fold": 4,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_short",
+      "fold": 5,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_long",
+      "fold": 1,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_long",
+      "fold": 2,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_long",
+      "fold": 3,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_long",
+      "fold": 4,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_long",
+      "fold": 5,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_long_regularized",
+      "fold": 1,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_long_regularized",
+      "fold": 2,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_long_regularized",
+      "fold": 3,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_long_regularized",
+      "fold": 4,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_long_regularized",
+      "fold": 5,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_long_child5",
+      "fold": 1,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_long_child5",
+      "fold": 2,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_long_child5",
+      "fold": 3,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_long_child5",
+      "fold": 4,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_long_child5",
+      "fold": 5,
+      "positive_weight": 1.0
+    },
+    {
+      "configuration": "A_balanced",
+      "fold": 1,
+      "positive_weight": 3.025764895330113
+    },
+    {
+      "configuration": "A_balanced",
+      "fold": 2,
+      "positive_weight": 3.0233306516492355
+    },
+    {
+      "configuration": "A_balanced",
+      "fold": 3,
+      "positive_weight": 3.0233306516492355
+    },
+    {
+      "configuration": "A_balanced",
+      "fold": 4,
+      "positive_weight": 3.026570048309179
+    },
+    {
+      "configuration": "A_balanced",
+      "fold": 5,
+      "positive_weight": 3.026570048309179
+    }
+  ],
+  "runtime": {
+    "python": "3.13.5",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "sklearn": "1.9.1",
+    "xgboost": "3.4.1",
+    "shap": "0.52.0"
+  }
+}

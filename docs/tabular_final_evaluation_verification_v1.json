@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-16",
+  "status": "synthetic_qualified_actual_test_not_run",
+  "source_and_artifact_sha256": {
+    "src/tabular/evaluate_frozen_tabular.py": "b6ad6e9caad38d9ab1a3bc8131084c5aea23069745715de66227bf9b4ba9c3cc",
+    "tests/test_evaluate_frozen_tabular.py": "5a1943f6b4281d451e6d4b4a1bf3ec2382955adb8681a49671a8eba905cf6383",
+    "docs/tabular_final_evaluator_synthetic_tests_v1.xml": "5083dc60a2a5faddb03d25a896d49ac63dbf314d0bd6fbfbf9c6a08504277417",
+    "docs/tabular_final_evaluation_readiness_v1.md": "7a6578730af1947de68e68bd65a480675f5e725fc0fb0b8516293ad38c26f393"
+  },
+  "receipt_sha256": "e08073b43e89ba99982483344e2612f577f46ae8ee0988b2458e5cfc2b8c6e0c",
+  "tests": {
+    "passed": 16,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "scope": "generated only,not full repository"
+  },
+  "fixture_correction": "Initial shared numeric age0..99 fixture rejected by valid30..80 guard; corrected generated ages/sex without weakening production.",
+  "compatibility": {
+    "scope": "one predefined fictional profile with hash-verified frozen models",
+    "n": 1,
+    "probabilities": {
+      "XGBoost_A_raw": 0.21408095955848694,
+      "Logistic_C1_raw": 0.19675996209720317,
+      "Training_rate": 0.24844024956007038
+    },
+    "new_predictive_fits": 0,
+    "model_hashes_unchanged": true
+  },
+  "real_test_loader_called": false,
+  "real_test_claim_exists": false,
+  "numerical_freeze_approval_record_created": false,
+  "test_authorization_record_created": false,
+  "test_inference": false,
+  "calibration_diagnostic_intervals_implemented": false,
+  "complex_survey_variance_implemented": false,
+  "commit": false,
+  "push": false
+}

@@ -1,0 +1,90 @@
+{
+  "scope": "descriptive development-only OOF interview-weight sensitivity",
+  "n": 6251,
+  "source": "P_DEMO WTINTPRP",
+  "manifest_sha256": "4d0f82149cb20485186ad929fca0a070a72fe4e4a3032b1cf8da37954c131551",
+  "oof_sha256": "704d1ac914a95b300306d5ba75a8cd2cbe6d1afd9c3841899e1487d97bd57502",
+  "strata": 24,
+  "stratum_psu_pairs": 49,
+  "weight_min": 1876.867755,
+  "weight_max": 311265.152122,
+  "weighted_positive_share": 0.23696947015528735,
+  "scores": {
+    "A_reference": {
+      "AUROC": 0.7348769869163206,
+      "PR-AUC (trapezoidal)": 0.5000164210511617,
+      "Average precision": 0.5007904802635073,
+      "Brier": 0.15284358409316895,
+      "Sensitivity @0.50": 0.29873959292679714,
+      "Specificity @0.50": 0.940795320525899,
+      "normalized_weight_TN": 4487.315054903793,
+      "normalized_weight_FP": 282.3887871555085,
+      "normalized_weight_FN": 1038.7743467134687,
+      "normalized_weight_TP": 442.5218112272342
+    },
+    "A_short": {
+      "AUROC": 0.7326411035157744,
+      "PR-AUC (trapezoidal)": 0.49545907544627704,
+      "Average precision": 0.4956960898886023,
+      "Brier": 0.15342215246623406,
+      "Sensitivity @0.50": 0.26524582802064156,
+      "Specificity @0.50": 0.9501156814976226,
+      "normalized_weight_TN": 4531.770416440003,
+      "normalized_weight_FP": 237.9334256192995,
+      "normalized_weight_FN": 1088.3885319839253,
+      "normalized_weight_TP": 392.90762595677654
+    },
+    "A_long": {
+      "AUROC": 0.7336817921763443,
+      "PR-AUC (trapezoidal)": 0.5010429615889013,
+      "Average precision": 0.5018045041696271,
+      "Brier": 0.15307507427780565,
+      "Sensitivity @0.50": 0.3226245993530034,
+      "Specificity @0.50": 0.9339537454086707,
+      "normalized_weight_TN": 4454.682767781412,
+      "normalized_weight_FP": 315.0210742778898,
+      "normalized_weight_FN": 1003.3935784619405,
+      "normalized_weight_TP": 477.9025794787625
+    },
+    "A_long_regularized": {
+      "AUROC": 0.7351810619099804,
+      "PR-AUC (trapezoidal)": 0.49874816556679574,
+      "Average precision": 0.4995100856501075,
+      "Brier": 0.15311951501557522,
+      "Sensitivity @0.50": 0.31538605302499223,
+      "Specificity @0.50": 0.9331053627724035,
+      "normalized_weight_TN": 4450.63623386167,
+      "normalized_weight_FP": 319.06760819763025,
+      "normalized_weight_FN": 1014.1160093266992,
+      "normalized_weight_TP": 467.1801486140039
+    },
+    "A_long_child5": {
+      "AUROC": 0.7334474896249974,
+      "PR-AUC (trapezoidal)": 0.5006836186188947,
+      "Average precision": 0.5013873392977028,
+      "Brier": 0.15329074624701028,
+      "Sensitivity @0.50": 0.32634818436056817,
+      "Specificity @0.50": 0.9313630330118864,
+      "normalized_weight_TN": 4442.325836908797,
+      "normalized_weight_FP": 327.3780051505032,
+      "normalized_weight_FN": 997.8778462964693,
+      "normalized_weight_TP": 483.418311644234
+    },
+    "A_balanced": {
+      "AUROC": 0.7354929419870437,
+      "PR-AUC (trapezoidal)": 0.4974545733208854,
+      "Average precision": 0.49833579102009873,
+      "Brier": 0.2086976862440796,
+      "Sensitivity @0.50": 0.58897334324926,
+      "Specificity @0.50": 0.7687284806458154,
+      "normalized_weight_TN": 3666.607187636753,
+      "normalized_weight_FP": 1103.096654422546,
+      "normalized_weight_FN": 608.8522074560825,
+      "normalized_weight_TP": 872.4439504846189
+    }
+  },
+  "new_model_fits": 0,
+  "held_out_payloads_accessed": false,
+  "population_inference": false,
+  "design_based_uncertainty_complete": false
+}

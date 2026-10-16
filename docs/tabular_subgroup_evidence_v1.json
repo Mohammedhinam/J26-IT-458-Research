@@ -1,0 +1,147 @@
+{
+  "version": "development-subgroups-v1",
+  "model": "Full XGBoost A reference",
+  "n": 6251,
+  "age_bins": [
+    [
+      30,
+      44
+    ],
+    [
+      45,
+      59
+    ],
+    [
+      60,
+      80
+    ]
+  ],
+  "manifest_sha256": "4d0f82149cb20485186ad929fca0a070a72fe4e4a3032b1cf8da37954c131551",
+  "oof_sha256": "704d1ac914a95b300306d5ba75a8cd2cbe6d1afd9c3841899e1487d97bd57502",
+  "subgroups": {
+    "age_30_44": {
+      "n": 1699,
+      "positive": 379,
+      "negative": 1320,
+      "AUROC": 0.7227392660110338,
+      "Brier": 0.15081947533862175,
+      "sensitivity_at_050": 0.1741424802110818,
+      "specificity_at_050": 0.9719696969696969,
+      "TN": 1283,
+      "FP": 37,
+      "FN": 313,
+      "TP": 66,
+      "conditional_AUROC_95": [
+        0.6941524796483511,
+        0.7510157842748978
+      ],
+      "conditional_Brier_95": [
+        0.14024342375128032,
+        0.1603300218942019
+      ],
+      "bootstrap_repetitions": 1000,
+      "undefined_AUROC_draws": 0,
+      "small_outcome_support": false
+    },
+    "age_45_59": {
+      "n": 1828,
+      "positive": 479,
+      "negative": 1349,
+      "AUROC": 0.7222205886677056,
+      "Brier": 0.1657325689798728,
+      "sensitivity_at_050": 0.2818371607515658,
+      "specificity_at_050": 0.9340252038547072,
+      "TN": 1260,
+      "FP": 89,
+      "FN": 344,
+      "TP": 135,
+      "conditional_AUROC_95": [
+        0.6951765460158107,
+        0.7483277490391569
+      ],
+      "conditional_Brier_95": [
+        0.15645145394379917,
+        0.1748878261748841
+      ],
+      "bootstrap_repetitions": 1000,
+      "undefined_AUROC_draws": 0,
+      "small_outcome_support": false
+    },
+    "age_60_80": {
+      "n": 2724,
+      "positive": 695,
+      "negative": 2029,
+      "AUROC": 0.7587768720459808,
+      "Brier": 0.15561053930813054,
+      "sensitivity_at_050": 0.30071942446043165,
+      "specificity_at_050": 0.9334647609659931,
+      "TN": 1894,
+      "FP": 135,
+      "FN": 486,
+      "TP": 209,
+      "conditional_AUROC_95": [
+        0.7383617237895157,
+        0.7788476498818464
+      ],
+      "conditional_Brier_95": [
+        0.1477249060874922,
+        0.16357750761845818
+      ],
+      "bootstrap_repetitions": 1000,
+      "undefined_AUROC_draws": 0,
+      "small_outcome_support": false
+    },
+    "recorded_sex_1": {
+      "n": 3005,
+      "positive": 730,
+      "negative": 2275,
+      "AUROC": 0.7433418636158362,
+      "Brier": 0.15437876681185278,
+      "sensitivity_at_050": 0.2534246575342466,
+      "specificity_at_050": 0.9446153846153846,
+      "TN": 2149,
+      "FP": 126,
+      "FN": 545,
+      "TP": 185,
+      "conditional_AUROC_95": [
+        0.7229288123589112,
+        0.7642648516565979
+      ],
+      "conditional_Brier_95": [
+        0.14670004947652093,
+        0.161863932988621
+      ],
+      "bootstrap_repetitions": 1000,
+      "undefined_AUROC_draws": 0,
+      "small_outcome_support": false
+    },
+    "recorded_sex_2": {
+      "n": 3246,
+      "positive": 823,
+      "negative": 2423,
+      "AUROC": 0.7353877306834212,
+      "Brier": 0.1599434194396968,
+      "sensitivity_at_050": 0.2733900364520049,
+      "specificity_at_050": 0.9442839455220801,
+      "TN": 2288,
+      "FP": 135,
+      "FN": 598,
+      "TP": 225,
+      "conditional_AUROC_95": [
+        0.7159965367323756,
+        0.7554367571724726
+      ],
+      "conditional_Brier_95": [
+        0.15300262407878482,
+        0.16714363601256726
+      ],
+      "bootstrap_repetitions": 1000,
+      "undefined_AUROC_draws": 0,
+      "small_outcome_support": false
+    }
+  },
+  "new_model_fits": 0,
+  "held_out_payloads_accessed": false,
+  "survey_design_uncertainty": false,
+  "external_fairness_proven": false
+}

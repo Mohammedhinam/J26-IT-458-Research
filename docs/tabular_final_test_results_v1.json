@@ -1,0 +1,878 @@
+{
+  "evidence": {
+    "execution": {
+      "status": "completed_one_authorized_final_evaluation",
+      "output": "data/tabular_final_test_results_v1_20261016T153805043162Z",
+      "record": "data/tabular_final_test_execution_v1_20261016T153805043162Z",
+      "duration_seconds": 12.5561288339959,
+      "peak_rss_mib": 228.703125,
+      "thread_limit": 2,
+      "receipt_sha256": "e08073b43e89ba99982483344e2612f577f46ae8ee0988b2458e5cfc2b8c6e0c",
+      "evaluator_bindings": {
+        "receipt_sha256": "e08073b43e89ba99982483344e2612f577f46ae8ee0988b2458e5cfc2b8c6e0c",
+        "evaluator_sha256": "b6ad6e9caad38d9ab1a3bc8131084c5aea23069745715de66227bf9b4ba9c3cc",
+        "subgroup_code_sha256": "e7188351e13fc35c6f50aa535f97046b5f008ab642fe2d95d7f2de43c53ceae0",
+        "output_path_sha256": "b91f125ccb754e70d6d4b5f514e890a5bcb5cc3bf0af536478a3c8919713d8d4"
+      },
+      "numerical_freeze_canonical_sha256": "c7ee61c5a583cadcc73f0f6c30154dcbb4bdd830eb9108cb30871021cdd07870",
+      "predictive_fits": 0,
+      "preprocessing_fits": 0,
+      "diagnostic_regression_fits": [
+        {
+          "n": 1563,
+          "features": 1,
+          "role": "descriptive_calibration_regression_only_no_probability_mapping"
+        },
+        {
+          "n": 1563,
+          "features": 1,
+          "role": "descriptive_calibration_regression_only_no_probability_mapping"
+        }
+      ],
+      "read_checks": [
+        {
+          "file": "P_DEMO.xpt",
+          "decoded_heldout_rows": 1563,
+          "all_returned_SEQN_in_frozen_heldout": true
+        },
+        {
+          "file": "P_OHQ.xpt",
+          "decoded_heldout_rows": 1563,
+          "all_returned_SEQN_in_frozen_heldout": true
+        },
+        {
+          "file": "P_SMQ.xpt",
+          "decoded_heldout_rows": 1563,
+          "all_returned_SEQN_in_frozen_heldout": true
+        },
+        {
+          "file": "P_DIQ.xpt",
+          "decoded_heldout_rows": 1563,
+          "all_returned_SEQN_in_frozen_heldout": true
+        }
+      ],
+      "opened_input_files": [
+        "data/P_DEMO.xpt",
+        "data/P_DIQ.xpt",
+        "data/P_OHQ.xpt",
+        "data/P_SMQ.xpt",
+        "data/preprocessing/split_manifest.json",
+        "data/tabular_final_freeze_v1_20261016T143007292661Z/development_oof.npz",
+        "data/tabular_final_freeze_v1_20261016T143007292661Z/freeze_receipt.json",
+        "data/tabular_final_freeze_v1_20261016T143007292661Z/logistic_model.joblib",
+        "data/tabular_final_freeze_v1_20261016T143007292661Z/protocol.json",
+        "data/tabular_final_freeze_v1_20261016T143007292661Z/training_rate.json",
+        "data/tabular_pp1_v1/development_oof.npz",
+        "models/questionnaire_pp1_v1/model.joblib"
+      ],
+      "threshold_tuning": false,
+      "recalibration": false,
+      "one_final_evaluation_permission_consumed": true,
+      "results_sha256": "abcc52076b7073767f4f13907e9682f5da683bc9fc31fef5000351c4e13b391c",
+      "predictions_sha256": "bea8b43941366012e5886e314b075dd643376353089a08751b72d700530e3f8a",
+      "commit": false,
+      "push": false
+    },
+    "verification_summary": {
+      "checks_passed": 109,
+      "maximum_independent_metric_difference": 1.1351847156726436e-08
+    }
+  },
+  "results": {
+    "status": "completed_single_frozen_evaluation",
+    "receipt_sha256": "e08073b43e89ba99982483344e2612f577f46ae8ee0988b2458e5cfc2b8c6e0c",
+    "n": 1563,
+    "yes": 388,
+    "no": 1175,
+    "thresholds": {
+      "XGBoost_A_raw": 0.26,
+      "Logistic_C1_raw": 0.28,
+      "Training_rate": 0.5
+    },
+    "metrics": {
+      "XGBoost_A_raw": {
+        "AUROC": 0.7606536521166922,
+        "PR-AUC (trapezoidal)": 0.5523561218908322,
+        "Average precision": 0.5550943441915592,
+        "Brier": 0.15085828304290771,
+        "Sensitivity @0.50": 0.26804123711340205,
+        "Specificity @0.50": 0.9548936170212766,
+        "TN": 1122,
+        "FP": 53,
+        "FN": 284,
+        "TP": 104,
+        "Sensitivity frozen": 0.5592783505154639,
+        "Specificity frozen": 0.8357446808510638,
+        "TN frozen": 982,
+        "FP frozen": 193,
+        "FN frozen": 171,
+        "TP frozen": 217
+      },
+      "Logistic_C1_raw": {
+        "AUROC": 0.7561131827155079,
+        "PR-AUC (trapezoidal)": 0.5538066035013355,
+        "Average precision": 0.5547647820200481,
+        "Brier": 0.15136356795705186,
+        "Sensitivity @0.50": 0.2963917525773196,
+        "Specificity @0.50": 0.948936170212766,
+        "TN": 1115,
+        "FP": 60,
+        "FN": 273,
+        "TP": 115,
+        "Sensitivity frozen": 0.5412371134020618,
+        "Specificity frozen": 0.8314893617021276,
+        "TN frozen": 977,
+        "FP frozen": 198,
+        "FN frozen": 178,
+        "TP frozen": 210
+      },
+      "Training_rate": {
+        "AUROC": 0.5,
+        "PR-AUC (trapezoidal)": 0.6241202815099168,
+        "Average precision": 0.24824056301983366,
+        "Brier": 0.18661722576614395,
+        "Sensitivity @0.50": 0.0,
+        "Specificity @0.50": 1.0,
+        "TN": 1175,
+        "FP": 0,
+        "FN": 388,
+        "TP": 0,
+        "Sensitivity frozen": 0.0,
+        "Specificity frozen": 1.0,
+        "TN frozen": 1175,
+        "FP frozen": 0,
+        "FN frozen": 388,
+        "TP frozen": 0
+      }
+    },
+    "calibration_diagnostics": {
+      "XGBoost_A_raw": {
+        "intercept": 0.24732214212417603,
+        "slope": 1.2440859079360962,
+        "clipped": 0,
+        "status": "OK"
+      },
+      "Logistic_C1_raw": {
+        "intercept": 0.12132950681345961,
+        "slope": 1.1187968360641785,
+        "clipped": 0,
+        "status": "OK"
+      },
+      "Training_rate": {
+        "intercept": null,
+        "slope": null,
+        "clipped": 0,
+        "status": "undefined: one class or constant scores"
+      }
+    },
+    "reliability": {
+      "XGBoost_A_raw": [
+        [
+          1,
+          157,
+          12,
+          0.06628161668777466,
+          0.07643312101910828
+        ],
+        [
+          2,
+          156,
+          13,
+          0.11118536442518234,
+          0.08333333333333333
+        ],
+        [
+          3,
+          156,
+          12,
+          0.14316605031490326,
+          0.07692307692307693
+        ],
+        [
+          4,
+          156,
+          24,
+          0.1718430370092392,
+          0.15384615384615385
+        ],
+        [
+          5,
+          167,
+          35,
+          0.19827382266521454,
+          0.20958083832335328
+        ],
+        [
+          6,
+          147,
+          33,
+          0.2191324234008789,
+          0.22448979591836735
+        ],
+        [
+          7,
+          157,
+          30,
+          0.23805272579193115,
+          0.1910828025477707
+        ],
+        [
+          8,
+          154,
+          40,
+          0.28058961033821106,
+          0.2597402597402597
+        ],
+        [
+          9,
+          156,
+          85,
+          0.42474785447120667,
+          0.5448717948717948
+        ],
+        [
+          10,
+          157,
+          104,
+          0.6219959855079651,
+          0.6624203821656051
+        ]
+      ],
+      "Logistic_C1_raw": [
+        [
+          1,
+          157,
+          11,
+          0.05421074515442235,
+          0.07006369426751592
+        ],
+        [
+          2,
+          156,
+          15,
+          0.10058413472872847,
+          0.09615384615384616
+        ],
+        [
+          3,
+          156,
+          15,
+          0.13415837123349122,
+          0.09615384615384616
+        ],
+        [
+          4,
+          156,
+          22,
+          0.16393895349725968,
+          0.14102564102564102
+        ],
+        [
+          5,
+          157,
+          35,
+          0.19008285162594826,
+          0.2229299363057325
+        ],
+        [
+          6,
+          156,
+          30,
+          0.21592766659570592,
+          0.19230769230769232
+        ],
+        [
+          7,
+          156,
+          31,
+          0.24347794838343936,
+          0.1987179487179487
+        ],
+        [
+          8,
+          156,
+          45,
+          0.29015908997872697,
+          0.28846153846153844
+        ],
+        [
+          9,
+          156,
+          80,
+          0.43326606945274737,
+          0.5128205128205128
+        ],
+        [
+          10,
+          157,
+          104,
+          0.6485863423975167,
+          0.6624203821656051
+        ]
+      ],
+      "Training_rate": [
+        [
+          1,
+          1563,
+          388,
+          0.24844024956007038,
+          0.24824056301983366
+        ]
+      ]
+    },
+    "intervals": {
+      "draws": 1000,
+      "undefined_draws": 0,
+      "absolute_95": {
+        "XGBoost_A_raw": {
+          "AUROC": [
+            0.7333632748814304,
+            0.7889402276520043
+          ],
+          "PR-AUC (trapezoidal)": [
+            0.5007891700518939,
+            0.6123700198175159
+          ],
+          "Average precision": [
+            0.504700986356297,
+            0.614911637734353
+          ],
+          "Brier": [
+            0.14095447324216365,
+            0.16165052466094493
+          ],
+          "Sensitivity @0.50": [
+            0.2236180904522613,
+            0.31139980272891665
+          ],
+          "Specificity @0.50": [
+            0.9427127211457456,
+            0.9660093519743057
+          ],
+          "Sensitivity frozen": [
+            0.5103561521955304,
+            0.6095035606590922
+          ],
+          "Specificity frozen": [
+            0.8143420715018816,
+            0.8573884773173713
+          ]
+        },
+        "Logistic_C1_raw": {
+          "AUROC": [
+            0.7278858032307538,
+            0.7836103038735666
+          ],
+          "PR-AUC (trapezoidal)": [
+            0.5042132217908066,
+            0.6100329924480871
+          ],
+          "Average precision": [
+            0.5063133676685697,
+            0.6116329704610541
+          ],
+          "Brier": [
+            0.14132123954165057,
+            0.1623968149100914
+          ],
+          "Sensitivity @0.50": [
+            0.2539614121510673,
+            0.34091053666435345
+          ],
+          "Specificity @0.50": [
+            0.9359157710388321,
+            0.960819863328977
+          ],
+          "Sensitivity frozen": [
+            0.49497229738435766,
+            0.5903148091516189
+          ],
+          "Specificity frozen": [
+            0.8104008217944388,
+            0.854718461369803
+          ]
+        },
+        "Training_rate": {
+          "AUROC": [
+            0.5,
+            0.5
+          ],
+          "PR-AUC (trapezoidal)": [
+            0.6135636596289188,
+            0.635956493921945
+          ],
+          "Average precision": [
+            0.2271273192578375,
+            0.27191298784388995
+          ],
+          "Brier": [
+            0.17599474110265362,
+            0.19852728432823913
+          ],
+          "Sensitivity @0.50": [
+            0.0,
+            0.0
+          ],
+          "Specificity @0.50": [
+            1.0,
+            1.0
+          ],
+          "Sensitivity frozen": [
+            0.0,
+            0.0
+          ],
+          "Specificity frozen": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "XGBoost_minus_comparator_95": {
+        "Logistic_C1_raw": {
+          "AUROC": [
+            -0.005623126639483164,
+            0.013845987013763519
+          ],
+          "PR-AUC (trapezoidal)": [
+            -0.015298338458256868,
+            0.014560241566586515
+          ],
+          "Average precision": [
+            -0.01196823629836859,
+            0.015204047500387001
+          ],
+          "Brier": [
+            -0.002098470091554082,
+            0.0012984710844394917
+          ],
+          "Sensitivity @0.50": [
+            -0.052493602362204725,
+            -0.007692307692307665
+          ],
+          "Specificity @0.50": [
+            -0.0017231026642648638,
+            0.013537240111425377
+          ],
+          "Sensitivity frozen": [
+            -0.00800325203252033,
+            0.044670581610489875
+          ],
+          "Specificity frozen": [
+            -0.008369433526337205,
+            0.016416169795436572
+          ]
+        },
+        "Training_rate": {
+          "AUROC": [
+            0.23336327488143033,
+            0.28894022765200433
+          ],
+          "PR-AUC (trapezoidal)": [
+            -0.11926337813022181,
+            -0.017200628957914764
+          ],
+          "Average precision": [
+            0.26422464417393304,
+            0.357907534186019
+          ],
+          "Brier": [
+            -0.04328692649967325,
+            -0.028938808859515927
+          ],
+          "Sensitivity @0.50": [
+            0.2236180904522613,
+            0.31139980272891665
+          ],
+          "Specificity @0.50": [
+            -0.05728727885425444,
+            -0.033990648025694334
+          ],
+          "Sensitivity frozen": [
+            0.5103561521955304,
+            0.6095035606590922
+          ],
+          "Specificity frozen": [
+            -0.18565792849811832,
+            -0.14261152268262864
+          ]
+        }
+      },
+      "predictive_refits": 0,
+      "complex_survey_variance": false
+    },
+    "predictive_fits": 0,
+    "age_recorded_sex_subgroups": {
+      "XGBoost_A_raw": {
+        "age_30_44": {
+          "n": 446,
+          "positive": 80,
+          "negative": 366,
+          "AUROC": 0.7235997267759562,
+          "Brier": 0.13274946808815002,
+          "sensitivity_at_050": 0.15,
+          "specificity_at_050": 0.9562841530054644,
+          "TN": 350,
+          "FP": 16,
+          "FN": 68,
+          "TP": 12,
+          "conditional_AUROC_95": [
+            0.6594133868263518,
+            0.783577138412571
+          ],
+          "conditional_Brier_95": [
+            0.11494084962220692,
+            0.15212728229217554
+          ],
+          "bootstrap_repetitions": 1000,
+          "undefined_AUROC_draws": 0,
+          "small_outcome_support": false
+        },
+        "age_45_59": {
+          "n": 441,
+          "positive": 127,
+          "negative": 314,
+          "AUROC": 0.7142785495762074,
+          "Brier": 0.17504416406154633,
+          "sensitivity_at_050": 0.2440944881889764,
+          "specificity_at_050": 0.9522292993630573,
+          "TN": 299,
+          "FP": 15,
+          "FN": 96,
+          "TP": 31,
+          "conditional_AUROC_95": [
+            0.6589264530221134,
+            0.7714818822656443
+          ],
+          "conditional_Brier_95": [
+            0.1553184553884031,
+            0.19646898258465387
+          ],
+          "bootstrap_repetitions": 1000,
+          "undefined_AUROC_draws": 0,
+          "small_outcome_support": false
+        },
+        "age_60_80": {
+          "n": 676,
+          "positive": 181,
+          "negative": 495,
+          "AUROC": 0.8016909425749206,
+          "Brier": 0.14702777564525604,
+          "sensitivity_at_050": 0.3370165745856354,
+          "specificity_at_050": 0.9555555555555556,
+          "TN": 473,
+          "FP": 22,
+          "FN": 120,
+          "TP": 61,
+          "conditional_AUROC_95": [
+            0.7606466531034819,
+            0.8407865380557324
+          ],
+          "conditional_Brier_95": [
+            0.13029287378794732,
+            0.1632346990271955
+          ],
+          "bootstrap_repetitions": 1000,
+          "undefined_AUROC_draws": 0,
+          "small_outcome_support": false
+        },
+        "recorded_sex_1": {
+          "n": 789,
+          "positive": 193,
+          "negative": 596,
+          "AUROC": 0.7633098028306151,
+          "Brier": 0.15061962604522705,
+          "sensitivity_at_050": 0.25906735751295334,
+          "specificity_at_050": 0.947986577181208,
+          "TN": 565,
+          "FP": 31,
+          "FN": 143,
+          "TP": 50,
+          "conditional_AUROC_95": [
+            0.7221219294135581,
+            0.8014791968032215
+          ],
+          "conditional_Brier_95": [
+            0.1357893737823114,
+            0.16593418970808768
+          ],
+          "bootstrap_repetitions": 1000,
+          "undefined_AUROC_draws": 0,
+          "small_outcome_support": false
+        },
+        "recorded_sex_2": {
+          "n": 774,
+          "positive": 195,
+          "negative": 579,
+          "AUROC": 0.7575306673752269,
+          "Brier": 0.15110160410404205,
+          "sensitivity_at_050": 0.27692307692307694,
+          "specificity_at_050": 0.9620034542314335,
+          "TN": 557,
+          "FP": 22,
+          "FN": 141,
+          "TP": 54,
+          "conditional_AUROC_95": [
+            0.7178934675253319,
+            0.7978806051648083
+          ],
+          "conditional_Brier_95": [
+            0.13648115702406471,
+            0.1649712868579452
+          ],
+          "bootstrap_repetitions": 1000,
+          "undefined_AUROC_draws": 0,
+          "small_outcome_support": false
+        }
+      },
+      "Logistic_C1_raw": {
+        "age_30_44": {
+          "n": 446,
+          "positive": 80,
+          "negative": 366,
+          "AUROC": 0.7116120218579235,
+          "Brier": 0.135059398184044,
+          "sensitivity_at_050": 0.225,
+          "specificity_at_050": 0.9480874316939891,
+          "TN": 347,
+          "FP": 19,
+          "FN": 62,
+          "TP": 18,
+          "conditional_AUROC_95": [
+            0.6465744685068457,
+            0.7689601530631878
+          ],
+          "conditional_Brier_95": [
+            0.11703586898156568,
+            0.15507486669865755
+          ],
+          "bootstrap_repetitions": 1000,
+          "undefined_AUROC_draws": 0,
+          "small_outcome_support": false
+        },
+        "age_45_59": {
+          "n": 441,
+          "positive": 127,
+          "negative": 314,
+          "AUROC": 0.7179397161342094,
+          "Brier": 0.17311955114930366,
+          "sensitivity_at_050": 0.29133858267716534,
+          "specificity_at_050": 0.9490445859872612,
+          "TN": 298,
+          "FP": 16,
+          "FN": 90,
+          "TP": 37,
+          "conditional_AUROC_95": [
+            0.6635011474371234,
+            0.7750995244056258
+          ],
+          "conditional_Brier_95": [
+            0.15303435748342722,
+            0.19471176269452853
+          ],
+          "bootstrap_repetitions": 1000,
+          "undefined_AUROC_draws": 0,
+          "small_outcome_support": false
+        },
+        "age_60_80": {
+          "n": 676,
+          "positive": 181,
+          "negative": 495,
+          "AUROC": 0.8011384563870751,
+          "Brier": 0.14792757850583652,
+          "sensitivity_at_050": 0.3314917127071823,
+          "specificity_at_050": 0.9494949494949495,
+          "TN": 470,
+          "FP": 25,
+          "FN": 121,
+          "TP": 60,
+          "conditional_AUROC_95": [
+            0.7617666919202833,
+            0.8399720460723195
+          ],
+          "conditional_Brier_95": [
+            0.1306454984655355,
+            0.16461252941788418
+          ],
+          "bootstrap_repetitions": 1000,
+          "undefined_AUROC_draws": 0,
+          "small_outcome_support": false
+        },
+        "recorded_sex_1": {
+          "n": 789,
+          "positive": 193,
+          "negative": 596,
+          "AUROC": 0.7581632298223042,
+          "Brier": 0.15089363620902266,
+          "sensitivity_at_050": 0.29533678756476683,
+          "specificity_at_050": 0.9463087248322147,
+          "TN": 564,
+          "FP": 32,
+          "FN": 136,
+          "TP": 57,
+          "conditional_AUROC_95": [
+            0.7163626043067667,
+            0.7943812944355518
+          ],
+          "conditional_Brier_95": [
+            0.13613483386360206,
+            0.16628184945327668
+          ],
+          "bootstrap_repetitions": 1000,
+          "undefined_AUROC_draws": 0,
+          "small_outcome_support": false
+        },
+        "recorded_sex_2": {
+          "n": 774,
+          "positive": 195,
+          "negative": 579,
+          "AUROC": 0.7534830166954519,
+          "Brier": 0.1518426069095002,
+          "sensitivity_at_050": 0.29743589743589743,
+          "specificity_at_050": 0.9516407599309153,
+          "TN": 551,
+          "FP": 28,
+          "FN": 137,
+          "TP": 58,
+          "conditional_AUROC_95": [
+            0.7134606293031063,
+            0.7941832797407327
+          ],
+          "conditional_Brier_95": [
+            0.1372974001760018,
+            0.16677417776707265
+          ],
+          "bootstrap_repetitions": 1000,
+          "undefined_AUROC_draws": 0,
+          "small_outcome_support": false
+        }
+      },
+      "Training_rate": {
+        "age_30_44": {
+          "n": 446,
+          "positive": 80,
+          "negative": 366,
+          "AUROC": 0.5,
+          "Brier": 0.15196820798350755,
+          "sensitivity_at_050": 0.0,
+          "specificity_at_050": 1.0,
+          "TN": 366,
+          "FP": 0,
+          "FN": 80,
+          "TP": 0,
+          "conditional_AUROC_95": [
+            0.5,
+            0.5
+          ],
+          "conditional_Brier_95": [
+            0.1350471485368755,
+            0.17001733805991504
+          ],
+          "bootstrap_repetitions": 1000,
+          "undefined_AUROC_draws": 0,
+          "small_outcome_support": false
+        },
+        "age_45_59": {
+          "n": 441,
+          "positive": 127,
+          "negative": 314,
+          "AUROC": 0.5,
+          "Brier": 0.20661184697049975,
+          "sensitivity_at_050": 0.0,
+          "specificity_at_050": 1.0,
+          "TN": 314,
+          "FP": 0,
+          "FN": 127,
+          "TP": 0,
+          "conditional_AUROC_95": [
+            0.5,
+            0.5
+          ],
+          "conditional_Brier_95": [
+            0.18607635713866877,
+            0.22828819734854358
+          ],
+          "bootstrap_repetitions": 1000,
+          "undefined_AUROC_draws": 0,
+          "small_outcome_support": false
+        },
+        "age_60_80": {
+          "n": 676,
+          "positive": 181,
+          "negative": 495,
+          "AUROC": 0.5,
+          "Brier": 0.19643354822166897,
+          "sensitivity_at_050": 0.0,
+          "specificity_at_050": 1.0,
+          "TN": 495,
+          "FP": 0,
+          "FN": 181,
+          "TP": 0,
+          "conditional_AUROC_95": [
+            0.5,
+            0.5
+          ],
+          "conditional_Brier_95": [
+            0.17929697054746965,
+            0.21578429825550974
+          ],
+          "bootstrap_repetitions": 1000,
+          "undefined_AUROC_draws": 0,
+          "small_outcome_support": false
+        },
+        "recorded_sex_1": {
+          "n": 789,
+          "positive": 193,
+          "negative": 596,
+          "AUROC": 0.5,
+          "Brier": 0.18479234679007941,
+          "sensitivity_at_050": 0.0,
+          "specificity_at_050": 1.0,
+          "TN": 596,
+          "FP": 0,
+          "FN": 193,
+          "TP": 0,
+          "conditional_AUROC_95": [
+            0.5,
+            0.5
+          ],
+          "conditional_Brier_95": [
+            0.16885066425269482,
+            0.20074997101000147
+          ],
+          "bootstrap_repetitions": 1000,
+          "undefined_AUROC_draws": 0,
+          "small_outcome_support": false
+        },
+        "recorded_sex_2": {
+          "n": 774,
+          "positive": 195,
+          "negative": 579,
+          "AUROC": 0.5,
+          "Brier": 0.18847747061383766,
+          "sensitivity_at_050": 0.0,
+          "specificity_at_050": 1.0,
+          "TN": 579,
+          "FP": 0,
+          "FN": 195,
+          "TP": 0,
+          "conditional_AUROC_95": [
+            0.5,
+            0.5
+          ],
+          "conditional_Brier_95": [
+            0.17352689113032763,
+            0.20342805009734766
+          ],
+          "bootstrap_repetitions": 1000,
+          "undefined_AUROC_draws": 0,
+          "small_outcome_support": false
+        }
+      }
+    },
+    "threshold_tuning": false,
+    "calibration_mapping_fitted": false,
+    "calibration_diagnostic_intervals": "not estimated",
+    "clinical_validation": false,
+    "test_feedback_retuning_allowed": false
+  }
+}
