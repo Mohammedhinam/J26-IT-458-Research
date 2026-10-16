@@ -50,3 +50,9 @@ Dental-Caries-Detection/models/*.ckpt
 
 # Local training outputs
 Dental-Caries-Detection/results/
+
+# Trained AI model files
+*.keras
+
+# Local test images
+Dental-Caries-Detection/backend/test_image.jpg
