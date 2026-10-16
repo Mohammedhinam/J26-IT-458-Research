@@ -1,0 +1,66 @@
+{
+  "n": 53,
+  "scope": "saved-prediction conditional uncertainty only",
+  "paired_stratified_resamples": 1000,
+  "seed": 42,
+  "v3_minus_v2_95": {
+    "accuracy": [
+      0.03773584905660382,
+      0.3018867924528302
+    ],
+    "macro_f1": [
+      -0.00635219098067391,
+      0.21082044104041484
+    ],
+    "ordinal_mae": [
+      -0.49056603773584906,
+      -0.1320754716981133
+    ],
+    "macro_auroc": [
+      -0.11984052224920345,
+      0.03167090690513372
+    ]
+  },
+  "v3_recall": [
+    {
+      "grade": 1,
+      "support": 1,
+      "correct": 0,
+      "conditional_binomial_95": [
+        0.0,
+        0.975
+      ]
+    },
+    {
+      "grade": 2,
+      "support": 13,
+      "correct": 1,
+      "conditional_binomial_95": [
+        0.0019456284973467482,
+        0.3602974352678775
+      ]
+    },
+    {
+      "grade": 3,
+      "support": 22,
+      "correct": 15,
+      "conditional_binomial_95": [
+        0.4512755724262295,
+        0.8613534784462021
+      ]
+    },
+    {
+      "grade": 4,
+      "support": 17,
+      "correct": 11,
+      "conditional_binomial_95": [
+        0.3832836634434029,
+        0.857902516889779
+      ]
+    }
+  ],
+  "image_independence_assumed_not_verified": true,
+  "selection_optimism_corrected": false,
+  "new_training_or_inference": false,
+  "original_images_or_test_accessed": false
+}

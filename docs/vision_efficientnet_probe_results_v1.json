@@ -1,0 +1,517 @@
+{
+  "date": "2026-10-16",
+  "status": "exploratory_comparison_completed",
+  "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+  "config": {
+    "version": "training680-frozen-efficientnet-b0-probe-v1",
+    "encoder": "EfficientNet_B0_Weights.IMAGENET1K_V1",
+    "dimensions": 1280,
+    "resolution": 224,
+    "folds": 5,
+    "seed": 42,
+    "C": 1.0,
+    "class_weight": "balanced",
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "scaler": "StandardScaler_fit_inside_each_fold",
+    "bootstrap": 1000,
+    "grades": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "scope": "Training_only",
+    "fine_tuning": false
+  },
+  "bindings": {
+    "manifest_sha256": "8e7ff195009a5e781c216795fd2a943db17a0b3ec8fd1c84760f3bf9878a4c9f",
+    "weights_sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+    "config_sha256": "11a8d6470a9810d734ae36c5c62eb716e7dda71ee18f5f5c31759c5cfbfe5e13",
+    "code_sha256": "3c041e17dbd50fa3dbb3ba47cfd45862c7129b71c6d2c86c863c18d807441897",
+    "selection_sha256": "c7d6ecd627364801218e60ad58653c701085bc554745cb2e8cbb054d036ef8b6",
+    "fold_sha256": "e202132b8b7ee38ec4041ea399bccb0b538ef75ce1861faec044292c11cf90d4",
+    "reference_results_sha256": "7c3f788ecb629d34da2f31b1e8fd29091745fa10c33cff4d9f59ef227fd9edf4",
+    "reference_oof_sha256": "18318980b1cfa216d535633ff57067d4456b39b150335a8abfdf2dc16c8174ea",
+    "output_path_sha256": "012d976ec5e37471a8684d9ca61dbc5ad978b9d25a2c88548c119c195b9d3188"
+  },
+  "metrics": {
+    "efficientnet": {
+      "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+      "mgi_grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "n": 680,
+      "support": [
+        12,
+        84,
+        223,
+        361
+      ],
+      "accuracy": 0.5264705882352941,
+      "confusion_matrix": [
+        [
+          0,
+          3,
+          6,
+          3
+        ],
+        [
+          1,
+          22,
+          33,
+          28
+        ],
+        [
+          6,
+          27,
+          99,
+          91
+        ],
+        [
+          3,
+          26,
+          95,
+          237
+        ]
+      ],
+      "macro_f1_four_grades": 0.34103719948018196,
+      "per_grade_f1": [
+        0.0,
+        0.2716049382716049,
+        0.4342105263157895,
+        0.6583333333333333
+      ],
+      "per_grade_recall": [
+        0.0,
+        0.2619047619047619,
+        0.4439461883408072,
+        0.6565096952908587
+      ],
+      "per_grade_auroc": [
+        0.843438123752495,
+        0.6977069351230425,
+        0.6212087017103158,
+        0.6848704834185778
+      ],
+      "macro_auroc": 0.7118060610011078,
+      "multiclass_brier": 0.7533831697771378,
+      "ordinal_mae": 0.5882352941176471,
+      "quadratic_weighted_kappa": 0.26783866063609163,
+      "clinical_validation": false,
+      "healthy_mgi0_supported": false,
+      "balanced_accuracy": 0.3405901613841069,
+      "within_one_accuracy": 0.8941176470588236,
+      "predicted_counts": [
+        10,
+        78,
+        233,
+        359
+      ]
+    },
+    "resnet": {
+      "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+      "mgi_grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "n": 680,
+      "support": [
+        12,
+        84,
+        223,
+        361
+      ],
+      "accuracy": 0.475,
+      "confusion_matrix": [
+        [
+          0,
+          3,
+          4,
+          5
+        ],
+        [
+          2,
+          17,
+          33,
+          32
+        ],
+        [
+          1,
+          22,
+          73,
+          127
+        ],
+        [
+          0,
+          18,
+          110,
+          233
+        ]
+      ],
+      "macro_f1_four_grades": 0.29511448569989673,
+      "per_grade_f1": [
+        0.0,
+        0.2361111111111111,
+        0.3295711060948081,
+        0.6147757255936676
+      ],
+      "per_grade_recall": [
+        0.0,
+        0.20238095238095238,
+        0.3273542600896861,
+        0.6454293628808865
+      ],
+      "per_grade_auroc": [
+        0.7572355289421158,
+        0.6452740492170023,
+        0.5187173121645358,
+        0.6130480466138122
+      ],
+      "macro_auroc": 0.6335687342343665,
+      "multiclass_brier": 0.831293901285898,
+      "ordinal_mae": 0.6205882352941177,
+      "quadratic_weighted_kappa": 0.21475155853815908,
+      "clinical_validation": false,
+      "healthy_mgi0_supported": false,
+      "balanced_accuracy": 0.29379114383788124,
+      "within_one_accuracy": 0.9117647058823529,
+      "predicted_counts": [
+        3,
+        60,
+        220,
+        397
+      ]
+    },
+    "majority": {
+      "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+      "mgi_grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "n": 680,
+      "support": [
+        12,
+        84,
+        223,
+        361
+      ],
+      "accuracy": 0.5308823529411765,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          12
+        ],
+        [
+          0,
+          0,
+          0,
+          84
+        ],
+        [
+          0,
+          0,
+          0,
+          223
+        ],
+        [
+          0,
+          0,
+          0,
+          361
+        ]
+      ],
+      "macro_f1_four_grades": 0.1733909702209414,
+      "per_grade_f1": [
+        0.0,
+        0.0,
+        0.0,
+        0.6935638808837656
+      ],
+      "per_grade_recall": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "per_grade_auroc": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "macro_auroc": 0.5,
+      "multiclass_brier": 0.9382352941176471,
+      "ordinal_mae": 0.6279411764705882,
+      "quadratic_weighted_kappa": 0.0,
+      "clinical_validation": false,
+      "healthy_mgi0_supported": false,
+      "balanced_accuracy": 0.25,
+      "within_one_accuracy": 0.8588235294117647,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        680
+      ]
+    },
+    "prior": {
+      "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+      "mgi_grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "n": 680,
+      "support": [
+        12,
+        84,
+        223,
+        361
+      ],
+      "accuracy": 0.5308823529411765,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          12
+        ],
+        [
+          0,
+          0,
+          0,
+          84
+        ],
+        [
+          0,
+          0,
+          0,
+          223
+        ],
+        [
+          0,
+          0,
+          0,
+          361
+        ]
+      ],
+      "macro_f1_four_grades": 0.1733909702209414,
+      "per_grade_f1": [
+        0.0,
+        0.0,
+        0.0,
+        0.6935638808837656
+      ],
+      "per_grade_recall": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "per_grade_auroc": [
+        0.4491017964071856,
+        0.4945669542984979,
+        0.49599650675589485,
+        0.49763804826370495
+      ],
+      "macro_auroc": 0.4843258264313208,
+      "multiclass_brier": 0.5950719074394464,
+      "ordinal_mae": 0.6279411764705882,
+      "quadratic_weighted_kappa": 0.0,
+      "clinical_validation": false,
+      "healthy_mgi0_supported": false,
+      "balanced_accuracy": 0.25,
+      "within_one_accuracy": 0.8588235294117647,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        680
+      ]
+    }
+  },
+  "uncertainty": {
+    "repetitions": 1000,
+    "undefined_draws": 0,
+    "conditional_only": true,
+    "participant_independence_verified": false,
+    "efficientnet_minus_reference_95": {
+      "resnet": {
+        "macro_f1_four_grades": [
+          0.00036254762716405215,
+          0.0922630604074304
+        ],
+        "balanced_accuracy": [
+          0.0033079069066658646,
+          0.09131645524387609
+        ],
+        "quadratic_weighted_kappa": [
+          -0.047026116152792834,
+          0.1614599859634183
+        ]
+      },
+      "majority": {
+        "macro_f1_four_grades": [
+          0.13633427949265317,
+          0.2038780755404017
+        ],
+        "balanced_accuracy": [
+          0.06212830923487759,
+          0.1258332456190984
+        ],
+        "quadratic_weighted_kappa": [
+          0.19617180895962436,
+          0.34552682847775784
+        ]
+      },
+      "prior": {
+        "macro_f1_four_grades": [
+          0.13633427949265317,
+          0.2038780755404017
+        ],
+        "balanced_accuracy": [
+          0.06212830923487759,
+          0.1258332456190984
+        ],
+        "quadratic_weighted_kappa": [
+          0.19617180895962436,
+          0.34552682847775784
+        ]
+      }
+    }
+  },
+  "efficientnet_minus_reference": {
+    "resnet": {
+      "accuracy": 0.05147058823529416,
+      "macro_f1_four_grades": 0.04592271378028523,
+      "balanced_accuracy": 0.046799017546225674,
+      "quadratic_weighted_kappa": 0.05308710209793255,
+      "ordinal_mae": -0.032352941176470584,
+      "macro_auroc": 0.07823732676674122,
+      "multiclass_brier": -0.07791073150876016,
+      "within_one_accuracy": -0.01764705882352935
+    },
+    "majority": {
+      "accuracy": -0.004411764705882337,
+      "macro_f1_four_grades": 0.16764622925924055,
+      "balanced_accuracy": 0.09059016138410692,
+      "quadratic_weighted_kappa": 0.26783866063609163,
+      "ordinal_mae": -0.039705882352941146,
+      "macro_auroc": 0.21180606100110777,
+      "multiclass_brier": -0.18485212434050924,
+      "within_one_accuracy": 0.03529411764705892
+    },
+    "prior": {
+      "accuracy": -0.004411764705882337,
+      "macro_f1_four_grades": 0.16764622925924055,
+      "balanced_accuracy": 0.09059016138410692,
+      "quadratic_weighted_kappa": 0.26783866063609163,
+      "ordinal_mae": -0.039705882352941146,
+      "macro_auroc": 0.22748023456978694,
+      "multiclass_brier": 0.15831126233769144,
+      "within_one_accuracy": 0.03529411764705892
+    }
+  },
+  "tests": {
+    "passed": 46,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "by_module": {
+      "tests.test_efficientnet_feature_probe": 30,
+      "tests.test_frozen_feature_probe": 16
+    },
+    "scope": "Generated focused tests plus directly affected ResNet regressions; not full repository"
+  },
+  "saved_result_checks": {
+    "passed": 79,
+    "failed": 0,
+    "metric_match_atol": 1e-12,
+    "probability_sum_max_deviation": {
+      "efficientnet": 1.4500983525067568e-07,
+      "resnet": 1.7637648852542043e-07,
+      "majority": 0.0,
+      "prior": 0.0
+    },
+    "probability_sum_atol": 1e-06
+  },
+  "execution": {
+    "status": "PASS",
+    "date": "2026-10-16",
+    "seconds": 48.25949962498271,
+    "peak_rss_bytes_macos": 1185579008,
+    "source_model_arrays_verified": 680,
+    "validation_arrays_accessed": 0,
+    "held_payloads_accessed": 0,
+    "test_payloads_accessed": 0,
+    "cam_arrays_accessed": 0,
+    "classifier_fits": 5,
+    "baseline_fits": 10,
+    "neural_optimizer_steps": 0,
+    "authorization_consumed": true,
+    "source_and_reference_bindings_unchanged": true,
+    "results_sha256": "d450ea6a9e21d560a3e21b51df707a538b676783575e9ebe25b4d3ca84bf0eb8",
+    "protocol_sha256": "2253db0e89aad06a2fe49a90d313b7ae0e08a806b87845d49753b3d9e48dbc4b"
+  },
+  "weights": {
+    "status": "PASS",
+    "date": "2026-10-16",
+    "official_url": "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth",
+    "path": "/Users/vinuthanvinuthan/.cache/torch/hub/checkpoints/efficientnet_b0_rwightman-7f5810bc.pth",
+    "bytes": 21444401,
+    "sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+    "official_filename_sha_prefix": "7f5810bc",
+    "full_hash_independently_published": false,
+    "seconds": 140.59968091599876,
+    "owner_reply": "ஆம், official EfficientNet-B0 weights மட்டும் download செய்",
+    "automatic_retry": false
+  },
+  "source_code_hashes": {
+    "b1_development_bundle_v1.py": "7ad20bcafce99797164239275954809cc11a7750922d6998443387aa91c7119c",
+    "b1_jpeg_source_v1.py": "5f28c0deb73f74a10afb8720300866877602e1c012ddecec092d46d23a1deefb",
+    "colour_b1_iccv2_generated.py": "6c611e1c9d77e7af1122d835cc7ce4d17699cbbb8497a6c279b32cd81a58c45c",
+    "colour_b1_prototype.py": "d3108ea3bf7f310f1b46960174d4936299ece19d762f4ca1ee9d900572b90856",
+    "colour_b1_streaming.py": "5b3a6bc893d1f6fc451c74e69f4865de00565b91bd19dc935baee6476cc5ec67",
+    "colour_qa.py": "4ad2b81c715b01e624b527d1971cc303740ddf559461f2d953c831956c1e82e3",
+    "colour_policy.py": "2bba567545143687f49b6e3ae63fdd72d1eacc10977d5ec373f00a4b5451a97b",
+    "exploratory_bundle.py": "dda776ca1558ed4da795df7cee47c0fe19d382cf32c37ca89d22f4141974b615",
+    "exploratory_bundle_v4.py": "c914cc05ad2be4ff08873a5d2270b5836e0f84219a539435beeca09b57ad76cd",
+    "model_pipeline.py": "c11ad18912575f3567d0baf0eefb1bfbb5eb00fbfa075880fe84aef1ccd34b3c",
+    "train_pipeline.py": "e7a979b0875af0e459496bca79ce3c80e594acf2639ea7dc9d8659ec75ffc695",
+    "exploratory_pilot_b1_v1.py": "876ec09dd7e9766bbc847416398e78d1ce320fa38a20bbaa952d35750eb5be05",
+    "exploratory_pilot.py": "c5bf6cba173390f914a44c4537b91d4f2a8e150aa0f5e4842c2ca94bb1a4d535",
+    "frozen_feature_probe.py": "066747fedc12c77bca129f38705fc7cdc98d829e6e38355226bee8d85b7c6ede",
+    "efficientnet_feature_probe.py": "2dd874210fe9eaacc758e5fbc87d4c0d176467febfb628c0465fed2ba95817d4"
+  },
+  "plan_sha256": "d3d38a15ab58b4335a3e47ceb918f1863dcc327fc3f0be05cdc6e2d7902dfff5",
+  "test_source_sha256": "7a07b139b3a4e027937003a439da4cc912c1be6fb4c10b24799e4660ec81c6a7",
+  "junit_sha256": "bb7281cd7e45761c1c16149e5c0e720ffd45f35f84828775295f99d636e35535",
+  "artifact_sha256": {
+    "protocol.json": "2253db0e89aad06a2fe49a90d313b7ae0e08a806b87845d49753b3d9e48dbc4b",
+    "features.npz": "d8cda6807e7954e2dd8d7cf20be77b46e5063f89910436df294381901231d838",
+    "oof.npz": "c78fd5be1507c0e4b18b9cafff2a8f63ef12fac2d584c1fea52d1ae1b863d8cb",
+    "results.json": "d450ea6a9e21d560a3e21b51df707a538b676783575e9ebe25b4d3ca84bf0eb8"
+  },
+  "output_directory": "data/vision/training680_efficientnet_probe_v1_20261016T151400472912",
+  "evidence_directory": "data/vision/training680_efficientnet_execution_v1_20261016T151400472912",
+  "final_model_selected": false,
+  "qualified_labels_approved": false,
+  "participant_independence_verified": false,
+  "healthy_mgi0_supported": false,
+  "held181_used": false,
+  "validation53_payload_accessed": false,
+  "test_used": false,
+  "committed": false,
+  "pushed": false
+}

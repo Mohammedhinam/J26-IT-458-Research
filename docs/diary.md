@@ -1201,3 +1201,268 @@ Why: Preserve completed work and actual evidence in meaningful branch history af
 Verification: Explicit Component 2 paths and vinuthan checked; raw data, weights, environments, OS files and unrelated diagram excluded. Earlier test evidence reused; no retraining or repeated audits.
 Next step: Verify this commit and push only to origin/vinuthan; retain remaining pending files for their own scoped batches.
 What I understood (my own words):
+
+
+## 2026-10-15 — Focused saved-prediction Grade2 diagnosis
+
+What was done: Compared only saved v2/v3ValidationpredictionJSONandits hash receipt;53uniqueID/label/gradeorderalignmentpassed. Computedconfusions,recalls,predictioncountsandall13Grade2p2/top2/gaps. Independentread-onlycross-checkagreed.
+Why: UnderstandobservedGrade2regressionbeforeproposingmoretraining;avoidclaimingcausesfromaccuracyalone.
+Findings: v3trueGrade2counts1correct/10→3/2→4;11previouscorrectlost. Meanp2.368161→.194547;12/13decrease;top2coverage13→2. V2Grade2precision12/45→v3onecorrectprediction1/1withrecall1/13. Grades3/4improvementcoexistswithGrade2deterioration.
+Decisions made: No correctivehyperparameter/clinicalcauseidentified. ProposedonlyONEpredeclaredrun-seedreplication43withotherv3settingsunchangedtoassessstability,pendingfreshownerapproval. No newtraining/inference/images/Training/Test/holds/checkpoints,sourceorlabelchanges,installs/downloads/uploads,commit/push.
+Next step: Ownerreviewofboundedstability-replicationproposal;noautomaticexperiment.
+What I understood (my own words):
+
+
+## 2026-10-15 — Project status and dataset recovery recommendations
+
+What was done: ReviewedexistingaggregateevidenceandprimaryresearchsourcesforpracticalPP1route. Clarified181helddevelopment=52Training+129Validation,separate182Test;121developmentpartialcandidates=2Training+119Validation. No repeateddataset/imageaudit.
+Why: Avoidassumingallheldimagesaredamagedoraddingthemwithoutvalidlabels/independence. RecoveringmostlyValidationcannotbeguaranteedtofixTrainingperformance.
+Decisions made: Recommendationonly—prioritiseexistingqualifiedreviewpackage/developmentrecoveryandside-by-sidequestionnaire/demoimplementation. B1engineeringworksolvedsourceformatblocker;missingwhole-imageMGI0,scarceMGI1,qualifiedlabels/participantindependenceandmodelqualityremainunresolved. Externaldatasourcesneedlabel/licence/provenancechecks;noneverifiedreadyor downloaded. Noautomaticseedrun,clinicalapprovalorlabel/splitchange.
+Next step: Preparecompactrecovery/decisionviewofexisting52heldTrainingrecordsandlinked121partial-policycasesfromcached evidence;retainholdsandseekonlyactualnecessaryqualified/methodologicaldecisions. Originalresearchscopeunchanged;noimplementationortrainingnow.
+What I understood (my own words):
+
+
+## 2026-10-15 — Training52recoverypackageprepared;sourcealternativesresearched
+
+What was done: Ownerapprovedcached52TrainingreviewpackageandfurtherVisionresearch. CreatedignoredfilterableHTML/52decisionCSV/121developmentpartiallinks/cachedQAJSON/instructions/verification/recipe,allpending. PreparedpublicaggregatehandoffandUNSENTreviewer/sourceclarificationdrafts.
+Why: Focus humanhelpontheactualdataapprovalblockerswithoutanothertraininglooporrepeatingaudits.
+Findings:52=2partialflags+45QAreferrals+4companions+1NP015. Nineprotected-Testaliases+oneValidation-shared+NP015make11boundaryholds. Remaining41source recordsare33proposedcontentgroups(26single+7multigroups/15sources);conditionalupperboundonly,zeronewapprovedrecords. Private/ambiguouslabelcasesnotcleared. ExternalMIOv2APIconfirmsCCBY4.0/open,but3diagnosticcategoriesnotMGI;Wen2024dataremainprivateandonlydesign/algorithmofferedonrequest.
+Verification:9focusedartifactcheckspass;52selectedTrainingQAobjectsreadwithTest/unselectedbodiesdiscardedbeforeJSONdecode;malformedTestsentinelpassed. Inputsandoldmanifestsunchanged,allhumanfieldsblank/pending,121partialrowsdevelopmentonly,HTMLnopreload. NooriginalRGB/TXT/CSV/checkpoint/Testlabels,training/inference,installs,datasetdownloads/uploads,commitsorpushes.
+Next step: Qualifiedreviewer/sourceclarificationrouteusingthepreparedpackage. NoColabneedednow;nonewclinical/split/manifest/experimentdecisionmade. Ownerisresting;novalidation-improvementpromise.
+What I understood (my own words):
+
+
+## 2026-10-15 — Original dataset-author clarification request prepared
+
+What was done: Verified the two published corresponding-author emails in the original article's Europe PMC full-text XML and updated the existing UNSENT request with four focused questions.
+Why: Source creators may clarify consensus annotations, upper-jaw-only captions, participant grouping, TXT format and supported whole-image MGI 0 evidence without inventing grades.
+Verification: Branch vinuthan confirmed; existing review evidence reused. Contact publication verified, delivery and response not assumed. No source images, Test labels, datasets or model outputs accessed.
+Decisions made: Owner agreed to pursue clarification. No message sent or attachment shared; a future reply must be reviewed before any eligibility or label decision.
+Next step: Owner can send the prepared initial email without patient-image attachments. Qualified annotation and supervisor decisions remain pending where source clarification does not resolve them.
+What I understood (my own words):
+
+
+## 2026-10-16 — Working questionnaire explanation and PP1 demonstration
+
+What was done: Completed the prospectively bounded six-setting development comparison, checked TreeSHAP for every OOF participant, implemented constrained What-if/reset and a localhost demonstration. Added survey-weight point sensitivity and uncertainty for saved Vision v2/v3 predictions. The separate Vision page shows the three existing v3 Grad-CAM examples; no new Vision inference or training.
+Why: PP1 needs usable explanations as well as measured model performance. Reusing fixed folds and saved evidence avoids leakage and unnecessary experiments. Primary SHAP/XGBoost/scikit-learn/CDC sources informed the implementation.
+Problems faced: Balanced XGBoost increased AUROC only from 0.739398 to 0.740041, with an interval including no gain and worse Brier. This is not reliable improvement. Vision Grade2 recall remains 1/13 in v3, provisional labels and participant independence remain unresolved, and MGI0 has no supported whole-image examples. Email clarification was deferred at the owner's request; this does not approve data.
+Decisions made: Retain existing raw XGBoost A as the demonstration reference; make output mean previous gum treatment only. Explain SHAP in log-odds, protect history fields, restrict smoking/cleaning scenarios and disclose non-causal behaviour. Keep 181 holds and Test material excluded. Use the installed standard-library local server; no package installation or public deployment.
+Verification: 76 tests passed, zero failures/skips; 15 browser checks passed. All 6,251 OOF SHAP checks passed, reference baseline reproduced, original reset exact. Local median prediction+SHAP time 11.14 ms/p95 12.22 ms over 30 requests, not clinical/usability validation. Dataset/historical evidence preserved; no new Vision training, cloud upload, commit or push.
+Next step: Open http://127.0.0.1:8765 and rehearse one fictional questionnaire scenario and one saved Vision example using docs/component2_pp1_working_demo_v1.md. Final model/calibration/threshold decisions and scientific evaluation remain separate unfinished work.
+What I understood (my own words):
+
+
+## 2026-10-16 — External advice assessed; next Vision diagnostic selected
+
+What was done: Read both external-adviser reports and selected a prospective fixed-ImageNet ResNet50 feature probe with one balanced regularised linear classifier. Defined a 680-Training-only comparison, keeping the53Validation separate and181holds/NP015/Test excluded.
+Why: Test the current representation with a small fixed recipe before further fine-tuning; do not confuse outside AI advice with verified clinical annotations or execution permission.
+Verification: Cached DRAFT SHA unchanged. Metadata-only support12/84/223/361;680distinct known content groups. Proposed5folds each544fit/136score;grade1 scoring support3/2/2/2/3. Known group isolation holds, participant independence remains unverified. No images, feature extraction, model fit or new automated test suite run.
+Decisions made: Routine technical advice is assessed by Codex. Preserve original captions, five-grade definitions, original split evidence and consumed-run guards. The new plan is prospective and does not create an approved manifest, active folds, clinical approval or real-run permission.
+Next step: Prepare a separately versioned synthetic-tested probe/extractor handoff, with fresh execution bindings required before a real run. No new upload or training now.
+What I understood (my own words):
+
+## 2026-10-16 — Local runtime and PP1 integration
+
+### What was done
+- Installed owner-authorized local Vision/API dependencies in .venv; Mac MPS available, generated CPU/MPS Grad-CAM tests pass.
+- Added React + FastAPI demonstration using the existing XGBoost reference, SHAP, What-if/reset and saved Vision examples; new-photo pipeline verified with generated inputs only.
+- Implemented the fixed 680-Training-only feature-probe runner and synthetic checks; real probe has not run.
+- Reused saved questionnaire OOF predictions for exact additional classification metrics and development age/recorded-sex summaries. No new model fit.
+- Final focused verification: 98 passed, 0 failed/errors/skipped; browser and source-hash evidence saved. No commit/push.
+
+### Problems faced
+- PyTorch/Torchvision/Pillow were missing locally; authorized installation resolved this. System pdftotext was absent, so the existing bundled pypdf reader was used for the signed proposal.
+- An initial browser selector check started after the Vision tab had been selected; explicit fresh navigation resolved it.
+- New phone-photo ICC/orientation compatibility is not established. The default photo runtime remains inactive; no unsupported colour fallback.
+- Label approvals, MGI0 absence/MGI1 scarcity, unknown participant independence, final tabular model/threshold freeze and final evaluation remain unresolved.
+
+### Decisions made
+- Retain raw XGBoost A for the demonstration; tiny balanced-model AUROC gain is not reliable and probability error worsened. No further blind hyperparameter searches.
+- Keep all original data, 181 holds, 53 Vision Validation cases, NP015 and final Tests outside the proposed Training-only probe.
+- Preserve old implementations/results; add isolated source files and locally bundled UI dependencies. No package or model download occurs when simply opening the demo.
+
+### Next step
+Owner rehearses http://127.0.0.1:8766. A new explicit real-run scope is needed for the one 680-image probe; scientific approvals remain separate. No Colab action is currently needed.
+
+What I understood (my own words):
+
+
+## 2026-10-16 — Actual 680-image frozen-feature probe
+
+### What was done
+Ran the owner-approved fixed ImageNet ResNet-50 feature pass and five-fold scaled/balanced Logistic Regression comparison on 680 original Training candidates only. Downloaded official V2 weights after separate owner approval and verified the full SHA. Reused unchanged B1 inputs, labels and code.
+
+### Problems faced
+The authentic official weights were absent locally; the explicit owner-approved download resolved this. A preliminary result-verification assertion used an overstrict 1e-12 probability-row-sum tolerance; actual maximum error 1.76e-7 passes the existing 1e-6 metric contract. No saved probabilities, test assertions or production thresholds were changed.
+
+The result is mixed: macro-F1 0.295114 vs 0.173391 and QWK 0.214752 vs 0, but accuracy 47.5% vs 53.09% and Brier 0.831294 vs prior 0.595072 are worse. Grade 1 recall remains 0/12; Grade 2 is 17/84. Provisional labels, unknown participant independence and missing MGI 0 remain unresolved.
+
+### Decisions made
+Record limited signal in this specific setup, not an overall win or clinical/final model. Do not directly rank Training680 OOF against historical53 Validation metrics. Preserve all 181 holds, NP015 and final Tests. The single probe permission is consumed; no extra experiment or neural training. Conditional paired bootstrap intervals do not correct refitting or participant/selection uncertainty.
+
+### Verification
+680 model-array hashes/accesses; five folds each 544 fitting/136 scoring; five classifier and ten Dummy fits; zero neural optimizer steps; zero Validation/held/Test/CAM payloads. 65 saved-result checks pass and independent reviewer metrics agree. Runtime 98.69s; peak RSS 1125.09 MiB. Prior16 generated tests reused without repetition; no new pytest claim. Code, source bundle and labels unchanged; no commit/push.
+
+### Next step
+Prepare a separately scoped, fixed EfficientNet-B0 feature comparison with identical 680 records and folds. Continue qualified annotation/group review independently; no automatic approvals or held-image recovery.
+
+What I understood (my own words):
+
+
+## 2026-10-16 — EfficientNet-B0 fixed-feature comparison
+
+### What was done
+Prepared and ran one owner-authorized EfficientNet-B0 feature pass on the same 680 Training images/folds as ResNet. Same B1 inputs and five fold-local scaled/balanced Logistic heads; no neural optimizer steps. Official weights downloaded only after separate owner approval, provenance/hash pinned. Original ResNet results reused unchanged.
+
+### Problems faced
+Official EfficientNet weights were absent; the authorized download resolved this. Remaining model performance is limited: Grade1 recall0/12, Grade2 22/84; accuracy52.65% still below majority53.09%, and Brier0.753383 worse than prior0.595072. Missing whole-image MGI0, provisional labels and unknown participant independence remain unresolved. No specific learning implementation bug has been established.
+
+### Decisions made
+Report measured encoder improvement, not a complete solution: macro-F1 .295114→.341037, balanced accuracy .293791→.340590, AUROC .633569→.711806, QWK .214752→.267839. Conditional paired macro-F1 interval is borderline; QWK difference includes zero. These intervals do not correct selection/refitting/unknown participants. No final model or automatic new training stage.
+
+### Verification
+46 focused generated/regression tests passed, zero failed/errors/skipped; 79 saved-result checks passed. Exactly680Training array hashes/accesses; same IDs/labels/folds and baseline predictions. Frozen weights/BatchNorm unchanged. CPU48.26s, peak RSS1130.66MiB. No53Validation/181held/NP015/Test/CAM payloads, original image or label changes, cloud, commit/push.
+
+### Next step
+Predeclare one cached-feature head-only balanced-versus-unweighted C=1 comparison to examine probability/recall trade-offs without new image inference. This is a recommendation, not an activated experiment. Qualified label/group decisions remain necessary.
+
+What I understood (my own words):
+
+
+## 2026-10-16 — Cached EfficientNet head class-weight comparison
+
+### What was done
+Ran one authorized five-fold unweighted C=1 Logistic comparison using existing680Training EfficientNet features. Same folds and per-fold scaler; reused balanced/majority/prior predictions. No new image inference, encoder execution, model weights, installs or datasets.
+
+### Problems faced
+Higher accuracy is a small trade-off, not a clear improvement:358→362correct, but Grade2 correct22→19 and macro-F1 .341037→.337377. Prior baseline has361correct and much better Brier. Grade1 remains0/12; whole-image MGI0 absent. No confirmed learning implementation bug was found.
+
+### Decisions made
+Keep both outcomes as exploratory evidence; no final winner or automatic deployment change. All five conditional paired differences versus balanced include zero. Avoid further blind optimizer searches. Keep181held records(52Training/129Validation), NP015, provisional labels and Test gates unchanged. Qualified review and approved demo/scientific integration remain necessary.
+
+### Verification
+22 generated tests passed, zero failed/errors/skipped.81 saved-result checks passed, including real fold-local scaler means and exact cache/OOF provenance. Five new fits, no balanced refit; runtime5.21s, peakRSS191.97MiB. Only three cache inputs opened; all image/other Vision data access blocked. No original source, label, split or old code change; no commit/push.
+
+### Next step
+Qualified label/group decisions and explicitly provisional new-photo prediction/Grad-CAM demo integration. Final scientific training/evaluation remains gated; no automatic held-image recovery or missing-class fabrication.
+
+What I understood (my own words):
+
+
+## 2026-10-16 — Held181 review workflow milestone
+What was done: Reused cached development evidence to prepare one181-case reviewer viewer, preserving the52-case package and every hold.
+Problems faced: Only2of121development partial flags are Training; recovery cannot be presented as121extra Training examples. Qualified labels/group/identity decisions remain unavailable.
+Decisions made: No automatic clinical grades, approvals or eligibility. Keep source evidence and overlapping flags; source image links open only deliberately.
+Verification:17generated tests and9artifact checks passed;52/129split and cached hashes unchanged. No Test objects/source images decoded.
+Next step: Diagnose saved MGI1/2 predictions and prepare a defensible bounded experiment; no new real fits yet.
+What I understood (my own words):
+
+
+## 2026-10-16 — Saved minority-grade diagnosis and bounded next experiment
+What was done: Verified three saved680OOF files share IDs/labels/folds; measured grade ranks, error direction, fixed confidence bins and288private case-model rows. Prepared a separately gated95-fit nestedEfficientNetcached-head runner and exact prospective plan; no real fitting.
+Problems faced: Grade1correct0/12 in all3heads. Grade2balanced22/84 becomes19/84unweighted. Many high-confidence errors and Brier worse than prior; causes are not established. MissingMGI0/qualified labels/participants remain.
+Decisions made: Test stronger regularisation as a hypothesis through inner-only selection, not blind neural fine-tuning or error-driven relabeling. Current generated readiness is not permission for real execution. No clinical or final model claim.
+Verification:11diagnostic+10nested generated tests passed,0failed/errors/skipped.680aligned records and288localcase-model rows. All6inner settings and95synthetic fits covered; scaler/class weights fit locally, deterministic predictions, exact folds, failure and approval gates tested. No images, new real inference/fits, Test, installs, commit/push.
+Next step: Obtain specific authorization for one frozen95-fit cache-only experiment; qualified held review remains separate.
+What I understood (my own words):
+
+## 2026-10-16 — Population-separated Vision demo evidence
+What was done: Added hash-verified aggregate evidence API and separate53Validationhistorical/680TrainingOOFUIcards. Rebuilt React using already installed dependencies. Preserved9savedGradCAMviews, fictional questionnaireSHAP/reset and inactive new-photo gate.
+Problems faced: Historical50.94% cannot fairly be compared with680OOFaccuracies. Initial browser request used an invalid relative URL; fixed automation URL. Screenshot tool destination differed from project; used permitted tool output and copied only generated aggregate screenshots.
+Decisions made: Show actual minority-grade recalls, majority baseline, provisional/noMGI0/participant/selection limits. No model substitution, activation or new data inference. Mobile table gets sideways-scroll hint and keyboard focus.
+Verification:20focused evidence/APItests passed,0failed/errors/skipped;12corebrowser+3post-hintchecks passed. Desktop/mobile aggregate screenshots inspected; questionnaire reset exact,9savedimages loaded, new-photo inactive.16historicalVisiondependency hashes unchanged. Fourmission suites total58passed; not fullrepository testing.
+Next step: Resume from docs/vision_autonomous_checkpoint_v1.json after exact new scope or genuine reviewer decisions. No automatic background continuation claimed.
+What I understood (my own words):
+
+
+## 2026-10-16 — Owner-authorized nested cached-head experiment completed
+What was done: After explicit owner approval, ran exactly95Logisticfits on the existing680TrainingEfficientNetcache.6fixedsettings×3innerfolds×5outerfolds+5outerrefits. Fourfolds selectedbalancedC.01,onebalancedC.1. Saved fresh protocol/authorization/hash/access/OOF evidence in ignoredlocalstorage. No full680deployment model refit or encoder/image execution.
+Problems faced: Balanced metrics improve modestly but trade-offs persist. Grade2correct22→27,macro-F1.341037→.346429,Brier.753383→.613977;accuracy358→355correct,Grade3/4recalls slightly lower. Grade1still0/12. PriorBrier.595072 still better. No confirmed reliablefourgrade or clinicalmodel.
+Decisions made: Preserve every result, label, hold and gate. Record one-run permission consumed; no automatic further training or final model deployment. Do not compare53Validation50.94% directly against680OOF. Qualified annotation/group review is now the practical blocker.
+Verification:57independent actualsaved-result assertions passed with0refits.680unchangedIDs/labels/groups/folds/cache,independentmetrics,outer scalermeans,all6inner configs/selection/convergence andbaselinepredictions checked.95fits,0neuralsteps,only3allowedcacheinputs;allotherVisiondatareadswereblocked.8.422s,peakRSS212.47MiB,twoCPUthreads.1000conditionalbootstrapdraws,0undefined.10generatedrunner tests reused,notrerun.8directlyaffectedaggregate tests rerun andpassed;5browserchecks passed afterdemoactualresultupdate. Existing58unique focused cases remain58,not66.16historicalVisiondependenciesunchanged. No53Validation/181held/NP015/Test/CAMpayloads,installs,cloud,commit/push.
+Next step: Qualified review of existing52heldTrainingcases using the prepared package; do not repeat54humanpairreview or addimagesautomatically. No more Colabwork needed now.
+What I understood (my own words):
+
+
+## 2026-10-16 — Tabular finalisation decision package, review only
+What was done: Read relevant signedproposal§§3.3–3.5,8calibrationworkflows,Logistic/XGBoost/boundedcomparison,subgroup/surveypoint reports and existing code. Created a concrete PROPOSED/PENDING finalisation package with primary/comparator/calibration/threshold/preparation/final-evaluation boundaries.
+Problems faced: Sigmoid worsened matched FullXGBoostBrier;Logisticbenefituncertain. Foldmedian.25 is not one validated cutoff. LogisticparticipantOOF/finalmodel were notpersisted historically;benchmarkartifactcompletion requires a bounded6fitstep afterapproval. Complexsurvey/clinicaltransportability andselectionuncertainty remain.
+Decisions made: Recommend FullrawunweightedXGBoostA +FullrawLogisticC1 +trainingratebaseline; noextra sigmoid. Propose existingdevelopmentOOFYoudenrule andnumericalfreeze beforeTest. Do not selectnewthreshold oractivatefinalmodelhere. Prepare6Logistic/0XGBoostfitpermission request;Testaccessseparate.
+Verification:51 arithmetic/tableconsistency assertions passed;model/OOF/manifest3/3hashesmatched and8/8historicalcoretabularsourcehashesmatched. No artifactdeserialization,datasetrows,model fits,thresholdselection,Testpayloads,installs,commit/push. No newpytest becauseonlydocs changed;historicaltestcounts reusedwithoutclaimingrerun.
+Next step: Owner reviews/approves exact finaldevelopmentpreparation;thenproducefreeze receipt,not finalTestevaluation.
+What I understood (my own words):
+
+
+## 2026-10-16 — Authorized Tabular six-fit freeze preparation
+What was done: After explicitownerapproval,reusedexistingXGBoostFullAmodel/OOF,ran5fixedfoldLogisticC1fits+1fulldevelopmentfit;all10historicalmetrics/countsreproducedbefore6thfit. SelectedpredefineddevelopmentOOFYoudenJcutoffsXGBoost.26/Logistic.28,savedhash-boundpreparedreceipt/pairedOOF/comparator/baselineinignoredlocaldata. Nohyperparametersearchoradditionalcalibration.
+Problems faced: ThresholdselectionusesOOFlabels,soitsoperatingmetricsareapparent/optimistic. LowercutoffmissesfewerreportedYesbutaddsmanyfalsepositives;noclinicalerrorcostdefined. Surveyvariance/transportability andfinalheldoutevaluationremainunresolved.
+Decisions made: Keepcutoffsstatistical/nonclinical,pendingownernumericalfreeze review. Do notactivateUI/substitutehistoricalmodelorreuseconsumedpermission. Testevaluationneedsseparateauthorization;final1,563stillsealed.
+Verification:13focusedtests passed,0failed/errors/skipped;63independentactualartifactchecks passed,0verificationrefits. Runtimeinstrumentationobserved6Logistic/0XGBoostfits,trainonlymedians/scalermeans,6251developmentrowsdecodedperXPTwith all returned SEQN in frozen development membership. Originalmodel/OOF/manifest/historyhashesunchanged. XGBoostAUROC.739398/Brier.157268;Logistic.736721/.157823. SelectedcutoffapparentSens/Spec:.545396/.806301and.535093/.822052. Sharedheaders/linkageonlyforheldrows;noheldpredictor/outcomedecodeorTestinference. CPU.273s/210.03MiB,notbenchmark;noinstalls/cloud/commit/push.
+Next step: OwnerreviewsreceiptSHAe08073b43e89ba99982483344e2612f577f46ae8ee0988b2458e5cfc2b8c6e0c;separateTestpermissionafterfreeze.
+What I understood (my own words):
+
+
+## 2026-10-16 — Final Tabular evaluator readiness, synthetic only
+What was done: Implementedone-shotfrozen-evaluationrunner withseparatenumerical/Testscopes,receipt/code/runtime/modelchecks,internalheldloadergateandpersistentonce-onlyclaim. Reusedmetrics/selectiveXPT/preprocessing/subgrouphelpers;noautomaticexecution. Preparedreadinessandhashverification.
+Problems faced: Sharedgeneratedagefixture0..99failedvalid30..80guard;correctedfixture,notbounds. ExistingundefinedcalibrationdiagnosticsuseNaN;newoutputadapterpreservesreasonandusesJSONnull. Coefficientintervals/complexsurveyvariance arenotimplemented;noaccuracyorTestclaims.
+Decisions made: Do notinferTestpermissionfromcontinue. Requireexplicitnumericalapproval plusseparateTestauthorizationboundtothatapproval. Failureafterclaimpreventsautomaticretry. Diagnosticregressionsdescribefixedpredictionsonly;nevercalibrateontest. Predictivemodels/cutoffsnotchanged.
+Verification:16generatedtests passed,0failed/errors/skipped. Correctfixedmetrics/cutoffs,pairedbootstrap,authorizationhashfailures,onceonlyreplay/directloaderrejection,generatedendtoendnopredictivefit. Actualfrozenmodelscheckedononeexistingfictionalprofileonly;hashesunchanged,0newfits,realclaimabsent,Testloadernotcalled. No source/labels/splits/demochanges,installs/cloud/commit/push.
+Next step: Twoexplicitownerdecisions:numericalfreezeapproval;oneprotectedfinalevaluationpermissionafterfreeze. No newColabneeded.
+What I understood (my own words):
+
+
+## 2026-10-16 — One authorized final questionnaire Test evaluation
+What was done: Recorded the owner's separate numerical-freeze approval and one-Test permission, then evaluated the frozen raw XGBoost A, raw Logistic C1 and development-rate baseline on the exact 1,563 held-out participants (388 Yes / 1,175 No). Fixed cutoffs 0.26 / 0.28 / 0.50; no new predictive or preprocessing fits, recalibration or tuning. Saved aggregate report, paired intervals, reliability/subgroup diagnostics and private hash-bound predictions.
+Problems faced: Overall AUROC0.80 not achieved; XGBoost0.760654 versus Logistic0.756113 with paired interval including zero. XGBoost0.26 misses171 reportedYes and flags193 reportedNo. Constant-score baseline trapezoidal PR-AUC0.624120 is interpolation-sensitive; its AP0.248241/AUROC0.5 show its lack of ranking. Calibration point estimates are not proof of clinical calibration; coefficient intervals and complex-survey variance remain unimplemented.
+Decisions made: Keep the pre-Test model/cutoff freeze. Treat cutoffs as statistical demonstrations of reported treatment history, not clinical decisions. One-run permission consumed; persistent claim retained, no repeat evaluation or Test-driven tuning. Historical reports/artifacts and demo untouched; Vision remains independent.
+Verification: 109 independent saved-evidence assertions passed, zero failures, maximum independent metric difference1.1351847156726436e-8 within1e-7 float32/float64 tolerance. No repeated inference/fits/bootstrap. Prior16synthetic tests reused, not rerun. Actual execution12.556s/228.70MiB; runtime observed0predictive/preprocessing fits,2descriptive calibration regressions,4selective1563-row returns. Frozen code/models/manifest/receipt checks passed. No install, upload, commit or push.
+Next step: Rehearse the existing prediction/SHAP/constrained What-if demo with final evidence and honest limitations; obtain remaining qualified Vision approvals separately.
+What I understood (my own words):
+
+
+## 2026-10-16 — Questionnaire live-demo rehearsal
+What was done: Exercised existing React/FastAPI on localhost8768 with fictional example only: Explain21.41%,cleaning7scenario24.41%,reset21.41%. Verified12SHAProws,log-odds/additivity/noncausal wording andeditingoriginalclearsresults/disablesscenario. Prepared five-step Tamil rehearsal/viva guide and actual API/browser evidence.
+Problems faced: Existing genericfooter/APIrole still use historical pending-evaluation wording; guide explicitly distinguishes completed questionnaire freeze/Test from pending Vision/clinical work. No model metadata or scientific code rewritten. Five expected422API rejections appear as network errors, not uncaughtJavaScript errors.
+Decisions made: Keep frozen model/cutoffs and historical artifacts. Higher what-if probability is reported honestly, not described as a health effect. Human understanding and usability feedback remain to be obtained, not invented.
+Verification:17explicitAPI/numerical assertions passed0failed; browser sequence/reset/edit-invalidation observed,0uncaughtpageerrors. Protectedage,lifetimehistory,cleaning8,stalemodel,outcomepredictor rejected422. SHAPmarginerror2.203451e-7/probabilityerror4.253787e-8 meetexisting1e-5. Finalartifacts/receipt/models/manifest/onceclaimhashes unchanged. No Testpayload/rerun,newtraining,install,upload,commit/push. No newpytest run claimed.
+Next step: Owner opens8768and explains five-step demo aloud, then collects genuine consentedfeedback separately.
+What I understood (my own words):
+
+
+## 2026-10-16 — Vision reviewer checklist and external healthy-data suitability
+What was done: Reused existing52Training cached review evidence, generated one actionable52-ID checklist/decision-role package and checked current officialMIO record/API metadata. No source-image audit repeated.
+Problems faced: MIO provides diagnosticHealthy/Gingivitis/Periodontitis, not established whole-imageMGI0–4equivalence. Licence is open/CCBY4.0 but actual privacy/identity/source comparability and qualifiedMGI evidence remainunknown. Gemini cannot replace a qualified clinical reviewer.
+Decisions made: Keep all181holds/52Training/129Validation unchanged, no new labels/eligibility; optionalauxiliary/externaldata training needs explicit scoped protocol. Preserve completed54near-pair decisions andNP015. Metadata-only review does not authorize download/upload.
+Verification:14cached-artifact assertions passed0failed; sevenexisting package hashes match,52uniqueTrainingIDs,disjoint2/45/4/1routes,inactivegates/protectedaliases/conditional41sources33contentunits verified. CurrentpublicAPI reportscc-by-4.0/open; SANO.zip433825820bytes. No archive downloaded or contents inspected. No model/tests rerun,source/Testpayloadaccess,install,training,commit/push.
+Next step: Genuine qualified/source-supported review route for existing52Trainingcases; independentprovisionaldemo remainspossible.
+What I understood (my own words):
+
+
+## 2026-10-16 — Practical PP1 delivery v3, without invented clinical decisions
+What was done: Owner requested practical completion while doctor review happens later. Added a hash/model-bound read-only questionnaire final-evidence loader/API/card, fixed generic footer status, rebuilt frontend using existing installed esbuild, preserved separate Vision saved evidence. Created a practical eight-step status/runbook, five-minute Tamil script, qualified-review handoff, blank genuine-feedback slots and viva explanation. New local8770server; old8768preserved.
+Problems faced: Engineering progress cannot itself supply missingMGI0, scarceMGI1, qualified labels or participant identity. Live new-photo runtime remains inactive. FinalVisionmodel/protocol/Test are not complete, and AI opinion cannot be recorded as human clinical validation. No all-eight-complete claim.
+Decisions made: Reuse existing authorized provisional cohort/model/results; retain181holds/NP015/source splits and sealedVisionTest. QuestionnairefinalTestpermissionalreadyconsumed; only aggregate report displayed. No inference on real dental sources, newtraining or dataset expansion.
+Verification:34focusedtests passed0failed/errors/skipped,17livebrowserchecks passed,33independentartifact assertions passed. Fictional21.41%→24.41%→21.41%,12SHAProws,ninesavedCAMviews,five680OOFrows,mobilelayout and accuratefinaltabularcard verified. Screenshots visually inspected. Frozen artifacts/manifest/historicalVisionresults/Testclaim unchanged. No full audit or full-suite rerun. No install/download,cloud,commit/push.
+Next step: Owner rehearses on8770and obtains genuinefeedback; use prepared qualified-review package later. New data/inference/training needs separately concrete scope.
+What I understood (my own words):
+
+
+## 2026-10-16 — Gemini held-image review preparation, local only
+What was done: Reused cached181heldreview evidence to build master181-rowCSV,split-separated12batchplansfor172non-Test-overlappingcandidates,localcached3-variant/TXTevidence and exactproposedfilename/requestlists. Owner identifiedPersonalGeminiweb/app.
+Problems faced:9TrainingholdsareprotectedTestcontentaliasesandcannotleaveunderthenoTestboundary. PersonalGeminihumanreview/retentionandpermitteduse notresolvedbyaccountname. Oldmetadata/ICC evidence means originals cannotbecopiedblindlywithoutprivacy/colourqualification. B1NPYnotGeminiimageformat; originalcaptions/TXTnotpackagedyet.
+Decisions made: All181trackedlocally,only172proposedforreview;allupload_readyfalse andpendingclinicalfieldsblank. Noautomaticgrades/release/training;NP015andallholdsremain. Externalapprovalflaggedbeforeactualpackaging asownerrequested.
+Verification:8focusedgeneratedtests passed0failed/errors/skipped;59finalsavedartifactassertions passed. Counts52/129,9excluded,172uniqueproposedrecords,10–15images/batch,<=10attachments/request,27CSVfieldsroundtripped,oldcachehashesmatch.344sourcepathmetadataexistencechecks, nooriginalRGB/header/CSV/TXT/Testpayloadopens/copies. OneverificationhelperFalseversusfalsecomparison correctedwithoutCSVchanges. ArtifactToolmasterpreviewinspected. No installs,uploads,training,commit/push.
+Next step: OwnerconfirmspermittedPersonalGeminiprocessing/privacyacceptance; separatelyqualifymetadata-safe fullresolutioncolour/filenamepreservationfor172sourcesbeforeactualexternalpackage.
+What I understood (my own words):
+
+
+## 2026-10-16 —172candidate read-only metadata/ICC/privacy preflight
+What was done: After explicit local-only authorization,reused cachedsource/group evidence and strictICC/caption parsers;checked172selectedJPEGbytes/headers and172TXT/516caption associations.9protectedTestaliasesexcluded. No pixeldecoding,exports,packagesorGeminitransmission.
+Problems faced: ValidationCSVhasexistingextraVùngcolumn;helperinitiallystoppedbeforesourceimagechecks,thenacceptedthatobservedschemawithoutchangingdata/policy.172sourcefilesmatchbutallcontainEXIF/DateTime/GPSInfo/MakerNote/XMP. GPSIFDs containversiononly,nocoordinatefields;notaconfirmedlocationleak.
+Decisions made: Separate technicalintegrity fromprivacy/release. All172headers/ICCstructurespassbutactualexportcolourfidelitynotmeasured. PublicCCBY4.0confirmed;externalprocessingpermission0established/172unknown,not172denials. OwnerPersonalGeminiriskacceptance/uploadpermissionremainfalse. All181holds/labels/splitsunchanged.
+Verification:172/172cachedsourceSHAandbefore/afterpreservation;caption/TXTmatching,parser/cacheequality,geometry/ROIandICCall172pass0fail. Verbatimprivacyclear0pass172fail.14independentsavedchecks passed0failed;master/cachedsourcesunchanged. JPEGpixel-loading/sourcewrites/networkblocked. No rawpixels/ICC/privatemetadatavalues/caption/TXTcopiessaved. Priorstoppedhelperfailurepreserved;nohistoricaltests/modelrunsrepeated.
+Next step: Propose separatelyscopedgenerated-onlylosslessJPEGmetadata/ICCpreservationqualification;actualexternalreleaseawaitsappropriatepermissionandownerdecision.
+What I understood (my own words):
+
+2026-10-16 — Saved completed vision milestone in a scoped commit at owner request; original data and approval gates preserved.

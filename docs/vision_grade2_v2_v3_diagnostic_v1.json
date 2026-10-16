@@ -1,0 +1,943 @@
+{
+  "sources": {
+    "v2": {
+      "path": "/Users/vinuthanvinuthan/Downloads/pp1_b1_balanced_v2_20261015T150352287886Z_results.zip",
+      "archive_bytes": 185389594,
+      "previously_verified_archive_sha256": "ab9d61f3d59c807b9181e6937f1099364f3cc06dda6607745bdf5fc11cae8a82",
+      "prediction_payload_sha256_verified": "591eee408184fa96e20391d20113abf812b2c89a4dc0286bdbd2fb00489856a0",
+      "access_scope": "saved prediction JSON and its existing hash receipt only; archive SHA reused from prior verified record, not recomputed"
+    },
+    "v3": {
+      "path": "/Users/vinuthanvinuthan/Downloads/pp1_b1_lastblock_v3_20261015T155608744170Z_results.zip",
+      "archive_bytes": 252199944,
+      "previously_verified_archive_sha256": "c79f16cf59b268f86a5a4c4b6a3482636e374cb67629895f38e55dbb1eaf0d70",
+      "prediction_payload_sha256_verified": "ad96de0c279092de2d0ff6206a93121d94023b4b4fa9148693a1769b77e29172",
+      "access_scope": "saved prediction JSON and its existing hash receipt only; archive SHA reused from prior verified record, not recomputed"
+    }
+  },
+  "membership": {
+    "records_per_version": 53,
+    "identical_immutable_ids": true,
+    "identical_provisional_labels": true,
+    "grades": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "grade_support": [
+      1,
+      13,
+      22,
+      17
+    ]
+  },
+  "overall": {
+    "v2": {
+      "confusion_matrix": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          12,
+          0,
+          1
+        ],
+        [
+          0,
+          20,
+          1,
+          1
+        ],
+        [
+          0,
+          12,
+          0,
+          5
+        ]
+      ],
+      "support": [
+        1,
+        13,
+        22,
+        17
+      ],
+      "prediction_counts": [
+        0,
+        45,
+        1,
+        7
+      ],
+      "recall": [
+        0.0,
+        0.9230769230769231,
+        0.045454545454545456,
+        0.29411764705882354
+      ],
+      "correct": 18,
+      "accuracy": 0.33962264150943394,
+      "grade2_precision": 0.26666666666666666,
+      "grade2_false_positives": 33,
+      "grade2_false_negatives": 1
+    },
+    "v3": {
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          10,
+          2
+        ],
+        [
+          0,
+          0,
+          15,
+          7
+        ],
+        [
+          1,
+          0,
+          5,
+          11
+        ]
+      ],
+      "support": [
+        1,
+        13,
+        22,
+        17
+      ],
+      "prediction_counts": [
+        1,
+        1,
+        31,
+        20
+      ],
+      "recall": [
+        0.0,
+        0.07692307692307693,
+        0.6818181818181818,
+        0.6470588235294118
+      ],
+      "correct": 27,
+      "accuracy": 0.5094339622641509,
+      "grade2_precision": 1.0,
+      "grade2_false_positives": 0,
+      "grade2_false_negatives": 12
+    }
+  },
+  "grade2_transition_matrix_rows_v2_columns_v3": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      10,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "grade2_statistics": {
+    "v2": {
+      "true_class_probability": {
+        "mean": 0.36816140092336214,
+        "median": 0.37332212924957275,
+        "min": 0.2834205627441406,
+        "max": 0.445289671421051
+      },
+      "top_two_gap": {
+        "mean": 0.10888828337192535,
+        "median": 0.11379081010818481,
+        "min": 0.022510021924972534,
+        "max": 0.20523999631404877
+      },
+      "grade2_gap": {
+        "mean": 0.10542520307577573,
+        "median": 0.11379081010818481,
+        "min": -0.022510021924972534,
+        "max": 0.20523999631404877
+      },
+      "true_grade2_top_two_count": 13,
+      "true_grade2_rank_counts": {
+        "1": 12,
+        "2": 1,
+        "3": 0,
+        "4": 0
+      },
+      "mean_probability_vector": [
+        0.13507202382271105,
+        0.36816140092336214,
+        0.2489432428891842,
+        0.24782332892601305
+      ]
+    },
+    "v3": {
+      "true_class_probability": {
+        "mean": 0.19454735689438307,
+        "median": 0.168258398771286,
+        "min": 0.0783599391579628,
+        "max": 0.47342413663864136
+      },
+      "top_two_gap": {
+        "mean": 0.2044617384672165,
+        "median": 0.21278542280197144,
+        "min": 0.025927603244781494,
+        "max": 0.4324895888566971
+      },
+      "grade2_gap": {
+        "mean": -0.2906752394942137,
+        "median": -0.3879416510462761,
+        "min": -0.4522882252931595,
+        "max": 0.18180325627326965
+      },
+      "true_grade2_top_two_count": 2,
+      "true_grade2_rank_counts": {
+        "1": 1,
+        "2": 1,
+        "3": 8,
+        "4": 3
+      },
+      "mean_probability_vector": [
+        0.05481471253845554,
+        0.19454735689438307,
+        0.4556328642826814,
+        0.295005056147392
+      ]
+    }
+  },
+  "grade2_probability_delta": {
+    "decreased": 12,
+    "increased": 1,
+    "unchanged": 0,
+    "mean": -0.1736140440289791,
+    "median": -0.2206851840019226,
+    "min": -0.29608021676540375,
+    "max": 0.09046357870101929
+  },
+  "grade2_cases": [
+    {
+      "source_record_id": "Validation/00778",
+      "true_provisional_grade": 2,
+      "v2": {
+        "predicted_grade": 2,
+        "true_class_probability": 0.445289671421051,
+        "top_two": [
+          {
+            "grade": 2,
+            "probability": 0.445289671421051
+          },
+          {
+            "grade": 3,
+            "probability": 0.24004967510700226
+          }
+        ],
+        "top_two_gap": 0.20523999631404877,
+        "grade2_gap": 0.20523999631404877,
+        "grade2_rank": 1,
+        "probabilities_mgi1_to4": [
+          0.1111721619963646,
+          0.445289671421051,
+          0.24004967510700226,
+          0.20348843932151794
+        ]
+      },
+      "v3": {
+        "predicted_grade": 3,
+        "true_class_probability": 0.40964847803115845,
+        "top_two": [
+          {
+            "grade": 3,
+            "probability": 0.43557608127593994
+          },
+          {
+            "grade": 2,
+            "probability": 0.40964847803115845
+          }
+        ],
+        "top_two_gap": 0.025927603244781494,
+        "grade2_gap": -0.025927603244781494,
+        "grade2_rank": 2,
+        "probabilities_mgi1_to4": [
+          0.04383804649114609,
+          0.40964847803115845,
+          0.43557608127593994,
+          0.1109374389052391
+        ]
+      },
+      "delta_true_class_probability": -0.03564119338989258,
+      "delta_grade2_gap": -0.23116759955883026
+    },
+    {
+      "source_record_id": "Validation/00784",
+      "true_provisional_grade": 2,
+      "v2": {
+        "predicted_grade": 2,
+        "true_class_probability": 0.3551124930381775,
+        "top_two": [
+          {
+            "grade": 2,
+            "probability": 0.3551124930381775
+          },
+          {
+            "grade": 3,
+            "probability": 0.2642908990383148
+          }
+        ],
+        "top_two_gap": 0.09082159399986267,
+        "grade2_gap": 0.09082159399986267,
+        "grade2_rank": 1,
+        "probabilities_mgi1_to4": [
+          0.14120528101921082,
+          0.3551124930381775,
+          0.2642908990383148,
+          0.2393912822008133
+        ]
+      },
+      "v3": {
+        "predicted_grade": 3,
+        "true_class_probability": 0.22561819851398468,
+        "top_two": [
+          {
+            "grade": 3,
+            "probability": 0.47315892577171326
+          },
+          {
+            "grade": 4,
+            "probability": 0.2603735029697418
+          }
+        ],
+        "top_two_gap": 0.21278542280197144,
+        "grade2_gap": -0.24754072725772858,
+        "grade2_rank": 3,
+        "probabilities_mgi1_to4": [
+          0.04084928333759308,
+          0.22561819851398468,
+          0.47315892577171326,
+          0.2603735029697418
+        ]
+      },
+      "delta_true_class_probability": -0.1294942945241928,
+      "delta_grade2_gap": -0.33836232125759125
+    },
+    {
+      "source_record_id": "Validation/00794",
+      "true_provisional_grade": 2,
+      "v2": {
+        "predicted_grade": 2,
+        "true_class_probability": 0.36998534202575684,
+        "top_two": [
+          {
+            "grade": 2,
+            "probability": 0.36998534202575684
+          },
+          {
+            "grade": 3,
+            "probability": 0.256194531917572
+          }
+        ],
+        "top_two_gap": 0.11379081010818481,
+        "grade2_gap": 0.11379081010818481,
+        "grade2_rank": 1,
+        "probabilities_mgi1_to4": [
+          0.12394683063030243,
+          0.36998534202575684,
+          0.256194531917572,
+          0.24987326562404633
+        ]
+      },
+      "v3": {
+        "predicted_grade": 3,
+        "true_class_probability": 0.12940098345279694,
+        "top_two": [
+          {
+            "grade": 3,
+            "probability": 0.5453726053237915
+          },
+          {
+            "grade": 4,
+            "probability": 0.2884140908718109
+          }
+        ],
+        "top_two_gap": 0.2569585144519806,
+        "grade2_gap": -0.41597162187099457,
+        "grade2_rank": 3,
+        "probabilities_mgi1_to4": [
+          0.036812297999858856,
+          0.12940098345279694,
+          0.5453726053237915,
+          0.2884140908718109
+        ]
+      },
+      "delta_true_class_probability": -0.2405843585729599,
+      "delta_grade2_gap": -0.5297624319791794
+    },
+    {
+      "source_record_id": "Validation/00796",
+      "true_provisional_grade": 2,
+      "v2": {
+        "predicted_grade": 2,
+        "true_class_probability": 0.38296055793762207,
+        "top_two": [
+          {
+            "grade": 2,
+            "probability": 0.38296055793762207
+          },
+          {
+            "grade": 4,
+            "probability": 0.2683968245983124
+          }
+        ],
+        "top_two_gap": 0.11456373333930969,
+        "grade2_gap": 0.11456373333930969,
+        "grade2_rank": 1,
+        "probabilities_mgi1_to4": [
+          0.14732415974140167,
+          0.38296055793762207,
+          0.20131845772266388,
+          0.2683968245983124
+        ]
+      },
+      "v3": {
+        "predicted_grade": 2,
+        "true_class_probability": 0.47342413663864136,
+        "top_two": [
+          {
+            "grade": 2,
+            "probability": 0.47342413663864136
+          },
+          {
+            "grade": 4,
+            "probability": 0.2916208803653717
+          }
+        ],
+        "top_two_gap": 0.18180325627326965,
+        "grade2_gap": 0.18180325627326965,
+        "grade2_rank": 1,
+        "probabilities_mgi1_to4": [
+          0.025918306782841682,
+          0.47342413663864136,
+          0.209036722779274,
+          0.2916208803653717
+        ]
+      },
+      "delta_true_class_probability": 0.09046357870101929,
+      "delta_grade2_gap": 0.06723952293395996
+    },
+    {
+      "source_record_id": "Validation/00798",
+      "true_provisional_grade": 2,
+      "v2": {
+        "predicted_grade": 2,
+        "true_class_probability": 0.3904480040073395,
+        "top_two": [
+          {
+            "grade": 2,
+            "probability": 0.3904480040073395
+          },
+          {
+            "grade": 3,
+            "probability": 0.2583297789096832
+          }
+        ],
+        "top_two_gap": 0.13211822509765625,
+        "grade2_gap": 0.13211822509765625,
+        "grade2_rank": 1,
+        "probabilities_mgi1_to4": [
+          0.12372060865163803,
+          0.3904480040073395,
+          0.2583297789096832,
+          0.22750160098075867
+        ]
+      },
+      "v3": {
+        "predicted_grade": 3,
+        "true_class_probability": 0.168258398771286,
+        "top_two": [
+          {
+            "grade": 3,
+            "probability": 0.6058918237686157
+          },
+          {
+            "grade": 4,
+            "probability": 0.17340223491191864
+          }
+        ],
+        "top_two_gap": 0.4324895888566971,
+        "grade2_gap": -0.4376334249973297,
+        "grade2_rank": 3,
+        "probabilities_mgi1_to4": [
+          0.052447494119405746,
+          0.168258398771286,
+          0.6058918237686157,
+          0.17340223491191864
+        ]
+      },
+      "delta_true_class_probability": -0.22218960523605347,
+      "delta_grade2_gap": -0.569751650094986
+    },
+    {
+      "source_record_id": "Validation/00805",
+      "true_provisional_grade": 2,
+      "v2": {
+        "predicted_grade": 2,
+        "true_class_probability": 0.37332212924957275,
+        "top_two": [
+          {
+            "grade": 2,
+            "probability": 0.37332212924957275
+          },
+          {
+            "grade": 4,
+            "probability": 0.276068776845932
+          }
+        ],
+        "top_two_gap": 0.09725335240364075,
+        "grade2_gap": 0.09725335240364075,
+        "grade2_rank": 1,
+        "probabilities_mgi1_to4": [
+          0.11164925247430801,
+          0.37332212924957275,
+          0.23895981907844543,
+          0.276068776845932
+        ]
+      },
+      "v3": {
+        "predicted_grade": 3,
+        "true_class_probability": 0.14382736384868622,
+        "top_two": [
+          {
+            "grade": 3,
+            "probability": 0.4478062689304352
+          },
+          {
+            "grade": 4,
+            "probability": 0.40340396761894226
+          }
+        ],
+        "top_two_gap": 0.04440230131149292,
+        "grade2_gap": -0.30397890508174896,
+        "grade2_rank": 3,
+        "probabilities_mgi1_to4": [
+          0.004962417762726545,
+          0.14382736384868622,
+          0.4478062689304352,
+          0.40340396761894226
+        ]
+      },
+      "delta_true_class_probability": -0.22949476540088654,
+      "delta_grade2_gap": -0.4012322574853897
+    },
+    {
+      "source_record_id": "Validation/00807",
+      "true_provisional_grade": 2,
+      "v2": {
+        "predicted_grade": 4,
+        "true_class_probability": 0.2834205627441406,
+        "top_two": [
+          {
+            "grade": 4,
+            "probability": 0.30593058466911316
+          },
+          {
+            "grade": 2,
+            "probability": 0.2834205627441406
+          }
+        ],
+        "top_two_gap": 0.022510021924972534,
+        "grade2_gap": -0.022510021924972534,
+        "grade2_rank": 2,
+        "probabilities_mgi1_to4": [
+          0.17643147706985474,
+          0.2834205627441406,
+          0.23421742022037506,
+          0.30593058466911316
+        ]
+      },
+      "v3": {
+        "predicted_grade": 4,
+        "true_class_probability": 0.08588767051696777,
+        "top_two": [
+          {
+            "grade": 4,
+            "probability": 0.5070599317550659
+          },
+          {
+            "grade": 3,
+            "probability": 0.28660348057746887
+          }
+        ],
+        "top_two_gap": 0.22045645117759705,
+        "grade2_gap": -0.42117226123809814,
+        "grade2_rank": 4,
+        "probabilities_mgi1_to4": [
+          0.12044892460107803,
+          0.08588767051696777,
+          0.28660348057746887,
+          0.5070599317550659
+        ]
+      },
+      "delta_true_class_probability": -0.19753289222717285,
+      "delta_grade2_gap": -0.3986622393131256
+    },
+    {
+      "source_record_id": "Validation/00808",
+      "true_provisional_grade": 2,
+      "v2": {
+        "predicted_grade": 2,
+        "true_class_probability": 0.38885584473609924,
+        "top_two": [
+          {
+            "grade": 2,
+            "probability": 0.38885584473609924
+          },
+          {
+            "grade": 3,
+            "probability": 0.2596854567527771
+          }
+        ],
+        "top_two_gap": 0.12917038798332214,
+        "grade2_gap": 0.12917038798332214,
+        "grade2_rank": 1,
+        "probabilities_mgi1_to4": [
+          0.12304743379354477,
+          0.38885584473609924,
+          0.2596854567527771,
+          0.22841133177280426
+        ]
+      },
+      "v3": {
+        "predicted_grade": 3,
+        "true_class_probability": 0.0927756279706955,
+        "top_two": [
+          {
+            "grade": 3,
+            "probability": 0.545063853263855
+          },
+          {
+            "grade": 4,
+            "probability": 0.24976928532123566
+          }
+        ],
+        "top_two_gap": 0.2952945679426193,
+        "grade2_gap": -0.4522882252931595,
+        "grade2_rank": 4,
+        "probabilities_mgi1_to4": [
+          0.11239119619131088,
+          0.0927756279706955,
+          0.545063853263855,
+          0.24976928532123566
+        ]
+      },
+      "delta_true_class_probability": -0.29608021676540375,
+      "delta_grade2_gap": -0.5814586132764816
+    },
+    {
+      "source_record_id": "Validation/00809",
+      "true_provisional_grade": 2,
+      "v2": {
+        "predicted_grade": 2,
+        "true_class_probability": 0.39105045795440674,
+        "top_two": [
+          {
+            "grade": 2,
+            "probability": 0.39105045795440674
+          },
+          {
+            "grade": 3,
+            "probability": 0.24155566096305847
+          }
+        ],
+        "top_two_gap": 0.14949479699134827,
+        "grade2_gap": 0.14949479699134827,
+        "grade2_rank": 1,
+        "probabilities_mgi1_to4": [
+          0.14579911530017853,
+          0.39105045795440674,
+          0.24155566096305847,
+          0.22159476578235626
+        ]
+      },
+      "v3": {
+        "predicted_grade": 3,
+        "true_class_probability": 0.1485377848148346,
+        "top_two": [
+          {
+            "grade": 3,
+            "probability": 0.5376359820365906
+          },
+          {
+            "grade": 4,
+            "probability": 0.2584872841835022
+          }
+        ],
+        "top_two_gap": 0.2791486978530884,
+        "grade2_gap": -0.389098197221756,
+        "grade2_rank": 3,
+        "probabilities_mgi1_to4": [
+          0.055338937789201736,
+          0.1485377848148346,
+          0.5376359820365906,
+          0.2584872841835022
+        ]
+      },
+      "delta_true_class_probability": -0.24251267313957214,
+      "delta_grade2_gap": -0.5385929942131042
+    },
+    {
+      "source_record_id": "Validation/00816",
+      "true_provisional_grade": 2,
+      "v2": {
+        "predicted_grade": 2,
+        "true_class_probability": 0.34318286180496216,
+        "top_two": [
+          {
+            "grade": 2,
+            "probability": 0.34318286180496216
+          },
+          {
+            "grade": 3,
+            "probability": 0.2622984051704407
+          }
+        ],
+        "top_two_gap": 0.08088445663452148,
+        "grade2_gap": 0.08088445663452148,
+        "grade2_rank": 1,
+        "probabilities_mgi1_to4": [
+          0.13673296570777893,
+          0.34318286180496216,
+          0.2622984051704407,
+          0.25778576731681824
+        ]
+      },
+      "v3": {
+        "predicted_grade": 3,
+        "true_class_probability": 0.0783599391579628,
+        "top_two": [
+          {
+            "grade": 3,
+            "probability": 0.4663015902042389
+          },
+          {
+            "grade": 4,
+            "probability": 0.35629209876060486
+          }
+        ],
+        "top_two_gap": 0.11000949144363403,
+        "grade2_gap": -0.3879416510462761,
+        "grade2_rank": 4,
+        "probabilities_mgi1_to4": [
+          0.09904630482196808,
+          0.0783599391579628,
+          0.4663015902042389,
+          0.35629209876060486
+        ]
+      },
+      "delta_true_class_probability": -0.26482292264699936,
+      "delta_grade2_gap": -0.4688261076807976
+    },
+    {
+      "source_record_id": "Validation/00822",
+      "true_provisional_grade": 2,
+      "v2": {
+        "predicted_grade": 2,
+        "true_class_probability": 0.3029167950153351,
+        "top_two": [
+          {
+            "grade": 2,
+            "probability": 0.3029167950153351
+          },
+          {
+            "grade": 4,
+            "probability": 0.2674933671951294
+          }
+        ],
+        "top_two_gap": 0.03542342782020569,
+        "grade2_gap": 0.03542342782020569,
+        "grade2_rank": 1,
+        "probabilities_mgi1_to4": [
+          0.16415175795555115,
+          0.3029167950153351,
+          0.26543810963630676,
+          0.2674933671951294
+        ]
+      },
+      "v3": {
+        "predicted_grade": 4,
+        "true_class_probability": 0.18332836031913757,
+        "top_two": [
+          {
+            "grade": 4,
+            "probability": 0.404097318649292
+          },
+          {
+            "grade": 3,
+            "probability": 0.32247141003608704
+          }
+        ],
+        "top_two_gap": 0.08162590861320496,
+        "grade2_gap": -0.22076895833015442,
+        "grade2_rank": 3,
+        "probabilities_mgi1_to4": [
+          0.09010288864374161,
+          0.18332836031913757,
+          0.32247141003608704,
+          0.404097318649292
+        ]
+      },
+      "delta_true_class_probability": -0.11958843469619751,
+      "delta_grade2_gap": -0.2561923861503601
+    },
+    {
+      "source_record_id": "Validation/00823",
+      "true_provisional_grade": 2,
+      "v2": {
+        "predicted_grade": 2,
+        "true_class_probability": 0.36142629384994507,
+        "top_two": [
+          {
+            "grade": 2,
+            "probability": 0.36142629384994507
+          },
+          {
+            "grade": 4,
+            "probability": 0.25145861506462097
+          }
+        ],
+        "top_two_gap": 0.1099676787853241,
+        "grade2_gap": 0.1099676787853241,
+        "grade2_rank": 1,
+        "probabilities_mgi1_to4": [
+          0.1370091587305069,
+          0.36142629384994507,
+          0.25010594725608826,
+          0.25145861506462097
+        ]
+      },
+      "v3": {
+        "predicted_grade": 3,
+        "true_class_probability": 0.21260668337345123,
+        "top_two": [
+          {
+            "grade": 3,
+            "probability": 0.4311450123786926
+          },
+          {
+            "grade": 4,
+            "probability": 0.34346967935562134
+          }
+        ],
+        "top_two_gap": 0.08767533302307129,
+        "grade2_gap": -0.2185383290052414,
+        "grade2_rank": 3,
+        "probabilities_mgi1_to4": [
+          0.01277866493910551,
+          0.21260668337345123,
+          0.4311450123786926,
+          0.34346967935562134
+        ]
+      },
+      "delta_true_class_probability": -0.14881961047649384,
+      "delta_grade2_gap": -0.3285060077905655
+    },
+    {
+      "source_record_id": "Validation/00824",
+      "true_provisional_grade": 2,
+      "v2": {
+        "predicted_grade": 2,
+        "true_class_probability": 0.3981271982192993,
+        "top_two": [
+          {
+            "grade": 2,
+            "probability": 0.3981271982192993
+          },
+          {
+            "grade": 3,
+            "probability": 0.26381799578666687
+          }
+        ],
+        "top_two_gap": 0.13430920243263245,
+        "grade2_gap": 0.13430920243263245,
+        "grade2_rank": 1,
+        "probabilities_mgi1_to4": [
+          0.11374610662460327,
+          0.3981271982192993,
+          0.26381799578666687,
+          0.22430865466594696
+        ]
+      },
+      "v3": {
+        "predicted_grade": 3,
+        "true_class_probability": 0.1774420142173767,
+        "top_two": [
+          {
+            "grade": 3,
+            "probability": 0.6171634793281555
+          },
+          {
+            "grade": 4,
+            "probability": 0.18773801624774933
+          }
+        ],
+        "top_two_gap": 0.4294254630804062,
+        "grade2_gap": -0.4397214651107788,
+        "grade2_rank": 3,
+        "probabilities_mgi1_to4": [
+          0.01765649951994419,
+          0.1774420142173767,
+          0.6171634793281555,
+          0.18773801624774933
+        ]
+      },
+      "delta_true_class_probability": -0.2206851840019226,
+      "delta_grade2_gap": -0.5740306675434113
+    }
+  ],
+  "raw_logits_available": false,
+  "new_inference_or_image_access": false,
+  "date": "2026-10-15",
+  "scope": "read-only saved Validation prediction analysis; no image/checkpoint access or model execution",
+  "margin_definitions": {
+    "top_two_gap": "highest probability minus second-highest probability; no calibrated-confidence claim",
+    "grade2_gap": "p(MGI2) minus max(p(MGI1),p(MGI3),p(MGI4)); positive iff grade2 strictly wins"
+  },
+  "logits_note": "Raw logits are absent from these saved prediction records; no logits reconstructed or new inference requested.",
+  "independent_crosscheck": "A separate read-only check using the same two prediction JSONs agreed on IDs, labels, counts, transitions, probability/gap means and ranks.",
+  "sources_unchanged_after_analysis": true,
+  "new_training_inference_test_image_access": false,
+  "next_experiment_recommendation": {
+    "status": "proposed_only_requires_fresh_owner_approval",
+    "purpose": "Assess run-seed sensitivity of the observed grade2-to3/4 trade-off, not claim an isolated sampler effect,repair or clinical validity",
+    "single_change": "Run random seed43 instead of42, chosen prospectively; all RNG streams used by the runner may change; no seed search",
+    "fixed": "Same pinned v2-best initialization, 680/53 records, B1 preprocessing, balanced loss, exact v3 trainable tensors and frozen BatchNorm, headLR0.001/blockLR0.00001, batch16/max5additional epochs/patience2, Validation macro-F1 selection",
+    "compare_against": "Reuse verified v3 seed42 results; no repeat baseline training",
+    "report": "All grade recalls, confusion/prediction counts, macro-F1/AUROC/Brier and53 probabilities, including worsened outcomes",
+    "limitation": "One additional seed can reveal sensitivity but cannot establish reproducibility across seeds, repair grade2, select a final model or remove repeated-Validation optimism",
+    "not_implemented_or_run": true,
+    "required_before_execution": "Separate versioned run scope/configuration,current hash-bound fresh owner approval and new exclusive attempt guard; do not rerun consumed v3cell"
+  }
+}

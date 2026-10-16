@@ -1,0 +1,622 @@
+{
+  "scope": "saved predictions only; fixed bins diagnostic, no selected operating threshold",
+  "n": 680,
+  "support": [
+    12,
+    84,
+    223,
+    361
+  ],
+  "models": {
+    "resnet_balanced": {
+      "metrics": {
+        "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+        "mgi_grades": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "n": 680,
+        "support": [
+          12,
+          84,
+          223,
+          361
+        ],
+        "accuracy": 0.475,
+        "confusion_matrix": [
+          [
+            0,
+            3,
+            4,
+            5
+          ],
+          [
+            2,
+            17,
+            33,
+            32
+          ],
+          [
+            1,
+            22,
+            73,
+            127
+          ],
+          [
+            0,
+            18,
+            110,
+            233
+          ]
+        ],
+        "macro_f1_four_grades": 0.29511448569989673,
+        "per_grade_f1": [
+          0.0,
+          0.2361111111111111,
+          0.3295711060948081,
+          0.6147757255936676
+        ],
+        "per_grade_recall": [
+          0.0,
+          0.20238095238095238,
+          0.3273542600896861,
+          0.6454293628808865
+        ],
+        "per_grade_auroc": [
+          0.7572355289421158,
+          0.6452740492170023,
+          0.5187173121645358,
+          0.6130480466138122
+        ],
+        "macro_auroc": 0.6335687342343665,
+        "multiclass_brier": 0.831293901285898,
+        "ordinal_mae": 0.6205882352941177,
+        "quadratic_weighted_kappa": 0.21475155853815908,
+        "clinical_validation": false,
+        "healthy_mgi0_supported": false,
+        "balanced_accuracy": 0.29379114383788124,
+        "within_one_accuracy": 0.9117647058823529,
+        "predicted_counts": [
+          3,
+          60,
+          220,
+          397
+        ]
+      },
+      "grades": {
+        "1": {
+          "support": 12,
+          "correct": 0,
+          "predicted_grade_counts": [
+            0,
+            3,
+            4,
+            5
+          ],
+          "true_grade_rank_counts_1to4": [
+            0,
+            4,
+            2,
+            6
+          ],
+          "top2_correct": 4,
+          "mean_true_probability": 0.061920371431673026,
+          "mean_true_minus_best_other": -0.737835221709247
+        },
+        "2": {
+          "support": 84,
+          "correct": 17,
+          "predicted_grade_counts": [
+            2,
+            17,
+            33,
+            32
+          ],
+          "true_grade_rank_counts_1to4": [
+            17,
+            29,
+            20,
+            18
+          ],
+          "top2_correct": 46,
+          "mean_true_probability": 0.19887879265390565,
+          "mean_true_minus_best_other": -0.5153487538486865
+        },
+        "3": {
+          "support": 223,
+          "correct": 73,
+          "predicted_grade_counts": [
+            1,
+            22,
+            73,
+            127
+          ],
+          "true_grade_rank_counts_1to4": [
+            73,
+            101,
+            39,
+            10
+          ],
+          "top2_correct": 174,
+          "mean_true_probability": 0.33932049016248017,
+          "mean_true_minus_best_other": -0.275152939246676
+        },
+        "4": {
+          "support": 361,
+          "correct": 233,
+          "predicted_grade_counts": [
+            0,
+            18,
+            110,
+            233
+          ],
+          "true_grade_rank_counts_1to4": [
+            233,
+            101,
+            22,
+            5
+          ],
+          "top2_correct": 334,
+          "mean_true_probability": 0.6287537075248631,
+          "mean_true_minus_best_other": 0.28918247870743485
+        }
+      },
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 2,
+          "mean_probability": 0.37993139028549194,
+          "accuracy": 0.0
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 94,
+          "mean_probability": 0.5238488468718021,
+          "accuracy": 0.3829787234042553
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 148,
+          "mean_probability": 0.7008688425695574,
+          "accuracy": 0.44594594594594594
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 436,
+          "mean_probability": 0.9535970320121958,
+          "accuracy": 0.5068807339449541
+        }
+      ],
+      "mean_max_probability": 0.8374978662413709,
+      "mean_max_probability_when_wrong": 0.8169267655086785,
+      "wrong_probability_ge_0_8": 215,
+      "wrong_probability_ge_0_9": 167,
+      "zero_probability_entries": 0
+    },
+    "efficientnet_balanced": {
+      "metrics": {
+        "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+        "mgi_grades": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "n": 680,
+        "support": [
+          12,
+          84,
+          223,
+          361
+        ],
+        "accuracy": 0.5264705882352941,
+        "confusion_matrix": [
+          [
+            0,
+            3,
+            6,
+            3
+          ],
+          [
+            1,
+            22,
+            33,
+            28
+          ],
+          [
+            6,
+            27,
+            99,
+            91
+          ],
+          [
+            3,
+            26,
+            95,
+            237
+          ]
+        ],
+        "macro_f1_four_grades": 0.34103719948018196,
+        "per_grade_f1": [
+          0.0,
+          0.2716049382716049,
+          0.4342105263157895,
+          0.6583333333333333
+        ],
+        "per_grade_recall": [
+          0.0,
+          0.2619047619047619,
+          0.4439461883408072,
+          0.6565096952908587
+        ],
+        "per_grade_auroc": [
+          0.843438123752495,
+          0.6977069351230425,
+          0.6212087017103158,
+          0.6848704834185778
+        ],
+        "macro_auroc": 0.7118060610011078,
+        "multiclass_brier": 0.7533831697771378,
+        "ordinal_mae": 0.5882352941176471,
+        "quadratic_weighted_kappa": 0.26783866063609163,
+        "clinical_validation": false,
+        "healthy_mgi0_supported": false,
+        "balanced_accuracy": 0.3405901613841069,
+        "within_one_accuracy": 0.8941176470588236,
+        "predicted_counts": [
+          10,
+          78,
+          233,
+          359
+        ]
+      },
+      "grades": {
+        "1": {
+          "support": 12,
+          "correct": 0,
+          "predicted_grade_counts": [
+            0,
+            3,
+            6,
+            3
+          ],
+          "true_grade_rank_counts_1to4": [
+            0,
+            0,
+            5,
+            7
+          ],
+          "top2_correct": 0,
+          "mean_true_probability": 0.021121715049957857,
+          "mean_true_minus_best_other": -0.6970131525983257
+        },
+        "2": {
+          "support": 84,
+          "correct": 22,
+          "predicted_grade_counts": [
+            1,
+            22,
+            33,
+            28
+          ],
+          "true_grade_rank_counts_1to4": [
+            22,
+            27,
+            22,
+            13
+          ],
+          "top2_correct": 49,
+          "mean_true_probability": 0.2848779886120439,
+          "mean_true_minus_best_other": -0.35256785141349856
+        },
+        "3": {
+          "support": 223,
+          "correct": 99,
+          "predicted_grade_counts": [
+            6,
+            27,
+            99,
+            91
+          ],
+          "true_grade_rank_counts_1to4": [
+            99,
+            86,
+            29,
+            9
+          ],
+          "top2_correct": 185,
+          "mean_true_probability": 0.4383939435006911,
+          "mean_true_minus_best_other": -0.06705434703942423
+        },
+        "4": {
+          "support": 361,
+          "correct": 237,
+          "predicted_grade_counts": [
+            3,
+            26,
+            95,
+            237
+          ],
+          "true_grade_rank_counts_1to4": [
+            237,
+            87,
+            28,
+            9
+          ],
+          "top2_correct": 324,
+          "mean_true_probability": 0.6337068892334402,
+          "mean_true_minus_best_other": 0.29430693838474487
+        }
+      },
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 6,
+          "mean_probability": 0.3663638134797414,
+          "accuracy": 0.16666666666666666
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 87,
+          "mean_probability": 0.5214227794230669,
+          "accuracy": 0.40229885057471265
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 128,
+          "mean_probability": 0.7138681667856872,
+          "accuracy": 0.375
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 459,
+          "mean_probability": 0.9515719068336072,
+          "accuracy": 0.5969498910675382
+        }
+      ],
+      "mean_max_probability": 0.8466302871704101,
+      "mean_max_probability_when_wrong": 0.8100404388600995,
+      "wrong_probability_ge_0_8": 185,
+      "wrong_probability_ge_0_9": 137,
+      "zero_probability_entries": 0
+    },
+    "efficientnet_unweighted": {
+      "metrics": {
+        "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+        "mgi_grades": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "n": 680,
+        "support": [
+          12,
+          84,
+          223,
+          361
+        ],
+        "accuracy": 0.5323529411764706,
+        "confusion_matrix": [
+          [
+            0,
+            3,
+            6,
+            3
+          ],
+          [
+            0,
+            19,
+            35,
+            30
+          ],
+          [
+            2,
+            20,
+            100,
+            101
+          ],
+          [
+            1,
+            24,
+            93,
+            243
+          ]
+        ],
+        "macro_f1_four_grades": 0.337376670046788,
+        "per_grade_f1": [
+          0.0,
+          0.25333333333333335,
+          0.437636761487965,
+          0.6585365853658537
+        ],
+        "per_grade_recall": [
+          0.0,
+          0.2261904761904762,
+          0.4484304932735426,
+          0.6731301939058172
+        ],
+        "per_grade_auroc": [
+          0.8566616766467066,
+          0.6974872163630553,
+          0.6227394491271796,
+          0.6832726925381429
+        ],
+        "macro_auroc": 0.7150402586687711,
+        "multiclass_brier": 0.7508123863346838,
+        "ordinal_mae": 0.5705882352941176,
+        "quadratic_weighted_kappa": 0.25663355836103685,
+        "clinical_validation": false,
+        "healthy_mgi0_supported": false,
+        "balanced_accuracy": 0.336937790842459,
+        "within_one_accuracy": 0.9029411764705882,
+        "predicted_counts": [
+          3,
+          66,
+          234,
+          377
+        ]
+      },
+      "grades": {
+        "1": {
+          "support": 12,
+          "correct": 0,
+          "predicted_grade_counts": [
+            0,
+            3,
+            6,
+            3
+          ],
+          "true_grade_rank_counts_1to4": [
+            0,
+            0,
+            4,
+            8
+          ],
+          "top2_correct": 0,
+          "mean_true_probability": 0.01265566039364785,
+          "mean_true_minus_best_other": -0.7360002846689895
+        },
+        "2": {
+          "support": 84,
+          "correct": 19,
+          "predicted_grade_counts": [
+            0,
+            19,
+            35,
+            30
+          ],
+          "true_grade_rank_counts_1to4": [
+            19,
+            28,
+            23,
+            14
+          ],
+          "top2_correct": 47,
+          "mean_true_probability": 0.2471788161180442,
+          "mean_true_minus_best_other": -0.43405322951247005
+        },
+        "3": {
+          "support": 223,
+          "correct": 100,
+          "predicted_grade_counts": [
+            2,
+            20,
+            100,
+            101
+          ],
+          "true_grade_rank_counts_1to4": [
+            100,
+            83,
+            33,
+            7
+          ],
+          "top2_correct": 183,
+          "mean_true_probability": 0.4394277030544777,
+          "mean_true_minus_best_other": -0.07007496113957827
+        },
+        "4": {
+          "support": 361,
+          "correct": 243,
+          "predicted_grade_counts": [
+            1,
+            24,
+            93,
+            243
+          ],
+          "true_grade_rank_counts_1to4": [
+            243,
+            87,
+            24,
+            7
+          ],
+          "top2_correct": 330,
+          "mean_true_probability": 0.6616351862762877,
+          "mean_true_minus_best_other": 0.3449736483387092
+        }
+      },
+      "reliability_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 4,
+          "mean_probability": 0.37266065180301666,
+          "accuracy": 0.0
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 76,
+          "mean_probability": 0.523374157124444,
+          "accuracy": 0.40789473684210525
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 118,
+          "mean_probability": 0.7066548986960266,
+          "accuracy": 0.3474576271186441
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 482,
+          "mean_probability": 0.9550898873954393,
+          "accuracy": 0.6016597510373444
+        }
+      ],
+      "mean_max_probability": 0.8603024739991216,
+      "mean_max_probability_when_wrong": 0.8221549046864299,
+      "wrong_probability_ge_0_8": 192,
+      "wrong_probability_ge_0_9": 147,
+      "zero_probability_entries": 0
+    }
+  },
+  "labels_changed": false,
+  "model_fits": 0,
+  "date": "2026-10-16",
+  "source_oof_sha256": {
+    "resnet_balanced": "18318980b1cfa216d535633ff57067d4456b39b150335a8abfdf2dc16c8174ea",
+    "efficientnet_balanced": "c78fd5be1507c0e4b18b9cafff2a8f63ef12fac2d584c1fea52d1ae1b863d8cb",
+    "efficientnet_unweighted": "466ed5d278d687c0b90f50bd215629e1828c0122ffd532a3f49d81ef0754a502"
+  },
+  "case_rows_private": 288,
+  "private_case_sha256": "00ca3e7689df6e0041e3077ff6c88a5cfb8938fb3a55738a0e35ba38dc75d817",
+  "limitations": [
+    "Provisional labels; non-clinical; non-final; participant independence unverified.",
+    "No image access, new inference, model fits, relabeling or threshold selection.",
+    "Three configurations reused the same development folds; descriptive analysis is not independent confirmation.",
+    "MGI1 support is only 12; no MGI0 examples."
+  ]
+}

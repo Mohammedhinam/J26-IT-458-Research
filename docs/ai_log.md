@@ -361,3 +361,217 @@ Prompt summary: Owner authorized committing and pushing pending Component 2 work
 What was accepted / rejected: feat: add bounded B1 fine-tuning and verified v3 results. Raw datasets, model weights, environments, OS files and unrelated root diagram excluded; original code/evidence unchanged.
 How I verified it: Current branch vinuthan and matching remote baseline confirmed; explicit path staging, source AST/JSON-notebook parsing, 18 archive CRC/content checks and staged data/model exclusion checks. Existing measured test/evidence records reused; no new experiment or test-performance claim.
 What I changed myself: Versioned this logical batch plus factual logs; no implementation, dataset, label, split or research-gate change. Commit and push outcomes are reported from actual Git commands.
+
+
+Date: 2026-10-15
+Tool: Codex
+Task: ONE read-only v2/v3Grade2prediction-erroranalysis
+Prompt summary: Align53immutableValidationIDs;compare13Grade2probabilities,top2,gapsandtrade-offs;noactualnewexperiment.
+What was accepted / rejected: Exactsavedpredictionevidenceaccepted;rejectedcausalclaimsaboutimbalance,fine-tuning,preprocessingorlabelswithoutablation/evidence. Noscope,label,thresholdorfinalmodelchange.
+How I verified it: ExistingpredictionpayloadSHAreceipts591eee408184fa96e20391d20113abf812b2c89a4dc0286bdbd2fb00489856a0(v2)/ad96de0c279092de2d0ff6206a93121d94023b4b4fa9148693a1769b77e29172(v3)matchbefore/after;53uniqueIDs/labels/gradeorder,finiteprobabilities/sums/argmaxmatch. Reusedpreviousarchiveverifications;readnoimage/checkpointpayloads. Independentreadonlyarithmeticreviewagreed. Grade2transitions2→2=1,2→3=10,2→4=1,4→4=1;meanp2drops.173614;12/13decrease;top2coverage13→2.
+What I changed myself: AddedreviewerMDandexactdiagnosticJSON,updatedhandoff/diary. ProposedonlyONEfresh-approvedrun-seedreplicationtoassessstability,notaguaranteedfix;notimplemented. Originalpredictions/labels/splits/metrics/checkpoints/dirtyfilespreserved;nocommit/push,training,inference,images,Test/helddata,installs/downloads/uploads. Ownerreflectionblank.
+
+
+Date: 2026-10-15
+Tool: Codex
+Task: Evidence-based project/dataset status and PP1 recovery recommendation
+Prompt summary: Owner asked where projectstands,which image-dataissuesaresolved,whetherexcluded183imagescanbeused,andrequestedthoroughsearch/practicalsolutions.
+What was accepted / rejected: Correctedhelddevelopmentcountto181(52Training/129Validation),separate182Test. Acceptedonlyconditionalqualifiedrecovery,notautomaticreinclusion,labelapproval,newtargetorperformancepromise. Seedreplicationremainsoptionalstabilitytest;broaderpriorityisdatareadinessandtwodemofunctions.
+How I verified it: Reusedstrict-draft/qualified-package/reconciliation/pilot/Grade2/tabularreports;independentreadonlycountcross-check. Disjoint181=121developmentpartialpolicy+54otherreferrals+4companions+2NP015.274all-splitpolicyincludes153protectedTest. Primarydatasetpaperverifiesper-toothannotations;externalMIOleadhasdifferent3-categoryschema/unverifiedlicence,2024MGIstudyunderlyingimagesnotpublic. No rawimages,sourceannotations,Testlabels,checkpoints,re-auditsortrainingaccessed.
+What I changed myself: AddedconciseprospectiverecoveryrecommendationwithsourceURLsandfactualdiaryentry. No source/code/data/labels/splits/threshold/gatechanges,downloads,installs,uploads,commit/push. Existingdirtyworkpreserved;nohuman/clinicaldecisionsmade. Ownerreflectionblank.
+
+
+Date: 2026-10-15
+Tool: Codex
+Task: Prepare52TrainingrecoveryreviewpackageandverifyexternalMGI0leads
+Prompt summary: OwnerapprovedproposedrecoveryworkandaskedautonomoussafeVisionprogress;requestedhumanhelp/Colabonlywhenneeded.
+What was accepted / rejected: Preparedreview-onlyartefacts,notlabels/manifest/trainingapproval. All52held;11boundaryholds/41remainingrecords/33proposedgroupsareconditionalaccounting,nofabricated33eligibleimagesorparticipants. Noautoseed43run,relabelingorTestreuse.
+How I verified it: Exactdevelopmentdraft914/52selection;47QA=2partial+45other,4companions,1NP015. Independentreadonlyreviewagreed25multi/10cross/9protectedflags. Nineartifactassertionspass,includingcachedsplit-before-labelselection/malformedTestsentinel,52coverage/partition,CSVpendingfields,121development-onlyrows,HTML52/noimageload,inactiveflags,andbefore/aftercachedinputSHA. MIOv2primaryAPIread-onlymetadataexplicitCCBY4.0/openverified;actualMGIschemaequivalencestillabsent. Noexistingmodelsuiterun.
+What I changed myself: NewignoredversionedreviewdirectoryandpublicaggregateMD/UNSENTrequestdrafts;factualhandoff/diaryupdated. Preservedalloldsource/data/labels/splits/181holds/NP015/Test/gatesanddirtywork. Nooutboundmessages,payloaddownloads/uploads,installs,training,inference,commit/push. Ownerreflectionblank;noColabneededforthiswork.
+
+
+Date: 2026-10-15
+Tool: Codex
+Task: Verify original dataset author contacts and prepare clarification email
+Prompt summary: Owner agreed to the original dataset-author clarification route.
+What was accepted / rejected: Prepared an UNSENT request about consensus annotations, partial-caption coverage, participant grouping, TXT format and whole-image MGI 0 support. No label, split, training or human-review approval inferred.
+How I verified it: Branch vinuthan and existing dirty work checked. Published correspondence addresses longnghia@hmu.edu.vn and lanlhbk@haui.edu.vn confirmed directly in the original article's Europe PMC full-text XML; no current email-delivery claim. Existing recovery reports reused; no dataset audit or image access.
+What I changed myself: Updated the existing request draft with verified contacts, sources and four concise questions; added factual diary entry. No outbound message, attachment, dataset change, training, installation, commit or push. Owner reflection remains blank.
+
+
+Date: 2026-10-16
+Tool: Codex
+Task: Development-only questionnaire comparison, checked SHAP/What-if, and local two-branch PP1 demonstration
+Prompt summary: Owner requested autonomous research and practical completion of both branches, an honest attempt to improve questionnaire AUROC, and working explainability; deferred author email and asked for human/Colab help only when necessary.
+What was accepted / rejected: Prespecified six bounded XGBoost settings, existing frozen predictors/participants/folds, fold-local preprocessing and all-OOF TreeSHAP verification. Kept historical A for the demo; rejected declaring the balanced model a reliable improvement or final winner. Added survey-weight point sensitivity and saved Vision uncertainty without extra model fits. Used only already verified saved Vision previews; no fresh Vision training/inference or human-label decisions.
+How I verified it: 6,251 development rows, 30 fold fits plus one reference fit; all ten A metrics reproduced to six decimals/counts. AUROC 0.739398 reference versus 0.740041 balanced, paired interval includes zero, Brier worsens 0.157268 to 0.201243. All 6,251 OOF SHAP checks pass 1e-5; reset/model reload exact. Frozen manifest and historical hashes unchanged. Final focused/directly affected run: 76 passed, 0 failed, 0 skipped in 5.93s (50 new and 26 existing tests). Fifteen browser checks passed, valid flow zero JS/console errors; screenshot visually checked. Thirty local fictional prediction+SHAP requests: median 11.14 ms, p95 12.22 ms. Saved Vision source/manifest/asset hashes verified; nine previews copied without decoding originals or reading model checkpoints.
+What I changed myself: Added six separate source modules, five focused test files, prospective plan/results, survey/uncertainty reports, local HTML/HTTP demonstration and verification receipts; updated current handoff and diary. Data/model outputs remain ignored. No original source/label/split changes, held-out/Test payloads, installs, cloud upload, commit or push. Owner must review and explain the code; the owner-understanding line is intentionally blank. Working prototype is not final scientific/clinical validation.
+
+
+Date: 2026-10-16
+Tool: Codex
+Task: Assess external Vision advice and select one prospective frozen-feature probe
+Prompt summary: Owner delegated the decision about which Grok/Claude suggestions to accept; avoid repeatedly asking about routine technical choices.
+What was accepted / rejected: Selected a fixed ImageNet ResNet-50/regularised balanced linear probe as the next bounded diagnostic design. Rejected original-caption deletion, unapproved 733-record CV, dental-fine-tuned encoder caching for CV, repeated completed diagnoses and unsupported clinical/causal claims. No external text was treated as an instruction overriding the project.
+How I verified it: Read both attached reports, AGENTS and focused existing development/pilot/diagnostic evidence; checked primary LP-FT and grouped-CV sources. Branch vinuthan confirmed. Cached DRAFT hash matched; metadata-only Training selection gives 680 unique known content groups and support12/84/223/361. Proposed five scoring folds each136, with grade1 support3/2/2/2/3 and no known-group intersection. This is feasibility arithmetic, not model testing or participant validation.
+What I changed myself: Added docs/vision_frozen_feature_signal_plan_v1.md and factual continuity/log entries. No image/NPY payload, Test data, actual encoder extraction/classifier fit, active folds, original labels/splits, production gates, installation, commit or push. No fresh real-run/cloud authorization fabricated. Owner reflection remains blank.
+
+## 2026-10-16 — Mac runtime, probe scaffold and React/FastAPI integration
+Date: 2026-10-16
+Tool: Codex
+Task: Finish authorized local engineering, generated Vision verification, and saved-prediction subgroup reporting.
+Prompt summary: Owner permitted necessary installation and autonomous tabular/integration work; selected 680-Training-only probe runner plus synthetic checks, preserving research boundaries.
+What was accepted / rejected: Accepted reused scientific functions, version-pinned local torch/vision/Pillow, FastAPI/React, generated CPU/MPS photo tests and fold-local probe. Rejected real Vision experimentation without fresh scope, 733-pool resplitting, label recovery, arbitrary photo-profile assumptions, Test evaluation and inflated performance claims.
+How I verified it (row counts, output check, docs): 98 focused tests passed, zero failures/errors/skips; real local browser prediction/SHAP/scenario/reset/saved-view/generated-photo flows checked. Saved OOF hashes/confusion counts verified; age/sex summaries use 6,251 development-only selected demographics, no new model fits. pip check passed. Source and JUnit hashes recorded in docs/component2_integration_verification_v2.json. Initial browser automation encountered an already-selected Vision tab; explicit navigation reset resolved the selector timeout, with no application defect inferred.
+What I changed myself: Codex implemented the adapters/runner/UI/tests and factual records; owner authorized installation and directed scope. Owner must review the scientific limits and write their own understanding. No clinical review, new real Vision run, commit or push was performed.
+
+
+Date: 2026-10-16
+Tool: Codex
+Task: Execute one authorized 680-Training-only frozen-feature signal check
+Prompt summary: Owner accepted the exact bounded probe and separately approved official ResNet-50 V2 weights download after the missing local cache was reported.
+What was accepted / rejected: Fixed ImageNet encoder, unchanged B1 inputs, five prescribed content-group folds and fresh fold-local scaler/balanced Logistic Regression. No neural fine-tuning, search, alternate weights, 53 Validation/181 held/NP015/Test payloads, label changes or final-model promotion. The one-run execution authorization is consumed.
+How I verified it: Official weights 102,540,417 bytes/full SHA matched. 680/680 array hashes passed; runtime access tracing observed only the allowed Training arrays. Five classifier plus ten Dummy fits, frozen encoder/BatchNorm unchanged. Runtime 98.69s, macOS peak RSS 1125.09 MiB. 65 saved-result assertions passed; independent sklearn/reviewer metrics agree. Macro-F1 0.295114 vs 0.173391, balanced accuracy 0.293791 vs 0.25, QWK 0.214752 vs 0; accuracy worsened 0.475 vs 0.530882, Brier worsened 0.831294 vs prior 0.595072. Recalls 0/12,17/84,73/223,233/361. One thousand conditional paired bootstrap draws, zero undefined; no refitting/participant/selection correction. Prior 16 generated tests reused unchanged, not rerun. An initial ad-hoc row-sum assertion used inappropriate 1e-12; measured 1.76e-7 passes the established 1e-6 metric tolerance without changing probabilities or production code.
+What I changed myself: Added aggregate actual-results MD/JSON, updated current handoff/diary, saved authorization/hash-bound protocol/features/OOF/access evidence under ignored data and authentic weights in local cache. Owner must review limitations and fill their understanding; no owner reflection or clinical approval invented. No commit/push or additional real experiment. Next proposed task is the same-fold EfficientNet-B0 feature comparison, not automatically run.
+
+
+Date: 2026-10-16
+Tool: Codex
+Task: Same-fold EfficientNet-B0 frozen-feature comparison
+Prompt summary: Owner asked to continue improving Vision learning efficiently; accepted the bounded encoder comparison and separately approved official EfficientNet weights download.
+What was accepted / rejected: Changed the fixed encoder to official EfficientNet-B0 V1, 1280 features. Reused exact 680 Training IDs/labels/groups/folds, B1 normalization and fold-local balanced C=1 Logistic classifier. No neural training, parameter search, new data/label decisions, 53 Validation/181 held/NP015/Test/CAM payloads, final model promotion or cloud upload. The one-run permission is consumed.
+How I verified it: 46 generated/regression tests passed, 0 failed/errors/skipped (30 new +16 directly affected). Official TLS URL and published filename hash prefix verified; full downloaded SHA computed and pinned, not falsely claimed independently published. 680 arrays verified/read, frozen weights/BatchNorm unchanged, baseline predictions and original ResNet evidence unchanged. 79 saved-result checks passed with independent sklearn calculations. EfficientNet versus ResNet: accuracy .526471/.475000, macro-F1 .341037/.295114, balanced accuracy .340590/.293791, AUROC .711806/.633569, Brier .753383/.831294, QWK .267839/.214752. Still below majority accuracy .530882 and worse than prior Brier .595072; Grade1 0/12. Conditional1000 bootstrap draws, no undefined; QWK difference includes zero, macro-F1 lower bound only .000363. Local CPU48.26s/peakRSS1130.66MiB; no clinical/final or controlled speed claim.
+What I changed myself: Added separate encoder runner, generated tests, prospective plan, actual aggregate MD/JSON and JUnit; updated handoff/diary. Stored numeric features, OOF and truthful authorization/hash/access records only in ignored local data; authentic weights in local cache. Existing source modules, datasets, labels, splits and research gates preserved. No commit/push. Owner must review the scientific limitations and fill their own understanding.
+
+
+Date: 2026-10-16
+Tool: Codex
+Task: Cached EfficientNet balanced-versus-unweighted head comparison
+Prompt summary: Owner accepted the exact cached-feature class-weight experiment and asked what remains in the Vision branch.
+What was accepted / rejected: Changed only class_weight to None with C=1 and exact prior680Training labels/groups/folds; fresh fold-local scaler/classifier. Reused balanced/baseline predictions without refit. No image/encoder access, Validation/held/NP015/Test, downloads/installs, neural optimization, threshold/calibration, blind search or final-model promotion. Fresh one-run scope consumed.
+How I verified it: 22 generated tests passed,0failed/errors/skipped;81 independent saved-result assertions passed, including fold scaler means, converged solver iterations, preserved IDs/labels/groups/folds, cached probabilities and hashes. Exactly5new fits, only3old cache inputs opened. Runtime5.21s/peakRSS191.97MiB. Accuracy358→362/680, but macro-F1 .341037→.337377, Grade2 correct22→19, balanced accuracy .340590→.336938. Brier .753383→.750812, still worse than prior .595072. All five conditional paired intervals versus balanced include zero; majority361correct is only one fewer than unweighted. No clear winner or learning bug established.
+What I changed myself: Added an isolated cache-only runner, generated tests, prospective plan, actual aggregate MD/JSON and JUnit; updated handoff/diary and remaining Vision checklist. Numeric outputs and truthful authorization/access records saved only under ignored data. Original data/labels/splits/model code/research gates preserved; no commit/push. Owner must review and fill their own understanding. Further unplanned experiments were not run.
+
+
+Date: 2026-10-16
+Tool: Codex
+Task: Prepare cached-only review workflow for all181 held development records
+Prompt summary: Owner requested autonomous safe Vision progress and held-data recovery preparation without relabeling, promotion or new unauthorized training.
+What was accepted / rejected: Reused914development DRAFT and selected cached181QAobjects; split-first reader discards Test/unselected bodies before JSON decoding. Kept all decisions pending, blank human/grade fields, eligibility false; no original RGB/CSV/TXT or model prediction used. Existing52Training package preserved.
+How I verified it:17generated tests/9artifact assertions pass. Exact52Training+129Validation; disjoint121partial(2/119),54otherreferrals(45/9),4companions,2NP015. Overlap flags not added to totals. Cached input hashes unchanged;181HTMLcards/development-only links/no image preloads. Zero new approved/eligible records.
+What I changed myself: New reusable workflow/tests/public report and ignored181viewer/CSV/evidence; checkpoint/handoff updated. No source/label/split changes, training, installs, cloud, commit/push. Owner must obtain genuine qualified decisions and fill their own understanding.
+
+
+Date: 2026-10-16
+Tool: Codex
+Task: Saved680minority-grade diagnosis and generated nested-probe readiness
+Prompt summary: Owner requested sustained scientific improvement while prohibiting unauthorized real training, Test access and automatic clinical decisions.
+What was accepted / rejected: Accepted immutable savedprobability comparison and one predeclared95-fit proposal, sixfixedC/weightsettings with inner-only selection. Rejected new real fits, optimization on53Validation, relabeling/errors as ground truth, unrestricted search, missingMGI0fabrication and causal/clinical claims.
+How I verified it (row counts, output check, docs):11diagnostic+10nested generated tests passed,0failed/errors/skipped.680identical ID/label/fold records, support12/84/223/361;288privatecase-model rows. Grade2balanced22/84 vsunweighted19/84, allGrade1correct0/12. Tests exercise95syntheticfits, fold-localscaling/classweightfit, outerisolation, reproducibility, deterministicties, convergencefailure and freshscope rejection. No actual new experiment results claimed; pinnedsourceOOF hashes in report.
+What I changed myself: New isolated diagnostic/runner/tests, aggregate MD/JSON, prospective plan and ignoredcaseCSV; handoff/checkpoint updated. Owner must review trade-offs/authorize the exact real experiment and fill their own understanding. No source labels/splits/images, final model or approval changes; no install/commit/push.
+
+Date: 2026-10-16
+Tool: Codex
+Task: Separate historical53Validation from680OOF Vision evidence in local demo
+Prompt summary: Finish independent safe engineering and demo verification without repeating prior audits or activating new inference.
+What was accepted / rejected: Added fixed-hash aggregate-only endpoint/UI, preserving model populations, grade support/recall and limitations. Rejected a mixed accuracy leaderboard, private case IDs in API, new-photo activation or final research-model replacement.
+How I verified it (row counts, output check, docs):20focused evidence/APItests passed,0failed/errors/skipped;12corebrowser+3post-hint checks passed, desktop/mobile aggregate screenshots inspected. Saved9views load; questionnaire reset identical; photo inactive.16priorVisioncore/source hashes unchanged. Initial relative browser API URL and screenshot root mismatch were automation issues corrected without weakening application checks.58selectedtests total this mission, not repository-wide. Current hashes saved in docs/vision_evidence_demo_verification_v1.json.
+What I changed myself: Aggregate adapter, API/UI and directly affected tests, compiled bundle, factual progress report/logs/checkpoint. Existing teammate/dirty files, datasets, labels, researchgates and historical evidence preserved; no new real fits, installs, cloud, commit/push. Owner understanding remains blank for owner.
+
+
+Date: 2026-10-16
+Tool: Codex
+Task: Execute and verify one owner-authorized95-fit nestedEfficientNetcached-head experiment
+Prompt summary: Owner explicitly answered ஆம், இந்த 95-fit experiment மட்டும் நடத்தவும் to the exact frozenplan; later continue messages steered completion,not extraexperiments.
+What was accepted / rejected: Accepted only cached680Training,6fixedC/weightsettings,3innerfolds/5unchangedouterfolds,freshfoldlocalscaling/classweights and95fits. Rejected originalimage/encoder execution,53Validation/181held/NP015/Test/CAMpayloads,moresearch,clinicalapproval,labels/splitchanges or finalmodelactivation. Freshhashboundownerrecord truthfully saved; scope nowconsumed.
+How I verified it (row counts, output check, docs):57independent actualsaved-result checks passed with0verificationrefits;95actualfits,0neuralsteps,only3allowedcachefiles opened under runtime audit.680unchangedmembership/folds/baselines/sourcehashes;allinnercandidates/selection/convergence/actualouterscalermeans andindependentmetrics checked. Accuracy.522059,macro-F1.346429,balancedaccuracy.348645,QWK.300275,AUROC.716342,Brier.613977;recalls0/12,27/84,96/223,232/361.1000conditionalbootstrapdraws,0undefined. CPU8.422s/peakRSS212.47MiB.10generatedrunner tests reused,notrerun.8post-result aggregate tests rerun/pass and5browserchecks pass;58distinctselectedtasktests overall,not66.16historicalVisiondependenciesunchanged.
+What I changed myself: Added separate actual MD/JSON results/currentprogress/verification andupdatedaggregatecard,focusedfixture,handoff/checkpoint/diary. Saved numericoutputs/protocol/ownerdecision/accesschecks only in ignoredlocaldata. No clinicalgrade/eligibility decisions;owner must understand trade-offs. Qualified52Trainingreview is the remaininghumanblocker. No automatic furtherfit,installation,cloud,commit/push.
+
+
+Date: 2026-10-16
+Tool: Codex
+Task: Tabular finalisation evidence review and concrete decision package
+Prompt summary: Owner accepted preparing finalmodel/calibration/threshold decisions and asked whether Sol6.1Medium is enough. Reviewonly scope retained; officialOpenAIreasoningguide consulted for modelsetting guidance.
+What was accepted / rejected: Accepted signedproposal§§3.3–3.5,existinghistoricalevidence andhashchecks. Proposed FullrawXGBoostA,FullrawLogisticC1,trainingratebaseline,noextra sigmoid,OOFYoudenrule/freeze. Rejectednewtuning/fits,medianfoldthresholdasfinal,clinicalclaims,.80fabrication,Testaccess andautomaticapproval. Exactnextpreparationbudget6Logistic/0XGBoostfits remains pending.
+How I verified it (row counts, output check, docs):51existingreportconfusion/support/sensitivity/specificitychecks passed across8fixed/8learnedworkflows.3/3existingmodel/OOF/manifesthashes and8/8coretabularsourcehashesMATCH. SignedPDF readpp20–23 withpypdf;existingbadobjectpointerwarningsdidnotpreventtext extraction. No savedmodel/OOFpayload deserialized andnoTestdataread. Documentation-onlychange;no newpytest orhistoricaltest rerunclaimed.
+What I changed myself: New docs/tabular_finalisation_decision_package_v1.md andboundJSONreviewreceipt;handoff/diaryupdated. No sourcecode,existingreports,models,labels,splits,UI,clinicalapproval orTestactivationchanged. No install/commit/push. Owner must approve the concrete choices and fill their own understanding;no ownerdecisionfabricated.
+
+
+Date: 2026-10-16
+Tool: Codex
+Task: One authorized six-Logistic-fit development freeze preparation
+Prompt summary: Owner answered yes proceed to exact6Logisticfits,existingXGBoostreuse,developmentOOFYouden thresholds andfreezereceipt;Testpermissionexplicitlyexcluded.
+What was accepted / rejected: Acceptedexistingselectivedevelopmentloader/preprocessing/originalfolds;rawFullAprimary/rawFullC1comparator/priorbaseline. RejectednewXGBoostfit,parametersearch,calibrationmapping,foldmedianascutoff,Testdecode/evaluation,clinicalapproval,UIactivation andhistoricalartifactrewrite. Onepreparationscopeconsumed.
+How I verified it (row counts, output check, docs):13generated/directlyaffectedtests passed,0failed/errors/skipped;63independentactualsavedartifactchecks passed,0verificationrefits. Pipelineauditobserved6Logisticfits;reproductionall10historicalmetrics/countsMATCHbefore6th. Actualfittingmedians/scalermeansmatched;fourselectiveXPTreturns6251each/allSEQNdevelopment. Runtimefileguardallowedonly4XPTs/manifest/savedOOF/primarymodel;noothersourcesorwrites. Thresholdgrid101candidatesindependentlyverified:primary.26,comparator.28;apparentconfusions3788/910/706/847and3862/836/722/831. Modelreloadexacton3devrows;core/history/manifest/originalartifactsunchanged. NewresultJSON/currentverificationandreceiptSHArecorded. NoTestpredictor/outcomedecode,inference,clinicalvalidityclaimorfinalapproval.
+What I changed myself: Newscopedrunner/tests,actualMD/JSON/verification/JUnit,handoff/logs;newLogistic/pairedOOF/protocol/baseline/ownerdecision/receiptonlyunderignoreddata. Existingdemo/modelmetadata preserved. Owner must review numericalfreeze/trade-offs and fill their understanding. Noinstall,cloud,commit/push;Testaccessremainsseparate.
+
+
+Date: 2026-10-16
+Tool: Codex
+Task: Prepare final frozen Tabular evaluator without real Test access
+Prompt summary: Owner saidcontinue aftersixfitpreparation;continuedsafeimplementation/testingwithoutinferringseparatefinalTestpermission.
+What was accepted / rejected: AcceptedsamehashboundrawA/.26,rawC1/.28,prior;twoexplicitapprovals,source/runtime/artifactchecks,internalloadercapability,canonicalonceclaim,norefit/retuning. RejectedsinglepreparationapprovalasTestpermission,automaticretry,undefinedmetricsaszero,clinical/populationclaimsandmodel/UIreplacement.
+How I verified it (row counts, output check, docs):16synthetictests passed,0failed/errors/skipped. Firstfixtureage0..99properlyfailedexisting30..80guard;correctedgeneratedfixturewithoutlooseningbounds. Generatedendtoendfixtureusesstand-inmodels,notrealTest. Additionalactualartifactcompatibilityusedoneexistingfictionalprofileonly,XGB.21408095955848694/LR.19675996209720317/prior.24844024956007038;hashes/runtimeunchanged,0newfits. Realsealedloader/claimnevertouched;noactualTestperformanceclaimed. UndefinedcalibrationhelperoutputsconvertedtoJSONnullwithstatus. Source/JUnit/reporthashesrecorded.
+What I changed myself: Newevaluator/tests/readiness/verification/JUnit andfactualhandoff/diaryupdates. No realfreeze/Testauthorizationrecordcreated. Existingpreparedreceipt,models,labels,manifest,history,teammate/dirtyworkanddemo preserved. No install/download,commit/push. Ownerreview/explicitpermissions remainnecessary;ownerunderstandingnotinvented.
+
+
+Date: 2026-10-16
+Tool: Codex
+Task: One explicitly authorized frozen final questionnaire evaluation and factual evidence handoff
+Prompt summary: Owner separately answered yes to the exact numerical freeze receipt and yes to one final1,563-participant evaluation; predictive training, recalibration, threshold tuning and retry excluded.
+What was accepted / rejected: Accepted genuine separately recorded approvals bound to receipt/code/output, existing frozen A/.26,C1/.28 and development-rate baseline, immutable once-only claim and fixed diagnostics/intervals. Rejected Test-driven model selection, retuning, automatic rerun, constant-score trapezoidalPR-AUC as evidence of superiority, clinical/current-disease/progression claims and invented approval.
+How I verified it (row counts, output check, docs): One run completed1563unique frozenheldout IDs,388Yes/1175No;0predictive/preprocessing fits,2descriptive calibration regressions,4selective1563-row returns. 109 saved-result assertions passed0failed; exact memberships/counts and independent metrics within1e-7 (max1.1351847156726436e-8,float32/float64).1,000pairedbootstrap draws0undefined,0refits; age/sex counts reconcile. Prior16synthetic tests reused unchanged, not claimed as rerun. Receipt/core/model/manifest/hash bindings preserved; private predictions/results hashes recorded. No verification inference or bootstrap rerun. Actual XGBoostAUROC.760654/Brier.150858,Logistic.756113/.151364;pairedAUROCintervalincludeszero,overall.80unmet.
+What I changed myself: New aggregate MD/JSON finalreport andverificationJSON;updated currenthandoff anddiary. Genuineowner/executionrecords andparticipantpredictions onlyinignoreddata; canonicalonceclaim retained unchanged. Originalmodels,history,splits,labels,Visionworkanddemo unchanged. No installs,downloads,cloud,commit/push. Owner must fill their own understanding;noclinicalapproval or fullprojectcompletionclaimed. FinalTestpermissionconsumed.
+
+
+Date: 2026-10-16
+Tool: Codex; local Playwright browser automation following webapp-testing skill
+Task: Existing questionnaire/SHAP/What-if live-demo rehearsal
+Prompt summary: Owner saiddo after recommending frozen questionnaire demo rehearsal.
+What was accepted / rejected: Acceptedfictionalprofileonly,existinglocalhostserver/model/scientificfunctions,readonlycodeinspection andfactualrehearsalguide. RejectedrepeatTest/newtraining,clinicalclaims,hidinghigherwhatifprobability,modelmetadatarewrite andinventedhumanfeedback.
+How I verified it (row counts, output check, docs):BrowserExplain21.41%→cleaning7scenario24.41%→exactreset21.41%;12rows,unit/additivity/warning/editinvalidation/restoration verified,0uncaughtpageerrors.17explicitAPI/numericalassertions passed0failed.5intentionalinvalidrequestsreturned422;networkerrorsareexpectedrejections. Actualmodel_id/fictionalresponses/SHAPchecks saved. Frozenartifactbindings andpersistentonceclaim recheckedunchanged withoutmodelreload/Testdecode/inference. No pytest/fullsuite rerun claimed.
+What I changed myself: Newdocs/tabular_demo_rehearsal_v1.mdandverificationJSON;handoff/diaryupdated. No code/frontend/model/threshold/source/splitchanges. Guide identifieshistoricalfooter/APIrolewording discrepancy andlatestreportauthority. No datasetaccess,newTestevaluation,install,upload,commit/push. Ownerunderstandinglineleftblank;humanrehearsal/feedbacknotfabricated.
+
+
+Date: 2026-10-16
+Tool: Codex; official public web/API metadata
+Task: Vision steps1–2 cached reviewer action package and externalMGI0suitability
+Prompt summary: Owner agreed to start review checklist/external suitability and suggestedGeminiasdoctor-like reviewer.
+What was accepted / rejected: Accepted existingcached52Trainingevidence andfocusedpublicrecord/APIreview. RejectedAIasclinicalapproval,HealthyfolderautomaticMGI0,periodontitisautomaticMGI4,automaticheldrecovery,Testaccess,newdownloads/training andclinicalclaims. No externalAIcontact orimageupload.
+How I verified it (row counts, output check, docs):14actualcached-artifactchecks passed0failed; allsevenexistingpackagehashesmatch,52uniqueTrainingrecords,2partial/45referrals/4companions/1NP015 andinactiveapproval/eligibility. All181holds retained. MIOofficialAPIconfirmscc-by-4.0/open andSANOsize433825820bytes;recordadvertises765diagnosticlabels,notMGIrubric. Actualarchivecontents/healthycount/clinicalequivalence/privacy/identity remainunknown. No previousaudits/tests/modelruns repeated.
+What I changed myself: Newdocs/vision_review_external_mgi0_action_package_v1.mdandaggregateevidenceJSON;handoff/diaryupdated. Onlyplanningdocuments/logs changed. Originals,CSV/TXT,splits,labels,manifests,reviewerdecisions,dirtyworkandgatespreserved. No installs,datasetdownloads/uploads,training,commit/push. Ownerunderstandingblank; genuinehumanreviewnotfabricated.
+
+
+Date: 2026-10-16
+Tool: Codex; webapp-testing skill / local Playwright
+Task: Practical PP1 presentation/API delivery v3 with accurate eight-step disposition
+Prompt summary: Owner asked to finish eight steps quickly and show doctor later. Advanced authorized prototype/evidence work without inventing reviewer decisions or scientific completion.
+What was accepted / rejected: Accepted hash/model-bound savedaggregate display, accurate status/UI, local browser verification, runbook/blankfeedback/viva and existing savedVisionevidence. Rejected clinical approval byAI, automatic181holdrelease, newmanifestactivation, unqualifiedHealthy→MGI0mapping, sealedVisionTestaccess, questionnaireTestretry and unsupportedall-eight-completeclaim.
+How I verified it (row counts, output check, docs):34focused generated/API/evidence tests passed0failed/errors/skipped;17browserchecks and33artifactassertions passed. Samefictionalprediction/12SHAP/scenario/reset,threefinaltabularrows,nineVisionviews,fiveOOFrows,mobileoverflow/zeroJSerrorsverified. Before/afterboundreport/model/manifest/claim/historicalVisionhashesunchanged. No newparticipantdata/Test/rawdentalaccess ornewmodeltraining; existing savedPNGpreviews rendered, not freshdentalinference. Frontendexistingesbuildonly, no npmci/install. JUnit/browserJSON/hashes/screenshotsrecorded.
+What I changed myself: Newquestionnaire_evidence.py/test;scoped ownAPI/test/UIchangesandrebuiltapp.js;newdeliveryv3guide/JUnit/browser/verificationdocs;handoff/diaryupdated. New8770loopbackserver,old8768preserved. Existingmodels,labels,sources,gates,resultsanddirtyworkpreserved. No externalAI/cloud,installs,downloads,commit/push. Ownerunderstandingblank;feedback/clinicaldecisionsnotfabricated.
+
+
+Date: 2026-10-16
+Tool: Codex; spreadsheets skill / bundled Artifact Tool; official Mendeley,CreativeCommons,Google documentation
+Task: Local181heldVisionGemini-review tracker/batchpreparation andexternalprivacyapprovalblockers
+Prompt summary: Owner requested181imagebatches10–15withRGB/3captions/TXT/mapping/groups,masterCSV,noprotectedTest,privacyconcernsflaggedbeforeexternalpackaging. OwneridentifiedPersonalGemini.
+What was accepted / rejected: Acceptedcached181evidence,localtracking/plans,splitseparation,pendingprovenanceandpublicmetadatareview. Rejected9protectedTestaliasesinexternalbatches,rawprivateEXIFcopy,blindICCstrip/failedsRGBreuse,B1arraysasGeminiimages,wholeCSVupload,AIclinicalapproval,automatictraining/labelsandaccountanswerasuploadpermission.
+How I verified it (row counts, output check, docs):8generatedtests passed0failed/errors/skipped;59artifactassertions passed,181CSVrows52/129,172uniqueexternalcandidates,9localonly,12batches15or14,all27CSVfieldsroundtripincludingnullzero/boolean,same4reviewinputhashes.344stat-onlyimage/TXTpathexistencechecks. OriginalRGB/header/CSV/TXT/Testnotopened orcopied;cached543parsedcaptionvariantsretainednotclaimedoriginaltext. InitialverifyFalse/falsecasecomparisoncorrectedonlyhelper. MasterCSVbuiltviaArtifactToolwithbundledruntimeandpreviewinspected. OfficiallicenceCCBY4.0andPersonalGeminiprivacy/10filelimitschecked;nodatasetdownload/serviceupload.
+What I changed myself: Newscopedplanutility/tests,report/evidence/JUnit,handoff/diary;ignoredlocalmasterCSV/manifests/plans/verification/builders. ActualRGB/caption/TXTpayloadpackaging0,upload-readyfalse. Sourcefiles/labels/splits/dirtywork/traininggatespreserved;noinstalls,training,commit/push. Pendingapprovalcomesfromownerexternal-packagingconditionandnoTestboundary,notinventedclinicalrequirement.
+
+
+Date: 2026-10-16
+Tool: Codex; existing strictICC/caption/hash helpers; officialpubliclicence/privacyreferences
+Task: Authorizedlocalread-only172-sourceGemini-reviewprivacy/ICCpreflight
+Prompt summary: Ownerauthorizedmetadata/ICC/sourceintegrity/annotationmatchingandpermissionevidencereviewonly;9protectedaliasesexcluded;noupload/package/originalchanges/training;PersonalGeminiriskacceptancenotassumed.
+What was accepted / rejected: Accepted selectedsourcebytehash/header/ICC/metadata-presence andannotationassociationchecks;reusedcachedinventory/captionparser. RejectedRGBdecode,colourconversion/export,rawprivatemetadatalogging,clinicalapproval,all181uploads/aliases,sourcewrites,cloud/riskacceptanceinference andtraining.
+How I verified it (row counts, output check, docs):172JPEGsourceSHAreferencesandbefore/afterpreservationpass;43Training129Validation;516captionvariants/172TXTmatchingandcache reproductionpass;172geometry/ROIs/header/ICCpass. All172as-isprivacyfail(EXIF/DateTime/GPSInfo/MakerNote/XMP);GPSversiononly172/coordinates0.14savedchecks passed0failed. FirsthelperCSVheaderstopbeforeimagechecksrectifiedforobservedextraVùngcolumn,notdataset/limits. Existingmaster/cachehashesunchanged;explicitreadallowlist/sourcewrite/networkguardsandPillowloadrejection. No pixel/profile/rawannotationexports;newcolourfidelitynotmeasured. OfficialCCBY4.0currentandGoogleconsumerprivacyreviewed;externalpermission0confirmed172unknownandowneracceptancefalse.
+What I changed myself: Newdiagnosticreport/aggregateJSONandignoredhash/header-onlydiagnosticartifacts;handoff/diaryupdated. No productioncode,sources,annotations,labels,split/heldmanifestorprivacy/policylimitschanged. No uploads/packages,installs,training,commit/push;ownerunderstandingblank.
+
+Date: 2026-10-16
+Tool: Codex
+Task: Commit completed vision work on owner request
+Prompt summary: Save completed work in scoped commits and push vinuthan before continuing generated JPEG qualification.
+What was accepted / rejected: Completed code, focused tests and aggregate documentation accepted; datasets, weights, private local evidence and unfinished JPEG helper excluded.
+How I verified it (row counts, output check, docs): Reviewed explicit staging paths, Python AST syntax and existing recorded verification; no model experiments or final evaluation repeated.
+What I changed myself: Owner requested commit/push; owner understanding remains to be filled.

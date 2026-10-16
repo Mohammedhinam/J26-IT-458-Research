@@ -1,0 +1,467 @@
+{
+  "date": "2026-10-16",
+  "status": "completed_exploratory_not_final",
+  "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+  "scope": "Original Training680 only; fixed ImageNet encoder and five-fold linear probe",
+  "config": {
+    "version": "training680-frozen-resnet-probe-v1",
+    "encoder": "ResNet50_Weights.IMAGENET1K_V2",
+    "dimensions": 2048,
+    "resolution": 224,
+    "folds": 5,
+    "seed": 42,
+    "C": 1.0,
+    "class_weight": "balanced",
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "scaler": "StandardScaler_fit_inside_each_fold",
+    "bootstrap": 1000,
+    "grades": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "scope": "Training_only",
+    "fine_tuning": false
+  },
+  "bindings": {
+    "manifest_sha256": "8e7ff195009a5e781c216795fd2a943db17a0b3ec8fd1c84760f3bf9878a4c9f",
+    "weights_sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+    "config_sha256": "ff85f2b9aaa5fd5eaa2e821ce305d4a93b92bad30542d48f5a3d0a1c267c3f59",
+    "code_sha256": "850676e8e12dd310a48f7efed317a9d7926c5f73730683d9436a6085b81d7f0b",
+    "selection_sha256": "c7d6ecd627364801218e60ad58653c701085bc554745cb2e8cbb054d036ef8b6",
+    "fold_sha256": "e202132b8b7ee38ec4041ea399bccb0b538ef75ce1861faec044292c11cf90d4",
+    "output_path_sha256": "66187fd740aa8e24228c10e8caa06143f673f2a0044753488bc6dea6392ef897"
+  },
+  "metrics": {
+    "linear": {
+      "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+      "mgi_grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "n": 680,
+      "support": [
+        12,
+        84,
+        223,
+        361
+      ],
+      "accuracy": 0.475,
+      "confusion_matrix": [
+        [
+          0,
+          3,
+          4,
+          5
+        ],
+        [
+          2,
+          17,
+          33,
+          32
+        ],
+        [
+          1,
+          22,
+          73,
+          127
+        ],
+        [
+          0,
+          18,
+          110,
+          233
+        ]
+      ],
+      "macro_f1_four_grades": 0.29511448569989673,
+      "per_grade_f1": [
+        0.0,
+        0.2361111111111111,
+        0.3295711060948081,
+        0.6147757255936676
+      ],
+      "per_grade_recall": [
+        0.0,
+        0.20238095238095238,
+        0.3273542600896861,
+        0.6454293628808865
+      ],
+      "per_grade_auroc": [
+        0.7572355289421158,
+        0.6452740492170023,
+        0.5187173121645358,
+        0.6130480466138122
+      ],
+      "macro_auroc": 0.6335687342343665,
+      "multiclass_brier": 0.831293901285898,
+      "ordinal_mae": 0.6205882352941177,
+      "quadratic_weighted_kappa": 0.21475155853815908,
+      "clinical_validation": false,
+      "healthy_mgi0_supported": false,
+      "balanced_accuracy": 0.29379114383788124,
+      "within_one_accuracy": 0.9117647058823529,
+      "predicted_counts": [
+        3,
+        60,
+        220,
+        397
+      ]
+    },
+    "majority": {
+      "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+      "mgi_grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "n": 680,
+      "support": [
+        12,
+        84,
+        223,
+        361
+      ],
+      "accuracy": 0.5308823529411765,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          12
+        ],
+        [
+          0,
+          0,
+          0,
+          84
+        ],
+        [
+          0,
+          0,
+          0,
+          223
+        ],
+        [
+          0,
+          0,
+          0,
+          361
+        ]
+      ],
+      "macro_f1_four_grades": 0.1733909702209414,
+      "per_grade_f1": [
+        0.0,
+        0.0,
+        0.0,
+        0.6935638808837656
+      ],
+      "per_grade_recall": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "per_grade_auroc": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "macro_auroc": 0.5,
+      "multiclass_brier": 0.9382352941176471,
+      "ordinal_mae": 0.6279411764705882,
+      "quadratic_weighted_kappa": 0.0,
+      "clinical_validation": false,
+      "healthy_mgi0_supported": false,
+      "balanced_accuracy": 0.25,
+      "within_one_accuracy": 0.8588235294117647,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        680
+      ]
+    },
+    "prior": {
+      "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+      "mgi_grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "n": 680,
+      "support": [
+        12,
+        84,
+        223,
+        361
+      ],
+      "accuracy": 0.5308823529411765,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          12
+        ],
+        [
+          0,
+          0,
+          0,
+          84
+        ],
+        [
+          0,
+          0,
+          0,
+          223
+        ],
+        [
+          0,
+          0,
+          0,
+          361
+        ]
+      ],
+      "macro_f1_four_grades": 0.1733909702209414,
+      "per_grade_f1": [
+        0.0,
+        0.0,
+        0.0,
+        0.6935638808837656
+      ],
+      "per_grade_recall": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "per_grade_auroc": [
+        0.4491017964071856,
+        0.4945669542984979,
+        0.49599650675589485,
+        0.49763804826370495
+      ],
+      "macro_auroc": 0.4843258264313208,
+      "multiclass_brier": 0.5950719074394464,
+      "ordinal_mae": 0.6279411764705882,
+      "quadratic_weighted_kappa": 0.0,
+      "clinical_validation": false,
+      "healthy_mgi0_supported": false,
+      "balanced_accuracy": 0.25,
+      "within_one_accuracy": 0.8588235294117647,
+      "predicted_counts": [
+        0,
+        0,
+        0,
+        680
+      ]
+    }
+  },
+  "uncertainty": {
+    "repetitions": 1000,
+    "undefined_draws": 0,
+    "conditional_only": true,
+    "participant_independence_verified": false,
+    "linear_minus_baseline_95": {
+      "majority": {
+        "macro_f1_four_grades": [
+          0.09078172715507588,
+          0.15233070201222743
+        ],
+        "balanced_accuracy": [
+          0.01619882487103859,
+          0.07238817705072817
+        ],
+        "quadratic_weighted_kappa": [
+          0.1399346093538743,
+          0.2913224427186116
+        ]
+      },
+      "prior": {
+        "macro_f1_four_grades": [
+          0.09078172715507588,
+          0.15233070201222743
+        ],
+        "balanced_accuracy": [
+          0.01619882487103859,
+          0.07238817705072817
+        ],
+        "quadratic_weighted_kappa": [
+          0.1399346093538743,
+          0.2913224427186116
+        ]
+      }
+    }
+  },
+  "linear_minus_baseline": {
+    "majority": {
+      "accuracy": -0.055882352941176494,
+      "macro_f1_four_grades": 0.12172351547895532,
+      "balanced_accuracy": 0.04379114383788124,
+      "quadratic_weighted_kappa": 0.21475155853815908,
+      "ordinal_mae": -0.007352941176470562,
+      "macro_auroc": 0.13356873423436655,
+      "multiclass_brier": -0.10694139283174908,
+      "within_one_accuracy": 0.05294117647058827
+    },
+    "prior": {
+      "accuracy": -0.055882352941176494,
+      "macro_f1_four_grades": 0.12172351547895532,
+      "balanced_accuracy": 0.04379114383788124,
+      "quadratic_weighted_kappa": 0.21475155853815908,
+      "ordinal_mae": -0.007352941176470562,
+      "macro_auroc": 0.14924290780304572,
+      "multiclass_brier": 0.2362219938464516,
+      "within_one_accuracy": 0.05294117647058827
+    }
+  },
+  "fold_support": [
+    {
+      "fold": 1,
+      "fit": 544,
+      "score": 136,
+      "score_grade_support": [
+        3,
+        17,
+        44,
+        72
+      ],
+      "overlapping_content_groups": 0
+    },
+    {
+      "fold": 2,
+      "fit": 544,
+      "score": 136,
+      "score_grade_support": [
+        2,
+        16,
+        45,
+        73
+      ],
+      "overlapping_content_groups": 0
+    },
+    {
+      "fold": 3,
+      "fit": 544,
+      "score": 136,
+      "score_grade_support": [
+        2,
+        17,
+        45,
+        72
+      ],
+      "overlapping_content_groups": 0
+    },
+    {
+      "fold": 4,
+      "fit": 544,
+      "score": 136,
+      "score_grade_support": [
+        2,
+        17,
+        45,
+        72
+      ],
+      "overlapping_content_groups": 0
+    },
+    {
+      "fold": 5,
+      "fit": 544,
+      "score": 136,
+      "score_grade_support": [
+        3,
+        17,
+        44,
+        72
+      ],
+      "overlapping_content_groups": 0
+    }
+  ],
+  "source_code_hashes": {
+    "b1_development_bundle_v1.py": "7ad20bcafce99797164239275954809cc11a7750922d6998443387aa91c7119c",
+    "b1_jpeg_source_v1.py": "5f28c0deb73f74a10afb8720300866877602e1c012ddecec092d46d23a1deefb",
+    "colour_b1_iccv2_generated.py": "6c611e1c9d77e7af1122d835cc7ce4d17699cbbb8497a6c279b32cd81a58c45c",
+    "colour_b1_prototype.py": "d3108ea3bf7f310f1b46960174d4936299ece19d762f4ca1ee9d900572b90856",
+    "colour_b1_streaming.py": "5b3a6bc893d1f6fc451c74e69f4865de00565b91bd19dc935baee6476cc5ec67",
+    "colour_qa.py": "4ad2b81c715b01e624b527d1971cc303740ddf559461f2d953c831956c1e82e3",
+    "colour_policy.py": "2bba567545143687f49b6e3ae63fdd72d1eacc10977d5ec373f00a4b5451a97b",
+    "exploratory_bundle.py": "dda776ca1558ed4da795df7cee47c0fe19d382cf32c37ca89d22f4141974b615",
+    "exploratory_bundle_v4.py": "c914cc05ad2be4ff08873a5d2270b5836e0f84219a539435beeca09b57ad76cd",
+    "model_pipeline.py": "c11ad18912575f3567d0baf0eefb1bfbb5eb00fbfa075880fe84aef1ccd34b3c",
+    "train_pipeline.py": "e7a979b0875af0e459496bca79ce3c80e594acf2639ea7dc9d8659ec75ffc695",
+    "exploratory_pilot_b1_v1.py": "876ec09dd7e9766bbc847416398e78d1ce320fa38a20bbaa952d35750eb5be05",
+    "exploratory_pilot.py": "c5bf6cba173390f914a44c4537b91d4f2a8e150aa0f5e4842c2ca94bb1a4d535",
+    "frozen_feature_probe.py": "066747fedc12c77bca129f38705fc7cdc98d829e6e38355226bee8d85b7c6ede"
+  },
+  "output_directory": "data/vision/training680_frozen_probe_v1_20261016T143627954173",
+  "execution_record_directory": "data/vision/training680_probe_execution_record_v1_20261016T143627954173",
+  "artifact_sha256": {
+    "protocol.json": "d486ae4b0657f2e0b9ac0d6bd2171d51de061bcfc960c39880bcc8d7510e420a",
+    "features.npz": "5eba4578f72c3ad911b7ea69d61ed23aa9cd1d620362712b0dd244a6c8d75eb5",
+    "oof.npz": "18318980b1cfa216d535633ff57067d4456b39b150335a8abfdf2dc16c8174ea",
+    "results.json": "7c3f788ecb629d34da2f31b1e8fd29091745fa10c33cff4d9f59ef227fd9edf4"
+  },
+  "weights": {
+    "official_url": "https://download.pytorch.org/models/resnet50-11ad3fa6.pth",
+    "bytes": 102540417,
+    "sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca"
+  },
+  "execution": {
+    "status": "PASS",
+    "date": "2026-10-16",
+    "seconds": 98.68906966701616,
+    "peak_rss_bytes_macos": 1179746304,
+    "model_arrays_verified": 680,
+    "validation_arrays_accessed": 0,
+    "held_arrays_accessed": 0,
+    "test_payloads_accessed": 0,
+    "cam_arrays_accessed": 0,
+    "neural_optimizer_steps": 0,
+    "classifier_fits": 5,
+    "baseline_fits": 10,
+    "source_and_code_bindings_unchanged": true,
+    "authorization_consumed": true,
+    "environment": {
+      "python": "3.13.5",
+      "platform": "Darwin",
+      "machine": "arm64",
+      "torch": "2.11.0",
+      "torchvision": "0.26.0",
+      "numpy": "2.5.3",
+      "sklearn": "1.9.1",
+      "Pillow": "11.3.0",
+      "device": "cpu",
+      "torch_threads": 2
+    },
+    "results_sha256": "7c3f788ecb629d34da2f31b1e8fd29091745fa10c33cff4d9f59ef227fd9edf4",
+    "protocol_sha256": "d486ae4b0657f2e0b9ac0d6bd2171d51de061bcfc960c39880bcc8d7510e420a"
+  },
+  "independent_checks": {
+    "passed": 65,
+    "failed": 0,
+    "scope": "Saved Training680 OOF, protocol and cached manifest metadata; no refits or bootstrap rerun",
+    "probability_sum_max_deviation": {
+      "linear": 1.7637648852542043e-07,
+      "majority": 0.0,
+      "prior": 0.0
+    },
+    "initial_verification_note": "Initial ad-hoc verification used an inappropriate1e-12 row-sum assertion and stopped. Corrected to established train_pipeline.validation_metrics1e-6 absolute tolerance, with no production code or saved probability change."
+  },
+  "tests": "16 prior focused generated tests reused with unchanged code; not rerun.65 saved-result assertions passed; these are not65 pytest cases.",
+  "participant_independence_verified": false,
+  "qualified_labels_approved": false,
+  "healthy_mgi0_supported": false,
+  "validation53_payload_accessed": false,
+  "test_used": false,
+  "held181_used": false,
+  "final_model_selected": false,
+  "committed": false,
+  "pushed": false
+}

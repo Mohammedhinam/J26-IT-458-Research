@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-16",
+  "branch": "vinuthan",
+  "status": "authorized_work_complete_qualified_annotation_grouping_blocker",
+  "mission": "Improve supported-grade balanced performance scientifically; preserve original MGI0-4 research goal and independent questionnaire branch.",
+  "completed_before_this_mission": [
+    "ResNet Training680 frozen-feature probe",
+    "EfficientNet same680/folds frozen-feature comparison",
+    "Cached balanced-versus-unweighted comparison",
+    "Original dataset/colour/duplicate audits and synthetic runtime qualification"
+  ],
+  "milestones": [
+    {
+      "name": "development181_cached_review_workflow",
+      "status": "complete_pending_human_decisions",
+      "report": "docs/vision_held_development_review_v2.md",
+      "generated_tests_passed": 17,
+      "artifact_assertions_passed": 9,
+      "new_approved_labels": 0,
+      "new_training_eligible": 0
+    },
+    {
+      "name": "saved_training680_grade12_diagnostic",
+      "status": "complete",
+      "report": "docs/vision_grade12_learning_diagnostic_v1.md",
+      "generated_tests_passed": 11,
+      "aligned_records": 680,
+      "private_case_model_rows": 288,
+      "real_fits": 0
+    },
+    {
+      "name": "nested_efficientnet_head_readiness",
+      "status": "generated_verified_real_execution_not_authorized",
+      "plan": "docs/vision_nested_feature_probe_plan_v1.md",
+      "generated_tests_passed": 10,
+      "proposed_real_fit_bound": 95,
+      "scope": "run_training680_nested_efficientnet_head_v1"
+    },
+    {
+      "name": "population_separated_demo",
+      "status": "complete",
+      "url": "http://127.0.0.1:8768",
+      "verification": "docs/vision_evidence_demo_verification_v1.json",
+      "focused_tests_passed": 20,
+      "core_browser_checks_passed": 12,
+      "post_hint_checks_passed": 3,
+      "new_photo_runtime_active": false
+    },
+    {
+      "name": "one_authorized_nested_real_experiment",
+      "status": "complete_permission_consumed",
+      "report": "docs/vision_nested_feature_probe_results_v1.md",
+      "real_logistic_fits": 95,
+      "new_neural_steps": 0,
+      "saved_result_assertions_passed": 57,
+      "runtime_seconds": 8.422238500003004,
+      "peak_rss_mib": 212.46875,
+      "post_nested_evidence_repeat_tests_passed": 8,
+      "post_nested_browser_checks_passed": 5,
+      "next_experiment_authorized": false
+    }
+  ],
+  "remaining_safe_work": [],
+  "real_training_authorized_now": false,
+  "past_one_run_permissions_consumed": true,
+  "held181_unchanged": true,
+  "sealed_test_access_permitted": false,
+  "labels_or_manifest_activation_permitted": false,
+  "commit_push_permitted": false,
+  "resume": "Read AGENTS.md, docs/component2_project_handoff.md and this checkpoint. Verify source/artifact hashes and continue only pending safe tasks. Do not rerun completed experiments or infer training approval. A new session must be opened/resumed through supported app behavior; this file is continuity, not a background scheduler.",
+  "next_single_action": "Obtain genuine qualified annotation/group decisions for existing52heldTrainingcases. Do not automatically promote/relabel/retrain.",
+  "qualified_review_pending": "All181development holds remain pending; use existing181viewer, prioritise52Training decisions. No automatic approval or promotion.",
+  "progress_report": "docs/vision_autonomous_progress_v2.md",
+  "new_selected_tests_this_mission": {
+    "passed": 58,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "full_repository_run": false
+  },
+  "current_run_scope": "run_training680_nested_efficientnet_head_v1",
+  "owner_decision": "ஆம், இந்த 95-fit experiment மட்டும் நடத்தவும்",
+  "current_run_status": "Completed successfully; one95fitpermissionconsumed; do not rerun.",
+  "actual_result_report": "docs/vision_nested_feature_probe_results_v1.md",
+  "actual_results": {
+    "accuracy": 0.5220588235294118,
+    "macro_f1": 0.34642858528130327,
+    "recall_correct_support": [
+      "0/12",
+      "27/84",
+      "96/223",
+      "232/361"
+    ],
+    "saved_result_checks_passed": 57,
+    "new_real_fits": 95
+  },
+  "remaining_blockers": [
+    "Qualified annotation/group decisions unavailable; all181holds unchanged",
+    "Whole-imageMGI0absent;only12Training/1ValidationMGI1examples",
+    "Unknown participant independence;final research cohort/protocol/held-out evaluation pending"
+  ],
+  "current_verification": "docs/vision_evidence_demo_verification_v2.json"
+}
