@@ -49,7 +49,7 @@ MAX_IMAGE_PIXELS = 20_000_000
 
 app = FastAPI(
     title="Dental Plaque, Tartar and Tooth Analysis API",
-    version="1.2.0",
+    version="1.3.0",
     description=(
         "Experimental AI-based dental image analysis "
         "with plaque segmentation, tooth segmentation, "
@@ -134,7 +134,7 @@ def home():
     return {
         "message": "Dental AI Analysis API is running",
         "status": "ready",
-        "version": "1.2.0",
+        "version": "1.3.0",
     }
 
 
@@ -383,6 +383,34 @@ async def analyze_dental_image(
     tartar_coverage_percent = None
 
     # --------------------------------------
+    # 6. Experimental image-based scores
+    # --------------------------------------
+    # These are NOT DI-S, CI-S or clinical OHI-S.
+    # A higher value indicates less model-detected
+    # plaque / less tooth area within tartar boxes.
+    # The tartar score is only a bounding-box proxy.
+    # Equal weighting is an illustrative design
+    # choice, NOT a clinically validated weighting.
+    if (
+        plaque_coverage_percent is not None
+        and tartar_box_tooth_area_percent is not None
+    ):
+        plaque_cleanliness_score = round(
+            100.0 - plaque_coverage_percent, 2
+        )
+        tartar_box_free_score = round(
+            100.0 - tartar_box_tooth_area_percent, 2
+        )
+        experimental_hygiene_score = round(
+            (plaque_cleanliness_score + tartar_box_free_score) / 2.0,
+            2,
+        )
+    else:
+        plaque_cleanliness_score = None
+        tartar_box_free_score = None
+        experimental_hygiene_score = None
+
+    # --------------------------------------
     # 6. Annotated dental image
     # --------------------------------------
 
@@ -504,8 +532,10 @@ async def analyze_dental_image(
             "available. Experimental tartar bounding-box "
             "area relative to predicted teeth is also "
             "available. Bounding-box area is not actual "
-            "tartar coverage. A clinically validated "
-            "oral hygiene score remains under development."
+            "tartar coverage. Experimental 0-100 image "
+            "scores are available, but a clinically "
+            "validated oral hygiene score remains "
+            "under development."
         )
 
     # --------------------------------------
@@ -542,7 +572,18 @@ async def analyze_dental_image(
             tartar_coverage_percent
         ),
 
-        # Do not invent a clinical score.
+        # Experimental, non-clinical image scores.
+        "plaque_cleanliness_score": plaque_cleanliness_score,
+        "tartar_box_free_score": tartar_box_free_score,
+        "experimental_hygiene_score": experimental_hygiene_score,
+        "experimental_score_scale": "0-100; higher = less predicted burden",
+        "experimental_score_method": (
+            "Plaque = 100 - plaque tooth coverage percentage; "
+            "tartar-box = 100 - detected box area on teeth percentage; "
+            "combined = arithmetic mean (illustrative equal weighting)."
+        ),
+
+        # Reserved for a future validated clinical index.
         "hygiene_score": None,
 
         "feedback": feedback,
@@ -561,6 +602,10 @@ async def analyze_dental_image(
             "image-based AI measurements, not clinically "
             "validated dental indices or diagnoses. "
             "Tartar-box area must not be interpreted "
-            "as true tartar surface coverage."
+            "as true tartar surface coverage. The 0-100 "
+            "scores and equal-weight combined score are "
+            "unvalidated experimental indicators, not "
+            "clinical OHI-S, DI-S or CI-S values. "
+            "Missed tooth regions can distort all scores."
         ),
     }

@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import "./App.css";
 
@@ -104,6 +103,12 @@ function App() {
     return typeof value === "number" &&
       Number.isFinite(value)
       ? `${value.toFixed(2)}%`
+      : "Not available";
+  }
+
+  function formatScore(value) {
+    return typeof value === "number" && Number.isFinite(value)
+      ? `${value.toFixed(2)} / 100`
       : "Not available";
   }
 
@@ -315,6 +320,39 @@ function App() {
                   </div>
                 </div>
 
+                {/* EXPERIMENTAL IMAGE-BASED SCORES */}
+                <div className="feedback-card" aria-label="Experimental hygiene indicators">
+                  <h3>Experimental AI Hygiene Scores</h3>
+                  <p>
+                    These 0–100 image-based indicators are for research demonstration only.
+                    Higher values mean less model-predicted plaque or tartar-box burden;
+                    they do not establish clinical oral health.
+                  </p>
+                  <div className="result-grid">
+                    <div className="result-card">
+                      <span>🟢 Plaque Cleanliness Score</span>
+                      <strong>{formatScore(result.plaque_cleanliness_score)}</strong>
+                    </div>
+                    <div className="result-card">
+                      <span>🔴 Tartar-Box-Free Score</span>
+                      <strong>{formatScore(result.tartar_box_free_score)}</strong>
+                    </div>
+                    <div className="result-card">
+                      <span>🦷 Combined Experimental Hygiene Score</span>
+                      <strong>{formatScore(result.experimental_hygiene_score)}</strong>
+                    </div>
+                  </div>
+                  <p>
+                    <small>
+                      Plaque score = 100 − predicted plaque coverage (%).
+                      Tartar-box score = 100 − predicted tooth area within tartar
+                      bounding boxes (%). Combined score = their arithmetic mean.
+                      Equal weighting is illustrative, not clinically validated.
+                      Bounding boxes do not measure true tartar coverage.
+                    </small>
+                  </p>
+                </div>
+
                 {/* ANNOTATED IMAGE */}
                 {result.annotated_image && (
                   <div className="image-container">
@@ -430,12 +468,25 @@ function App() {
                   </p>
 
                   <p>
-                    <strong>
-                      Oral Hygiene Score:
-                    </strong>{" "}
+                    <strong>Experimental Plaque Score:</strong>{" "}
+                    {formatScore(result.plaque_cleanliness_score)}
+                  </p>
+
+                  <p>
+                    <strong>Experimental Tartar-Box Score:</strong>{" "}
+                    {formatScore(result.tartar_box_free_score)}
+                  </p>
+
+                  <p>
+                    <strong>Combined Experimental Hygiene Score:</strong>{" "}
+                    {formatScore(result.experimental_hygiene_score)}
+                  </p>
+
+                  <p>
+                    <strong>Clinically Validated OHI-S Score:</strong>{" "}
                     {result.hygiene_score != null
                       ? result.hygiene_score
-                      : "Pending scientific validation"}
+                      : "Not available — clinical validation required"}
                   </p>
 
                   <small>
