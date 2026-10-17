@@ -1,6 +1,6 @@
 
-import { useEffect, useState } from 'react';
-import { getHealth, predictCaries } from '../services/api.js';
+import { useEffect, useRef, useState } from 'react';
+import { getHealth, predictCaries, getGradcam } from '../services/api.js';
 
 const labels = ['No Caries', 'Early-Stage Caries', 'Advanced Caries'];
 
@@ -23,6 +23,12 @@ export default function Home() {
   width: 0,
   height: 0,
 });
+
+const [selectedRegion, setSelectedRegion] = useState(null);
+const [gradcamResults, setGradcamResults] = useState(null);
+const [gradcamLoading, setGradcamLoading] = useState(false);
+const [gradcamError, setGradcamError] = useState('');
+const gradcamRequestId = useRef(0);
 
   async function checkBackend() {
     setStatus('loading');
@@ -56,6 +62,11 @@ export default function Home() {
     }
 
     setSelectedFile(file);
+    gradcamRequestId.current += 1;
+    setSelectedRegion(null);
+    setGradcamResults(null);
+    setGradcamLoading(false);
+    setGradcamError('');
     setImageDimensions({ width: 0, height: 0 });
 
 const img = new Image();
@@ -81,7 +92,12 @@ img.src = objectUrl;
 
     setAnalyzing(true);
     setResults(null);
-    setError('');
+    gradcamRequestId.current += 1;
+    setSelectedRegion(null);
+    setGradcamResults(null);
+    setGradcamLoading(false);
+    setGradcamError('');
+    setError(''); 
 
     try {
       const response = await predictCaries(selectedFile);
@@ -92,6 +108,54 @@ img.src = objectUrl;
       setAnalyzing(false);
     }
   }
+  
+async function handleGradcam() {
+  if (!selectedFile || selectedRegion === null || gradcamLoading) {
+    return;
+  }
+
+  const requestedRegion = selectedRegion;
+  const requestId = ++gradcamRequestId.current;
+
+  setGradcamLoading(true);
+  setGradcamResults(null);
+  setGradcamError('');
+
+  try {
+    const response = await getGradcam(
+      selectedFile,
+      requestedRegion
+    );
+
+    if (requestId !== gradcamRequestId.current) return;
+
+    if (response.region !== requestedRegion) {
+      throw new Error('Grad-CAM region mismatch.');
+    }
+
+    setGradcamResults(response);
+  } catch (err) {
+    if (requestId !== gradcamRequestId.current) return;
+
+    setGradcamError(
+      err.message || 'Failed to generate Grad-CAM.'
+    );
+  } finally {
+    if (requestId === gradcamRequestId.current) {
+      setGradcamLoading(false);
+    }
+  }
+}
+
+function handleRegionSelect(regionNumber) {
+  gradcamRequestId.current += 1;
+
+  setSelectedRegion(regionNumber);
+  setGradcamResults(null);
+  setGradcamLoading(false);
+  setGradcamError('');
+}
+
 
   return (
     <main className="min-h-screen bg-slate-50 px-6 py-12 text-slate-900">
@@ -187,15 +251,30 @@ img.src = objectUrl;
         const isUncertain =
           region.final_prediction === 'Uncertain';
 
+        const isSelected = selectedRegion === region.region;
+
         return (
           <div
-            key={region.region}
-            className={`absolute border-2 ${
-              isUncertain
-                ? 'border-purple-500'
-                : 'border-red-500'
-            }`}
-            style={{
+  key={region.region}
+  role="button"
+  tabIndex={0}
+  aria-label={`Select region ${region.region}`}
+  aria-pressed={isSelected}
+  onClick={() => handleRegionSelect(region.region)}
+  onKeyDown={(event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleRegionSelect(region.region);
+    }
+  }}
+  className={`absolute cursor-pointer transition-all ${
+    isSelected
+      ? 'z-10 border-4 border-yellow-400'
+      : isUncertain
+      ? 'border-2 border-purple-500'
+      : 'border-2 border-red-500'
+  }`}
+  style={{
               left: `${(x1 / imageWidth) * 100}%`,
               top: `${(y1 / imageHeight) * 100}%`,
               width: `${((x2 - x1) / imageWidth) * 100}%`,
@@ -240,6 +319,77 @@ img.src = objectUrl;
             <h2 className="text-xl font-semibold">
               AI Analysis Results
             </h2>
+            
+{/* Grad-CAM controls */}
+<div className="space-y-3 rounded-lg border border-teal-200 bg-teal-50 p-4">
+  <h3 className="font-semibold text-teal-900">
+    Explainable AI — Grad-CAM
+  </h3>
+
+  <p className="text-sm text-slate-600">
+    Select a detected region (R1, R2, etc.) to generate
+    visual explanations from both classification models.
+  </p>
+
+  <p className="text-sm font-medium">
+    Selected Region: {selectedRegion === null ? 'None' : `R${selectedRegion}`}
+  </p>
+
+  <button
+    type="button"
+    onClick={handleGradcam}
+    disabled={selectedRegion === null || gradcamLoading}
+    className="rounded-lg bg-teal-700 px-4 py-2 font-medium text-white hover:bg-teal-800 disabled:opacity-50"
+  >
+    {gradcamLoading ? 'Generating Grad-CAM...' : 'Generate Grad-CAM'}
+  </button>
+
+  {gradcamError && (
+    <p role="alert" className="text-sm text-red-600">
+      {gradcamError}
+    </p>
+  )}
+
+  {/* Grad-CAM visualization */}
+  {gradcamResults && gradcamResults.region === selectedRegion && (
+    <div className="space-y-4">
+      <h4 className="font-semibold text-slate-800">
+        Grad-CAM Explanations — Region R{gradcamResults.region}
+      </h4>
+
+      <div className="grid gap-4 md:grid-cols-2">
+        <div className="rounded-lg border bg-white p-3">
+          <h5 className="mb-2 font-semibold">
+            MobileNetV2
+          </h5>
+          <img
+            src={gradcamResults.MobileNetV2.overlay}
+            alt="MobileNetV2 Grad-CAM visualization"
+            className="w-full rounded-lg"
+          />
+        </div>
+
+        <div className="rounded-lg border bg-white p-3">
+          <h5 className="mb-2 font-semibold">
+            EfficientNet-B0
+          </h5>
+          <img
+            src={gradcamResults.EfficientNetB0.overlay}
+            alt="EfficientNet-B0 Grad-CAM visualization"
+            className="w-full rounded-lg"
+          />
+        </div>
+      </div>
+
+      <p className="text-xs text-slate-500">
+        Grad-CAM highlights image areas influencing each model's
+        prediction. These visualizations do not confirm dental
+        caries or establish clinical accuracy.
+      </p>
+    </div>
+  )}
+</div>
+
             
 <div className="grid grid-cols-2 gap-4 rounded-lg bg-teal-50 p-4 md:grid-cols-4">
   {[
@@ -286,10 +436,15 @@ img.src = objectUrl;
             )}
 
             {results.regions.map((region) => (
-              <div
-                key={region.region}
-                className="space-y-2 rounded-lg border border-slate-200 p-4"
-              >
+  <div
+    key={region.region}
+    onClick={() => handleRegionSelect(region.region)}
+    className={`space-y-2 rounded-lg border p-4 cursor-pointer transition-all ${
+      selectedRegion === region.region
+        ? 'border-yellow-400 bg-yellow-50 ring-2 ring-yellow-300'
+        : 'border-slate-200 bg-white'
+    }`}
+  >
                 <h3 className="font-semibold">
                   Region {region.region}
                 </h3>
