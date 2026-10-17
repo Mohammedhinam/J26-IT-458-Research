@@ -37,3 +37,34 @@ export async function predictCaries(file) {
 
   return response.json();
 }
+
+
+export async function getGradcam(file, region) {
+  const formData = new FormData();
+
+  formData.append('file', file);
+  formData.append('region', String(region));
+
+  const response = await fetch(
+    `${API_BASE_URL}/api/caries/gradcam`,
+    {
+      method: 'POST',
+      body: formData,
+    }
+  );
+
+  if (!response.ok) {
+    let message = `Grad-CAM generation failed: ${response.status}`;
+
+    try {
+      const errorData = await response.json();
+      message = errorData.detail || message;
+    } catch {
+      // Use the default error message
+    }
+
+    throw new Error(message);
+  }
+
+  return response.json();
+}
