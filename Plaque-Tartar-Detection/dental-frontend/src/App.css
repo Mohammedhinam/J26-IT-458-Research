@@ -1,23 +1,53 @@
 
-/* DentalAI - Individual Research Component */
+/* ==========================================
+   DentalAI — Professional Research Dashboard
+   ========================================== */
 
 :root {
   font-family: Inter, "Segoe UI", Arial, sans-serif;
-  color: #16324f;
+  color: #163553;
   background: #f4f8fc;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+
+  --primary: #1769d2;
+  --primary-dark: #104eac;
+  --teal: #08a9b5;
+  --text-main: #163553;
+  --text-muted: #70849a;
+  --border: #dce8f5;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-width: 320px;
-  background: #f4f8fc;
+  background:
+    radial-gradient(
+      circle at 12% 8%,
+      rgba(101, 187, 255, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 25%,
+      rgba(89, 218, 211, 0.13),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #f0f7ff 0%,
+      #f8fbff 60%,
+      #edf6ff 100%
+    );
+  background-attachment: fixed;
 }
 
 button,
@@ -25,20 +55,31 @@ input {
   font: inherit;
 }
 
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #9ed6ff;
+  outline-offset: 3px;
+}
+
 .app-shell {
   min-height: 100vh;
 }
 
-/* Header */
+/* ==========================================
+   Header
+   ========================================== */
 
 .site-header {
+  position: relative;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
   padding: 18px max(24px, calc((100vw - 1180px) / 2));
-  background: #ffffff;
-  border-bottom: 1px solid #e5edf5;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid rgba(202, 221, 241, 0.7);
+  box-shadow: 0 4px 24px rgba(34, 91, 151, 0.05);
 }
 
 .brand {
@@ -50,17 +91,26 @@ input {
 .brand-icon {
   display: grid;
   place-items: center;
+  flex-shrink: 0;
   width: 48px;
   height: 48px;
-  background: #e8f4ff;
+  background: linear-gradient(
+    135deg,
+    #e1f3ff,
+    #d4f8f5
+  );
+  border: 1px solid #c7e7f5;
   border-radius: 14px;
+  box-shadow: 0 5px 16px rgba(19, 121, 184, 0.1);
   font-size: 26px;
 }
 
 .brand strong {
   display: block;
-  color: #145ca5;
+  color: #1457a6;
   font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
 .brand small {
@@ -72,14 +122,21 @@ input {
 
 .research-tag {
   padding: 9px 15px;
+  border: 1px solid #d3e8f6;
   border-radius: 30px;
-  background: #e9f3ff;
-  color: #2366a4;
+  background: linear-gradient(
+    120deg,
+    #e7f2ff,
+    #e3fbf8
+  );
+  color: #24649c;
   font-size: 12px;
   font-weight: 700;
 }
 
-/* Main layout */
+/* ==========================================
+   Main Layout
+   ========================================== */
 
 .main-content {
   width: min(1180px, calc(100% - 40px));
@@ -87,16 +144,19 @@ input {
 }
 
 .hero {
-  padding: 52px 12px 40px;
+  position: relative;
+  padding: 60px 12px 48px;
   text-align: center;
 }
 
 .eyebrow {
   display: inline-block;
   padding: 9px 15px;
-  background: #e7f2ff;
+  border: 1px solid #d5e9fb;
   border-radius: 30px;
-  color: #2170b5;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(38, 119, 196, 0.07);
+  color: #1b76c2;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 1.2px;
@@ -104,36 +164,52 @@ input {
 
 .hero h1 {
   margin: 18px 0 12px;
-  color: #123c63;
-  font-size: clamp(30px, 4vw, 45px);
-  letter-spacing: -1.2px;
+  color: #123c68;
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -1.8px;
+  line-height: 1.15;
 }
 
 .hero p {
   max-width: 670px;
   margin: 0 auto;
-  color: #71849b;
+  color: #667f97;
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
 .workspace {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
   gap: 24px;
   align-items: start;
   padding-bottom: 32px;
 }
 
-/* Panels */
+/* ==========================================
+   Panels
+   ========================================== */
 
 .panel {
   min-width: 0;
   padding: 28px;
-  background: #ffffff;
-  border: 1px solid #e3ebf4;
-  border-radius: 20px;
-  box-shadow: 0 12px 35px rgba(31, 74, 119, 0.055);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(214, 230, 245, 0.9);
+  border-radius: 24px;
+  box-shadow:
+    0 18px 55px rgba(25, 82, 145, 0.07),
+    0 3px 12px rgba(25, 82, 145, 0.025);
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.panel:hover {
+  box-shadow:
+    0 22px 65px rgba(25, 82, 145, 0.11);
 }
 
 .section-heading {
@@ -150,24 +226,34 @@ input {
   width: 44px;
   height: 44px;
   border-radius: 13px;
-  background: #e8f3ff;
-  color: #2071b8;
+  background: linear-gradient(
+    135deg,
+    #176fd6,
+    #13a8c3
+  );
+  color: #ffffff;
+  box-shadow:
+    0 6px 15px rgba(20, 118, 197, 0.2);
   font-weight: 800;
 }
 
 .section-heading h2 {
   margin: 0 0 5px;
-  color: #1d3f5f;
+  color: #183f63;
   font-size: 19px;
+  font-weight: 800;
 }
 
 .section-heading p {
   margin: 0;
   color: #8595a8;
   font-size: 13px;
+  line-height: 1.6;
 }
 
-/* Image upload */
+/* ==========================================
+   Image Upload
+   ========================================== */
 
 .upload-zone {
   display: flex;
@@ -175,19 +261,31 @@ input {
   align-items: center;
   justify-content: center;
   gap: 13px;
-  min-height: 220px;
+  min-height: 245px;
   padding: 24px;
-  border: 2px dashed #a8cdec;
-  border-radius: 17px;
-  background: #f5faff;
+  border: 2px dashed #91c6eb;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(232, 246, 255, 0.95),
+    rgba(241, 253, 252, 0.95)
+  );
   cursor: pointer;
   text-align: center;
-  transition: background 0.2s, border-color 0.2s;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .upload-zone:hover {
-  background: #eaf5ff;
-  border-color: #3185ce;
+  background: linear-gradient(
+    135deg,
+    #e0f1ff,
+    #e8faf8
+  );
+  border-color: #248bd3;
+  transform: translateY(-2px);
 }
 
 .upload-zone:focus-within {
@@ -196,14 +294,15 @@ input {
 }
 
 .upload-symbol {
-  font-size: 39px;
+  font-size: 46px;
 }
 
 .upload-zone strong {
   max-width: 100%;
   overflow-wrap: anywhere;
-  color: #2b679a;
+  color: #1d659e;
   font-size: 15px;
+  font-weight: 800;
 }
 
 .upload-zone span:last-of-type {
@@ -221,9 +320,11 @@ input {
 .image-container {
   margin-top: 22px;
   overflow: hidden;
-  border: 1px solid #e0e9f3;
-  border-radius: 15px;
+  border: 1px solid #d7e7f5;
+  border-radius: 18px;
   background: #f7fafc;
+  box-shadow:
+    0 5px 20px rgba(25, 82, 145, 0.04);
 }
 
 .image-label {
@@ -243,28 +344,53 @@ input {
   padding: 12px;
 }
 
+/* ==========================================
+   Analyze Button
+   ========================================== */
+
 .analyze-button {
   width: 100%;
-  min-height: 52px;
+  min-height: 56px;
   margin-top: 22px;
   padding: 14px;
   border: 0;
-  border-radius: 12px;
-  background: #1878c7;
+  border-radius: 15px;
+  background: linear-gradient(
+    110deg,
+    #1769d2,
+    #139cc5
+  );
+  box-shadow:
+    0 9px 22px rgba(23, 105, 210, 0.2);
   color: #ffffff;
   cursor: pointer;
   font-size: 15px;
-  font-weight: 750;
-  transition: background 0.2s, transform 0.2s;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
 }
 
 .analyze-button:hover:not(:disabled) {
-  background: #1267ad;
-  transform: translateY(-1px);
+  background: linear-gradient(
+    110deg,
+    #125abd,
+    #0c8dad
+  );
+  box-shadow:
+    0 12px 26px rgba(23, 105, 210, 0.26);
+  transform: translateY(-2px);
+}
+
+.analyze-button:active:not(:disabled) {
+  transform: translateY(0);
 }
 
 .analyze-button:disabled {
   background: #a7bfd2;
+  box-shadow: none;
   cursor: not-allowed;
 }
 
@@ -276,6 +402,7 @@ input {
   background: #fff0f0;
   color: #b33c3c;
   font-size: 13px;
+  line-height: 1.6;
 }
 
 .privacy-note {
@@ -286,7 +413,9 @@ input {
   text-align: center;
 }
 
-/* Empty results */
+/* ==========================================
+   Empty Results
+   ========================================== */
 
 .empty-results {
   display: flex;
@@ -295,8 +424,13 @@ input {
   justify-content: center;
   min-height: 325px;
   padding: 25px;
-  border-radius: 15px;
-  background: #f7fafd;
+  border: 1px solid #e0eef8;
+  border-radius: 20px;
+  background: linear-gradient(
+    145deg,
+    #f3f9ff,
+    #f0fafb
+  );
   text-align: center;
 }
 
@@ -318,7 +452,9 @@ input {
   line-height: 1.8;
 }
 
-/* Analysis results */
+/* ==========================================
+   Analysis Results
+   ========================================== */
 
 .results-content {
   display: flex;
@@ -328,7 +464,8 @@ input {
 
 .result-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -336,21 +473,38 @@ input {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  min-height: 104px;
+  min-height: 112px;
   padding: 16px;
-  border: 1px solid #e0edf8;
-  border-radius: 13px;
-  background: #f5faff;
+  border: 1px solid #dcebf8;
+  border-radius: 17px;
+  background: linear-gradient(
+    145deg,
+    #f3f9ff,
+    #f9fcff
+  );
+  box-shadow:
+    0 4px 14px rgba(28, 91, 153, 0.035);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 9px 20px rgba(28, 91, 153, 0.09);
 }
 
 .result-card span {
-  color: #6c87a1;
+  color: #6a859e;
   font-size: 12px;
+  font-weight: 600;
 }
 
 .result-card strong {
-  color: #1e4c73;
-  font-size: 16px;
+  color: #14588f;
+  font-size: 18px;
+  font-weight: 800;
   overflow-wrap: anywhere;
 }
 
@@ -359,6 +513,8 @@ input {
   flex-wrap: wrap;
   gap: 14px;
   padding: 13px;
+  border-radius: 12px;
+  background: #f5faff;
   color: #5c7892;
   font-size: 12px;
 }
@@ -366,17 +522,25 @@ input {
 .feedback-card,
 .pending-card {
   padding: 20px;
-  border-radius: 14px;
+  border-radius: 17px;
 }
 
 .feedback-card {
-  border: 1px solid #cde9db;
-  background: #f0fbf5;
+  border: 1px solid #c6eada;
+  background: linear-gradient(
+    135deg,
+    #effcf7,
+    #f6fdfb
+  );
 }
 
 .pending-card {
-  border: 1px solid #e4e7f0;
-  background: #f8f9fc;
+  border: 1px solid #e0e6f4;
+  background: linear-gradient(
+    135deg,
+    #f6f8ff,
+    #fafbff
+  );
 }
 
 .feedback-card h3,
@@ -409,16 +573,22 @@ input {
   line-height: 1.7;
 }
 
-/* Footer */
+/* ==========================================
+   Footer
+   ========================================== */
 
 .page-footer {
-  padding: 20px 0 35px;
+  margin-top: 25px;
+  padding: 25px 0 35px;
+  border-top: 1px solid #e0ebf6;
   color: #9aabb9;
   font-size: 12px;
   text-align: center;
 }
 
-/* Responsive layout */
+/* ==========================================
+   Responsive Design
+   ========================================== */
 
 @media (max-width: 850px) {
   .workspace {
@@ -433,6 +603,21 @@ input {
 @media (max-width: 480px) {
   .site-header {
     padding: 14px 16px;
+    gap: 10px;
+  }
+
+  .brand-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 23px;
+  }
+
+  .brand strong {
+    font-size: 18px;
+  }
+
+  .brand small {
+    font-size: 10px;
   }
 
   .research-tag {
@@ -446,13 +631,64 @@ input {
 
   .panel {
     padding: 18px;
+    border-radius: 18px;
   }
 
   .result-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero h1 {
-    font-size: 30px;
+  .hero {
+    padding-top: 38px;
+    padding-bottom: 32px;
   }
+
+  .hero h1 {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .upload-zone {
+    min-height: 210px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .panel,
+  .upload-zone,
+  .analyze-button,
+  .result-card {
+    transition: none;
+  }
+}
+/* Better file upload control */
+
+.upload-zone input[type="file"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 9px;
+  border: 1px solid #d1e4f5;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #55718b;
+  font-size: 12px;
+}
+
+.upload-zone input[type="file"]::file-selector-button {
+  margin-right: 12px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(110deg, #1769d2, #139cc5);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.upload-zone input[type="file"]::file-selector-button:hover {
+  background: #125abd;
 }

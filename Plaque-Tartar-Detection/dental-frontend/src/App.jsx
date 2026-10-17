@@ -94,13 +94,15 @@ function App() {
   }
 
   function formatNumber(value) {
-    return typeof value === "number"
+    return typeof value === "number" &&
+      Number.isFinite(value)
       ? value.toLocaleString()
       : "N/A";
   }
 
   function formatPercentage(value) {
-    return typeof value === "number" && Number.isFinite(value)
+    return typeof value === "number" &&
+      Number.isFinite(value)
       ? `${value.toFixed(2)}%`
       : "Not available";
   }
@@ -113,7 +115,7 @@ function App() {
 
           <div>
             <strong>DentalAI</strong>
-            <small>Plaque & Tartar Detection</small>
+            <small>Plaque &amp; Tartar Detection</small>
           </div>
         </div>
 
@@ -145,7 +147,9 @@ function App() {
 
               <div>
                 <h2>Upload Dental Image</h2>
-                <p>Choose a clear photograph of the teeth.</p>
+                <p>
+                  Choose a clear photograph of the teeth.
+                </p>
               </div>
             </div>
 
@@ -153,7 +157,9 @@ function App() {
               <span className="upload-symbol">📷</span>
 
               <strong>
-                {file ? file.name : "Choose a dental image"}
+                {file
+                  ? file.name
+                  : "Choose a dental image"}
               </strong>
 
               <span>
@@ -197,8 +203,8 @@ function App() {
             )}
 
             <p className="privacy-note">
-              Your image is sent to the locally configured
-              AI backend for analysis.
+              Your image is sent to the locally
+              configured AI backend for analysis.
             </p>
           </section>
 
@@ -294,6 +300,19 @@ function App() {
                       )}
                     </strong>
                   </div>
+
+                  {/* NEW: TARTAR BOX AREA PROXY */}
+                  <div className="result-card">
+                    <span>
+                      Experimental tartar-box area
+                    </span>
+
+                    <strong>
+                      {formatPercentage(
+                        result.tartar_box_tooth_area_percent
+                      )}
+                    </strong>
+                  </div>
                 </div>
 
                 {/* ANNOTATED IMAGE */}
@@ -305,7 +324,7 @@ function App() {
 
                     <img
                       src={result.annotated_image}
-                      alt="Dental image with predicted tooth and plaque masks and tartar bounding boxes"
+                      alt="Dental image with predicted tooth and plaque masks and tartar detection boxes"
                     />
 
                     <div className="legend">
@@ -328,15 +347,13 @@ function App() {
                 <div className="feedback-card">
                   <h3>Oral Hygiene Guidance</h3>
 
-                  <p>
-                    {result.feedback}
-                  </p>
+                  <p>{result.feedback}</p>
                 </div>
 
                 {/* QUANTIFICATION SECTION */}
                 <div className="pending-card">
                   <h3>
-                    Quantification & Hygiene Score
+                    Quantification &amp; Hygiene Score
                   </h3>
 
                   <p>
@@ -373,9 +390,37 @@ function App() {
                     {result.tartar_box_count ?? 0}
                   </p>
 
+                  {/* NEW: EXPERIMENTAL TARTAR QUANTIFICATION */}
                   <p>
                     <strong>
-                      Tartar Coverage:
+                      Experimental Tartar-Box Area:
+                    </strong>{" "}
+                    {formatPercentage(
+                      result.tartar_box_tooth_area_percent
+                    )}
+                  </p>
+
+                  <p>
+                    <strong>
+                      Tartar-Box Pixels on Teeth:
+                    </strong>{" "}
+                    {formatNumber(
+                      result.tartar_box_pixels_on_teeth
+                    )}
+                  </p>
+
+                  <p>
+                    <strong>
+                      Total Tartar-Box Pixels:
+                    </strong>{" "}
+                    {formatNumber(
+                      result.tartar_box_pixels
+                    )}
+                  </p>
+
+                  <p>
+                    <strong>
+                      Actual Tartar Coverage:
                     </strong>{" "}
                     {result.tartar_coverage_percent != null
                       ? formatPercentage(
@@ -399,12 +444,23 @@ function App() {
 
                   <p>
                     <small>
-                      Plaque coverage is an experimental
-                      measurement based on predicted tooth
-                      and plaque segmentation masks.
+                      Plaque coverage is calculated using
+                      predicted plaque and tooth masks.
+                      The tartar-box area is the percentage
+                      of predicted tooth pixels located
+                      inside tartar detection rectangles.
+                      It is not the percentage of teeth
+                      actually covered by tartar.
+                    </small>
+                  </p>
+
+                  <p>
+                    <small>
+                      Both measurements depend on model
+                      accuracy. Incomplete tooth detection
+                      can make the percentages unreliable.
                       A low value does not necessarily
-                      indicate good oral hygiene, especially
-                      when the model misses visible teeth.
+                      indicate good oral hygiene.
                     </small>
                   </p>
                 </div>
