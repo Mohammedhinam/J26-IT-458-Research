@@ -56,3 +56,10 @@ Dental-Caries-Detection/results/
 
 # Local test images
 Dental-Caries-Detection/backend/test_image.jpg
+
+# Dental Caries - generated Grad-CAM images
+Dental-Caries-Detection/backend/gradcam_*.png
+Dental-Caries-Detection/backend/region*_crop_test.png
+
+# Temporary personal test photographs
+Dental-Caries-Detection/backend/WhatsApp Image*.jpeg
