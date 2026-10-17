@@ -22,15 +22,19 @@ TARTAR_MODEL_PATH = (
     / "tartar_yolov8n_baseline" / "weights" / "best.pt"
 )
 
+TOOTH_MODEL_PATH = (
+    MODEL_DIR / "Tooth_Segmentation" / "runs"
+    / "tooth_yolov8n_baseline" / "weights" / "best.pt"
+)
+
 MAX_UPLOAD_BYTES = 10 * 1024 * 1024
 
 app = FastAPI(
-    title="Dental Plaque and Tartar Detection API",
-    version="1.0.0",
-    description="Research prototype for dental image analysis."
+    title="Dental Plaque, Tartar and Tooth Analysis API",
+    version="1.1.0",
+    description="Research prototype for AI-based dental image analysis."
 )
 
-# Allow local React development servers to access the API.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -44,15 +48,30 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Load the models once when the backend starts.
+# Load models once at startup.
 plaque_model = YOLO(str(PLAQUE_MODEL_PATH))
 tartar_model = YOLO(str(TARTAR_MODEL_PATH))
+tooth_model = YOLO(str(TOOTH_MODEL_PATH))
+
+
+def create_union_mask(result, height, width):
+    """Combine all predicted segmentation polygons into one binary mask."""
+    mask = np.zeros((height, width), dtype=np.uint8)
+
+    if result.masks is not None:
+        for polygon in result.masks.xy:
+            points = np.asarray(polygon, dtype=np.int32)
+
+            if len(points) >= 3:
+                cv2.fillPoly(mask, [points], 255)
+
+    return mask
 
 
 @app.get("/")
 def home():
     return {
-        "message": "Dental Plaque and Tartar AI API is running",
+        "message": "Dental AI Analysis API is running",
         "status": "ready"
     }
 
@@ -62,7 +81,8 @@ def health():
     return {
         "status": "ok",
         "plaque_model_loaded": True,
-        "tartar_model_loaded": True
+        "tartar_model_loaded": True,
+        "tooth_model_loaded": True
     }
 
 
@@ -108,7 +128,7 @@ async def analyze_dental_image(file: UploadFile = File(...)):
             detail="Image dimensions are too large."
         )
 
-    # PLAQUE SEGMENTATION
+    # 1. PLAQUE SEGMENTATION
     plaque_result = plaque_model.predict(
         source=image,
         conf=0.10,
@@ -116,28 +136,60 @@ async def analyze_dental_image(file: UploadFile = File(...)):
         verbose=False
     )[0]
 
-    plaque_mask = np.zeros((height, width), dtype=np.uint8)
-
-    if plaque_result.masks is not None:
-        for polygon in plaque_result.masks.xy:
-            points = np.asarray(polygon, dtype=np.int32)
-
-            if len(points) >= 3:
-                cv2.fillPoly(plaque_mask, [points], 255)
+    plaque_mask = create_union_mask(
+        plaque_result, height, width
+    )
 
     plaque_pixels = int(np.count_nonzero(plaque_mask))
     plaque_detected = plaque_pixels > 0
 
-    # Create annotated image.
+    # 2. TOOTH SEGMENTATION
+    tooth_result = tooth_model.predict(
+        source=image,
+        conf=0.25,
+        device=0,
+        verbose=False
+    )[0]
+
+    tooth_mask = create_union_mask(
+        tooth_result, height, width
+    )
+
+    tooth_pixels = int(np.count_nonzero(tooth_mask))
+    tooth_detected = tooth_pixels > 0
+
+    # 3. AUTOMATIC PLAQUE COVERAGE
+    plaque_on_teeth_mask = cv2.bitwise_and(
+        plaque_mask, tooth_mask
+    )
+
+    plaque_pixels_on_teeth = int(
+        np.count_nonzero(plaque_on_teeth_mask)
+    )
+
+    if tooth_pixels > 0:
+        plaque_coverage_percent = round(
+            (plaque_pixels_on_teeth / tooth_pixels) * 100,
+            2
+        )
+    else:
+        plaque_coverage_percent = None
+
+    # 4. ANNOTATED IMAGE
     annotated = image.copy()
     overlay = annotated.copy()
+
+    # Light blue = predicted tooth regions
+    overlay[tooth_mask > 0] = (255, 200, 0)
+
+    # Green = predicted plaque regions
     overlay[plaque_mask > 0] = (0, 255, 0)
 
     annotated = cv2.addWeighted(
         overlay, 0.35, annotated, 0.65, 0
     )
 
-    # TARTAR OBJECT DETECTION
+    # 5. TARTAR OBJECT DETECTION
     tartar_result = tartar_model.predict(
         source=image,
         conf=0.25,
@@ -183,7 +235,7 @@ async def analyze_dental_image(file: UploadFile = File(...)):
 
     tartar_detected = len(tartar_boxes) > 0
 
-    # Educational feedback, not a clinical diagnosis.
+    # 6. EDUCATIONAL FEEDBACK
     if plaque_detected and tartar_detected:
         feedback = (
             "Possible plaque and tartar were detected. "
@@ -208,7 +260,7 @@ async def analyze_dental_image(file: UploadFile = File(...)):
             "This does not confirm that the teeth are disease-free."
         )
 
-    # Encode annotated image for easy display in React.
+    # 7. ENCODE ANNOTATED IMAGE
     success, encoded_image = cv2.imencode(
         ".jpg", annotated
     )
@@ -223,27 +275,33 @@ async def analyze_dental_image(file: UploadFile = File(...)):
         encoded_image.tobytes()
     ).decode("utf-8")
 
+    # 8. API RESPONSE
     return {
         "plaque_detected": plaque_detected,
         "tartar_detected": tartar_detected,
+        "tooth_detected": tooth_detected,
         "predicted_plaque_pixels": plaque_pixels,
-        "plaque_coverage_percent": None,
+        "predicted_tooth_pixels": tooth_pixels,
+        "plaque_pixels_on_teeth": plaque_pixels_on_teeth,
+        "plaque_coverage_percent": plaque_coverage_percent,
         "tartar_coverage_percent": None,
         "tartar_box_count": len(tartar_boxes),
         "tartar_boxes": tartar_boxes,
         "hygiene_score": None,
         "feedback": feedback,
         "quantification_status": (
-            "Tooth-normalized coverage requires an "
-            "automatic tooth mask. Tartar pixel coverage "
-            "requires segmentation rather than boxes."
+            "Automatic tooth-normalized plaque coverage "
+            "is available when teeth are detected. "
+            "Tartar pixel coverage requires segmentation. "
+            "A validated hygiene scoring method is still "
+            "under development."
         ),
         "annotated_image": (
             "data:image/jpeg;base64," + image_base64
         ),
         "disclaimer": (
-            "Research prototype only. "
-            "Not intended for clinical diagnosis."
+            "Experimental research prototype only. "
+            "Predicted plaque coverage is not a clinically "
+            "validated oral hygiene score or diagnosis."
         )
     }
-
