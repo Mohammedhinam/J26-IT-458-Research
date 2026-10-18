@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+@theme {
+  --color-navy: #17365D;
+  --color-sky-accent: #2585C6;
+  --color-light-blue: #8ED3F4;
+  --color-dashboard: #EAF5FC;
+}
+
+#home,
+#ai-assessment {
+  scroll-margin-top: 12rem;
+}
+
+@media (min-width: 40rem) {
+  #home,
+  #ai-assessment {
+    scroll-margin-top: 6rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
