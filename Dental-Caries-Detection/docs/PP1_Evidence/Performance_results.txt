@@ -1,0 +1,23 @@
+PP1 - API Performance Results
+
+Environment: Local Windows laptop, CPU inference
+Test Image: test_image.jpg
+Requests: 3 per endpoint
+
+Prediction API:
+Run 1: 0.551 seconds
+Run 2: 0.496 seconds
+Run 3: 0.459 seconds
+Average: 0.502 seconds
+
+Grad-CAM API (Region R1):
+Run 1: 1.679 seconds
+Run 2: 1.599 seconds
+Run 3: 1.702 seconds
+Average: 1.660 seconds
+
+All 6 requests returned HTTP 200.
+Both Grad-CAM overlays were generated successfully.
+
+Note: Measurements were taken with the backend
+already running and models loaded in memory.

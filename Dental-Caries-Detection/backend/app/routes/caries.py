@@ -2,12 +2,38 @@ from fastapi import APIRouter, UploadFile, File, Form, HTTPException
 from pathlib import Path
 from PIL import Image, UnidentifiedImageError
 import tempfile
-import shutil
 
 from app.services.caries_prediction import predict_dental_caries
 from app.services.gradcam import generate_region_gradcams
 
 router = APIRouter(prefix="/api/caries", tags=["Dental Caries"])
+
+MAX_UPLOAD_BYTES = 10 * 1024 * 1024
+MAX_IMAGE_PIXELS = 20_000_000
+
+
+def _copy_upload_with_limit(source, destination):
+    """Copy in bounded chunks, reading at most one byte beyond the limit."""
+    total_bytes = 0
+    while True:
+        chunk = source.read(min(64 * 1024, MAX_UPLOAD_BYTES - total_bytes + 1))
+        if not chunk:
+            break
+        total_bytes += len(chunk)
+        if total_bytes > MAX_UPLOAD_BYTES:
+            raise HTTPException(
+                status_code=413,
+                detail="Image upload exceeds the maximum size of 10 MB."
+            )
+        destination.write(chunk)
+
+
+def _check_image_dimensions(img):
+    if img.width * img.height > MAX_IMAGE_PIXELS:
+        raise HTTPException(
+            status_code=413,
+            detail="Image exceeds the maximum dimensions of 20 megapixels (width × height)."
+        )
 
 
 @router.post("/predict")
@@ -30,8 +56,8 @@ def predict_caries(file: UploadFile = File(...)):
             delete=False,
             suffix=suffix
         ) as temp:
-            shutil.copyfileobj(file.file, temp)
             temp_path = Path(temp.name)
+            _copy_upload_with_limit(file.file, temp)
 
         # Verify uploaded image
         try:
@@ -42,8 +68,14 @@ def predict_caries(file: UploadFile = File(...)):
                         detail="Invalid image format. Upload JPG or PNG."
                     )
 
+                _check_image_dimensions(img)
                 img.verify()
 
+        except Image.DecompressionBombError:
+            raise HTTPException(
+                status_code=413,
+                detail="Image exceeds the maximum dimensions of 20 megapixels (width × height)."
+            )
         except (UnidentifiedImageError, OSError, ValueError):
             raise HTTPException(
                 status_code=400,
@@ -102,8 +134,8 @@ def predict_gradcam(
             delete=False,
             suffix=suffix
         ) as temp:
-            shutil.copyfileobj(file.file, temp)
             temp_path = Path(temp.name)
+            _copy_upload_with_limit(file.file, temp)
 
         # Validate the actual image content
         try:
@@ -113,8 +145,14 @@ def predict_gradcam(
                         status_code=400,
                         detail="Invalid image format."
                     )
+                _check_image_dimensions(img)
                 img.verify()
 
+        except Image.DecompressionBombError:
+            raise HTTPException(
+                status_code=413,
+                detail="Image exceeds the maximum dimensions of 20 megapixels (width × height)."
+            )
         except (UnidentifiedImageError, OSError, ValueError):
             raise HTTPException(
                 status_code=400,
