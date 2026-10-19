@@ -1,10 +1,230 @@
 # Component 2 project handoff
 
-Last reconciled: **2026-10-16 (Asia/Kolkata)**. Owner: Vinuthan T, IT23311022.
+## Version control snapshot — 19 October 2026
+
+Owner explicitly requested commit and push on the existing `vinuthan` branch.
+This snapshot packages 99 source/report files in 14 logical commits, including
+the current four-model proposal demo, bounded experiments, notebooks and the
+31-page beginner guide. Earlier statements that this work is only uncommitted
+describe historical snapshots. Git transport confirmation is reported after
+this final log/handoff commit.
+
+Data, trained weights, photos, temporary artifacts and the three photo-bearing
+PPTX packages remain local and ignored. Both committed Word reports were checked
+to contain no embedded media or embedded files. A remote clone therefore still
+needs the separately preserved local model/data artifacts to run the full demo;
+do not upload those to make a checkout appear self-contained.
+
+Pre-push checks: 41 changed/new Python files parsed; 33 ordinary Python notebook
+cells parsed and one Colab shell-magic cell retained as Colab-only; all five
+notebooks have no saved outputs or attachments. Nine JSON reports parsed, no
+secret-shaped credential hits were found, and the frontend rebuilt byte-for-byte
+with the existing bundle using cached dependencies. Markdown hard breaks and
+one existing test EOF blank line were preserved to retain verified source bytes.
+No training, final Test rerun, dependency installation or running-demo restart.
+
+## Latest: EfficientNet main candidate now integrated — 18 October 2026
+
+Owner explicitly requested adding the trained proposal candidate. **Open
+http://127.0.0.1:8773/**, launch `zsh scripts/run_pp1_proposal_demo.sh`.
+[Verified integration/runbook](vision_efficientnet_live_integration_v1.md).
+The earlier8771process was preserved. Use8773for the new candidate runtime.
+
+One photo now runs EfficientNet-B0 first (proposal main candidate), ResNet50v3
+second (baseline), followed by ROIv1 and CORALv2 as additional experiments.
+Four individual statuses, results and feedback records, with Doctor/Developer
+modes and local-only consent/export/privacy preserved. Existing XGBoost,
+Questionnaire/SHAP/what-if/reset remain unchanged and working.
+
+Actual pinned EfficientNet checkpoint is existing `fold0_last_block/final.pt`
+under `data/efficientnet_adaptation_v1_20261017_1792202682936988000/`, SHA
+`b557f52e358ca88329391e01e3f2c6f77123d14bbbe1027dd38391a27ea96353`.
+360/360training tensor hashes match. Shared B1 input/decoding, predicted-class
+Grad-CAM at `features.8`, original geometry and honest attention. No retraining.
+Its **neural680OOFaccuracy46.76%,Macro-F1.3416,G1=1/12,G2=33/84** is distinct
+from52.21%frozenfeatures+Logistic. Fold0is illustrative, not an all680refit or
+clinical model. Main-candidate role does not mean best demonstrated accuracy.
+
+**40focused tests +40browser checks passed,0failed**. Permitted photo genuine
+gradesEfficientNet3/ResNet3/ROIv1max3with12boxes/CORALmax2with12boxes. Same bytes
+verified for all four. Three initial numerical checks failed at an overly strict
+1e-7ordinary-vs-gradient tolerance; final independent gradient parity and shared
+1e-6float32bound passed without model/pixel/heatmap modification. Initial failure
+XML preserved.39protected artifacts unchanged;4intended API/UI files changed
+with before snapshots. No originalcheckpoint/research/data/labels/splits/Test,
+oldprocess, cloud upload or commit/push/reset changes.
+
+New10-slide editable/render-verified deck:
+`docs/pp1_final_20261018/PP1_Proposal_Doctor_Demo_v3.pptx`. Desktop convenience
+folder: `/Users/vinuthanvinuthan/Desktop/PP1_Proposal_Demo_20261018/`.
+Evidence: `data/vision/efficientnet_live_integration_20261018_v1/`.
+Earlier three-model delivery below is historical. Clinical review and Grade1/2
+reliability remain pending, and Grad-CAM still has irrelevant-region attention.
+
+## PP1 final local rehearsal delivery — 18 October 2026
+
+Owner authorized completing the local demo, ROI coverage investigation, fair
+comparison and presentation while away. [Final runbook](pp1_final_delivery_20261018.md),
+[ROI results](vision_roi_context_diagnostic_20261018.md),
+[data/review preparation](grade12_data_review_next_steps_20261018.md).
+Open **http://127.0.0.1:8771/**. Restart with
+`zsh scripts/run_pp1_doctor_demo.sh` from this repository. Desktop convenience
+folder: `/Users/vinuthanvinuthan/Desktop/PP1_Final_Demo_20261018/`.
+The 10-slide editable deck is `docs/pp1_final_20261018/PP1_Doctor_Demo.pptx`.
+
+Fresh verification: **31 API/decoding tests + 37 browser checks passed, 0 failed**.
+Actual permitted photo outputs remain ResNet3, ROIv1max3/12boxes, CORALmax2/12boxes.
+Questionnaire/SHAP/what-if/reset work independently. Existing React/API, models
+and research were preserved: **29/29 protected hashes unchanged**.
+
+Four fit-only Grade1/2 coverage sheets reproduced **48/48 exact training crops**.
+Visible gum margins already appear in current crops; clinical sufficiency remains
+unverified. One predeclared frozen-weight padding15%vs30% inference ablation on
+the same136scorephotos yielded accuracy61.76%vs62.50%,Macro-F1.3347vs.2980,
+Grade1both0/3,Grade2 1/17vs0/17. Shared detector boxes and unchanged fold-00 weights.
+**Do not promote the expanded context.** Local baseline matches128/136historical
+CUDApredictions; cause of8disagreements unisolated, no680OOFimprovement claim.
+Twelve generated geometry and76independent saved-result assertions passed.
+
+The76-case fit review queue is9Grade1+67Grade2, with blank qualified reviewer/grade
+fields. Zero new verified photos/clinical labels. Qualified review and any future
+matched training study remain pending. No new training, Test payload, held-record
+release, external upload, commit/push/reset or process disruption. Original demo
+continues using the original three checkpoints. Private evidence:
+`data/vision/pp1_final_local_20261018_v1/`. Engineering/demo rehearsal preparation
+is complete; clinical readiness and Grade1/2 accuracy are not established.
+
+## Latest controlled ResNet50 fold-0 return — 18 October 2026
+
+Owner explicitly approved and ran the bounded shared1epoch+5A+5B Colab experiment, then
+returned `resnet50_fold0_return_v1.zip` (SHA `e169edc135e5f6786bf510bd81d5cb3b77125d08edfa944ac5f121f4f694de8c`).
+[Actual results and CAM review](vision_resnet50_fold0_colab_results_v1.md). The unchanged
+544fit/136score Training fold has grades1–4 support9/67/179/289 and3/17/44/72.
+A last-bottleneck:55/136=40.44%,Macro-F1.2341; B full-layer4:62/136=45.59%,Macro-F1.3175.
+Grade2recall1/17→5/17, Grade1both0/3; majority accuracy52.94%. These are single-fold
+results and must not be compared directly to680OOF or53Validation metrics.
+
+All154return file hashes,11checkpoints/3520tensor hashes, official320/320initializer hashes,
+shared warm-up, frozen BN, optimizer/batch-order provenance and independently recomputed
+metrics passed.8matched cases/16predictions/32CAMs reproduced on CPU (probability error≤1.91e-6,
+RGB differences≤1/255). Qualitative AI review still sees peripheral/lip/retractor attention;
+consistent gingival focus and clinical localization are not established.29protected artifact
+hashes remain unchanged. Return preserved separately under
+`data/vision/resnet50_fold0_pilot_v1_20261018_r2/colab_return_v1_20261018/`.
+**No replacement of PP1 models/demo and no further training or promotion.** Next meaningful
+research step requires qualified review and a separately approved protocol. Existing UI below
+continues to use its original three models.
+
+Last reconciled: **2026-10-18 (Asia/Kolkata)**. Owner: Vinuthan T, IT23311022.
 Workspace: `/Users/vinuthanvinuthan/Desktop/RP-J26-IT-458`; branch **`vinuthan`**.
 Remote: `https://github.com/Mohammedhinam/J26-IT-458-Research.git`.
 
+## Latest UI reference update (18 October 2026)
+
+Owner requested the blue/teal dashboard reference. Implemented dark sidebar and teal header, drag/drop upload, aligned three model cards, real class-score bars, compact Grad-CAM triptych, ROI probability tables and model-specific feedback below. Doctor independent assessment still precedes AI inference. All sidebar links work; Vision is now the default tab. Refresh **http://127.0.0.1:8771**. See [UI update and verification](pp1_doctor_demo_ui_v2.md).
+
+Final verification: **37 browser checks / 21 API tests passed**, **15/15 protected hashes matched**. Backend, checkpoint loaders, trained weights, scientific model code and research results were not changed by this UI task. Real same-photo outputs remain MGI3 / max3+12ROIs / max2+12ROIs. Original attention is preserved, including the upper-lip hotspot. New evidence/screenshots are in ignored `data/vision/doctor_demo_ui_v2_20261018/`. No training/Test access/external images/commit/push/reset.
+
+## Latest approved PP1 Doctor Demo implementation (18 October 2026)
+
+The approved three-model workspace is implemented and verified. Read [run instructions, exact changes and verification](pp1_three_model_doctor_demo_v1.md). The current service was started at **http://127.0.0.1:8771** with the same pinned ResNet50 v3, ROI v1 fold00 and ROI v2 CORAL fold00. No training or replacement checkpoints.
+
+Doctor Review Mode records an independent assessment before inference; Developer Demo Mode explicitly marks outputs not clinically reviewed. One JPG/PNG, consent and Run All dispatch the same bytes sequentially to existing endpoints. Responses verify source SHA; per-model status/results survive another model's failure; stale responses are invalidated. Feedback stays separate and only explicit JSON/CSV download persists an allowlist without source photo data, filename, input hash or patient-ID fields. Free-text notes must omit identifiers. Reset/navigation/reload discards case state.
+
+V2 local uploads now use shared ICC/EXIF/alpha-validated sRGB pixels as lossless temporary PNG, matching v1; trained transforms/weights are unchanged. Predicted ROI numbers match table rows. Grad-CAM was not altered to focus on gums. Its 7×7 final-block feature map and independent CAM algebra parity were checked on the permitted non-study photo (max difference 1.79e-7); attention still includes upper lip. This is not clinical localisation proof.
+
+Verification: 102 focused Python/API tests, final 32 browser acceptance checks, 6 real CAM checks, 4 independent missing-checkpoint startup checks; zero final failures; 12/12 protected hashes match. Three genuine outputs on the owner-permitted photo remain ResNet3, v1 max3/12 ROIs, CORAL max2/12 ROIs. Browser fault cases are explicitly synthetic fixtures. Screenshots/receipts are in ignored `data/vision/doctor_demo_20261018_v1/`. Actual clinician review remains pending. No Test access, training, external image uploads, commit/push/reset. Existing dirty changes preserved.
+
+## Latest local photo-model comparison (2026-10-18)
+
+The owner wants to run the same newly uploaded photo through each saved, runnable Vision model and compare their outputs. The React demo now keeps three runs visible together: the existing ResNet50 B1 v3 checkpoint with Grad-CAM, YOLO ROI v1 weighted-CE fold 00, and YOLO ROI v2 CORAL fold 00. Their grades remain independent; the page does not combine them.
+
+On the owner's 540×360 RGB photo with no embedded ICC, ResNet50 predicted MGI 3 and output scores 0.1293, 0.2825, 0.3508, 0.2374 for grades 1–4. Its Grad-CAM hotspot fell on the upper lip rather than the teeth. ROI v1 returned 12 boxes (11 crop grades 1, one grade 3; maximum 3). ROI v2 returned 12 boxes (9 crop grades 1, 3 grade 2; maximum 2). The ROI detector confidence range was 0.5322–0.7285; it describes boxes, not MGI confidence. All these are one-photo research outputs, not accuracy measures or diagnosis. Both ROI models use fold 00, not final all-development refits. The ResNet50 B1 demo checkpoint is separate from the frozen ResNet + Logistic OOF row.
+
+The same-680-Training-image OOF comparison is documented in [machine-readable comparison evidence](vision_photo_model_comparison_v1.json): ResNet + balanced Logistic is 47.50% accuracy / .2951 Macro-F1; EfficientNet + Logistic is 52.21% / .3464; ROI v1 is 60.74% / .3384; ROI v2 CORAL is 59.71% / .3279. ROI v1 has highest accuracy in that table but lower Macro-F1 than EfficientNet and lower Grade 2 recall (8/84 versus 27/84); every row has Grade 1 recall 0/12. The EfficientNet 52.21% model has saved OOF predictions but no fitted Logistic checkpoint/full-development refit, so it cannot currently run on a new photo. Accuracy alone does not establish the best model or fix Grades 1–2.
+
+Start the local service using the command in [local upload setup and output guide](vision_local_photo_upload_demo_v1.md), which loads all three available model runtimes. Open `http://127.0.0.1:8770`, choose **Vision · exploratory evidence**, select a photo, check the permission box, then run **ResNet50 + Grad-CAM**, **Run YOLO v1 · 60.74% OOF**, and **Run YOLO v2 CORAL · 59.71% OOF**. Outputs stay together until the photo is reset or replaced. The UI also shows the four-row aggregate comparison. The source image is processed on loopback and is not saved; the ROI helper's temporary file is removed after inference. The questionnaire branch stays separate. See the [prior four-panel ROI v2 output](../data/vision/user_photo_demo_v1_20261018/demo_comparison.png) and [numbered v2 ROI boxes](../data/vision/user_photo_demo_v1_20261018/roi_boxes_mgi.png).
+
+Final verification: all three runtimes reported ready on MPS and returned HTTP 200 on the same photo with `photo_saved: false`; omission of the consent header returned HTTP 403. The verified four-row evidence loaded from `/api/vision/evidence`. Fifty-seven focused tests passed. Photo, ResNet checkpoint, v1 ZIP, and v2 ZIP hashes matched their verified values. No training, data, labels, splits, protected Test payloads, or old PP1 models/results were changed. The updated React bundle passed `git diff --check`; no commit or push.
+
+## Current next step — v2 ordinal result returned and verified (2026-10-17)
+
+The owner ran [the v2 Colab notebook](../notebooks/roi_tooth_v2_ordinal_colab.ipynb) on a Tesla T4 and returned the archive. Read [actual v2 results and limitations](vision_roi_ordinal_v2_colab_results.md) and the [protocol and implementation handoff](vision_roi_ordinal_v2_plan.md). The run used 680 Training photos, five fixed folds (544 fit / 136 score per fold), 8,160 crop rows, and 12 epochs per arm. It did not use Validation for model selection or access protected Test payloads. All 21 return-manifest entries passed size/SHA checks; 680 OOF records, labels and folds matched the frozen protocol; metrics and the paired bootstrap were independently recomputed.
+
+Matched weighted CE: 59.85% accuracy / .3241 Macro-F1; recall by grades 1–4 is 0/12, 5/84, 97/223, 305/361. CORAL: 59.71% / .3279; recall 0/12, 15/84, 46/223, 345/361. CORAL recovered ten more Grade 2 photos than matched CE but one fewer correct photo overall; Grade 1 remains zero. Compared with earlier v1 ROI (60.74% / .3384; Grade 2 8/84), accuracy and Macro-F1 are lower while Grade 2 recall is descriptively higher. Compared with historical EfficientNet (52.21% / .3464; Grade 2 27/84), overall accuracy is higher but Grade 2 remains lower. Do not claim that the weak-grade accuracy problem is fixed.
+
+The 8,160 annotated tooth-crop diagnostic is separate: weighted CE 46.59% accuracy/.4031 Macro-F1/.3923 balanced accuracy; CORAL 40.78%/.3738/.4192. Crop scores bypass predicted localization and do not equal image-level MGI accuracy or detector mAP.
+
+The return ZIP is preserved at `data/vision/roi_tooth_v1_20261017/ordinal_v2/colab_return_v1_20261017/roi_tooth_v2_coral_return.zip`, SHA-256 `e78240b01a1b039e091be0d2e31881ce96c1b1e47388e99f8f49b2541094771b`; its adjacent `verification.json` records the input hashes and 10/10 unchanged protected artifact checks. A separate v2 CLI adapter loads a selected fold only after checking the local receipt and ZIP manifest. Fold 00 ran on MPS for `Training/00002`: 12 ROIs, image grade 4, matching its OOF prediction; provisional target grade 3. Its clarified, watermarked ROI preview is [here](../data/vision/roi_tooth_v1_20261017/ordinal_v2/demo_outputs_v2/Training_00002_fold00_mps_research_only_final/roi_overlay.png). It is an isolated research preview, not a final all-development refit.
+
+An optional local PP1 integration now adds a separate `/api/vision/roi-photo` route and React action, **Run YOLO tooth boxes + CORAL**. It loads verified fold 00 on MPS when available, uses the same source-registered photo gate as the existing ResNet50/Grad-CAM path, and returns predicted tooth boxes, crop grades, and the maximum-grade aggregation. The existing PP1 ResNet50 checkpoint and Grad-CAM route remain unchanged. The React source and bundle were rebuilt; 76 focused tests passed. The real v2 weights passed an API smoke test using only the generated colour fixture: HTTP 200, no detections, and no grade, as expected for a non-dental image. No source-confirmed non-study dental photo is registered yet, so real live tooth-box display still awaits an eligible photo. See [ROI v2 live-demo setup](vision_roi_v2_live_demo.md). No commit or push.
+
+**Current state:** local Colab-return verification and optional React/API wiring are complete. Keep v2 research-only and do not run another training or promote a checkpoint based on these results. The optional runtime stays disabled by default and requires both the verified ROI return ZIP and existing photo-registration arguments; follow the linked live-demo guide. No real non-study dental sample is registered. Labels remain provisional, participant independence is unknown, Grade 1 recall is zero, and clinical/supervisor verification is still pending.
+
+## Current Vision restart — Colab ROI result returned and checked (2026-10-17)
+
+Read [full Colab ROI results](vision_roi_tooth_v1_colab_results.md) and [preparation/engineering record](vision_roi_tooth_v1_results.md). The five-fold YOLO26n tooth_roi detector + ResNet-18 crop classifier completed on a Tesla T4. The return archive and all 19 file hashes passed verification. The returned fold pairs are saved under the ignored `data/vision/roi_tooth_v1_20261017/colab_return/`; return ZIP SHA-256 is `ebb41badf4bd2154019dad55ba2f459ad1807c7f42b0722c13d849be2460f9bb`.
+
+Evaluation uses one OOF prediction for each of the same 680 Training IDs and exact five-fold assignment as the historical EfficientNet result. No Validation model selection or Test data use. ROI accuracy is **60.74% (413/680)** versus historical **52.21% (355/680)** and majority **53.09%**. However, Macro-F1 is **0.3384** versus **0.3464**, balanced accuracy **0.3437** versus **0.3486**; Grade 1 remains **0/12** and Grade 2 falls to **8/84** versus **27/84**. Detector mAP50/50–95 averages 0.9598/0.4967 and must stay separate from image-level MGI metrics. Ground-truth-crop diagnostic over 8,160 crops is 46.67% accuracy/.4054 Macro-F1; this crop-only score does not replace photo-level evaluation. Do not claim the Grade 1–2 problem is fixed or promote this model to the live demo.
+
+The paired fixed-prediction content-group bootstrap (1,000 draws, seed 42) gives ROI-minus-EfficientNet intervals: accuracy +3.82 to +12.94 percentage points; Macro-F1 −5.03 to +3.35 pp; balanced accuracy −4.35 to +3.30 pp; Grade 2 recall −33.33 to −12.64 pp. All 680 known content groups are single-image groups; participant independence is unverified, so intervals are conditional only. Qualified label approval remains false and image-grade MGI 0 is unsupported.
+
+Mac verification loaded fold 00 on MPS and ran `Training/00002` (a fold-00 score image): 12 ROIs and grade 4, matching OOF; its provisional caption grade is 3. The overlay and JSON are in ignored `data/vision/roi_tooth_v1_20261017/demo_outputs/colab_fold00_training_00002/`. This remains an isolated experimental CLI; the existing PP1 Grad-CAM demo/checkpoint/UI is unchanged. The prior preservation audit still matches all 10 protected artifacts. No commit or push.
+
+**Current state:** the planned Colab run, return integrity check, matched OOF comparison, Mac checkpoint smoke and documentation are complete. Do not launch another full training or tune thresholds from these scores without a separately defined experiment. Keep the result provisional and do not use it as a clinical diagnosis or final Test score.
+
+## Approved matched EfficientNet trial — actual result (17 October 2026)
+
+Owner explicitly approved the exact10-fit plan. [Actual report](vision_efficientnet_adaptation_results_v1.md), [aggregate](vision_efficientnet_adaptation_results_v1.json), [independent verification](vision_efficientnet_adaptation_verification_v1.json). **10MPSfits/50epochs completed**, same680Training/fivefolds/B1/labels. Head-only accuracy46.3235%/macro-F1.336195; head+`features.8` accuracy46.7647%/macro-F1.341579:net3morecorrect,+0.4412pp,+.005384F1. Neither beats historical52.21%nestedLRaccuracy/.346429F1; no successful overall accuracy fix or finalmodelpromotion. No whole-imageMGI0support; Grade1only1/12correct in both; Grade2 31→33/84.
+
+Original summary failed **after allfits andOOFsave** on wrongmetric key`brier` versus actual`multiclass_brier`. OriginalFAILED/attempt/code snapshot preserved. Reporting-onlyhelper/regressionfixed; savedOOFrecovery performed with0newfits/0inference. `recovered_results.json`/`POSTPROCESSING_COMPLETE.json` clearlymarkrecovery; no fabricatedoriginalCOMPLETE. Timing/RSSnotcaptured beforeexception, recordednull. Current27generatedtests pass; original26pre-run is historical, notadditional.135saved-outputassertions pass,maxmetricdiff1.11e-16; all10×360checkpointtensorhashes and officialinitialstate independently verified. Instrumentedloader680allowedTrainingcalls only, notOSaudit.
+
+Ignoredoutput:`data/efficientnet_adaptation_v1_20261017_1792202682936988000/`; persistentconsumedclaim:`data/efficientnet_adaptation_once_v1/attempt.json`. Newsource:`src/vision/efficientnet_adaptation_v1.py`; tests companion. Executionbindingpoints to preserved oldrunner; currentreporting-onlypatchSHA recordedseparately. No retraining/replay to repairreporting; no extraepochs/searchautomaticrepeat. Existingdemo/checkpoint, datasets/labels/splits/181holds/NP015/Test/questionnaire/colourpolicy unchanged; noTXTdetectortraining/install/download/upload/commit/push. Earliernext-plan-preview wording below is historical and superseded for this exact completed trial, not clinical/scientific approval.
+
+## Accuracy investigation — three owner-requested agents (17 October 2026)
+
+[Investigation](vision_accuracy_reverse_engineering_v1.md), [proposed next trial](vision_accuracy_next_experiment_v1.md). No new dental training or improved accuracy. Source review found no demonstrated class-mapping/loss/checkpoint bug explaining performance.52.21%is frozenEfficientNetfeatures+nestedLR, not neural fine-tuning; same680majorityaccuracy53.09%, macro-F1.3464versus.1734. Do not blame all datasets or infer held52conflicts caused the680cohort errors. Generated-only checks demonstrated the frozenB1non-antialiased sampler's synthetic aliasing and identified numerical qualification limits in a candidate antialias primitive; no preprocessing change activated. Originalsource remains relevant; alternative diagnostic labels are not automaticMGI0–4.
+
+**Correction:** seed42v3CUDA and seed43MPS changed both seed and backend/runtime; variation does not isolate seed. Erratum added to seed43report; source/code/receipts/numbers preserved. The next exact10-fit/two-arm/five-foldEfficientNet plan is a preview, not implementation or execution approval. Existing labels/splits/181holds/NP015/Test boundaries and concurrent live-demo work preserved. Owner should read/understand the bounded plan before any new runner/real execution; no automatic training/download/upload/commit/push follows.
+
+## Latest live-demo integration — 17 October 2026
+
+[Runbook](vision_registered_photo_live_demo_v1.md), [actual evidence](vision_registered_photo_live_verification_v1.json). **101 focused tests passed, zero failed/errors/skipped; 24 unique browser checks passed.** Existing pinned v3 checkpoint + generated JPEG ran end-to-end through React upload, exact B1 input and aligned predicted-class Grad-CAM. Questionnaire/SHAP/What-if/reset also verified; no training, dental-image inference or Test rerun. Default photo runtime remains inactive; new explicit all-or-none CLI checkpoint/registration/trusted-SHA arguments activate only a registered scope. Generated verification is separately marked on local8772; previous servers preserved.
+
+**The user's new PNG is of uncertain internet/other provenance**, confirmed directly by the owner; it was not registered or run. Real-photo runtime remains restricted to hash-registered, source-confirmed non-study RGB JPEGs, qualified embedded ICC, identity orientation, <=8MiB/40MP. It does not accept arbitrary phone/photos/PNG or infer missing ICC. No real source decision, clinical approval, held-image release or final-research activation was invented. Next real-photo step needs one genuinely source-confirmed permitted supported original JPEG; do not use Test/held/data screenshots as substitutes. All181holds/NP015, labels/splits/colour policies/models and scientific results remain unchanged; accuracy did not improve through integration. Continue remaining review and genuine feedback/rehearsal separately. No commit/push.
+
+## Current Vision restart — Training-52 cached-evidence triage (2026-10-17)
+
+See [triage report](vision_training52_evidence_triage_v1.md) and the existing ignored [Training-52 viewer](../data/vision/gingivitis/staging-16669f74665ff0deca6ddd25feb0d233e52fdc2313265465bf91731af1e8956b/training_recovery_review_v1_20261015/index.html). Read-only comparison of the existing selected Training cache/decision CSV: **52/52 pending, zero newly approved/eligible**. Cached evidence records14 caption/TXT histogram disagreements,12 tooth-count reviews,one additional unsupported/count case,2 partial-caption cases,4 group companions and1 NP015 identity hold. Parsed caption max and TXT maximum agree47/49; differ2;3 have no parsed maximum. A matching maximum does not clear full-histogram, clinical-label, group, or identity issues.
+
+Focused original-file comparison of **Training/00025** now confirms the same image maximum grade4 in captions and mapped TXT, but a one-count MGI2↔MGI0 histogram conflict (captions0/1/2/3/4=`0/1/3/1/7`; TXT=`1/1/2/1/7`), plus a malformed MGI3 tooth-position phrase. TXT boxes lack FDI IDs; no correction is assigned. The case remains pending/held. Only this one Training image and its matching caption row/TXT were opened; no other image or Test record.
+
+No other original RGB, CSV/TXT, Test payload, held Validation record or model output was accessed. No labels, splits, held status or approvals changed. **Next:** qualified annotation review starts with the14 histogram conflicts and12 tooth-count cases in the existing Training-52 viewer; group/NP015 decisions remain separate. Do not train on or promote any case until real review provenance and all existing gates are satisfied.
+
+## Current Vision restart — seed-43 local stability replication complete (2026-10-16)
+
+See [actual report](vision_b1_seed43_replication_v1.md) and [local output](../data/vision/pp1_b1_lastblock_seed43_v1_20261016T234343+0530/results.json). Owner authorized local exploratory training in the latest request; the exact predeclared follow-up was the seed-43 replication from the prior Grade-2 diagnostic. **MPS run completed on the same frozen 680 Training / 53 Validation bundle; best epoch 2.** Metrics independently recomputed from saved predictions aligned by all 53 Validation IDs.
+
+- Seed-43 result: Validation accuracy **43.40%**, macro-F1 **0.2697**, recall MGI1/2/3/4 **0/1, 1/13, 7/22, 15/17**. Versus v3 seed42 on the same records, accuracy fell 50.94%→43.40%, macro-F1 .3259→.2697; Grade2 recall stayed 1/13 and Grade1 stayed 0/1. This supports run-to-run instability, not an improvement or causal explanation.
+- MPS synthetic ResNet step passed; focused wrapper tests **9 passed, 0 failed, 0 skipped**. Actual stage took32.68s; process peak RSS607.19MiB; frozen315 tensors unchanged. New checkpoint SHA `2a6381c1f920e1aada04774bab814600764eae6f4b7a281e1a3f4e3cc677516f`; no pretrained download or new Grad-CAM run.
+- Four-output MGI1–4 pilot only; MGI0 is unsupported at image level, Grade1 support is one Validation case, labels remain provisional, participant independence unknown. No Test, held records, original image/annotation/label/split change, upload, commit or push.
+- The existing 172-case visual screen remains pending; it covered43 Training+129 Validation held candidates and assigned no AI grades. It was not an individual visual audit of all733 model candidates. Do not treat model predictions as label corrections.
+
+**Next:** do not start another same-53 tuning run. Keep seed42 v3 only as a provisional demo candidate (not a final model); improve evidence first through supported Grade1/2 labels and participant/content-group review or a genuinely compatible additional source. Original five-grade research scope and all181 holds stay unchanged.
+
 This is a local continuity record, not new research approval or a replacement for signed requirements. Read root `AGENTS.md`, current user instructions and only the relevant linked evidence before continuing. Signed proposal/verified records take precedence over conversational summaries; report conflicts instead of silently resolving them. Proposal: `/Users/vinuthanvinuthan/Downloads/RP-IT23311022 (2).pdf`, especially §§3.1–3.5, pp.17–22, and explanation validation p.23. The supplied original AGENTS attachment has been retained verbatim in the new root file, with a handoff pointer appended.
+
+## Current Vision restart — 172-source header/ICC/XMP compatibility preflight (2026-10-16)
+
+[Read-only report](vision_gemini_sanitisation_compat_preflight_v1.md), [aggregate counts](vision_gemini_sanitisation_compat_preflight_v1.json). **172/172 candidate JPEG headers, shared ICC structure, and standard XMP packets match the tested sanitizer structure; 0 structural failures.** Reused the selected 172 hash-bound case list, Training43/Validation129 only; current source hashes and stat identities match; header parsed through SOS only; zero RGB decodes, zero source changes, zero protected Test aliases accessed. No images exported/uploaded or training started.
+
+The single 480-byte ICC profile contains `desc`/`cprt` text fields. Values were not saved/reported; privacy non-identification is not established, and its real SHA is not in the generated-only sanitizer allowlist. Personal Gemini risk acceptance/external-processing permission remains unresolved for172/172. **Next:** owner reviews those shared ICC text values locally, then separately decides whether to allowlist the profile for local derivatives; Gemini external processing needs its own permission. The preflight is not upload/package permission.
+
+## Current Vision restart — generated JPEG metadata qualification, local only (2026-10-16)
+
+[Qualification report](vision_jpeg_metadata_qualification_v1.md), [actual receipts/hashes](vision_jpeg_metadata_qualification_evidence_v1.json): **35 generated tests passed, 0 failed/errors/skipped**. Narrow baseline RGB8 marker-copy workflow removes supported EXIF/XMP/comments/thumbnails without re-encoding; decoded RGB, declared ICC colour interpretation, dimensions and generated source hashes/annotation bindings unchanged. Unknown ICC/rendering schemas, nonidentity orientation, malformed or tampered inputs fail closed. Generated ICC allowlist only; real ICC privacy not approved. No real172images/profiles accessed, package/upload/training or production activation. Next separate approval: local read-only172header/ICC/XMP compatibility/privacy check, nine protected Test aliases excluded. Personal Gemini risk acceptance/external-processing rights remain unresolved.
+
+Owner requested saving completed work first: pushed four scoped commits f1ec893 (Vision comparisons), 6b37c40 (frozen questionnaire evidence), 6ddbd7f (PP1 demo/API), 2f1535d (held review/preflight) to vinuthan. New generated JPEG qualification intentionally remains local pending next work; no automatic further push.
 
 ## Current Vision restart —172-source read-only privacy/ICC preflight complete; release blocked (2026-10-16)
 
@@ -285,3 +505,16 @@ Speak in simple conversational Tamil; one practical step at a time. Owner instru
 Only branch `vinuthan`. Preserve teammate files, datasets, existing tracked changes and untracked work. No commits/pushes, destructive Git operations, installs or downloads unless separately authorised. Never commit data/, .venv, model weights or private data. No broad audits/refactoring, repeated extraction/hash/QA or completed Colab reruns. Reuse code/evidence/dependencies; read only task-relevant files. Current root instructions' old setup/calendar steps are history, not a reason to redo completed work. Obtain explicit approval for clinical/review/policy decisions.
 
 Current HEAD at handoff: `fe52e01`; substantial completed implementations/reports are **local uncommitted files**. Remote cloning does not reproduce this workspace. This handoff is also saved locally, not committed/pushed; it supports future sessions in this checkout and does not imply global memory outside the project. Do not advance automatically from recorded content decisions to group merges, label/split approval, manifest activation or training; wait for explicit next instructions and required scientific approvals.
+
+
+## Current Vision restart — AI-assisted visual screen of held development images (2026-10-16)
+
+Report: [vision_ai_assisted_visual_review_172_v1.md](vision_ai_assisted_visual_review_172_v1.md). Local per-image CSV: `data/vision/gingivitis/staging-16669f74665ff0deca6ddd25feb0d233e52fdc2313265465bf91731af1e8956b/ai_assist_visual_review_v1_20261016/ai_assisted_visual_review_172_v1.LOCAL_ONLY.csv`; 43 contact sheets are in the adjacent `contact_sheets/` directory.
+
+Screened 172 non-Test held records (43 Training +129 Validation); the nine protected Test aliases and sealed Test payloads were excluded. Rechecked image/TXT hashes:172/172 each matched. Caption evidence gives 166 pending candidates (Training 42, Validation 124) and 6 unresolved; MGI0 remains 0, MGI1 has one Validation candidate, and MGI2 has seven candidates. No visual grade was suggested because reduced, uncalibrated contact sheets cannot support clinical MGI adjudication. All 172 remain `needs_qualified_dental_review`; no labels, split, holds, or sources changed. Flags:121 partial-caption patterns,16 caption/TXT histogram conflicts,12 annotation-count reviews,4 exact repeated TXT rows. These categories overlap; report gives details.
+
+Next: qualified dental/annotation review must record reviewer credentials, date, evidence and decision. Supervisor decision is separately needed before any partial-caption policy or manifest change. No training/upload/commit/push.
+
+## Current review continuation — Training/00052
+
+The held-image triage includes focused read-only comparisons of all14 explicit histogram-conflict cases in [the case report](vision_training52_evidence_triage_v1.md); none were cleared or relabeled. In the separate tooth-count queue, `00060`, `00085`, `00484`, and `00537` each have12 captioned positions but13 TXT tooth boxes; `00557` has12 captioned positions but11 TXT tooth boxes. `00484` also shows apparent hard seams at image edges; cause is unknown, so it remains an image-integrity review flag. `00537` has a broader caption/TXT histogram mismatch despite matching maximum grade. `00557` has one fewer TXT tooth box and one fewer MGI-3 box than its captions; both maxima are 4. `00568` has one additional TXT tooth box/MGI-4 count and remains in its protected cross-split content-group hold; only the Training alias was inspected. `00602` has12 captioned positions versus13 TXT boxes, with one extra MGI-3 box. All cases remain pending/held. `00657` also has12 captioned positions versus13 TXT boxes, with one extra MGI-3 count. `00667` also has12 captioned positions versus13 TXT boxes, with one extra MGI-3 count. `00673` has12 captioned positions versus11 TXT boxes, with one fewer MGI-2 count. `00676` has12 captioned positions versus11 TXT boxes, with one fewer MGI-3 count. `00702` has12 captioned positions versus13 TXT boxes, one extra MGI-3 count. The current 12-ID tooth-count review queue is complete; all cases remain pending/held pending qualified review. `00162` remains unresolved: captions have 12 positioned MGI-3 sites plus unlocated non-inflamed/MGI1/2/4 counts, while TXT has12 MGI-3 boxes. No max grade assigned. Next: continue the duplicate/group cases one Training alias at a time, never opening protected Test companions. Training/00271 and `00272` have within-record caption/TXT histogram agreement but remain held due to protected cross-split grouping and unapproved labels. `00272` counts are MGI0–4 0/2/2/5/3. Training/00273 also has within-record caption/TXT agreement (MGI0–4 0/1/3/4/4) but remains held in its Test-crossing group. Training/00275 also has within-record caption/TXT agreement (MGI0–4 3/2/4/3/0) but remains held in its protected Test-crossing group. Training/00562 has within-record caption/TXT agreement (MGI0–4 0/0/2/4/6) but remains pending in a multi-image Training group. Next: Training/00564. No Test access, training, label change, or split change.

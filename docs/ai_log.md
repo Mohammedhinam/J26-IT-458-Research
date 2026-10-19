@@ -599,3 +599,683 @@ Prompt summary: Owner requested scoped commits and push before continuing genera
 What was accepted / rejected: Review code/tests and aggregate reports accepted; local case evidence, originals and unfinished JPEG helper excluded.
 How I verified it (row counts, output check, docs): Explicit staged-file review, existing eight generated tests and 172-source preflight evidence; no reruns of datasets or models. Existing UI build-script trailing whitespace retained to preserve recorded source hashes.
 What I changed myself: Owner requested save and push; owner understanding remains to be filled.
+
+Date: 2026-10-16
+Tool: Codex
+Task: Generated-only lossless JPEG metadata sanitisation qualification
+Prompt summary: Remove private metadata while preserving generated JPEG pixels, ICC, dimensions, sources and annotation association; no real172processing or upload packages.
+What was accepted / rejected: Narrow baseline RGB8 marker-copy workflow accepted for synthetic qualification only; unknown profiles/rendering metadata/orientation rejected; real processing and Personal Gemini permission remain pending.
+How I verified it (row counts, output check, docs): 35 generated tests passed, zero failed/errors/skipped; independent decoded RGB and CMS Lab equality; source/output/ICC/scan hashes and JUnit saved. No historical runs repeated.
+What I changed myself: Owner understanding to be filled; no clinical labels or approvals changed.
+
+Date: 2026-10-16
+Tool: Codex
+Task: Read-only JPEG/ICC/XMP compatibility preflight for 172 development review candidates
+Prompt summary: Compare selected development source headers and metadata with the generated-qualified sanitiser, without RGB decoding or release.
+What was accepted / rejected: All 172 header/ICC structures and XMP packets fit the tested structural rules; real ICC hash was not allowlisted because its desc/cprt text has not been approved non-identifying; Gemini permission remains unresolved.
+How I verified it (row counts, output check, docs): Reused 172 hash-bound case evidence; current hashes/stat, baseline RGB8 headers, shared ICC hash/size/tag signatures and XMP schemas checked; 172 pass, 0 structural failures, 0 Test aliases accessed, 0 pixel decodes. Aggregate report only; no ICC/XMP values saved.
+What I changed myself: Owner understanding remains to be filled; no original image, label, split or approval changed.
+
+
+Date: 2026-10-16
+Tool: Codex
+Task: Local AI-assisted visual screen of held Vision development images
+Prompt summary: Compare selected Training/Validation RGB previews, captions and YOLO evidence; prepare separate review CSV without label changes or Test access.
+What was accepted / rejected: Accepted only caption-derived pending candidates and non-clinical visual notes. No AI grade suggestions, approvals, label edits, split changes, Test access, training, upload, commit or push.
+How I verified it (row counts, output check, docs): 172 rows (43 Training,129 Validation), 43 contact sheets; current image and TXT hashes 172/172 matched cached evidence; all review status fields pending, all suggested-grade/reviewer/date fields blank; protected aliases absent. Aggregate report created.
+What I changed myself: Owner decision fields remain blank; owner should add their own understanding after reviewing the handoff.
+
+Date: 2026-10-16
+Tool: Codex
+Task: Local seed-43 replication of the exploratory B1 last-block Vision pilot
+Prompt summary: Reuse hash-bound v2 initialization and exact v3 recipe on the same development participants, change only the random seed, use local MPS, and preserve all original research data and gates.
+What was accepted / rejected: Accepted one local experimental run under the owner's explicit autonomous-exploration request. No labels, clinical decisions, split/manifest changes, Test access, external upload, final model selection, or additional training were accepted.
+How I verified it (row counts, output check, docs): Generated MPS ResNet step passed; focused tests 9 passed/0 failed/0 skipped; 680/53 package verification and IDs/labels checked; saved v2/v3/seed43 predictions independently recomputed and aligned across 53 Validation IDs. Best epoch 2; frozen tensor checks passed.
+What I changed myself: Added an isolated seed43 wrapper/test, experiment report, and handoff/diary entries. Owner understanding remains to be filled; no commit or push.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Read-only cached-evidence triage for the existing 52 held Training records
+Prompt summary: Reuse the existing reviewer package to order caption/TXT agreement and conflict evidence without changing labels or training eligibility.
+What was accepted / rejected: Accepted only cached Training evidence summary. No AI grade suggestions, clinical approvals, label or split changes, Test/Validation payload access, training, package edits, upload, commit or push.
+How I verified it (row counts, output check, docs): Parsed 52 cached Training records and decision rows; all52 remain pending. Compared cached caption maximum, TXT grade histogram and stored complete-caption checks; found14 histogram conflicts,12 tooth-count reviews,2 partial records, one additional unsupported/count case, four group companions and one NP015 hold. Input hashes recorded in the triage report.
+What I changed myself: Added `docs/vision_training52_evidence_triage_v1.md` and updated the project handoff/diary. No original source data changed; owner understanding remains to be filled.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only visual/annotation comparison of Training/00025
+Prompt summary: Compare the one held Training case's original RGB image, three captions and YOLO TXT annotation.
+What was accepted / rejected: Accepted a technical comparison and temporary visual box overlay only. No clinical grade adjudication, tooth-ID inference from TXT order, annotation edit, approval, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Read exactly three CSV rows and the matching TXT; original image is RGB 7286x4863. Caption/TXT histograms both contain12 teeth but differ by one MGI2 vs MGI0 count; both maxima are4. Visually inspected only this image and its TXT overlay; original SHA-256s are recorded in the triage report.
+What I changed myself: Added a case-specific evidence section to the triage report and handoff; source image, CSV and TXT remain unchanged. Reviewer decision stays pending.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only visual/annotation comparison of Training/00052
+Prompt summary: Compare one held Training image with its three caption variants and YOLO TXT, continuing the 52-image review queue.
+What was accepted / rejected: Accepted only a technical discrepancy record and temporary box overlay. No clinical grade adjudication, FDI inference from TXT row order, label/split changes, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Read exactly three caption rows and the matching 14-line TXT; source image is RGB 7286x4863. Captions report MGI0–4 counts 1/1/1/7/2; mapped TXT counts 1/1/1/8/1. Both have 12 tooth entries and max grade4. Source hashes are recorded in the triage report; `git diff --check` passed. No test suite was run for this documentation-only update.
+What I changed myself: Added the case evidence to `docs/vision_training52_evidence_triage_v1.md` and refreshed the handoff/diary. The image, CSV, TXT, labels, hold and split remain unchanged; reviewer decision remains pending.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only visual/annotation comparison of Training/00097
+Prompt summary: Compare one held Training image with all three captions and its YOLO TXT, continuing the explicit conflict queue.
+What was accepted / rejected: Accepted a technical annotation-conflict finding and temporary box overlay only. No clinical label choice, FDI identity inference, source edit, approval, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Read exactly three caption rows and the matching 14-line TXT; image is RGB 7286x4863. The three captions agree at MGI0–4 counts 0/1/6/5/0; mapped TXT counts are 2/5/5/0/0. Both describe 12 teeth but their maximum differs (3 vs 2). Current image/TXT hashes match the existing 172-image review CSV; current captions hash matches the recorded source hash. `git diff --check` passed; no tests were run for this documentation-only update.
+What I changed myself: Added a case-specific report entry and updated the handoff/diary. Sources and pending/held status remain unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only visual/annotation comparison of Training/00122
+Prompt summary: Continue the held Training caption/TXT conflict queue with one original RGB image and its annotations.
+What was accepted / rejected: Accepted technical histogram/box review only. No clinical grade decision, relabeling, tooth-ID inference from TXT order, split change, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Read exactly three caption rows and the 14-line TXT; image is RGB 7286x4863. Caption MGI0–4 counts are 0/1/0/1/10; mapped TXT counts 0/0/0/2/10. Both describe12 teeth and max4. Image/TXT hashes match the cached 172-image review CSV; captions hash matches recorded source. The initial overlay attempt had a script path/name error and made no source changes; corrected temporary overlay rendered successfully. `git diff --check` passed; no tests were run for this documentation-only update.
+What I changed myself: Recorded the case and updated handoff/diary. Source files and pending/held status are unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only visual/annotation comparison of Training/00224
+Prompt summary: Continue one case in the held Training conflict queue; compare three captions, TXT histogram, and original RGB/box locations.
+What was accepted / rejected: Accepted a technical count discrepancy only. No clinical adjudication, label change, FDI inference from TXT order, split/hold change, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Three caption rows describe12 positions; 14 TXT lines include2 jaw ROIs and12 teeth. Captions map to MGI0–4 counts 0/2/8/2/0; TXT maps to 0/3/7/2/0. Both maxima are3. Source image/TXT hashes match the existing 172-image review CSV; caption CSV hash matches the recorded source. `git diff --check` passed; no tests run for documentation-only change.
+What I changed myself: Added case details to the triage report and updated the handoff/diary. Source and pending/held status remain unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only visual/annotation comparison of Training/00277
+Prompt summary: Compare the next held Training caption/TXT conflict and visually inspect only its original RGB image with the annotation overlay.
+What was accepted / rejected: Accepted a technical histogram mismatch and temporary overlay only. No clinical grade choice, FDI identity inference, relabeling, split change, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Three caption rows agree; TXT has12 tooth boxes plus2 jaw ROIs. Caption MGI0–4 counts 0/0/0/3/9; mapped TXT counts 0/0/0/2/10. Max4 matches. Image/TXT hashes match cached 172-image review evidence; captions CSV hash matches prior record. `git diff --check` passed; no tests run for documentation-only change.
+What I changed myself: Added a case-specific entry to the evidence report and updated handoff/diary. Original files and pending/held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only visual/annotation comparison of Training/00289
+Prompt summary: Continue the Training conflict queue with original image, captions and TXT comparison for one case.
+What was accepted / rejected: Accepted only technical grade-count comparison and temporary box overlay. No clinical correction, FDI identity inference, annotation edit, approval, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Three captions agree; mapped TXT has12 tooth boxes plus2 jaw ROIs. Captions map to MGI0–4 counts 0/0/0/6/6; TXT maps to 0/0/0/5/7. Both maxima are4. Image/TXT hashes match existing cached review; caption CSV hash matches recorded source; temporary overlay rendered. `git diff --check` passed; no tests run for docs-only change.
+What I changed myself: Added case detail to report/handoff/diary. Originals and pending/held status remain unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only visual/annotation comparison of Training/00298
+Prompt summary: Continue the held Training caption/TXT conflict queue for one original image.
+What was accepted / rejected: Accepted a count comparison and temporary overlay only. No clinical grade decision, FDI identity inference, label edit, approval, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Three captions agree; TXT contains12 tooth boxes plus2 jaw ROIs. Caption MGI0–4 counts 0/0/0/5/7; mapped TXT counts 0/0/0/6/6. Both maxima4. Image/TXT hashes match cached review evidence; captions hash matches prior source; overlay rendered. `git diff --check` passed; no tests run for documentation-only update.
+What I changed myself: Added the case to the report/handoff/diary. Originals and pending status remain unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only visual/annotation comparison of Training/00358
+Prompt summary: Compare the next held-image grade-histogram conflict using three captions, YOLO TXT and original RGB with box locations.
+What was accepted / rejected: Accepted a jaw-localized technical discrepancy only. No clinical grade decision, relabel, FDI tooth identity inference, source modification, approval, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Three captions agree; TXT contains12 tooth boxes and2 jaw ROIs. Caption MGI0–4 counts 0/0/0/6/6; mapped TXT counts 0/0/6/6/0. Upper TXT boxes (class5→MGI3) align by jaw with caption group; lower TXT boxes (class4→MGI2) conflict with caption MGI4 group. Maxima differ 4 vs3. Hashes match cached review; overlay rendered; `git diff --check` passed.
+What I changed myself: Recorded the finding in report and handoff/diary; sources and held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only visual/annotation comparison of Training/00469
+Prompt summary: Continue held Training conflict review using exactly one image, its captions, TXT and visual box overlay.
+What was accepted / rejected: Accepted technical histogram comparison only. No clinical grade adjudication, label edit, FDI inference, split/hold change, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Captions agree; 12 tooth entries in each source. Caption MGI0–4 counts 0/0/4/4/4; mapped TXT counts 0/0/0/6/6. Both maxima4. Image/TXT hashes match existing cached review CSV; captions hash matches saved source; overlay rendered. `git diff --check` passed; no tests run for docs-only change.
+What I changed myself: Added a case-specific evidence report entry and refreshed the handoff/diary. Source and held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only visual/annotation comparison of Training/00575
+Prompt summary: Continue the held Training conflict queue for one image, checking caption/TXT grade counts and overlay placement.
+What was accepted / rejected: Accepted only a technical histogram note and temporary overlay. No clinical grade decision, FDI inference, label or split change, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Three captions agree; 12 TXT tooth rows plus2 ROI rows. Caption MGI0–4 counts 0/0/0/9/3; mapped TXT counts 0/0/0/8/4. Both max4. Image/TXT hashes match the existing 172-image review CSV; captions hash matches recorded source; overlay rendered. `git diff --check` passed; no tests run for docs-only change.
+What I changed myself: Added report/handoff/diary evidence; originals and pending/held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only visual/annotation comparison of Training/00649
+Prompt summary: Continue one case in the caption/TXT conflict queue and verify box location on its original RGB image.
+What was accepted / rejected: Accepted technical MGI histogram comparison only. No clinical correction, FDI inference, source/label/split modification, approval, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Captions agree; 12 TXT tooth boxes plus2 ROI rows. Caption MGI0–4 counts 0/0/1/8/3; mapped TXT counts 0/0/2/7/3. Both maxima4. Image/TXT hashes match cached review evidence; caption hash matches saved source; overlay rendered. `git diff --check` passed; no tests run for docs-only update.
+What I changed myself: Added report entry and updated handoff/diary. Originals and pending/held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only visual/annotation comparison of Training/00709
+Prompt summary: Finish the 14-case explicit Training caption/TXT conflict queue with one-case evidence review.
+What was accepted / rejected: Accepted a technical MGI1/2 histogram conflict and temporary visual overlay only. No clinical grade determination, relabeling, FDI inference, approval, split/hold change, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Three captions agree; 12 TXT tooth boxes plus2 ROI rows. Captions map to MGI0–4 counts 0/0/12/0/0; TXT maps to 0/9/3/0/0. Both maxima2. Image/TXT hashes match cached 172-review evidence; caption hash matches source; overlay rendered. `git diff --check` passed; no tests run for docs-only update.
+What I changed myself: Added final explicit-conflict case entry to the report and updated handoff/diary. Source and pending/held status remain unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only count review of Training/00060
+Prompt summary: Start the separate tooth-count review queue by comparing one Training image, its three captions, and TXT boxes.
+What was accepted / rejected: Accepted a technical count anomaly and temporary overlay only. No clinical grade correction, FDI inference, source edit, approval, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Three caption variants describe12 positions; TXT has13 tooth boxes plus2 jaw ROIs. Caption MGI0–4 counts are 5/3/4/0/0; mapped TXT counts are 5/4/4/0/0. Image/TXT hashes match the cached review CSV; caption hash matches source; overlay rendered. `git diff --check` passed; no tests for docs-only change.
+What I changed myself: Added the case to the evidence report and updated handoff/diary. Original files and pending/held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only count review of Training/00085
+Prompt summary: Continue the held Training tooth-count review with one image, captions, TXT and overlay.
+What was accepted / rejected: Accepted a structural tooth-count discrepancy only. No label/grade change, clinical decision, FDI inference, split change, approval, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Three captions describe12 teeth; TXT has13 tooth boxes plus2 ROI rows. Caption MGI0–4 counts 2/8/2/0/0; mapped TXT counts 2/9/2/0/0. Image/TXT hashes match cached review evidence; caption hash matches saved source; overlay rendered. `git diff --check` passed; no tests run for docs-only update.
+What I changed myself: Added a case entry and updated report/handoff/diary. Original sources and pending/held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only count and source-quality review of Training/00484
+Prompt summary: Compare one held Training image, caption variants and TXT boxes; inspect only for visible image-integrity anomalies.
+What was accepted / rejected: Accepted a count discrepancy and a non-diagnostic visual seam/patch flag. No attribution of cause, clinical grade decision, relabel, FDI inference, source edit, approval, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Captions describe12 positions with MGI0–4 counts 0/0/0/1/11; TXT has13 tooth boxes with counts 0/0/0/2/11. Image shows hard horizontal/right-edge seams; source cause unknown. Image/TXT hashes match the cached review CSV; caption hash matches source; overlay rendered. `git diff --check` passed; no tests run for docs-only update.
+What I changed myself: Added the count and visual-anomaly finding to the case report and updated handoff/diary. Original data and pending/held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only visual/annotation comparison of Training/00576
+Prompt summary: Compare the next held Training caption/TXT conflict and verify source hashes/box regions.
+What was accepted / rejected: Accepted a technical count mismatch and temporary overlay only. No clinical adjudication, grade correction, FDI inference, split/hold change, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Captions agree; 12 TXT tooth boxes plus2 jaw ROIs. Caption MGI0–4 counts 0/0/0/9/3; TXT maps to 0/0/0/10/2. Both maxima4. Source image/TXT hashes match cached 172-review evidence; captions hash matches recorded source; overlay rendered. `git diff --check` passed; no tests run for docs-only update.
+What I changed myself: Added the case to the report and refreshed handoff/diary. Originals and pending/held status unchanged.
+
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only count and grade-histogram review of Training/00537
+Prompt summary: Compare the held Training image, all three caption variants, mapped TXT boxes, source hashes and visual box coverage.
+What was accepted / rejected: Accepted a count/histogram discrepancy only. No grade correction, FDI inference, clinical approval, source edit, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Captions describe 12 positions with MGI0–4 counts 0/0/0/5/7; mapped TXT has 13 tooth boxes with counts 0/0/4/6/3. Max grade 4 matches but the distributions do not. Image/TXT hashes match cached review evidence; caption hash matches source; temporary overlay rendered.
+What I changed myself: Added the case evidence and this log/diary entry; updated the next review pointer. Original files and pending/held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only count and grade-histogram review of Training/00557
+Prompt summary: Compare the held Training image, all three caption variants, mapped TXT boxes, source hashes and visual box coverage.
+What was accepted / rejected: Accepted a count/histogram discrepancy only. No grade correction, FDI inference, clinical approval, source edit, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Captions state 12 positions with MGI0–4 counts 0/0/0/10/2; mapped TXT has 11 tooth boxes with counts 0/0/0/9/2 plus two jaw ROI boxes. Overlay shows six upper and five lower boxes. Image/TXT hashes match cached evidence; caption hash matches source; coordinates parsed as valid.
+What I changed myself: Added the case evidence and log entry, and updated the review pointer. Original files and pending/held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only count and duplicate-hold review of Training/00568
+Prompt summary: Compare only the Training alias, its captions and TXT boxes; honor its existing protected content-group status.
+What was accepted / rejected: Accepted a one-box/MGI-4 histogram discrepancy only. No use of its Test companion, grade correction, FDI inference, group approval, source edit, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Current Training image SHA matches the verified split-manifest hash. Captions state 12 positions with counts 0/0/2/6/4; TXT has 13 tooth boxes with counts 0/0/2/6/5 plus two ROI rows. Temporary overlay rendered. TXT lacks tooth IDs, so the extra box cannot be assigned. Existing cached group hold is preserved.
+What I changed myself: Added the Training-only case evidence and this log entry; updated the next review pointer. No source or hold changed.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only count and histogram review of Training/00602
+Prompt summary: Check one held Training image against its three captions and TXT, reusing cached source hash and annotation evidence.
+What was accepted / rejected: Accepted one extra TXT tooth box/MGI-3 count as a structural discrepancy. No clinical correction, FDI inference, relabel, split/hold change, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Image SHA matches the verified split manifest. Captions state12 positions with MGI0–4 counts 0/0/0/6/6; TXT has13 tooth boxes with counts 0/0/0/7/6 plus two jaw ROI boxes. All coordinates parsed valid; overlay rendered.
+What I changed myself: Added case evidence and log entry, updated diary/handoff. Source files and pending/held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only count and histogram review of Training/00657
+Prompt summary: Compare one held Training image with its captions, TXT boxes and prior hash-bound evidence.
+What was accepted / rejected: Accepted one extra mapped MGI-3 TXT box only. No grade correction, FDI inference, approval, source/split change, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Image SHA matches the verified split manifest. Captions state12 positions with MGI0–4 counts 0/0/1/7/4; TXT has13 tooth boxes with counts 0/0/1/8/4 plus two ROI rows. TXT coordinates parsed valid; overlay rendered.
+What I changed myself: Added case evidence and the log entry, updated diary/handoff. Source and pending/held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only count and histogram review of Training/00667
+Prompt summary: Compare one held Training image with its three caption variants, mapped TXT boxes and prior hash-bound inventory.
+What was accepted / rejected: Accepted one additional TXT tooth box/MGI-3 count only. No clinical label correction, FDI inference, source/split change, approval, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Image SHA matches prior manifest. Captions state12 positions with MGI0–4 counts 0/0/2/10/0; TXT has13 tooth boxes with counts 0/0/2/11/0 plus two ROI rows. Coordinates parsed valid; overlay rendered.
+What I changed myself: Added the evidence/log entry and updated diary/handoff. Original image, annotations and pending/held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only count and histogram review of Training/00673
+Prompt summary: Compare a held Training image, its three caption variants, TXT boxes and hash-bound source inventory.
+What was accepted / rejected: Accepted one fewer TXT tooth box/MGI-2 count only. No clinical correction, FDI inference, approval, source/split edit, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Image SHA matches prior manifest. Captions state12 positions with MGI0–4 counts 0/0/7/2/3; TXT has11 tooth boxes with counts 0/0/6/2/3 plus two jaw ROI boxes. Coordinates parsed valid; temporary overlay rendered.
+What I changed myself: Added case evidence and log entry, updated diary/handoff. Original files and pending/held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only count and histogram review of Training/00676
+Prompt summary: Compare one held Training image, three caption variants, TXT boxes and prior hash-bound inventory.
+What was accepted / rejected: Accepted one fewer TXT tooth box/MGI-3 count only. No label change, FDI inference, clinical approval, source/split edit, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Image SHA matches the verified split manifest. Captions state12 positions with MGI0–4 counts 0/0/0/8/4; TXT has11 tooth boxes with counts 0/0/0/7/4 plus two jaw ROI boxes. Coordinates parsed valid; overlay rendered.
+What I changed myself: Added case evidence/log and diary/handoff update. Source and pending/held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only count and histogram review of Training/00702
+Prompt summary: Compare one held Training image, its caption variants, mapped TXT boxes and prior source-hash inventory.
+What was accepted / rejected: Accepted one additional TXT tooth box/MGI-3 count only. No clinical grade correction, FDI inference, source/split change, approval, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Image SHA matches the verified split manifest. Captions state12 positions with MGI0–4 counts 0/0/8/4/0; TXT has13 tooth boxes with counts 0/0/8/5/0 plus two jaw ROI boxes. Coordinates parsed valid; overlay rendered.
+What I changed myself: Added case evidence/log and diary/handoff update. Original files and pending/held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only unsupported-caption review of Training/00162
+Prompt summary: Inspect the flagged Training image and compare all caption clauses with TXT MGI counts.
+What was accepted / rejected: Accepted that the caption evidence is unresolved because grades/counts are stated without tooth positions. Rejected assigning grade3 from TXT alone. No relabel, clinical approval, source/split change, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Image SHA matches prior split manifest. Three captions state 12 MGI3 positions but also unlocated non-inflamed and MGI1/2/4 counts; TXT has12 MGI3 tooth boxes plus two ROI rows. Coordinates valid; overlay rendered. Cached parser flags declared tooth-count mismatch and unsupported grade clause.
+What I changed myself: Added a focused evidence entry and updated diary/handoff. Original source and pending/held status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only annotation/group review of Training/00271
+Prompt summary: Check one Training alias against its captions and TXT while preserving protected Test-group isolation.
+What was accepted / rejected: Accepted within-image caption/TXT count and histogram consistency only. No Test comparison, identity inference, clinical approval, relabel, split change, training, upload, commit or push.
+How I verified it (row counts, output check, docs): Image SHA matches prior manifest; captions state12 positions and caption/TXT MGI0–4 histograms both equal2/1/3/4/2; TXT has12 tooth boxes plus two ROI boxes, coordinates valid. Overlay rendered. Group is cached as spanning Test and remains held.
+What I changed myself: Added the Training-only evidence and log/diary update. Original files and pending status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only annotation/group review of Training/00272
+Prompt summary: Compare one Training alias with its captions and TXT while keeping its protected Test group isolated.
+What was accepted / rejected: Accepted within-image caption/TXT agreement only. No Test access/comparison, identity inference, clinical approval, label/split change, training, upload, commit or push.
+How I verified it (row counts, output check, docs): Image SHA matches prior manifest; captions and TXT both show12 tooth boxes and MGI0–4 histogram0/2/2/5/3; two ROI boxes; valid coordinates; overlay rendered. Cached group spans Test and remains held.
+What I changed myself: Added Training-only case evidence and log/diary/handoff update. Source and pending status unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only annotation/group review of Training/00273
+Prompt summary: Review only the Training alias, captions, TXT and overlay; preserve the protected Test group hold.
+What was accepted / rejected: Accepted within-record caption/TXT count/histogram consistency only. No Test access, group or participant decision, clinical approval, relabel, training, upload, commit or push.
+How I verified it (row counts, output check, docs): Image SHA matches prior manifest; three captions and TXT both show12 teeth, MGI0–4 counts0/1/3/4/4. TXT has two jaw ROI rows, valid normalized coordinates. Overlay rendered. Group status includes Test and remains held.
+What I changed myself: Added Training-only evidence and log/diary update. Sources and statuses unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only annotation/group review of Training/00275
+Prompt summary: Compare the Training alias with its three captions and TXT; preserve protected Test split isolation.
+What was accepted / rejected: Accepted within-record caption/TXT count/histogram agreement only. No Test access, participant/group inference, label approval/change, training, upload, commit or push.
+How I verified it (row counts, output check, docs): Image SHA matches prior split manifest. Captions and TXT both show12 tooth boxes and MGI0–4 counts3/2/4/3/0; two ROI rows and valid coordinates; overlay rendered. Cached group spans Test and remains held.
+What I changed myself: Added this Training-only case record and log/diary/handoff note. Sources and statuses unchanged.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Focused read-only annotation/group review of Training/00562
+Prompt summary: Check the Training image, captions and TXT, using existing group metadata without changing group decisions.
+What was accepted / rejected: Accepted within-record count/histogram consistency. No participant identity or duplicate decision, grade approval, relabel, split change, training, Test access, upload, commit or push.
+How I verified it (row counts, output check, docs): Image SHA matches prior manifest. Captions/TXT each support12 tooth records and MGI0–4 counts0/0/2/4/6; two ROI rows, valid coordinates; overlay rendered. Existing two-image Training group remains unapproved.
+What I changed myself: Added case evidence and log/diary/handoff update. No source/status changes.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Explain whether reverse engineering can improve project performance
+Prompt summary: Owner asked whether a reverse-engineering approach suits this project and can increase accuracy.
+What was accepted / rejected: Advice only; no owner acceptance or research decision recorded. Distinguished studying/reproducing a pipeline and development error analysis from an accuracy guarantee. Recommended qualified label/support review before further Vision tuning; retained frozen Tabular evaluation and existing scope.
+How I verified it (row counts, output check, docs): Read AGENTS.md, current handoff and saved seed-43 report; a read-only agent checked Tabular summaries. Vision same-53 Validation accuracy was 50.94% (seed42) and 43.40% (seed43), Grade2 recall 1/13 in both. Tabular final Test AUROC was 0.760654, not accuracy; its one-run permission is consumed. Checked official PyTorch transfer-learning and scikit-learn data-leakage documentation. No data/model/Test payload access or new experiment.
+What I changed myself: Codex appended this discussion record and a diary line only. Owner's own changes/understanding: not recorded; owner to complete.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Assess current Component 2 level and PP1 readiness
+Prompt summary: Owner asked what stage the project has reached and whether it is ready for PP1.
+What was accepted / rejected: Status assessment only; no scope or model decision. Identified questionnaire demonstration as implemented/previously verified and Vision as provisional saved-evidence demonstration. Did not claim both required live functions complete, a completion percentage, or guaranteed PP1 acceptance.
+How I verified it (row counts, output check, docs): Read delivery v3 and its verification JSON (16 Oct: 34 focused tests, 17 browser checks), current handoff, and SHAP summary. Read-only agent compared delivery against AGENTS two-function requirement. New-photo runtime is inactive, three saved Vision examples/nine views available, final Vision Test pending. Current curl reachability check for 127.0.0.1:8770 failed with exit7/HTTP000; the demo server is not reachable now. No server launch, training, evaluation or data/model payload access.
+What I changed myself: Codex appended this assessment and diary line only. Owner's understanding/rehearsal: not recorded; owner to complete.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Clarify whether TXT bounding boxes were used for model training or demo output
+Prompt summary: Owner asked whether TXT training had already happened and quoted the distinction between RGB input, TXT annotations and Grad-CAM.
+What was accepted / rejected: Clarified completed image-level classifier training versus unimplemented box-supervised detection. TXT contributes to annotation QA/eligibility, while training takes normalized RGB arrays and a caption-derived provisional image-maximum grade. No request to implement a new overlay or detector was inferred.
+How I verified it (row counts, output check, docs): Read the pilot Dataset/epoch loop, seed43 wrapper, bundle provenance, verify_caption_labels.verify_record and delivery v3. Read-only agent checked demo Views: original/heatmap/Grad-CAM overlay only, no TXT boxes. Consulted official TorchVision detection tutorial to distinguish detector predictions from drawing supplied annotations. No original image/TXT/model/Test payload or training/inference accessed.
+What I changed myself: Codex appended this explanation record and diary line only. Owner's own changes/understanding: not recorded; owner to complete.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Report current branch-specific accuracy
+Prompt summary: Owner asked for project accuracy.
+What was accepted / rejected: Reported independent branch metrics; no combined accuracy or clinical claim. Distinguished provisional Vision Validation accuracy from frozen Questionnaire Test accuracy and AUROC.
+How I verified it (row counts, output check, docs): Read saved seed43 report and final Tabular Test report. Vision seed42 v3 accuracy50.94%, seed43 replication43.40%, same53 Validation records. Calculated Questionnaire XGBoost accuracy at frozen0.26 cutoff as (982TN+217TP)/1563=76.711452%; AUROC0.760654. Always-No accuracy1175/1563=75.175944%, illustrating class imbalance. No raw data access, training, inference or evaluation rerun.
+What I changed myself: Codex appended metric explanation to AI log and diary only. Owner's own changes/understanding: not recorded; owner to complete.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Correct omission of the 52.21% Vision experiment
+Prompt summary: Owner asked why an earlier answer said52% while the latest table listed50.94% and43.40%.
+What was accepted / rejected: Acknowledged the omitted distinct experiment. Explained nested EfficientNet cached-feature/classifier-head OOF accuracy52.2059% on680Training records versus ResNet same53Validation runs; did not rank different cohorts or claim final Test accuracy.
+How I verified it (row counts, output check, docs): Read docs/vision_nested_feature_probe_results_v1.md:355/680 correct, accuracy0.522059, macro-F10.346429, five outer folds with inner head selection,95Logistic fits,0new neural optimizer steps, no full680deployment refit. Saved majority accuracy0.530882 underscores why accuracy alone is insufficient. No new inference/training/evaluation.
+What I changed myself: Codex appended this clarification and diary line. Owner's own changes/understanding: not recorded; owner to complete.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Explain whether image-plus-TXT box supervision could improve accuracy
+Prompt summary: Owner asked whether training with TXT annotations would produce better accuracy.
+What was accepted / rejected: Explained possible spatial-supervision benefit as an untested hypothesis, not an improvement guarantee. TXT alone is not image training. Detector/tooth-region supervision would be a separately agreed supplementary method; current caption-based image-maximum target remains unchanged. No training or scope change initiated.
+How I verified it (row counts, output check, docs): Reused verified classifier/detection distinctions and read Training52 cached-evidence triage:14 caption/TXT histogram conflicts,12 tooth-count reviews, all52pending. These findings do not establish clinical truth. Existing five-grade support/group limitations remain. Any future comparison must use approved labels and matched protected evaluation boundaries; detector mAP cannot be treated as image-level accuracy. No new data/model/Test access or experiment.
+What I changed myself: Codex appended advice record and diary line only. Owner's own changes/understanding: not recorded; owner to complete.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Correct interpretation of the proposed separate TXT-supervised detector option
+Prompt summary: Owner clarified that the question was about separately training with image+TXT annotations and adding a detector-output option beside MGI and Heatmap in the PP1 demo, not merely drawing existing annotations or improving the current classifier.
+What was accepted / rejected: Acknowledged earlier misunderstanding. Explained a possible supplementary detector and separate predicted-box view while retaining the existing image classifier and Grad-CAM. No claim that detector training/UI is completed; no label, method or final research-scope decision silently activated.
+How I verified it (row counts, output check, docs): Reused previously checked pilot Dataset, demo Views, current delivery and Training52 triage. Current pipeline has no completed box-supervised detector or predicted-box UI. Image+TXT annotations would supervise training; a trained detector can predict from a new photo without its annotation TXT. Existing review and protocol requirements remain.
+What I changed myself: Codex appended this clarification and diary line only; no code, training, inference or source change. Owner's own changes/understanding: not recorded; owner to complete.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Compare Mac and Colab for a possible supplementary detector
+Prompt summary: Owner asked whether detector training needs Colab or can run on the Mac.
+What was accepted / rejected: Explained local small-model feasibility with a compatibility/speed check before any real run; Colab GPU remains the repository's default Vision training environment. No detector/architecture, training authorization or external upload inferred.
+How I verified it (row counts, output check, docs): Read-only system_profiler showed MacBookAir AppleM4/16GB. Existing .venv Python reported torch2.11.0, arm64, mps_built=True and mps_available=True. Official Ultralytics training docs confirm AppleSilicon MPS support. These checks do not verify a selected detector's training/inference or provide runtime/memory estimates. No installs, downloads, training, inference or project data access.
+What I changed myself: Codex appended hardware advice and diary line only. Owner's own changes/understanding: not recorded; owner to complete.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Explicit local registered-photo live-demo integration
+Prompt summary: Finish safe PP1 engineering using the existing model, B1 input, upload API/UI and Grad-CAM; preserve scientific and dataset gates.
+What was accepted / rejected: Accepted hash-bound opt-in runtime startup and generated-only end-to-end verification. The owner confirmed the attached PNG has uncertain internet/other provenance; it was not registered or inferred. No label/split/hold approval, real dental-image processing, training, Test access, installs, downloads, cloud upload, commit or push.
+How I verified it (row counts, output check, docs): 101 focused tests passed, zero failed/errors/skipped; 24 unique browser checks passed against the pinned real v3 checkpoint and generated JPEG. Input/registration/checkpoint hashes verified; three40x24RGB views aligned; fictional questionnaire21.41%->24.41%->21.41% and reset worked. Initial immutable-registry bug fixed; browser scenario harness omission corrected and initial evidence preserved. Local installed Playwright used after MCP upload roots pointed to another project.
+What I changed myself: Added registration loader/tests/runbook/evidence; wired all-or-none startup arguments and safe decoder errors; improved/reset upload UI and rebuilt using existing dependencies. Owner understanding remains to be filled. Real source-compatible non-study JPEG verification remains pending.
+
+Date: 2026-10-17
+Tool: Codex (three owner-requested parallel agents)
+Task: Reverse-engineer image-accuracy limitations and prepare a controlled improvement trial
+Prompt summary: Owner requested multiple agents to investigate/fix image accuracy and challenged whether all datasets are problematic.
+What was accepted / rejected: Investigated code, saved metrics and official source compatibility. Rejected blaming all datasets or treating held annotation conflicts as a proven cause in the680included records. Added an explicit seed+backend/runtime interpretation correction. Preserved original source/labels/splits/model and concurrent demo work. No accuracy improvement, new training permission, clinical label approval or automatic detector scope was invented.
+How I verified it (row counts, output check, docs): Three read-only agents reviewed actual trainer/preprocessor, failure reports and primary dataset metadata. Nested52.21%=355/680 is below majority53.09%=361/680 but macro-F1.346429 exceeds.173391; existing EfficientNet work had zero neural optimizer steps. Agent executed generated-only stripe/constant/ramp checks: currentB1aliasing reproduced; candidate antialias primitive has up to1.907349e-6constant error and is not qualified. Saved reviewer receipt with provenance; root JSON/report/plan consistency checks passed. Verified v3TeslaT4/CUDA versus follow-upAppleMPS, so seed alone was not isolated. Primary Mendeley/MIO metadata checked; no archives downloaded. No prior test suite, dental training/inference, source/held/Test payload access, upload, installs, commit or push.
+What I changed myself: Codex added investigation report, generated-observation receipt and a prospective exact10-fit matched EfficientNet plan; added interpretation erratum to seed43report and handoff pointer; appended diary/log. Frozen runner/code/weights/metrics unchanged. Owner's own changes/understanding and decision on new bounded execution: pending.
+
+Date: 2026-10-17
+Tool: Codex (owner-requested parallel implementation/test/review work)
+Task: Implement and qualify the approved matched EfficientNet runner
+Prompt summary: Owner approved the exact10-fit improvement comparison with “so fix panuu all persmion i alowed do it i will see good news”.
+What was accepted / rejected: Accepted this bounded local experiment only, retaining all provisional/clinical limits and unchanged680Training/folds/B1labels. No data/label/split change, detector, model promotion or Test evaluation inferred. Showed/explained the Training-only loader, freezing, matched initialization and final-epoch scoring blocks.
+How I verified it (row counts, output check, docs): Metadata-only agent verified680IDs/support12/84/223/361 and exactfivefoldSHA, officialcachedweightsSHA and ignoredoutputs.26pre-run generated tests passed, actualEfficientNetMPSgeneratedsteps passed botharms; independentreview checked exact5124/414724trainableparameters and frozenBN/stochasticdepth. No downloads/installs. The later reporting-schema defect was not covered by those initial26tests; currentpostpatchsuite has27passes, not53cumulative.
+What I changed myself: Codex added src/vision/efficientnet_adaptation_v1.py, generatedtests and qualificationreceipt. Owner's own changes/understanding: not recorded; owner to complete.
+
+Date: 2026-10-17
+Tool: Codex (independent saved-output reviewer)
+Task: Execute10fits and repair/report actual mixed results without rerunning training
+Prompt summary: Run the approved head-only versus final-block comparison and report real results, including worse outcomes.
+What was accepted / rejected: Exactly10realMPSfits/50epochs completed, final-onlyOOF on680Training. Head-only46.3235%/F1.336195; final-block46.7647%/F1.341579, net3morecorrect. Did not claim overall accuracy fixed: both below historical52.21%accuracy and.346429F1. Originalmodel/demo not replaced; noautoextension/seedsearch/replay. Labels/splits/181holds/NP015/Test unchanged.
+How I verified it (row counts, output check, docs): All10checkpoints andOOF saved before KeyError from reporting keybrier versusmulticlass_brier. PreservedFAILED/claim/executedsource; fixedreportinghelper and recoveredfromsavedoutputs with0newfits/0inference/0predictionchanges. Current27generatedtests passed;135independent saved-outputassertions passed,maxmetricdifference1.11e-16. Ten360-tensorcheckpoint checks and officialinitialreconstruction verified358/357frozenstates unchanged, pairedinitial/shuffle andfit-onlyweights. Instrumentedloader680uniqueallowedTrainingcalls, notOSaudit. Timing/RSSnull because originalsummaryexceptionoccurred beforecapture. No sourceJPEG/CSV/TXT/Validation/held/Testpayloadaccess, install/download/upload/commit/push.
+What I changed myself: Codex added actualreport/aggregate/verification, reporting-onlyregressionfix andhandoff/log/diary update. Ignoredlocalcheckpoints/predictions/ownerrecord/qualification/sourcefailureevidence retained; persistentattempt remainsconsumed. Owner's own changes/understanding: not recorded; owner to complete.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Prepare the full Component 2 PP1 explanation and code-navigation report
+Prompt summary: Owner requested a complete PP1 preparation report covering the work done, components created, technologies, key source files and locations, research novelty, evidence, limitations and viva preparation.
+What was accepted / rejected: Prepared an evidence-based report for the signed Component 2 scope. Distinguished implemented software from verified outcomes and pending research; kept the two branches separate; described 52.21% as nested OOF on 680 Training records and included the later matched fine-tuning result without claiming accuracy was fixed. No project code, labels, splits, models or scientific scope changed.
+How I verified it (row counts, output check, docs): Cross-checked the signed proposal, current handoff, saved NHANES and Vision reports, result receipts, code paths and official CDC/Mendeley/method references already reviewed for this task. Rendered the editable Word report to 15 page images and visually inspected all pages, tables, code paths, references and page numbering. No model run or software test was needed for this documentation-only task.
+What I changed myself: Added docs/pp1_component2_full_preparation_20261017.md and docs/PP1_Component2_Full_Preparation_Report.docx; appended this AI log entry and one diary entry. Owner understanding and corrections remain for the owner to add.
+
+
+Date: 2026-10-17
+Tool: Codex (owner-authorized local work; two read-only supporting audits)
+Task: Build an isolated one-class tooth ROI detector and MGI crop-classifier workflow; prepare a resumable Colab experiment and Mac handoff.
+Prompt summary: Owner authorized autonomous local Vision engineering, a bounded M4/MPS pilot, notebook/data preparation and documentation, with no Test-label use, destructive replacement, commit, push or external upload.
+What was accepted / rejected: Implemented one-class tooth_roi localization followed by a separate weighted MGI 0–4 crop classifier, using the frozen safe 680/53 bundle and existing five Training folds. Rejected any use of the 12-image pilot as a performance claim or current demo replacement. Full Colab training and clinical/participant verification remain pending.
+How I verified it (row counts, output check, docs): Checked all 733 allowlisted records, 2,199 caption variants, 10,262 source TXT rows, 8,796 tooth boxes/crops, zero selected caption-manifest and tooth-box-caption maximum mismatches, and one subpixel edge clip. The final 476,604,177-byte package passed ZIP CRC/allowlist/count checks; its SHA-256 is in docs/vision_roi_tooth_v1_results.md. Mac MPS one-epoch detector and crop-classifier smoke completed on 48 fit/12 score images; at confidence 0.25 it had 0/12 image accuracy and 0% coverage. A 0.001 plumbing pass processed 300 low-confidence boxes and was not considered usable. Synthetic + existing caption-label tests: 52 passed; notebook JSON/code cells and package/code hashes validated. Pre/post hashes matched all 10 preserved artifacts. No Test payload entered data/training/metrics; a read-only agent audit accidentally exposed derived Test filenames and aggregate caption/conflict metadata from an existing audit document, documented in the report and handoff.
+What I changed myself: Added isolated ROI geometry/dataset/training/inference/demo scripts and tests; generated the ignored sRGB ROI package and Colab notebook; wrote the results and handoff updates. Existing demo/model/results unchanged; no commit, push or external upload. Owner understanding to be added by owner after reading the viva section.
+
+
+Date: 2026-10-17
+Tool: Codex
+Task: Verify the returned five-fold Colab tooth-ROI experiment and document actual results
+Prompt summary: Owner supplied the Colab return ZIP after the T4 run; inspect integrity, compare leakage-safe development metrics, verify local checkpoint inference and preserve existing research.
+What was accepted / rejected: Accepted the completed run as a separate experimental result. It achieved 60.74% image-level accuracy but did not improve Macro-F1 or Grades 1–2; rejected any claim that the ROI workflow fixed the classification problem or is clinically approved.
+How I verified it (row counts, output check, docs): ZIP CRC passed; all 19 SHA-256 manifest entries matched. Five folds matched the saved protocol, each with 544 fit and 136 score images; 680 unique Training OOF IDs/labels/groups/folds aligned exactly to the nested EfficientNet evidence; `full_model_selection_on_score_fold` was false in every fold; Test use was false. Independently recomputed accuracy 413/680=.607353, Macro-F1 .338439, balanced accuracy .343708, recalls 0/12, 8/84, 92/223, 313/361; detector mAP50/mAP50–95 means .959800/.496665. Oracle ground-truth-crop diagnostic across 8,160 score crops: accuracy .466667, macro-F1 .405390, balanced accuracy .395031; this is separate from photo-level MGI. A 1,000-draw seed-42 paired content-group bootstrap had zero undefined draws; fixed-prediction intervals are in the report. Fold-00 detector/classifier loaded on Mac MPS and scored one fold-held-out Training image, producing 12 ROIs and grade 4 matching its OOF output (provisional caption grade 3). Existing preservation snapshot remains 10/10 matched. Focused ROI suite: 14 passed after setting the repository import path; `git diff --check` passed. No Test payload was used.
+What I changed myself: Copied and extracted the return ZIP under ignored `data/vision/roi_tooth_v1_20261017/colab_return/`; added `docs/vision_roi_tooth_v1_colab_results.md` and a machine-readable ignored verification receipt; updated the ROI report, handoff, this AI log and diary. Existing PP1 model/demo, labels, splits and prior results unchanged; no commit or push. Owner understanding remains for the owner to write.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Prepare a separate ordinal tooth-crop comparison after the owner selected Option 2
+Prompt summary: Owner asked Codex to proceed with an ordinal crop-classification comparison while preserving all existing model outputs and the PP1 demo.
+What was accepted / rejected: Prepared a matched five-fold comparison of the current fit-fold weighted-CE crop method against a rank-consistent CORAL-style threshold head. Kept the 680 Training IDs, source labels, folds, detector checkpoints and image-level maximum-grade rule fixed. Clarified that this compares two complete classifier methods because the CE arm is class-weighted and the ordinal arm uses uniform threshold BCE; it is not a loss-only ablation. No new dental training or label change was performed.
+How I verified it (row counts, output check, docs): Official CORAL paper and authors' PyTorch source checked for shared score and ordered thresholds. Real package metadata guard passed for 733 allowlisted records, 680 Training, 53 Validation metadata rows, five 544/136 folds and 8,160 Training crop rows. All 19 entries in the v1 returned detector bundle passed saved byte-size/SHA checks. Seven new synthetic ordinal tests plus existing ROI regressions passed (24 total); one-epoch generated-only training/scoring and checkpoint resume passed for both arms. Colab notebook, code bundle, expected hashes and safety guards were prepared; the Colab training itself was not run. Ten protected legacy artifact hashes still match.
+What I changed myself: Added `src/vision/roi_ordinal_v2.py`, `tests/test_roi_ordinal_v2.py`, `notebooks/roi_tooth_v2_ordinal_colab.ipynb`, the ignored source bundle and `docs/vision_roi_ordinal_v2_plan.md`; updated the current handoff, this AI log and diary. No Drive upload, commit, push, Test payload access, live-demo change, or overwrite of prior models/results. Owner understanding remains for the owner to add after reading the experiment explanation.
+
+
+Date: 2026-10-17
+Tool: Codex
+Task: Finalize and independently verify the ordinal Colab handoff
+Prompt summary: Owner selected the separate label/ROI audit and ordinal-classifier follow-up; prepare all Mac-side work while preserving existing models and waiting for the owner to run Colab.
+What was accepted / rejected: Completed the code-only Colab bundle and notebook integrity binding. No Colab training, external upload, Test access, label change, checkpoint replacement, commit or push. No new accuracy result is claimed.
+How I verified it (row counts, output check, docs): Rebuilt a 24,857-byte code ZIP (SHA-256 8af0d3596d3afe4586d5407ecedb27754315f606b7c0e8e55c8a39e08abfffdf); its CRC and four source-file manifest hashes pass. All six notebook code cells compile, the expected ZIP hash and run argument match, and 24 focused tests pass. Recomputed the ten protected model/research artifact hashes against the saved pre-experiment snapshot; 10/10 match. Dataset/protocol guards remain 733 allowlisted metadata rows, 680 Training, 53 Validation metadata-only, five fixed folds and 8,160 Training crops.
+What I changed myself: Refreshed the notebook hash binding and code bundle; corrected handoff sizes/input instructions; added an isolated preservation verification record and this log/diary entry. Owner understanding remains for the owner to add after reviewing the method.
+
+
+Date: 2026-10-17
+Tool: Codex
+Task: Fix Colab v1 return archive root discovery
+Prompt summary: Owner ran the notebook checks; all three input hashes passed, then extraction failed because `experiment_complete.json` was nested inside the v1 ZIP's top-level folder.
+What was accepted / rejected: Confirmed the archived paths and corrected only the new notebook's extraction-root discovery. Kept all three ZIP contents and source labels/checkpoints unchanged. Colab training remains unstarted; no accuracy result is claimed.
+How I verified it (row counts, output check, docs): Inspected all 20 v1 ZIP members; the completion record is at `roi_tooth_v1_colab_return/experiment_complete.json`, with all five detector directories under that root. Re-extracted the verified archive in a temporary directory and confirmed the located root, completion status and fold detector files. All six notebook code cells compile; the v1 ZIP hash remains `ebb41badf4bd2154019dad55ba2f459ad1807c7f42b0722c13d849be2460f9bb`; the bundle hashes reported by the owner already match.
+What I changed myself: Updated the notebook to discover the unique completion record and use its parent directory; updated its SHA-256 and handoff documentation. No Drive upload, commit or push.
+
+
+Date: 2026-10-17
+Tool: Codex
+Task: Match the Colab Drive path to the owner's shared-folder shortcut
+Prompt summary: Owner showed that the shared `roi_tooth_v1` folder is available as a shortcut at the root of the second account's My Drive.
+What was accepted / rejected: Updated only notebook path discovery so the same three verified ZIPs can be found either at `MyDrive/RP-J26-IT-458/roi_tooth_v1` or `MyDrive/roi_tooth_v1`. No files were moved or copied; no Colab training or GPU-limit workaround was performed.
+How I verified it (row counts, output check, docs): All six notebook code cells compile. Static checks confirm both folder paths and all three required ZIP names are covered. The prior fix for the v1 archive's internal folder remains intact. Notebook SHA-256 is `418f6ba927252ed3c11ada47caf9655e8409cf5d0d7fbf9044de68938a8f20ba`.
+What I changed myself: Updated the notebook's Drive-root discovery and synchronized the protocol/handoff SHA references. No external upload, commit or push.
+
+
+Date: 2026-10-17
+Tool: Codex
+Task: Add optional local PP1 React/API output for the v2 tooth-ROI model
+Prompt summary: Owner asked whether YOLO tooth boxes and ROI crop grading can be shown in the PP1 demo and whether Colab is needed.
+What was accepted / rejected: Accepted local inference integration using the already returned, hash-verified v2 CORAL fold-00 checkpoint pair. Kept the existing ResNet50/Grad-CAM path separate and unchanged. Rejected claims that fold 00 is a final all-development model or that boxes are clinical gum boundaries. The generated colour fixture is only an engineering check; no real source-confirmed non-study dental JPEG is registered.
+How I verified it (row counts, output check, docs): Download ZIP SHA-256 matched the saved receipt; ZIP CRC passed and all 21 internal manifest members matched. Mac venv imports for PyTorch, torchvision, Ultralytics, FastAPI and Pillow passed; MPS is available. The real fold-00 models loaded on MPS and the generated-only input passed through the new API with HTTP 200, zero detections and no grade. UI build succeeded; 76 focused runtime, inference, API and registration tests passed. No protected Test payload was accessed.
+What I changed myself: Added `src/vision/roi_ordinal_v2_live.py`, a separate API status/prediction route, and a React ROI-box action with fold/model limitations. Added generated-fixture tests and `docs/vision_roi_v2_live_demo.md`; updated this handoff, AI log and diary. Existing uncommitted user/workspace changes were preserved. No training, external upload, commit or push.
+
+Date: 2026-10-17
+Tool: Codex
+Task: Verify returned v2 CORAL ROI results and prepare an isolated Mac preview
+Prompt summary: Owner supplied `roi_tooth_v2_coral_return.zip`; continue the authorized Vision ROI task, preserve the existing PP1 demo and models, verify the real returned outputs, and document the result.
+What was accepted / rejected: Accepted the five-fold Tesla T4 run as a separate provisional research result. CORAL improved Grade 2 recall versus the matched weighted-CE arm (15/84 versus 5/84) but got one fewer image correct overall, reduced Grade 3 recall, and still found 0/12 Grade 1 images. Rejected any claim that the low-accuracy problem is solved or that the v2 checkpoint should replace the PP1 model.
+How I verified it (row counts, output check, docs): Return ZIP CRC and all 21 manifest entries passed; source package/protocol/fold/code hashes matched; both OOF files had 680 IDs and matched the saved targets/folds. Independently recomputed image-level metrics, crop confusion matrices and the 1,000-draw paired bootstrap. `test_split_used=false` and validation model selection false. All 10 protected legacy artifact hashes still match. Added a separate CORAL inference/CLI adapter; fold 0 loaded on Mac MPS and predicted Training/00002 as grade 4 with 12 ROIs, exactly matching OOF (provisional target 3). Focused tests: 30 passed; `git diff --check` passed. The separate overlay labels detector score as a box score and has a visible research-only footer.
+What I changed myself: Added `src/vision/roi_ordinal_v2_inference.py`, `src/vision/roi_ordinal_v2_demo.py` and `tests/test_roi_ordinal_v2_inference.py`; created the v2 actual-results report; updated the ordinal protocol, current handoff, this AI log and diary. Saved smoke JSON/overlay under ignored `data/vision/.../ordinal_v2/demo_outputs_v2/`. The v1/PP1 model, source labels, splits and old results were not changed. No Test payload access, commit, push or external upload. Owner understanding remains for the owner to add after reading the report.
+
+Date: 2026-10-18
+Tool: Codex
+Task: Produce a one-photo local illustration of the separate Grad-CAM and ROI/MGI outputs
+Prompt summary: Owner supplied a dental JPEG, confirmed it was their photo, and approved treating its untagged RGB values as sRGB for this single local demo.
+What was accepted / rejected: Ran the pinned ResNet50 B1 v3 Grad-CAM and verified ROI v2 CORAL fold-00 models as separate research outputs. Used an isolated direct-RGB/sRGB assumption for this one photo because it has no embedded ICC; did not inject a misleading profile or change the guarded React/API path. Rejected diagnosis, clinical-validity, accuracy-improvement, and calibrated-probability claims.
+How I verified it (row counts, output check, docs): The input is a 46,446-byte RGB JPEG, 540×360, orientation 1, with no ICC. Its SHA-256 stayed `195e3cd12410f75117b95893349edaaaddb9a15a3ca4405d68ac61a4f3a5fef1`. ResNet50 predicted grade 3 (grade 1–4 outputs: 0.1293, 0.2825, 0.3508, 0.2374); the Grad-CAM hotspot is on the upper lip. ROI fold 00 found 12 boxes (9 predicted grade 1, 3 predicted grade 2), maximum image grade 2; box confidence ranged 0.5322–0.7285. The v3 checkpoint SHA stayed `36dd33662e277d3770995bf406f714b71231e77846a4a6a01ef418864259b2ee`, and the verified ROI return ZIP SHA stayed `e78240b01a1b039e091be0d2e31881ce96c1b1e47388e99f8f49b2541094771b`. Output PNGs have no embedded metadata; no dataset/Test files were used.
+What I changed myself: Created only ignored local output files in `data/vision/user_photo_demo_v1_20261018/` and updated the handoff, AI log and diary. The original image, model weights, standard API input gate, labels, splits and evaluation results were not changed. No commit, push or external upload. Owner should read the method and add their own understanding.
+
+Date: 2026-10-18
+Tool: Codex
+Task: Enable local new-photo inference in the PP1 Vision demo
+Prompt summary: Owner authorized fixing the React demo so a presenter can upload a dental photo and see outputs from saved trained Vision models; explain why it was blocked and what output means.
+What was accepted / rejected: Enabled an opt-in, loopback-only local upload path for JPEG/PNG/WebP with explicit ICC-to-sRGB conversion or an explicit sRGB assumption when RGB has no ICC. Kept ResNet50 + Grad-CAM and YOLO ROI + CORAL as separate actions and kept the questionnaire branch separate. No training, label or split changes, clinical claims, model promotion, Test access, commit, push or external upload.
+How I verified it (row counts, output check, docs): Focused tests passed (44 passed); local React page/bundle and both model runtimes returned ready; missing-consent upload returned HTTP 403 and consented photo requests returned HTTP 200. On the owner-provided 540x360 RGB sample, ResNet50 predicted MGI 3 (outputs 0.1293/0.2825/0.3508/0.2374 for grades 1–4); Grad-CAM highlighted the upper lip. ROI fold 00 returned 12 boxes: 9 crop grades 1 and 3 crop grades 2, maximum 2. Browser UI completed selection/consent/ResNet/results with a generated-only PNG and confirmed the new uncalibrated-score wording. Sample photo, checkpoint and ROI archive SHA-256 values stayed unchanged. `git diff --check` passed. The browser's unrelated allowed-root restriction blocked attaching the owner photo itself, so its real-image upload was verified directly against the local HTTP route.
+What I changed myself: Added `src/vision/local_photo_upload_demo.py`; connected opt-in photo routes and CLI in `src/tabular/api.py`, updated `src/vision/photo_explanation.py` and the React source/bundle/styles, added upload/API tests, and wrote `docs/vision_local_photo_upload_demo_v1.md`; updated handoff and this log/diary. Existing models and earlier PP1 outputs remain preserved. Owner should explain the difference between Grad-CAM attention, YOLO boxes, and crop grades before the viva.
+
+Date: 2026-10-18
+Tool: Codex
+Task: Compare available Vision model outputs on the same uploaded photo
+Prompt summary: Owner clarified they want to see which of the many saved image-model workflows runs on one photo and compare what each returns.
+What was accepted / rejected: Added a separate live action for the verified ROI v1 fold-00 checkpoint and a four-row same-680-image OOF evidence table. Kept ResNet50 B1 Grad-CAM, ROI v1, and ROI v2 as independent outputs. Rejected claiming that one photo selects the best model; the 52.21% EfficientNet + Logistic arm has no packaged fitted classifier, and the live ResNet50 checkpoint is not the frozen ResNet + Logistic OOF row.
+How I verified it (row counts, output check, docs): Same owner photo passed through all three loopback API routes: ResNet predicted MGI 3; ROI v1 returned 12 boxes (11 crop grades 1, one grade 3; max 3); ROI v2 returned 12 boxes (9 crop grades 1, 3 grade 2; max 2). Every response said `photo_saved: false`; absent consent returned HTTP 403. Each local MPS runtime and the aggregate evidence endpoint returned ready/HTTP 200. The 680-image OOF evidence records accuracy/Macro-F1 of 47.50%/.2951 (ResNet + Logistic), 52.21%/.3464 (EfficientNet + Logistic), 60.74%/.3384 (ROI v1), and 59.71%/.3279 (ROI v2). Fifty-seven focused tests passed and `git diff --check` passed. Photo, ResNet checkpoint, v1 ZIP and v2 ZIP hashes matched verified values. No Colab run, model training, Test access, label/split change, commit or push.
+What I changed myself: Added `src/vision/roi_tooth_v1_live.py`, the ROI v1 API runtime/routes, same-photo model comparison UI and `docs/vision_photo_model_comparison_v1.json`; rebuilt the React bundle and updated the upload guide, handoff, AI log and diary. Existing checkpoints, results and demo sample outputs remain intact. Owner understanding: explain that per-photo predictions are examples, while OOF accuracy/Macro-F1 summarize 680 held-out-from-fold Training predictions.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Implement approved PP1 three-model Doctor Demo.
+Prompt summary: Reuse existing checkpoints/endpoints; one photo, two modes, independent model results, local feedback JSON/CSV export; verify Grad-CAM/decoding and preserve research.
+What was accepted / rejected: Added dedicated React comparison workspace, same-byte API identity, independent optional runtimes, v2 shared sRGB decode, numbered ROI views. No retraining, artificial heatmap focus, image export in feedback or automatic persistence/retraining.
+How I verified it (row counts, output check, docs): 102 focused Python/API tests passed; final 32 browser checks passed (including actual questionnaire/what-if/reset and three genuine photo inferences); 6 real CAM parity/integrity checks; 4 missing-checkpoint startup checks; 12/12 protected hashes matched. Details in docs/pp1_three_model_doctor_demo_v1.md and ignored verification evidence. Earlier test-harness mistakes preserved and corrected; no Test labels opened, external images uploaded or Git commit/push/reset.
+What I changed myself: Owner to describe understanding and clinical-review decisions in their own words; not filled by AI.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Apply owner's dashboard reference to PP1 three-model doctor UI.
+Prompt summary: Make output UI balanced and similar to supplied screenshot.
+What was accepted / rejected: Implemented teal header/dark sidebar, compact upload/drop, aligned three cards, real score bars and tables, feedback section below. Rejected copying reference's sample outputs, confidence/severity labels or artificial gum-focused heatmaps. Kept independent doctor assessment before AI reveal.
+How I verified it (row counts, output check, docs): Final browser suite 37 passed/0 failed; API suite 21 passed/0 failed; 15/15 protected hashes matched; real same-photo outputs unchanged (3/3/2; ROI counts12/12), desktop/mobile screenshots inspected, production build and diff check passed. Earlier selector/timing failures preserved and corrected. No model/backend changes, training, Test access, external image upload, commit/push/reset.
+What I changed myself: Owner to record their own understanding; no student/clinician understanding or review decision fabricated.
+
+Date: 2026-10-18
+Tool: Codex
+Task: Prepare controlled ResNet50 fold-0 Colab pilot; preparation/validation only.
+Prompt summary: Freeze 544fit/136score, independent ImageNet initialization, shared1epoch head warm-up, matched5epoch last-bottleneck/full-layer4 arms, unchanged B1, no training/upload.
+What was accepted / rejected: Prepared isolated r2 notebook and355328546-byte ZIP; retained provisional labels and all existing models/demo. Rejected v3 warm-start and gingival-mask claims. No actual dental/GPU fitting or upload authorized/executed. First package retained after manifest-receipt SHA bug; fixed with regression test and new r2.
+How I verified it (row counts, output check, docs): Final34 generated tests passed;544grades9/67/179/289 and136grades3/17/44/72;698file hashes+699entry CRC;8exact B1 source/cache checks; isolated import, official ImageNet load/generated forward/CAM, notebook syntax/schema/local preflight, approval gate and29protected hashes passed. Clean Colab CUDA remains unexecuted. Report:docs/vision_resnet50_fold0_pilot_preparation_v1.md.
+What I changed myself: Owner to fill; understanding and clinical/privacy approvals pending.
+
+Date: 2026-10-18
+Tool: Codex
+Task: Separate Drive-input notebook for the existing ResNet fold0 pilot.
+Prompt summary: Owner requested using a Google Drive ZIP like the previous ROI workflow.
+What was accepted / rejected: Added r3 Drive notebook and local builder; reused r2 ZIP and unchanged scientific cells. Setup stops for session restart after dependency changes. No actual cloud access/upload/training or claimed NumPy repair.
+How I verified it (row counts, output check, docs): Seven code-cell syntax checks, notebook schema, six generated fake-mount transport checks passed; four scientific cells unchanged;29protected artifacts plus r2 notebook/ZIP unchanged. See docs/vision_resnet50_fold0_drive_notebook_v1.md.
+What I changed myself: Owner understanding pending.
+
+Date: 2026-10-18
+Tool: Codex
+Task: Verify actual ResNet50 fold0 Colab return and review matched Grad-CAM.
+Prompt summary: Owner approved the single11epoch pilot, executed it and supplied return ZIP for results/heatmap verification.
+What was accepted / rejected: Preserved return separately; verified A40.44%/F1.2341 versus B45.59%/.3175 on136scores. Grade2 1/17to5/17, Grade1both0/3, majority accuracy52.94%. Eight-case qualitative AI visual review still sees peripheral/lip/retractor hotspots. No clinical attention fix, final-model claim, demo promotion or further training accepted.
+How I verified it (row counts, output check, docs): Owner SHA matched;154file hashes and CRC,11checkpoints/3520tensor hashes,320fresh initialization hashes, shared warmup, frozen BN, optimizer counts and orders passed. Independent NumPy136image metrics maxdiff1.11e-16. Sixteen allowed matched predictions and32CAMs reproduced onCPU (probability maxdiff1.91e-6, RGBmax1/255);29existing artifacts and original download unchanged. Conditional fixed-prediction bootstrap1000draws/947valid, no refit. See docs/vision_resnet50_fold0_colab_results_v1.md/json.
+What I changed myself: Owner understanding and qualified clinical review pending.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Clarify current model count.
+Prompt summary: Owner asked how many models there are in total.
+What was accepted / rejected: Distinguished four live demo workflows (three Vision pipelines and questionnaire XGBoost) from research comparison models, simple baselines, folds and experimental checkpoints; did not count checkpoints as separate architectures.
+How I verified it (row counts, output check, docs): Read AGENTS.md, current handoff sections and the three-model demo report; a read-only parallel check confirmed ResNet50 B1 v3, YOLO/ResNet18 weighted-CE, YOLO/ResNet18 CORAL and the live questionnaire XGBoost. No inference or training was needed for this documentation question.
+What I changed myself: Appended factual AI log and diary entries only; owner understanding remains for the owner to record.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Explain which model performs best on existing evidence.
+Prompt summary: Owner asked which model is best after the live-model count.
+What was accepted / rejected: Explained that ROI v1 has the highest accuracy among the saved matched 680-image comparison rows, while EfficientNet plus Logistic has the highest Macro-F1 in that table. Neither fixes Grade 1 recall or establishes clinical readiness. Questionnaire XGBoost stays the frozen primary; its held-out advantage over Logistic is not clearly established. No model promotion or new selection from Test results.
+How I verified it (row counts, output check, docs): Read docs/vision_photo_model_comparison_v1.json and docs/vision_roi_ordinal_v2_colab_results.md: ROI v1 accuracy 60.74%, Macro-F1 .3384; CORAL 59.71%/.3279; EfficientNet 52.21%/.3464; each Grade 1 recall 0/12. A parallel read-only check of docs/tabular_final_test_results_v1.md confirmed AUROC .760654 versus .756113 and the paired difference interval spanning zero. Reused saved results; no inference, refitting or Test rerun.
+What I changed myself: Appended documentation logs only. Owner to record their own understanding of accuracy versus Macro-F1.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Distinguish ResNet50 v3 from EfficientNet-B0 comparison workflows.
+Prompt summary: Owner asked whether ResNet50 v3 or EfficientNet-B0 is better.
+What was accepted / rejected: Kept the existing runnable ResNet50 v3 as the practical PP1 demo choice. Rejected ranking its 53-image Validation result directly against EfficientNet's 680-image OOF result. Clarified that the earlier 47.50% ResNet row is a frozen-feature Logistic workflow, not the live v3 checkpoint; 52.21% refers to EfficientNet features plus a nested-selected Logistic head, with no packaged fitted new-photo classifier.
+How I verified it (row counts, output check, docs): Read docs/vision_b1_lastblock_results_v3.md (27/53, accuracy .509434, Macro-F1 .325872), docs/vision_nested_feature_probe_results_v1.md (355/680 OOF, .522059/.346429), the fixed-feature and neural adaptation reports, and the local-photo guide. The neural EfficientNet adaptation results are separate workflows. No inference, training or new scientific evaluation performed.
+What I changed myself: Documentation logs only; owner to record their own explanation of why different evaluation populations cannot establish a winner.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Clarify that EfficientNet-B0 training was completed.
+Prompt summary: Owner asked whether we had already done EfficientNet-B0.
+What was accepted / rejected: Confirmed completed frozen-feature/Logistic experiments and the separate head-only/final-block neural training. Clarified that absence from the current live photo UI does not mean training was not performed; did not suggest the 52.21% Logistic workflow and 46.76% neural workflow are the same model.
+How I verified it (row counts, output check, docs): Read docs/vision_efficientnet_adaptation_results_v1.md: 17 October, 10 real fits/50 epochs, 680 five-fold OOF records, head-only accuracy 46.3235% and final-block/head accuracy 46.7647%. Read docs/vision_nested_feature_probe_results_v1.md for 52.2059% frozen-feature/nested-Logistic result and current handoff for live integration status. No execution or new training.
+What I changed myself: Appended logs only; owner understanding remains for the owner to record.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Recommend the model to present in the PP1 main demo.
+Prompt summary: Owner asked which model to use after discussing ResNet50 v3 and EfficientNet-B0.
+What was accepted / rejected: Recommended retaining existing ResNet50 v3 for the provisional main photo/Grad-CAM demo and presenting EfficientNet experiments as comparison evidence. This is a practical demo recommendation, not a scientific winner declaration or approval to replace models, change research scope or train again.
+How I verified it (row counts, output check, docs): Reused the already-read current demo guide, handoff, ResNet v3 results and EfficientNet reports. Existing v3 inference/Grad-CAM is integrated; EfficientNet workflows are separate experiments with different evaluation populations from v3. No new run or code/UI change.
+What I changed myself: Documentation logs only; owner to record their own explanation of the demo choice.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Correct the framing of the proposal's candidate and baseline models.
+Prompt summary: Owner challenged recommending ResNet50 for the main demo when the research plan names EfficientNet-B0 as candidate and expects an advantage with limited images.
+What was accepted / rejected: Acknowledged that demo readiness was an insufficient reason to frame ResNet as the main research model. Reaffirmed EfficientNet-B0 as candidate and ResNet50 as baseline, without inventing performance superiority. Clarified that EfficientNet neural training was completed and live photo/Grad-CAM integration remains pending; limited data does not guarantee higher accuracy for an architecture.
+How I verified it (row counts, output check, docs): Reused AGENTS.md section 3 and already-read handoff/results: EfficientNet neural trial completed 10 fits/50 epochs on 17 October, final-block/head 46.7647% on 680 OOF records; current UI has no EfficientNet route. Existing ResNet v3 53-Validation result cannot establish an architecture winner against that OOF result. No new code, training, inference or scope change.
+What I changed myself: Documentation logs only. Owner's research-understanding entry remains for the owner to fill; no live integration claimed.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Confirm training completion for both Vision architectures.
+Prompt summary: Owner asked whether both ResNet50 and EfficientNet-B0 had been trained.
+What was accepted / rejected: Confirmed actual ResNet50 v3 head/last-bottleneck training and actual EfficientNet-B0 head-only/final-block training. Kept training completion separate from live UI integration; did not claim either is a final clinically validated model.
+How I verified it (row counts, output check, docs): Reused the already-read docs/vision_b1_lastblock_results_v3.md and docs/vision_efficientnet_adaptation_results_v1.md. ResNet v3 is integrated; EfficientNet live photo/Grad-CAM integration remains pending. No rerun needed for this status clarification.
+What I changed myself: Documentation logs only; owner to record their own understanding.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Explain image counts used for ResNet50 v3 and EfficientNet-B0.
+Prompt summary: Owner asked how many images were used for both models.
+What was accepted / rejected: Distinguished ResNet v3's 680 fitting plus 53 Validation images from EfficientNet's same 680 original Training images evaluated using five folds (544 fit, 136 score per fold). Did not count repeated fold/epoch reuse as extra unique images or imply a final EfficientNet fit on all 680.
+How I verified it (row counts, output check, docs): Read matching count lines from docs/vision_b1_lastblock_results_v3.md:12 and docs/vision_efficientnet_adaptation_results_v1.md:15,20. Existing reports confirm EfficientNet did not use the 53 Validation images. No data loading, inference or training.
+What I changed myself: Documentation logs only; owner to record their own explanation of folds versus unique image counts.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Clarify model choice after explaining training image counts.
+Prompt summary: Owner again asked which of ResNet50 v3 and EfficientNet-B0 is best.
+What was accepted / rejected: Kept EfficientNet-B0 as the proposal candidate and ResNet50 as baseline. Did not declare an accuracy winner from ResNet v3's 53-Validation result versus EfficientNet neural 680-image OOF results; image count alone does not establish superiority. Clarified actual neural EfficientNet result rather than substituting frozen-feature Logistic accuracy.
+How I verified it (row counts, output check, docs): Reused verified reports already read: ResNet v3 accuracy .509434 on 53 Validation cases; EfficientNet final-block/head .467647 on 680 five-fold OOF cases. No common evaluation for these exact two workflows was established in this discussion. No new evaluation or training.
+What I changed myself: Documentation logs only; owner to record their own understanding of candidate versus demonstrated winner.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Consolidate the discussed Vision model accuracies.
+Prompt summary: Owner asked how many models and what their accuracies are.
+What was accepted / rejected: Distinguished the two original proposal architectures from the seven selected Vision workflows discussed (including feature/Logistic and ROI variants). Listed their saved accuracies with evaluation populations; did not describe seven workflows as seven independent architectures or an exhaustive inventory of every experiment/checkpoint.
+How I verified it (row counts, output check, docs): Re-read docs/vision_photo_model_comparison_v1.json, the v3 summary table and EfficientNet neural adaptation summary. ResNet v3 50.94% on 53 Validation; 680 OOF: ResNet features/Logistic 47.50%, EfficientNet head-only 46.32%, final-block/head 46.76%, nested features/Logistic 52.21%, ROI v1 60.74%, ROI v2 CORAL 59.71%. No new metrics computed or training run.
+What I changed myself: Documentation logs only; owner to record their own understanding of architecture versus workflow and evaluation population.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Clarify the intended PP1 demo model roles.
+Prompt summary: Owner asked which model is for the PP1 demo after the accuracy summary.
+What was accepted / rejected: Explained the proposal-aligned intended demonstration: EfficientNet-B0 candidate with Grad-CAM, ResNet50 baseline comparison, and independent questionnaire XGBoost with SHAP/what-if. Explicitly distinguished the intended EfficientNet demo from current readiness: its live photo/Grad-CAM integration is still pending, while existing ResNet v3 is runnable. No checkpoint promotion, integration or superiority claim made.
+How I verified it (row counts, output check, docs): Reused AGENTS.md sections 3 and 11 plus already-read current handoff and training reports. Both architectures have actual exploratory training results; only the existing ResNet and ROI photo pipelines are integrated currently. No new code, inference, evaluation or training.
+What I changed myself: Documentation logs only; owner to record their own understanding of planned roles versus currently runnable demo.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Give a direct PP1 main Vision demo recommendation.
+Prompt summary: Owner asked again for the best model to put in PP1.
+What was accepted / rejected: Recommended EfficientNet-B0 as the intended main research-candidate demonstration, with ResNet50 v3 as baseline comparison. Made the recommendation conditional on completing and verifying the pending EfficientNet live photo/Grad-CAM integration; did not claim this is currently runnable or an established accuracy winner. No specific experimental checkpoint was promoted.
+How I verified it (row counts, output check, docs): Reused the already-verified proposal roles, actual EfficientNet training report and current demo status. No further reads, metrics, inference, training or source changes were needed for this recommendation.
+What I changed myself: Documentation logs only; owner to record their own understanding of the recommendation and remaining integration.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Answer which discussed Vision workflow has the highest recorded accuracy.
+Prompt summary: Owner asked specifically for best accuracy, separate from the PP1 recommendation.
+What was accepted / rejected: Identified ROI v1 as the highest-accuracy row in the verified same-680-image comparison (413/680, 60.74%). Distinguished the proposal's EfficientNet candidate role from observed performance. Did not rank exact ResNet v3 versus neural EfficientNet using their different evaluation populations.
+How I verified it (row counts, output check, docs): Reused previously checked docs/vision_photo_model_comparison_v1.json, ResNet v3 report and EfficientNet neural report. ResNet v3 50.94% on 53 Validation; neural EfficientNet final-block/head 46.76% on 680 OOF. No new run or invented comparison.
+What I changed myself: Documentation logs only; owner to record their own distinction between highest recorded accuracy and proposal candidate.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Complete and verify local PP1 demo, ROI context diagnostic, review preparation and presentation.
+Prompt summary: Owner authorized all feasible local finishing while away, requested ROI gum-context checks, fair minority-grade comparison and a usable PP1 demo/PPT. Preserve existing models and research.
+What was accepted / rejected: Reused original three live models and existing React/API. Added a standalone launcher, isolated fit-only coverage diagnostic, one predeclared 15%-versus-30% frozen-weight inference-context comparison and Grade1/2 review checklist/blank queue. Rejected adopting wider crops because Macro-F1 and Grade2 recall deteriorated. Did not fabricate gingival masks, clinical labels, new photos or an accuracy fix. No new training, cloud upload, held/Test access or model promotion.
+How I verified it (row counts, output check, docs): 31 focused API/decoding pytest cases passed with 3 pre-existing SHAP deprecation warnings. 37 browser checks passed using actual three-checkpoint inference plus explicitly synthetic error fixtures, including Questionnaire/SHAP/what-if/reset, same-photo SHA, independent errors/stale responses, exports, desktop/mobile and no external browser requests. Permitted photo: ResNet3, v1max3/12ROIs, CORALmax2/12ROIs. Four fit-only photos reproduced48/48 training crop JPEGs. Same544fit/136score group-isolated fold, scoring supports3/17/44/72. Candidate fixed before scoring; shared detector boxes and frozen v1fold00 classifier. Baseline accuracy84/136=.617647,F1=.334708,G2=1/17;expanded85/136=.625,F1=.297981,G2=0/17;G1both0/3. Localbaseline128/136agreeswithhistoricCUDAresults, not exact replication.12geometry+76independent metrics/membership/preservation assertions passed.29protected checkpoint/research/UI hashes unchanged.10-slidePPTX/four native tables passed structure/font/layout/import checks;all final slides rendered and individually inspected. NativePowerPoint not tested. Dirtytree preserved and git diff --check passed. No commit/push/reset.
+What I changed myself: Added scripts/pp1_roi_context_diagnostic_v1.py and scripts/run_pp1_doctor_demo.sh, new versioned evidence, reports/review preparation, a verified PPTX and Desktop convenience copies. Updated handoff and logs. Existing scientific/demo files untouched. Owner should rehearse and record their understanding; clinical review fields remain blank.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Integrate trained EfficientNet-B0 proposal candidate with live photo and Grad-CAM.
+Prompt summary: Owner explicitly asked to add EfficientNet after clarifying main candidate/baseline roles.
+What was accepted / rejected: Used existing fold0 last_block checkpoint, not a new fit or frozen Logistic head. Candidate first, ResNet baseline second, existing ROI comparisons retained. Shared B1 decoding/CAM geometry, real unaltered attention, no fabricated confidence. New API8773 preserves8771process. No model superiority or clinical approval claimed. Neural46.76%OOF differs from52.21%frozenfeatures+LR.
+How I verified it (row counts, output check, docs): PinnedcheckpointSHA/schema/fold/arm/provenance and360/360trainingtensorhashes matched.40focusedpytestcases and40browserassertionspassed,0failed,3existingSHAPwarnings. Actualsamepermittedphoto yieldsEff3,ResNet3,ROIv1max3/12boxes,CORALmax2/12boxes;sourceSHAidentical,photo_savedfalse. Questionnaire/SHAP/what-if/reset,independentcandidatefailure,staleresponse,feedbackJSONCSV,mobile,noexternalbrowserrequests/noJSerrorspassed. GeneratedJPEG/orientedICCJPEG/RGBAPNGcheckedrealcheckpointCAMprobability/grade/geometry/original/state/BN/hookcleanup. Threeinitialnumericalchecksfailedat1e-7ordinary-vs-gradientbound;observeddifference2.086e-7,nowindependentgradientparity1e-7andsharedfloat32inferencebound1e-6pass.Noactualmodel/preprocessing/predictionchanges.39protectedartifactsunchanged;4intendedAPI/UIfileschangedwithbeforesnapshots.Updated10slidedeckrendered/inspectedandstructural/font/layout/importchecks.NativenativePowerPointexecutionuntested.NoTestpayload,newtraining,upload,commit/push/resetoroldprocessshutdown.
+What I changed myself: Added src/vision/efficientnet_live.py, optional API endpoints/CLI, four-card React view/styles/bundle, focused tests, versioned launcher/browser script, documentation/PPT and Desktop convenience folder. Existing weights, training code/results, data and Questionnaire logic untouched. Owner should rehearse and explain main-candidate role versus observed performance.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Assess actual PP1 contribution against the owner's assessment-criteria PDF.
+Prompt summary: Owner asked for an honest judgement of how much the current work contributes to PP1.
+What was accepted / rejected: Mapped verified prototype evidence to the rubric. Kept potential criteria coverage separate from awarded marks, personal understanding and clinical readiness. Did not invent a readiness percentage or likely examiner score.
+How I verified it (row counts, output check, docs): Read the complete one-page PP1 Assessment Criteria.pdf supplied from WhatsApp using pypdf. Rubric weights: gap/proof10%,knowledge25%,implementation40%,communication15%,commercialization10%; assessment contributes15%overall. Excellent-completion descriptor says approximately50%whereapplicable, not a mandatoryaccuracythreshold. Reused verified EfficientNet integration report40tests+40browserchecks and actual metric/provenance limits. Existing preparation report explicitly treats novelty as interface/evaluation contribution, not invented model architecture. Actual owner viva/stage performance, genuine clinician/user feedback and business-benefit evidence remain unverified. No new test/training, PDF edit, upload or commit.
+What I changed myself: Task logs only. Owner should explain the work and supply genuine review/presentation evidence.
+
+Date: 2026-10-18 (Asia/Kolkata)
+Tool: Codex
+Task: Create a complete beginner learning report explaining Component 2 from A to Z.
+Prompt summary: Owner requested a full child-friendly explanation of project purpose, every important keyword including epoch, completed work, reasons for methods, current results, personal responsibilities and future work.
+What was accepted / rejected: Created a new editable Word guide and matching Markdown with 26 lessons, 171 dictionary entries, 29 viva questions, actual experiment tables, code-block maps, five-minute script and six learning sessions. Reconciled current handoff before writing: EfficientNet is now integrated on 8773, four Vision plus independent XGBoost workflows. Corrected earlier integration-pending chat status and distinguished completed survey point sensitivity from pending complex-design variance. Kept original documents, models, data, scope and owner-understanding fields intact; rejected invented metrics, clinical approval, architecture-winner and completion-percentage claims.
+How I verified it (row counts, output check, docs): Read AGENTS/current handoff and task-relevant audit/preprocessing/training/ROI/SHAP/final-evaluation/runtime reports and code. Checked CDC codebooks and primary PyTorch/sklearn/XGBoost/SHAP/Grad-CAM/Mendeley/NIH references. Read-only GETs returned HTTP200 and ready=true for all four Vision runtimes plus the questionnaire schema at8773; no prediction or training request. Used bundled python-docx and bundled LibreOffice/Poppler rendering; individually inspected all31 final pages, 8 repeating-header tables and26 TOC bookmarks. Verified22 local evidence paths exist. Final structural/hash receipt is under ignored data/component2_learning_report_20261018_v1/final_verification.json. Fixed the inherited title border and separated final learning exercises; two unsuccessful content-patch attempts made no file changes. No scientific run, Test access, install, external image upload, commit or push.
+What I changed myself: Added docs/Component2_Complete_Learning_Guide_20261018.docx and docs/component2_learning_guide_20261018.md; retained build/render/verification artifacts under ignored data/component2_learning_report_20261018_v1; appended task logs. Owner must explain concepts in their own words; no understanding or clinical review was filled by AI.
+
+Date: 2026-10-19 (Asia/Kolkata)
+Tool: Codex
+Task: Commit and push the authorized Component 2 work on vinuthan.
+Prompt summary: Owner explicitly requested commit and push.
+What was accepted / rejected: Grouped 99 scoped source/report files into 14 logical commits. Added required image/temporary/model-artifact ignore rules. Kept raw data, trained weights, images, DS_Store files and three photo-bearing PPTX packages local; included the two text-only Word reports after checking zero media/embeddings. No force push, branch change, reset, scientific rerun, installs or automatic PR.
+How I verified it (row counts, output check, docs): Read AGENTS/current handoff; showed git status before commits; fetched origin and confirmed starting branch divergence0/0. Checked exact allowlist coverage, parsed41 Python files,33 ordinary Python notebook cells and9 JSON reports. One notebook cell uses valid Colab shell-magic syntax outside ordinary Python AST scope; all5notebooks have0outputs/attachments. Secret-shaped credential scan found0hits; no new file exceeded5MiB. Rebuilt frontend with cached esbuild and verified byte-identical output. Reviewed staged whitespace; retained intentional Markdown two-space breaks and one pre-existing test EOF blank line instead of modifying hash-bound sources. Original test evidence reused, no claimed new pytest/scientific results. Final log commit is followed by ordinary push and remote/local tip comparison; transport outcome will be stated in the chat after those checks.
+What I changed myself: Only .gitignore and task log/handoff entries were newly edited for this Git task; existing authorized implementation and reports were committed as logical groups. Owner understanding remains for the owner to record.
