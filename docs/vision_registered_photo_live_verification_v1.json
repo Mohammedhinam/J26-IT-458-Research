@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-17",
+  "branch": "vinuthan",
+  "status": "PASS",
+  "scope": "registered-photo engineering; generated input only; real non-study photo verification pending",
+  "tests": {
+    "passed": 101,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "new_registration_tests": 51
+  },
+  "browser": {
+    "scope": "actual browser generated-photo integration; real pinned checkpoint, no dental photo inference",
+    "checks": {
+      "explicit_generated_scope": true,
+      "no_file_button_disabled": true,
+      "registered_file_enabled": true,
+      "generated_photo_http_200": true,
+      "real_checkpoint_pinned": true,
+      "scope_stays_generated": true,
+      "four_grade_mapping": true,
+      "same_explained_grade": true,
+      "probability_sum": true,
+      "three_aligned_views": true,
+      "healthy_grade0_unsupported": true,
+      "nonclinical_notice": true,
+      "reset_clears_result": true,
+      "reset_clears_file": true,
+      "reset_disables_predict": true,
+      "unregistered_rejected": true,
+      "select_clears_stale_error": true,
+      "nonjpeg_client_rejection": true,
+      "invalid_selection_blocks_predict": true,
+      "mobile_no_overflow": true,
+      "questionnaire_live_predict": true,
+      "whatif_live": true,
+      "whatif_reset": true,
+      "no_page_errors": true
+    },
+    "passed": 24,
+    "failed": 0,
+    "errors": [],
+    "view_dimensions": [
+      [
+        40,
+        24
+      ],
+      [
+        40,
+        24
+      ],
+      [
+        40,
+        24
+      ]
+    ],
+    "checkpoint_sha256": "36dd33662e277d3770995bf406f714b71231e77846a4a6a01ef418864259b2ee",
+    "source_dental_images_used": 0,
+    "training_performed": false,
+    "test_used": false,
+    "harness_correction": "Initial scenario test omitted changing cleaning days to7 and correctly observed unchanged prediction. Targeted corrected check set7, verified24.41%, reset21.41%; no implementation change.",
+    "scenario_recheck": {
+      "initial": "21.41%",
+      "changed": "Original 21.41% \u2192 Scenario 24.41%\n\nChanging an answer changes the model output, not a person's actual treatment history. This is model sensitivity, not evidence that a behaviour improves health.",
+      "reset": "21.41%"
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "torch": "2.11.0",
+    "torchvision": "0.26.0",
+    "numpy": "2.5.3",
+    "Pillow": "11.3.0",
+    "mps_available": true
+  },
+  "checkpoint_sha256": "36dd33662e277d3770995bf406f714b71231e77846a4a6a01ef418864259b2ee",
+  "generated_input_sha256": "7386540fd3b8ba8e65671360f5416374a8d45bc2f89bfffa8d443d6e0648e492",
+  "registration_sha256": "15d2e8584225660154dd5ce7291829b3993c33f7a7509dd411aea3482c7629e8",
+  "file_sha256": {
+    "src/vision/live_photo_demo.py": "bbf08f5d96ceabfd0dd250b52e766d92c9acae20911810a03e489a0a115e2a8a",
+    "src/vision/photo_explanation.py": "e632e67acf356c2d326c07b092ff30c19d52bf0efe12c0f5e39ff6790e76026e",
+    "src/tabular/api.py": "b6b09de0d14829477eb83adb8954a0ed4652deceb8108e68501fa922ef6b3f5d",
+    "src/tabular/ui/App.jsx": "06269f1aaad4aee7597c0738b17bccc39d9a2eade3921e3ec89048ea05a22584",
+    "src/tabular/ui/app.js": "ee5bf40d7d0124cc82d1ab60b037e53fbc91b25b4415f5057ffa4ee605814309",
+    "tests/test_live_photo_demo.py": "de94b1f197fe8de051e37f7f16d447cd60d7b22295223ca4d8ba8dbbd3623481",
+    "docs/vision_registered_photo_live_demo_v1.md": "e6b8cf9cecb82e51616366f59293668e7884fead63f967410f4e2da7a17a2c9c",
+    "docs/vision_registered_photo_live_tests_v1.xml": "17ac7ed8dd85540d41c2813ff891561145c35058946eaabcb81fb15fc856677c"
+  },
+  "generated_artifact_root": "/Users/vinuthanvinuthan/Desktop/RP-J26-IT-458/data/pp1_live_photo_verification_v1_20261017T013402631604Z",
+  "default_photo_runtime": "inactive",
+  "generated_verification_url": "http://127.0.0.1:8772",
+  "unknown_source_user_png_registered": false,
+  "real_dental_image_inference": false,
+  "dental_training": false,
+  "test_access": false,
+  "held_images_promoted": 0,
+  "labels_changed": false,
+  "install": false,
+  "download": false,
+  "external_upload": false,
+  "commit": false,
+  "push": false,
+  "remaining": [
+    "Source-confirmed permitted non-study JPEG with supported ICC and orientation",
+    "Current implementation rejects arbitrary, untagged/other-profile/rotated/PNG inputs",
+    "Qualified Vision label/group/manifest decisions, absent MGI0/scarce MGI1, poor MGI1/2 recall",
+    "Final Vision scientific evaluation, genuine feedback and owner rehearsal"
+  ]
+}

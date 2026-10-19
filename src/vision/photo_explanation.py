@@ -140,6 +140,9 @@ class PhotoRuntime:
     def status(self):
         return {"ready": bool(self.allowed_inputs), "version": VERSION,
                 "notice": NOTICE, "synthetic_only": self.synthetic_only,
+                "registered_count": len(self.allowed_inputs),
+                "message": ("Generated-image verification only; not a dental performance result"
+                            if self.synthetic_only else "Local registered non-study photo demo"),
                 "accepted_format": "registered RGB JPEG with qualified ICC and identity orientation",
                 "maximum_bytes": MAX_BYTES, "healthy_mgi0_supported": False}
 
@@ -159,22 +162,32 @@ class PhotoRuntime:
         return _checked_result(result, prepared, self.checkpoint_sha256, self.synthetic_only)
 
 
-def load_v3_runtime(checkpoint, allowed_inputs):
+def load_v3_runtime(checkpoint, allowed_inputs, *, synthetic_only=False):
     """Explicit caller only: load the pinned model, never ImageNet weights/downloads.
 
     This is not called by the default demo, packaging or any training gate.
     Input registration requires a separate owner-origin decision; this helper
     does not authenticate clinical consent or discover study/Test photographs.
     """
+    if type(synthetic_only) is not bool:
+        raise ValueError("Explicit runtime scope required")
+    origin = "generated" if synthetic_only else "owner_supplied_nonstudy"
+    if (not isinstance(allowed_inputs, dict) or not allowed_inputs
+            or any(not _digest(k) or v != origin for k, v in allowed_inputs.items())):
+        raise ValueError("Explicit new-photo input registration required; study images forbidden")
+    model, cam_layer = load_v3_model(checkpoint)
+    return PhotoRuntime(model, cam_layer, V3_CHECKPOINT_SHA,
+                        dict(allowed_inputs), synthetic_only=synthetic_only)
+
+
+def load_v3_model(checkpoint):
+    """Load only the pinned PP1 checkpoint; shared by separately gated local runtimes."""
     path = Path(checkpoint)
     if path.is_symlink() or not path.is_file():
         raise ValueError("A regular local pinned checkpoint is required")
     raw = path.read_bytes()
     if sha256(raw).hexdigest() != V3_CHECKPOINT_SHA:
         raise ValueError("Checkpoint SHA mismatch before deserialization")
-    if (not isinstance(allowed_inputs, dict) or not allowed_inputs
-            or any(not _digest(k) or v != "owner_supplied_nonstudy" for k, v in allowed_inputs.items())):
-        raise ValueError("Explicit new-photo input registration required; study images forbidden")
     torch = pilot.models._torch()
     state = torch.load(io.BytesIO(raw), map_location="cpu", weights_only=True)
     if state.get("version") != "pp1-b1-last-bottleneck-v3" or state.get("schema") != list(GRADES):
@@ -186,4 +199,4 @@ def load_v3_runtime(checkpoint, allowed_inputs):
     network = pilot.make_model(pretrained=False)
     network["model"].load_state_dict(state["model"], strict=True)
     network["model"].eval()
-    return PhotoRuntime(network["model"], network["cam_layer"], V3_CHECKPOINT_SHA, dict(allowed_inputs))
+    return network["model"], network["cam_layer"]
