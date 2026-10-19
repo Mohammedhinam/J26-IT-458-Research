@@ -1,0 +1,6 @@
+# Use the Colab GPU runtime's preinstalled Torch/Torchvision build.
+ultralytics==8.4.178
+numpy>=1.23
+Pillow>=10
+PyYAML>=6
+scikit-learn>=1.4
