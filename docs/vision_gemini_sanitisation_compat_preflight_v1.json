@@ -1,0 +1,61 @@
+{
+  "scope": "172 cached development JPEGs; header through SOS only; ICC/XMP structure only",
+  "selected": 172,
+  "splits": {
+    "Training": 43,
+    "Validation": 129
+  },
+  "compatible_header_and_XMP": 172,
+  "fail_or_unresolved": 0,
+  "source_hash_matches_cached": 172,
+  "source_stat_unchanged": 172,
+  "JPEG_header_and_dimensions_match": 172,
+  "baseline_RGB8_SOF0_and_SOS_supported": 172,
+  "XMP_packets": 172,
+  "XMP_packets_pass_metadata_removal_schema": 172,
+  "unique_ICC_profiles": 1,
+  "ICC_hash": "2b8daf8cabe783b17f801e6687f57016b53c775a826269e21c51313083c9fefc",
+  "ICC_bytes": 480,
+  "ICC_tag_signatures": [
+    "wtpt",
+    "rTRC",
+    "gTRC",
+    "bTRC",
+    "rXYZ",
+    "gXYZ",
+    "bXYZ",
+    "cprt",
+    "desc"
+  ],
+  "ICC_text_tags": [
+    "desc",
+    "cprt"
+  ],
+  "ICC_text_values_retained_or_logged": false,
+  "ICC_nonidentifying_profile_approval": false,
+  "ICC_real_hash_allowlisted_for_sanitizer": false,
+  "RGB_decode_count": 0,
+  "source_files_modified": false,
+  "protected_aliases_opened": 0,
+  "external_package_created": false,
+  "Gemini_upload": false,
+  "training": false,
+  "permission_confirmed": 0,
+  "permission_unresolved": 172,
+  "personal_Gemini_processing_risk_accepted": false,
+  "fail_reasons": {},
+  "status": "TECHNICAL_HEADER_XMP_COMPATIBLE_PRIVACY_AND_RELEASE_BLOCKED",
+  "structural_counts": {
+    "jpeg_headers_compatible": 172,
+    "jpeg_header_failures": 0,
+    "icc_structure_matches_cached_supported_subset": 172,
+    "icc_structure_failures": 0,
+    "xmp_packet_schema_pass": 172,
+    "xmp_packet_schema_fail": 0,
+    "source_hash_mismatch": 0,
+    "source_changed": 0,
+    "protected_test_aliases_accessed": 0
+  },
+  "ICC_profile_nonidentification": "NOT_ESTABLISHED: the shared profile has description and copyright text fields; values were not retained or reported.",
+  "sanitizer_execution_status": "No real derivative was passed through strip_generated; its ICC allowlist remains generated-only and the real profile hash is not authorized."
+}
