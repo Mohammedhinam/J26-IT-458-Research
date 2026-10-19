@@ -20,6 +20,7 @@ Plaque_Segmentation/Plaque_YOLO_Clean/
 # Python temporary files
 __pycache__/
 *.pyc
+.DS_Store
 
 # Model outputs/weights
 runs/
@@ -34,4 +35,17 @@ runs/
 venv/
 *.pth
 *.pkl
+*.joblib
+*.safetensors
+*.ckpt
+*.npy
+*.npz
 .env
+
+# Component 2 rules: source images stay local, including generated previews
+*.jpg
+*.jpeg
+*.png
+
+# These presentation packages embed local dental photos and screenshots
+/docs/pp1_final_20261018/*.pptx
