@@ -9,7 +9,8 @@ SOURCES = {
     'vision_frozen_feature_signal_results_v1.json': '0ea11860bbf34d4db83524878631e5bcba34894e063191fd723bfabf8cca6f12',
     'vision_efficientnet_probe_results_v1.json': '13be61eb29b1922ca5f66c60e11b19daa091769a5344aaf5ba825f7aa8164eed',
     'vision_efficientnet_head_results_v1.json': 'bf4ac9f190c0541a07c86084e1d2a0c2c1cef2dae4f21772e4bd368c138154a0',
-    'vision_nested_feature_probe_results_v1.json': '731dfbdc67f9cd2db6753b997c0e5e14e8ac3d819c991097cfa23e734be13c6d'}
+    'vision_nested_feature_probe_results_v1.json': '731dfbdc67f9cd2db6753b997c0e5e14e8ac3d819c991097cfa23e734be13c6d',
+    'vision_photo_model_comparison_v1.json': 'c4ba21f3ea84980ca85c6b77f44ca4f14a5ba0818201368574a5564f396fa096'}
 
 
 def card(name, metrics):
@@ -45,6 +46,11 @@ def load_evidence(root=DOCS):
     efficient = saved['vision_efficientnet_probe_results_v1.json']['metrics']
     unweighted = saved['vision_efficientnet_head_results_v1.json']['metrics']
     nested = saved['vision_nested_feature_probe_results_v1.json']['metrics']
+    model_comparison = saved['vision_photo_model_comparison_v1.json']
+    if (model_comparison.get('status') != 'verified_680_image_oof_comparison'
+            or [row.get('support') for row in model_comparison.get('rows', [])]
+            != [[12, 84, 223, 361]] * 4):
+        raise ValueError('Saved photo-model comparison population mismatch')
     probes = [card('ResNet + balanced head', resnet['linear']),
               card('EfficientNet + balanced head', efficient['efficientnet']),
               card('EfficientNet + unweighted head', unweighted['unweighted']),
@@ -54,6 +60,7 @@ def load_evidence(root=DOCS):
         raise ValueError('Evidence population mismatch')
     return {'notice': 'Provisional labels; non-clinical; non-final; participant independence unverified.',
             'historical_validation53': historical, 'training680_oof': probes,
+            'photo_model_comparison_680': model_comparison,
             'comparability': 'Different evaluation populations: do not rank the historical 53-Validation pilot against Training680 OOF.',
             'limitations': ['MGI0 has no whole-image support; definitions remain 0–4.',
                 'All measured learned OOF workflows have Grade1 recall 0/12; Grade1 support is insufficient.',

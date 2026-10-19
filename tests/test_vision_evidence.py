@@ -18,7 +18,9 @@ def fixture_files(tmp_path, monkeypatch):
         {'metrics': {'linear': large, 'majority': large}},
         {'metrics': {'efficientnet': large}},
         {'metrics': {'unweighted': large}},
-        {'metrics': {'linear': large}}]
+        {'metrics': {'linear': large}},
+        {'status': 'verified_680_image_oof_comparison',
+         'rows': [{'support': [12, 84, 223, 361]} for _ in range(4)]}]
     hashes = {}
     for name, document in zip(evidence.SOURCES, documents):
         path = tmp_path / name
@@ -34,6 +36,7 @@ def test_population_separation_and_no_private_fields(tmp_path, monkeypatch):
     assert result['historical_validation53']['n'] == 53
     assert all(row['n'] == 680 for row in result['training680_oof'])
     assert len(result['training680_oof']) == 5
+    assert len(result['photo_model_comparison_680']['rows']) == 4
     assert 'DO_NOT_EXPOSE' not in json.dumps(result)
     assert result['final_model_selected'] is result['test_used'] is result['new_photo_runtime_activated'] is False
     for row in result['training680_oof']:

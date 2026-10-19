@@ -1,0 +1,83 @@
+{
+  "status": "verified_680_image_oof_comparison",
+  "population": "Same 680 Training images, five saved content-group folds; provisional grades 1–4 only.",
+  "rows": [
+    {
+      "name": "ResNet + balanced Logistic head",
+      "accuracy": 0.475,
+      "macro_f1": 0.29511448569989673,
+      "balanced_accuracy": 0.29379114383788124,
+      "correct_per_grade": [
+        0,
+        17,
+        73,
+        233
+      ],
+      "support": [
+        12,
+        84,
+        223,
+        361
+      ],
+      "new_photo_inference": "Not packaged; OOF estimator only"
+    },
+    {
+      "name": "EfficientNet + nested-selected Logistic head",
+      "accuracy": 0.5220588235294118,
+      "macro_f1": 0.34642858528130327,
+      "balanced_accuracy": 0.34864528118739146,
+      "correct_per_grade": [
+        0,
+        27,
+        96,
+        232
+      ],
+      "support": [
+        12,
+        84,
+        223,
+        361
+      ],
+      "new_photo_inference": "Not packaged; no fitted Logistic checkpoint or full-development refit"
+    },
+    {
+      "name": "YOLO tooth ROI v1 + ResNet18 crop classifier",
+      "accuracy": 0.6073529411764705,
+      "macro_f1": 0.3384393403845929,
+      "balanced_accuracy": 0.3437075400325217,
+      "correct_per_grade": [
+        0,
+        8,
+        92,
+        313
+      ],
+      "support": [
+        12,
+        84,
+        223,
+        361
+      ],
+      "new_photo_inference": "Available for exploratory fold 00"
+    },
+    {
+      "name": "YOLO tooth ROI v2 + ResNet18 CORAL",
+      "accuracy": 0.5970588235294118,
+      "macro_f1": 0.32791383868630986,
+      "balanced_accuracy": 0.33513203145934223,
+      "correct_per_grade": [
+        0,
+        15,
+        46,
+        345
+      ],
+      "support": [
+        12,
+        84,
+        223,
+        361
+      ],
+      "new_photo_inference": "Available for exploratory fold 00"
+    }
+  ],
+  "interpretation": "New-photo outputs illustrate each loaded checkpoint on one selected image. They do not select a winner; use the 680-image OOF metrics for aggregate comparison. Fold 00 is not a full-development refit."
+}
