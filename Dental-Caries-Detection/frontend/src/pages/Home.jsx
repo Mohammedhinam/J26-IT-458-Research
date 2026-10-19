@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 import { getHealth, predictCaries, getGradcam } from '../services/api.js';
 
 const labels = ['No Caries', 'Early-Stage Caries', 'Advanced Caries'];
+// Enable for PP2 to restore the Grad-CAM UI.
+const SHOW_GRADCAM = false;
 
 const severityLabels = {
   NoEnamel_Caries: 'No Enamel Caries',
@@ -227,8 +229,9 @@ function handleRegionSelect(regionNumber) {
 
         <p className="max-w-2xl text-sm leading-6 text-slate-600">
           Upload a dental image to detect suspected regions with YOLOv8,
-          compare MobileNetV2 and EfficientNet-B0 classifications, and explore
-          visual explanations with Grad-CAM. Individual Research Project.
+          compare MobileNetV2 and EfficientNet-B0 classifications
+          {SHOW_GRADCAM && ', and explore visual explanations with Grad-CAM'}.
+          {' '}Individual Research Project.
         </p>
 
         <div className="space-y-3 border-t border-light-blue/40 pt-4">
@@ -383,6 +386,7 @@ function handleRegionSelect(regionNumber) {
             </h2>
             
 {/* Grad-CAM controls */}
+{SHOW_GRADCAM && (
 <div className="order-last min-w-0 space-y-5 rounded-2xl border border-light-blue/40 bg-white p-4 shadow-sm sm:p-6">
   <div className="space-y-2">
   <p className="text-xs font-semibold uppercase tracking-widest text-navy">Model insights</p>
@@ -469,6 +473,7 @@ function handleRegionSelect(regionNumber) {
     </div>
   )}
 </div>
+)}
 
             
 <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -505,7 +510,7 @@ function handleRegionSelect(regionNumber) {
 
             <div className="flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 pt-5">
               <h3 className="font-semibold text-slate-800">Region predictions</h3>
-              <p className="text-xs text-slate-500">Select a card to explore Grad-CAM</p>
+              {SHOW_GRADCAM && <p className="text-xs text-slate-500">Select a card to explore Grad-CAM</p>}
             </div>
 
             {results.total_regions === 0 && (
