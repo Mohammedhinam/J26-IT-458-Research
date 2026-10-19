@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-17",
+  "status": "generated_observations_only_not_qualified_replacement",
+  "executed_by": "owner-requested vision_code_forensics agent",
+  "root_action": "saved reviewer-reported numerical observations; no claimed root rerun",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.3",
+    "torch": "2.11.0",
+    "pillow": "11.3.0",
+    "device": "cpu"
+  },
+  "baseline_fixture": {
+    "kind": "generated_two_pixel_alternating_stripe",
+    "width": 7286,
+    "height": 1,
+    "channels": 3,
+    "values": [0, 1],
+    "formula": "((arange(7286) // 2) % 2).astype(float32)",
+    "sampler": "existing colour_b1_streaming._model_view",
+    "identity_handling": "in-memory BytesIO; temporary generated-only _identity sentinel restored in finally",
+    "reference": "installed Pillow float-mode BOX resize to224x1",
+    "printed_values_are_rounded": true,
+    "existing_b1": {"minimum": 0, "maximum": 1, "standard_deviation": 0.4081931710},
+    "area_reference": {"minimum": 0.4848484993, "maximum": 0.5151515007, "standard_deviation": 0.0109033668}
+  },
+  "candidate_primitive": {
+    "function": "torch.nn.functional.interpolate",
+    "dtype": "float32",
+    "mode": "bilinear",
+    "align_corners": false,
+    "antialias": true,
+    "fixtures": {
+      "signed_stripes": {"input_levels": [-8, 8], "shape": [1, 3, 1, 224], "finite": true, "output_minimum_rounded": -0.140767783, "output_maximum_rounded": 0.003949205},
+      "constant_negative": {"input_value": -3.25, "shape": [1, 3, 112, 224], "finite": true, "maximum_constant_error": 0.0000009536743},
+      "constant_positive": {"input_value": 4.75, "shape": [1, 3, 112, 224], "finite": true, "maximum_constant_error": 0.000001907349, "within_input_range_at_1e_minus6": false},
+      "signed_ramp": {"input_range": [-16, 16], "shape": [1, 3, 112, 224], "finite": true, "output_minimum_rounded": -15.894664, "output_maximum_rounded": 15.894664}
+    }
+  },
+  "established": "existing non-antialiased B1 sampler aliases this generated high-frequency fixture",
+  "not_established": ["cause of dental classification errors", "accuracy improvement", "candidate strict range or bit-exact constant preservation", "full B1 or ICC qualification", "streaming-memory compatibility", "clinical colour validation"],
+  "dental_payload_access": false,
+  "held_or_Test_access": false,
+  "model_execution": false,
+  "training": false,
+  "production_activation": false,
+  "old_tests_rerun": false
+}
