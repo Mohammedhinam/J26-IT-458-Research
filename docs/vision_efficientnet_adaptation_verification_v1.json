@@ -1,0 +1,429 @@
+{
+  "date": "2026-10-17",
+  "status": "PASS_saved_output_verification",
+  "experiment_status": "ten_fits_completed_original_summary_failed_then_saved_output_postprocessing_recovered",
+  "output_directory": "/Users/vinuthanvinuthan/Desktop/RP-J26-IT-458/data/efficientnet_adaptation_v1_20261017_1792202682936988000",
+  "verification_method": "Independent sklearn metrics and metadata arithmetic. Separately, all ten final checkpoints were CPU weights_only deserialized and every tensor bytehash checked against fit.json; official initial encoder/head independently reconstructed without any forward pass.",
+  "assertions_passed": 135,
+  "assertions_failed": 0,
+  "checks": [
+    "recovery_receipt_binds_summary",
+    "original_failure_preserved",
+    "postprocessing_no_refit_or_inference",
+    "manifest_sha_exact",
+    "selection_sha_exact",
+    "held181_and_exact_np015_exclusions",
+    "exact_oof_fields",
+    "680_unique_sorted_training_ids",
+    "manifest_id_label_group_alignment",
+    "protocol_id_group_fold_alignment",
+    "class_support12_84_223_361",
+    "pinned_five_fold_sha",
+    "configuration_and_qualification_sha",
+    "prospective10fits5epochs_no_selection",
+    "oof_sha",
+    "instrumented_loader680_unique_allowed_training_paths",
+    "declared_payload_scope_training680_only",
+    "head_only_finite_probability_shape_range",
+    "head_only_probability_normalization",
+    "head_only_independent_accuracy",
+    "head_only_independent_macro_f1_four_grades",
+    "head_only_independent_balanced_accuracy",
+    "head_only_independent_per_grade_recall",
+    "head_only_independent_per_grade_f1",
+    "head_only_independent_quadratic_weighted_kappa",
+    "head_only_independent_ordinal_mae",
+    "head_only_independent_per_grade_auroc",
+    "head_only_independent_macro_auroc",
+    "head_only_independent_multiclass_brier",
+    "head_only_independent_confusion_matrix",
+    "head_only_independent_within_one_accuracy",
+    "head_only_independent_predicted_counts",
+    "last_block_finite_probability_shape_range",
+    "last_block_probability_normalization",
+    "last_block_independent_accuracy",
+    "last_block_independent_macro_f1_four_grades",
+    "last_block_independent_balanced_accuracy",
+    "last_block_independent_per_grade_recall",
+    "last_block_independent_per_grade_f1",
+    "last_block_independent_quadratic_weighted_kappa",
+    "last_block_independent_ordinal_mae",
+    "last_block_independent_per_grade_auroc",
+    "last_block_independent_macro_auroc",
+    "last_block_independent_multiclass_brier",
+    "last_block_independent_confusion_matrix",
+    "last_block_independent_within_one_accuracy",
+    "last_block_independent_predicted_counts",
+    "fold0_544_136_group_isolation",
+    "fold0_head_only_five_finite_epochs",
+    "fold0_head_only_fit_only_weights",
+    "fold0_head_only_trainable_names",
+    "fold0_head_only_initial_digest",
+    "fold0_head_only_frozen_proof",
+    "fold0_head_only_fitting_order_sha",
+    "fold0_head_only_parameter_groups",
+    "fold0_last_block_five_finite_epochs",
+    "fold0_last_block_fit_only_weights",
+    "fold0_last_block_trainable_names",
+    "fold0_last_block_initial_digest",
+    "fold0_last_block_frozen_proof",
+    "fold0_last_block_fitting_order_sha",
+    "fold0_last_block_parameter_groups",
+    "fold0_paired_initial_and_order",
+    "fold1_544_136_group_isolation",
+    "fold1_head_only_five_finite_epochs",
+    "fold1_head_only_fit_only_weights",
+    "fold1_head_only_trainable_names",
+    "fold1_head_only_initial_digest",
+    "fold1_head_only_frozen_proof",
+    "fold1_head_only_fitting_order_sha",
+    "fold1_head_only_parameter_groups",
+    "fold1_last_block_five_finite_epochs",
+    "fold1_last_block_fit_only_weights",
+    "fold1_last_block_trainable_names",
+    "fold1_last_block_initial_digest",
+    "fold1_last_block_frozen_proof",
+    "fold1_last_block_fitting_order_sha",
+    "fold1_last_block_parameter_groups",
+    "fold1_paired_initial_and_order",
+    "fold2_544_136_group_isolation",
+    "fold2_head_only_five_finite_epochs",
+    "fold2_head_only_fit_only_weights",
+    "fold2_head_only_trainable_names",
+    "fold2_head_only_initial_digest",
+    "fold2_head_only_frozen_proof",
+    "fold2_head_only_fitting_order_sha",
+    "fold2_head_only_parameter_groups",
+    "fold2_last_block_five_finite_epochs",
+    "fold2_last_block_fit_only_weights",
+    "fold2_last_block_trainable_names",
+    "fold2_last_block_initial_digest",
+    "fold2_last_block_frozen_proof",
+    "fold2_last_block_fitting_order_sha",
+    "fold2_last_block_parameter_groups",
+    "fold2_paired_initial_and_order",
+    "fold3_544_136_group_isolation",
+    "fold3_head_only_five_finite_epochs",
+    "fold3_head_only_fit_only_weights",
+    "fold3_head_only_trainable_names",
+    "fold3_head_only_initial_digest",
+    "fold3_head_only_frozen_proof",
+    "fold3_head_only_fitting_order_sha",
+    "fold3_head_only_parameter_groups",
+    "fold3_last_block_five_finite_epochs",
+    "fold3_last_block_fit_only_weights",
+    "fold3_last_block_trainable_names",
+    "fold3_last_block_initial_digest",
+    "fold3_last_block_frozen_proof",
+    "fold3_last_block_fitting_order_sha",
+    "fold3_last_block_parameter_groups",
+    "fold3_paired_initial_and_order",
+    "fold4_544_136_group_isolation",
+    "fold4_head_only_five_finite_epochs",
+    "fold4_head_only_fit_only_weights",
+    "fold4_head_only_trainable_names",
+    "fold4_head_only_initial_digest",
+    "fold4_head_only_frozen_proof",
+    "fold4_head_only_fitting_order_sha",
+    "fold4_head_only_parameter_groups",
+    "fold4_last_block_five_finite_epochs",
+    "fold4_last_block_fit_only_weights",
+    "fold4_last_block_trainable_names",
+    "fold4_last_block_initial_digest",
+    "fold4_last_block_frozen_proof",
+    "fold4_last_block_fitting_order_sha",
+    "fold4_last_block_parameter_groups",
+    "fold4_paired_initial_and_order",
+    "exact10_saved_fit_files",
+    "efficientnet_adaptation_v1.py_executed_snapshot_sha",
+    "only_reporting_runner_changed_post_fit",
+    "original_code_binding_matches_qualified_sources",
+    "official_weights_unchanged",
+    "one_attempt_marker_retained",
+    "no_final_or_clinical_claims",
+    "runtime_not_invented"
+  ],
+  "maximum_metric_absolute_difference": 1.1102230246251565e-16,
+  "maximum_probability_row_sum_deviation": 1.3783574104309082e-07,
+  "independent_metrics": {
+    "head_only": {
+      "accuracy": 0.4632352941176471,
+      "macro_f1_four_grades": 0.33619524969876124,
+      "balanced_accuracy": 0.35450549609804544,
+      "per_grade_recall": [
+        0.08333333333333333,
+        0.36904761904761907,
+        0.47533632286995514,
+        0.4903047091412742
+      ],
+      "per_grade_f1": [
+        0.046511627906976744,
+        0.28440366972477066,
+        0.4335378323108384,
+        0.580327868852459
+      ],
+      "quadratic_weighted_kappa": 0.24627439212960556,
+      "ordinal_mae": 0.6970588235294117,
+      "per_grade_auroc": [
+        0.8193612774451098,
+        0.6619527005433046,
+        0.5656307954980325,
+        0.7014996656796255
+      ],
+      "macro_auroc": 0.6871111097915181,
+      "multiclass_brier": 0.6345496224372251,
+      "confusion_matrix": [
+        [
+          1,
+          6,
+          5,
+          0
+        ],
+        [
+          4,
+          31,
+          36,
+          13
+        ],
+        [
+          10,
+          48,
+          106,
+          59
+        ],
+        [
+          16,
+          49,
+          119,
+          177
+        ]
+      ],
+      "within_one_accuracy": 0.8632352941176471,
+      "predicted_counts": [
+        31,
+        134,
+        266,
+        249
+      ]
+    },
+    "last_block": {
+      "accuracy": 0.4676470588235294,
+      "macro_f1_four_grades": 0.34157925156206276,
+      "balanced_accuracy": 0.3615789532836102,
+      "per_grade_recall": [
+        0.08333333333333333,
+        0.39285714285714285,
+        0.4798206278026906,
+        0.4903047091412742
+      ],
+      "per_grade_f1": [
+        0.046511627906976744,
+        0.3,
+        0.4385245901639344,
+        0.5812807881773399
+      ],
+      "quadratic_weighted_kappa": 0.25191491958863566,
+      "ordinal_mae": 0.6926470588235294,
+      "per_grade_auroc": [
+        0.8209830339321357,
+        0.6638702460850112,
+        0.5664844815574374,
+        0.7023419793502895
+      ],
+      "macro_auroc": 0.6884199352312185,
+      "multiclass_brier": 0.6340814501295955,
+      "confusion_matrix": [
+        [
+          1,
+          6,
+          5,
+          0
+        ],
+        [
+          4,
+          33,
+          34,
+          13
+        ],
+        [
+          10,
+          48,
+          107,
+          58
+        ],
+        [
+          16,
+          49,
+          119,
+          177
+        ]
+      ],
+      "within_one_accuracy": 0.8632352941176471,
+      "predicted_counts": [
+        31,
+        136,
+        265,
+        248
+      ]
+    }
+  },
+  "last_block_minus_head_only": {
+    "accuracy": 0.004411764705882337,
+    "macro_f1_four_grades": 0.005384001863301513,
+    "balanced_accuracy": 0.007073457185564791,
+    "quadratic_weighted_kappa": 0.005640527459030098,
+    "multiclass_brier": -0.0004681723076296329
+  },
+  "support": [
+    12,
+    84,
+    223,
+    361
+  ],
+  "checkpoint_verification": [
+    {
+      "fold": 0,
+      "arm": "head_only",
+      "checkpoint_sha256": "be90d24afe561796c80fe303f4a84f0b2b882b5c6dc01a0cbf67e92702adb503",
+      "fit_json_sha256": "6c5cd7e80a9304e18677c8f006c3a3a3f8b7f676a6400db7c72442054789b44f",
+      "actual_cpu_checkpoint_tensors_independently_deserialized_and_hashed": 360,
+      "frozen_tensors_confirmed_unchanged": 358,
+      "allowed_trainable_tensors_confirmed_changed": 2,
+      "initial_state_matches_independently_reconstructed_official_encoder_and_seed42_head": true
+    },
+    {
+      "fold": 0,
+      "arm": "last_block",
+      "checkpoint_sha256": "b557f52e358ca88329391e01e3f2c6f77123d14bbbe1027dd38391a27ea96353",
+      "fit_json_sha256": "689a37b7afde5b10feeaac2ee80fd4efaea1cc65e08135af081dad4a77edcd82",
+      "actual_cpu_checkpoint_tensors_independently_deserialized_and_hashed": 360,
+      "frozen_tensors_confirmed_unchanged": 357,
+      "allowed_trainable_tensors_confirmed_changed": 3,
+      "initial_state_matches_independently_reconstructed_official_encoder_and_seed42_head": true
+    },
+    {
+      "fold": 1,
+      "arm": "head_only",
+      "checkpoint_sha256": "b49b706ea2eb1fbf76ddcc6ac1ef9f36fe8ae9ebf28150c0c5c9a6a59f7733c0",
+      "fit_json_sha256": "9282ffdd274ff32e7585d145622b311c357d05435b87a336793c0f09d6a0ef56",
+      "actual_cpu_checkpoint_tensors_independently_deserialized_and_hashed": 360,
+      "frozen_tensors_confirmed_unchanged": 358,
+      "allowed_trainable_tensors_confirmed_changed": 2,
+      "initial_state_matches_independently_reconstructed_official_encoder_and_seed42_head": true
+    },
+    {
+      "fold": 1,
+      "arm": "last_block",
+      "checkpoint_sha256": "a4c6e39bce93dc09e880b4744779b8f6febbf9d26b116e9aee666db06cb70405",
+      "fit_json_sha256": "e1b706e6e3dd791c93ab80ac0ae61431e79152a4ee90c556a845a70493f761b4",
+      "actual_cpu_checkpoint_tensors_independently_deserialized_and_hashed": 360,
+      "frozen_tensors_confirmed_unchanged": 357,
+      "allowed_trainable_tensors_confirmed_changed": 3,
+      "initial_state_matches_independently_reconstructed_official_encoder_and_seed42_head": true
+    },
+    {
+      "fold": 2,
+      "arm": "head_only",
+      "checkpoint_sha256": "413d0640320a9d7b0611e3156eabf2ac2f8ef8c9ffca8bf8bb26403de888cc12",
+      "fit_json_sha256": "9a75d571a7186d1d951d8c515a04b33570fcd6cd8391fc5c975fbf6094d55f24",
+      "actual_cpu_checkpoint_tensors_independently_deserialized_and_hashed": 360,
+      "frozen_tensors_confirmed_unchanged": 358,
+      "allowed_trainable_tensors_confirmed_changed": 2,
+      "initial_state_matches_independently_reconstructed_official_encoder_and_seed42_head": true
+    },
+    {
+      "fold": 2,
+      "arm": "last_block",
+      "checkpoint_sha256": "88aeb6290ab78dc87311254b4f2438a8a74da5132e2d254657464c9423ad9bac",
+      "fit_json_sha256": "701af832cb3a435deaa453bdf166f745b2cb9df56590d33d5279c9db28cf997a",
+      "actual_cpu_checkpoint_tensors_independently_deserialized_and_hashed": 360,
+      "frozen_tensors_confirmed_unchanged": 357,
+      "allowed_trainable_tensors_confirmed_changed": 3,
+      "initial_state_matches_independently_reconstructed_official_encoder_and_seed42_head": true
+    },
+    {
+      "fold": 3,
+      "arm": "head_only",
+      "checkpoint_sha256": "b55d0dff9ab7c7f6fdb407bcd1e0b6602a2aa45879bdb13dd04bcc30a91992cf",
+      "fit_json_sha256": "e1c144384670f4b756bd89d3cb2123b79bbbbb6703acf3ed562512763dc63485",
+      "actual_cpu_checkpoint_tensors_independently_deserialized_and_hashed": 360,
+      "frozen_tensors_confirmed_unchanged": 358,
+      "allowed_trainable_tensors_confirmed_changed": 2,
+      "initial_state_matches_independently_reconstructed_official_encoder_and_seed42_head": true
+    },
+    {
+      "fold": 3,
+      "arm": "last_block",
+      "checkpoint_sha256": "c356c77edbcf22fca1448ccb61b0d7bd566d39f078ce702395820c13a1ea227e",
+      "fit_json_sha256": "094808dfeeb7135f65227f50f3555625c5e69a007870cd3d3d16c4e4f2e7da02",
+      "actual_cpu_checkpoint_tensors_independently_deserialized_and_hashed": 360,
+      "frozen_tensors_confirmed_unchanged": 357,
+      "allowed_trainable_tensors_confirmed_changed": 3,
+      "initial_state_matches_independently_reconstructed_official_encoder_and_seed42_head": true
+    },
+    {
+      "fold": 4,
+      "arm": "head_only",
+      "checkpoint_sha256": "22f104384060378db883ce685b0a9c5d5374a90350a560c940e8683bb908cdbb",
+      "fit_json_sha256": "af9c73b3c8f17d6baad5491443e0e8a6e564dad99ee2aacd20ce4a02e7577eef",
+      "actual_cpu_checkpoint_tensors_independently_deserialized_and_hashed": 360,
+      "frozen_tensors_confirmed_unchanged": 358,
+      "allowed_trainable_tensors_confirmed_changed": 2,
+      "initial_state_matches_independently_reconstructed_official_encoder_and_seed42_head": true
+    },
+    {
+      "fold": 4,
+      "arm": "last_block",
+      "checkpoint_sha256": "3a46db089a9ece73f90ac4feab77fcdd4ccf9af979ffc79a267ba8665382ac24",
+      "fit_json_sha256": "7fcd2b2ee4d9d5b8e73b69db6cc5e32249ebf5ae5e9f8037137c75005cf042a1",
+      "actual_cpu_checkpoint_tensors_independently_deserialized_and_hashed": 360,
+      "frozen_tensors_confirmed_unchanged": 357,
+      "allowed_trainable_tensors_confirmed_changed": 3,
+      "initial_state_matches_independently_reconstructed_official_encoder_and_seed42_head": true
+    }
+  ],
+  "official_initial_tensor_count": 360,
+  "qualification_source_count": 18,
+  "current_reporting_only_source_changes": [
+    "efficientnet_adaptation_v1.py"
+  ],
+  "provenance_hashes": {
+    "protocol_sha256": "8d90c77b7551cd4f7f44bdf9344c711c20494458b6ca96382e82ff1ae42dee28",
+    "oof_sha256": "7fbe26fa78899c2bd1d06681e66b84edb3b87ea78544cd4f5f605e65a2f133b5",
+    "recovered_results_sha256": "4f29d9e9d2e666d6bd6481a73c76e24c3990febddc52c58bd2b1791bf01acea2",
+    "original_failure_sha256": "3e8640cc173514a816d175c9e84d822a1c4875f00c3325719140b6b2730b82ff",
+    "postprocessing_receipt_sha256": "689dbd2753e4dca46671260b2db9ab224e18b1b33c855528431d554a53312734",
+    "loader_audit_sha256": "25d7cafdb1729ce69bc18c1b37e311e28c135405b5df6929273182f321543a1f",
+    "attempt_marker_sha256": "f4f4995dbb718b91af6de7fafd9822935164d10d827c753206fc445a7b92277c",
+    "executed_runner_sha256": "b2736538f2e1886450894d6ecc279cefd894383eb05abec984d401ca98a84fb9",
+    "current_reporting_fixed_runner_sha256": "6696d7c9aca500207de0d44c6af7bc04b54e5bb6c4163b3952ee6dd3b0d04edc",
+    "manifest_sha256": "8e7ff195009a5e781c216795fd2a943db17a0b3ec8fd1c84760f3bf9878a4c9f",
+    "official_weights_sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934"
+  },
+  "generated_tests": {
+    "current_reporting_fixed_version": {
+      "passed": 27,
+      "failed": 0,
+      "seconds": 1.63
+    },
+    "original_executed_version": {
+      "passed": 26,
+      "failed": 0,
+      "seconds": 2.13
+    },
+    "counts_are_versions_not_additive": true,
+    "intermediate_regression_test_before_helper_existed": "1 failed with AttributeError; timing-related missing implementation; expectation unchanged before passing current suite"
+  },
+  "verification_expectation_correction": "Initial metadata assertion incorrectly expected np015_excluded boolean; actual schema is exact two-ID list. Corrected verifier only, no source/data/result changes.",
+  "loader_trace_limit": "Instrumented model-array loader records680unique allowed Training calls; not an OS-level trace. Verification never reopened image arrays, source images, annotations, Validation, held or Test payloads.",
+  "scientific_limits": [
+    "Provisional four-grade pilot; whole-image MGI0 unsupported.",
+    "Twelve provisional MGI1 examples; participant independence unverified.",
+    "Earlier development selection remains; no clinical or final-model approval.",
+    "Small paired improvement is descriptive, not a statistically established fix."
+  ],
+  "new_training_fits_during_verification": 0,
+  "new_inference_calls_during_verification": 0,
+  "original_FAILED_json_retained": true,
+  "one_attempt_marker_retained": true
+}

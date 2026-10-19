@@ -1,0 +1,233 @@
+{
+  "version": "training680-matched-efficientnet-adaptation-v1",
+  "status": "ten_fits_completed_summary_recovered_without_refitting",
+  "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+  "config": {
+    "version": "training680-matched-efficientnet-adaptation-v1",
+    "arms": [
+      "head_only",
+      "last_block"
+    ],
+    "folds": 5,
+    "fits": 10,
+    "seed": 42,
+    "epochs": 5,
+    "batch_size": 16,
+    "device": "mps",
+    "head_lr": 0.001,
+    "block_lr": 1e-05,
+    "weight_decay": 0.0001,
+    "unfreeze": "features.8_except_BatchNorm",
+    "batchnorm": "frozen",
+    "optimizer": "AdamW",
+    "loss": "fitting_fold_balanced_cross_entropy",
+    "score_epoch": 5,
+    "resolution": 224,
+    "grades": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "early_stopping": false,
+    "augmentation": false,
+    "primary": "last_block_minus_head_only_OOF_macro_F1"
+  },
+  "bindings": {
+    "manifest_sha256": "8e7ff195009a5e781c216795fd2a943db17a0b3ec8fd1c84760f3bf9878a4c9f",
+    "weights_sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+    "config_sha256": "b73a4df70082d8664e34c373e06fd5ebd89eba392f66e197d2c39028a4c73286",
+    "code_sha256": "8441da982667717865f36042815d7f6bab67052d4636223733ec1ebd96ac5129",
+    "selection_sha256": "c7d6ecd627364801218e60ad58653c701085bc554745cb2e8cbb054d036ef8b6",
+    "fold_sha256": "e202132b8b7ee38ec4041ea399bccb0b538ef75ce1861faec044292c11cf90d4",
+    "output_path_sha256": "353a0bfa83c948fc08377c9bdc146c6f317e071276a189cbeee7a3a6c886a190",
+    "qualification_sha256": "09e57b056022c0a1991dec77f61999d2a3333bcd926cbd3e36bd47e30344c8ab"
+  },
+  "metrics": {
+    "head_only": {
+      "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+      "mgi_grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "n": 680,
+      "support": [
+        12,
+        84,
+        223,
+        361
+      ],
+      "accuracy": 0.4632352941176471,
+      "confusion_matrix": [
+        [
+          1,
+          6,
+          5,
+          0
+        ],
+        [
+          4,
+          31,
+          36,
+          13
+        ],
+        [
+          10,
+          48,
+          106,
+          59
+        ],
+        [
+          16,
+          49,
+          119,
+          177
+        ]
+      ],
+      "macro_f1_four_grades": 0.33619524969876124,
+      "per_grade_f1": [
+        0.046511627906976744,
+        0.28440366972477066,
+        0.4335378323108384,
+        0.580327868852459
+      ],
+      "per_grade_recall": [
+        0.08333333333333333,
+        0.36904761904761907,
+        0.47533632286995514,
+        0.4903047091412742
+      ],
+      "per_grade_auroc": [
+        0.8193612774451098,
+        0.6619527005433046,
+        0.5656307954980326,
+        0.7014996656796255
+      ],
+      "macro_auroc": 0.6871111097915181,
+      "multiclass_brier": 0.6345496224372251,
+      "ordinal_mae": 0.6970588235294117,
+      "quadratic_weighted_kappa": 0.24627439212960567,
+      "clinical_validation": false,
+      "healthy_mgi0_supported": false,
+      "balanced_accuracy": 0.35450549609804544,
+      "within_one_accuracy": 0.8632352941176471,
+      "predicted_counts": [
+        31,
+        134,
+        266,
+        249
+      ]
+    },
+    "last_block": {
+      "notice": "Provisional labels; non-clinical; non-final; participant independence unverified.",
+      "mgi_grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "n": 680,
+      "support": [
+        12,
+        84,
+        223,
+        361
+      ],
+      "accuracy": 0.4676470588235294,
+      "confusion_matrix": [
+        [
+          1,
+          6,
+          5,
+          0
+        ],
+        [
+          4,
+          33,
+          34,
+          13
+        ],
+        [
+          10,
+          48,
+          107,
+          58
+        ],
+        [
+          16,
+          49,
+          119,
+          177
+        ]
+      ],
+      "macro_f1_four_grades": 0.34157925156206276,
+      "per_grade_f1": [
+        0.046511627906976744,
+        0.3,
+        0.4385245901639344,
+        0.5812807881773399
+      ],
+      "per_grade_recall": [
+        0.08333333333333333,
+        0.39285714285714285,
+        0.4798206278026906,
+        0.4903047091412742
+      ],
+      "per_grade_auroc": [
+        0.8209830339321357,
+        0.6638702460850112,
+        0.5664844815574374,
+        0.7023419793502896
+      ],
+      "macro_auroc": 0.6884199352312186,
+      "multiclass_brier": 0.6340814501295955,
+      "ordinal_mae": 0.6926470588235294,
+      "quadratic_weighted_kappa": 0.25191491958863566,
+      "clinical_validation": false,
+      "healthy_mgi0_supported": false,
+      "balanced_accuracy": 0.3615789532836102,
+      "within_one_accuracy": 0.8632352941176471,
+      "predicted_counts": [
+        31,
+        136,
+        265,
+        248
+      ]
+    }
+  },
+  "last_block_minus_head_only": {
+    "accuracy": 0.004411764705882337,
+    "macro_f1_four_grades": 0.005384001863301513,
+    "balanced_accuracy": 0.007073457185564791,
+    "quadratic_weighted_kappa": 0.005640527459029987,
+    "multiclass_brier": -0.0004681723076296329
+  },
+  "fit_count": 10,
+  "oof_sha256": "7fbe26fa78899c2bd1d06681e66b84edb3b87ea78544cd4f5f605e65a2f133b5",
+  "runtime": {
+    "device": "mps",
+    "seconds": null,
+    "peak_process_rss_mib": null,
+    "reason": "Original summary exception occurred before final timing/memory fields were saved"
+  },
+  "recovery": {
+    "original_failure": {
+      "error_type": "KeyError",
+      "message": "'brier'",
+      "attempt_consumed": true
+    },
+    "executed_source_snapshot": "preserved in ignored local output",
+    "current_reporting_patch_sha256": "6696d7c9aca500207de0d44c6af7bc04b54e5bb6c4163b3952ee6dd3b0d04edc",
+    "recovery_training_fits": 0,
+    "recovery_inference_calls": 0,
+    "changed_prediction_count": 0,
+    "original_failure_and_attempt_preserved": true
+  },
+  "test_used": false,
+  "validation53_used": false,
+  "qualified_labels_approved": false,
+  "participant_independence_verified": false,
+  "executed_source_sha256": "b2736538f2e1886450894d6ecc279cefd894383eb05abec984d401ca98a84fb9"
+}

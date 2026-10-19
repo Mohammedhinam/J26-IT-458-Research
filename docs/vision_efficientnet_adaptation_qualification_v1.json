@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "code_sha256": "8441da982667717865f36042815d7f6bab67052d4636223733ec1ebd96ac5129",
+  "source_hashes": {
+    "b1_development_bundle_v1.py": "7ad20bcafce99797164239275954809cc11a7750922d6998443387aa91c7119c",
+    "b1_jpeg_source_v1.py": "5f28c0deb73f74a10afb8720300866877602e1c012ddecec092d46d23a1deefb",
+    "colour_b1_iccv2_generated.py": "6c611e1c9d77e7af1122d835cc7ce4d17699cbbb8497a6c279b32cd81a58c45c",
+    "colour_b1_prototype.py": "d3108ea3bf7f310f1b46960174d4936299ece19d762f4ca1ee9d900572b90856",
+    "colour_b1_streaming.py": "5b3a6bc893d1f6fc451c74e69f4865de00565b91bd19dc935baee6476cc5ec67",
+    "colour_qa.py": "4ad2b81c715b01e624b527d1971cc303740ddf559461f2d953c831956c1e82e3",
+    "colour_policy.py": "2bba567545143687f49b6e3ae63fdd72d1eacc10977d5ec373f00a4b5451a97b",
+    "exploratory_bundle.py": "dda776ca1558ed4da795df7cee47c0fe19d382cf32c37ca89d22f4141974b615",
+    "exploratory_bundle_v4.py": "c914cc05ad2be4ff08873a5d2270b5836e0f84219a539435beeca09b57ad76cd",
+    "model_pipeline.py": "c11ad18912575f3567d0baf0eefb1bfbb5eb00fbfa075880fe84aef1ccd34b3c",
+    "train_pipeline.py": "e7a979b0875af0e459496bca79ce3c80e594acf2639ea7dc9d8659ec75ffc695",
+    "exploratory_pilot_b1_v1.py": "876ec09dd7e9766bbc847416398e78d1ce320fa38a20bbaa952d35750eb5be05",
+    "exploratory_pilot.py": "c5bf6cba173390f914a44c4537b91d4f2a8e150aa0f5e4842c2ca94bb1a4d535",
+    "frozen_feature_probe.py": "066747fedc12c77bca129f38705fc7cdc98d829e6e38355226bee8d85b7c6ede",
+    "efficientnet_feature_probe.py": "2dd874210fe9eaacc758e5fbc87d4c0d176467febfb628c0465fed2ba95817d4",
+    "exploratory_pilot_b1_balanced_v2.py": "b551adfecadb0fca51422cabcb8c960d64b75bf38ff9f438d71cacbd4db72bd1",
+    "verify_b1_balanced_runtime_v2.py": "be2d244272f2cfd67f829908e5b32102613607243d1d090e13879b1d3b8105a8",
+    "efficientnet_adaptation_v1.py": "b2736538f2e1886450894d6ecc279cefd894383eb05abec984d401ca98a84fb9"
+  },
+  "mps_generated_step": true,
+  "generated_tests": {
+    "passed": 26,
+    "failed": 0,
+    "seconds": 2.13,
+    "command": ".venv/bin/python -B -m pytest tests/test_efficientnet_adaptation_v1.py -q",
+    "test_source_sha256": "a7af58fc0d19cd836ed4f8f7ae58391ea0c4b364b34f8ba0b99ea275f2232e85"
+  },
+  "generated_MPS": {
+    "head_only": {
+      "initial_sha": "9de3ec7a7a9eb95987c869cfa25828c73cec67083b7adc5c7f7990dc5030b70d",
+      "order_sha": "2c578b7a5bc350769ff0b9c609b03b8c17ca103aff376039036bc8a264816334",
+      "frozen_check": true,
+      "trainable_names": [
+        "classifier.1.bias",
+        "classifier.1.weight"
+      ],
+      "parameter_diagnostics": [
+        {
+          "names": [
+            "classifier.1.weight",
+            "classifier.1.bias"
+          ],
+          "lr": 0.001,
+          "parameters": 5124
+        }
+      ]
+    },
+    "last_block": {
+      "initial_sha": "9de3ec7a7a9eb95987c869cfa25828c73cec67083b7adc5c7f7990dc5030b70d",
+      "order_sha": "2c578b7a5bc350769ff0b9c609b03b8c17ca103aff376039036bc8a264816334",
+      "frozen_check": true,
+      "trainable_names": [
+        "classifier.1.bias",
+        "classifier.1.weight",
+        "features.8.0.weight"
+      ],
+      "parameter_diagnostics": [
+        {
+          "names": [
+            "classifier.1.weight",
+            "classifier.1.bias"
+          ],
+          "lr": 0.001,
+          "parameters": 5124
+        },
+        {
+          "names": [
+            "features.8.0.weight"
+          ],
+          "lr": 1e-05,
+          "parameters": 409600
+        }
+      ]
+    }
+  },
+  "torch": "2.11.0",
+  "dental_arrays_opened": 0,
+  "real_training_fits": 0,
+  "cpu_fallback_enabled": false
+}
