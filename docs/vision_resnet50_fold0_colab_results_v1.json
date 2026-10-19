@@ -1,0 +1,207 @@
+{
+  "additional_training_run": false,
+  "cam_views_verified": 32,
+  "clinical_labels_verified": false,
+  "clinical_localization_validated": false,
+  "conditional_bootstrap": {
+    "bootstrap_draws": 1000,
+    "conditioning": "Known content-group resampling; groups are single-record; skip resamples missing a supported grade; no refitting/label-uncertainty coverage.",
+    "fixed_predictions_only": true,
+    "interval_B_minus_A_95": {
+      "accuracy": [
+        -0.01470588235294118,
+        0.125
+      ],
+      "balanced_accuracy": [
+        -0.0079754239332813,
+        0.11895629459516589
+      ],
+      "grade2_recall": [
+        0.058823529411764705,
+        0.46153846153846156
+      ],
+      "macro_f1": [
+        0.018602517143650837,
+        0.15359694039009236
+      ],
+      "ordinal_mae": [
+        -0.13235294117647067,
+        0.022058823529411797
+      ],
+      "quadratic_weighted_kappa": [
+        0.08920642152028495,
+        0.2984633494130858
+      ]
+    },
+    "paired_correctness": {
+      "A_only_correct": 8,
+      "B_only_correct": 15,
+      "both_correct": 47,
+      "both_wrong": 66
+    },
+    "participant_independence_verified": false,
+    "seed": 42,
+    "skipped_missing_grade": 53,
+    "valid_draws": 947
+  },
+  "date": "2026-10-18",
+  "demo_promoted": false,
+  "epoch_checkpoints_verified": 11,
+  "fresh_initializer_tensor_matches": 320,
+  "matched_images_per_arm": 8,
+  "max_cpu_cam_rgb_difference_out_of_255": 1.0,
+  "max_cpu_probability_error": 1.9073486328125e-06,
+  "metrics": {
+    "A": {
+      "accuracy": 0.40441176470588236,
+      "balanced_accuracy": 0.28617052881758764,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          1,
+          16,
+          0
+        ],
+        [
+          1,
+          0,
+          38,
+          5
+        ],
+        [
+          0,
+          1,
+          55,
+          16
+        ]
+      ],
+      "confusion_matrix_labels": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "macro_f1": 0.23413216664490008,
+      "ordinal_mae": 0.6323529411764706,
+      "per_grade_recall": {
+        "1": 0.0,
+        "2": 0.058823529411764705,
+        "3": 0.8636363636363636,
+        "4": 0.2222222222222222
+      },
+      "quadratic_weighted_kappa": 0.17062634989200864
+    },
+    "B": {
+      "accuracy": 0.45588235294117646,
+      "balanced_accuracy": 0.3377339572192513,
+      "confusion_matrix": [
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          5,
+          12,
+          0
+        ],
+        [
+          0,
+          8,
+          30,
+          6
+        ],
+        [
+          0,
+          3,
+          42,
+          27
+        ]
+      ],
+      "confusion_matrix_labels": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "macro_f1": 0.3174854557207498,
+      "ordinal_mae": 0.5808823529411765,
+      "per_grade_recall": {
+        "1": 0.0,
+        "2": 0.29411764705882354,
+        "3": 0.6818181818181818,
+        "4": 0.375
+      },
+      "quadratic_weighted_kappa": 0.3618726275832982
+    },
+    "fitting_majority_grade4": {
+      "accuracy": 0.5294117647058824,
+      "balanced_accuracy": 0.25,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          17
+        ],
+        [
+          0,
+          0,
+          0,
+          44
+        ],
+        [
+          0,
+          0,
+          0,
+          72
+        ]
+      ],
+      "confusion_matrix_labels": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "macro_f1": 0.17307692307692307,
+      "ordinal_mae": 0.6397058823529411,
+      "per_grade_recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 1.0
+      },
+      "quadratic_weighted_kappa": 0.0
+    }
+  },
+  "n_fit": 544,
+  "n_score": 136,
+  "paired_correctness": {
+    "A_only_correct": 8,
+    "B_only_correct": 15,
+    "both_correct": 47,
+    "both_wrong": 66
+  },
+  "participant_independence_verified": false,
+  "qualitative_AI_attention_review": "Peripheral/lip/retractor/tooth and image-edge hotspots remain; consistent gingival focus not demonstrated on eight predeclared cases.",
+  "return_files_verified": 154,
+  "return_sha256": "e169edc135e5f6786bf510bd81d5cb3b77125d08edfa944ac5f121f4f694de8c",
+  "scope": "single_fixed_Training_fold0_544fit136score",
+  "status": "verified_actual_colab_results",
+  "tensor_hash_entries_verified": 3520,
+  "whole_image_mgi0_supported": false
+}
