@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-16",
+  "scope": "generated-only JPEG metadata removal qualification, not production activation",
+  "status": "PASS_FOR_TESTED_SUBSET",
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B -m pytest tests/test_jpeg_metadata_qualification.py -q -p no:cacheprovider --junitxml=docs/vision_jpeg_metadata_qualification_tests_v1.xml",
+    "passed": 35,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "runtime": {
+    "python": "3.13.5",
+    "Pillow": "11.3.0"
+  },
+  "source_sha256": {
+    "src/vision/jpeg_metadata_qualification.py": "b000f903929b91833e3af6d385a83645887be5fa3e7a7e982a3db4556778c8e5",
+    "tests/test_jpeg_metadata_qualification.py": "68a7a5920fdb7be24f3a2a533c5520b70c677fae75bb43d375ae11847d961cae",
+    "tests/test_colour_b1_iccv2_generated.py": "fb110d8f7dc27bef91e055e5ef257ca7f05d4a895822b223e66763096421e9d8"
+  },
+  "unchanged_production_guard_sha256": {
+    "src/vision/exploratory_bundle_v4.py": "c914cc05ad2be4ff08873a5d2270b5836e0f84219a539435beeca09b57ad76cd",
+    "src/vision/colour_policy.py": "2bba567545143687f49b6e3ae63fdd72d1eacc10977d5ec373f00a4b5451a97b",
+    "src/vision/train_pipeline.py": "e7a979b0875af0e459496bca79ce3c80e594acf2639ea7dc9d8659ec75ffc695"
+  },
+  "generated_fixtures": {
+    "shape": "43x61 RGB8",
+    "metadata": [
+      "EXIF DateTime",
+      "EXIF DateTimeOriginal",
+      "GPS latitude/longitude",
+      "MakerNote",
+      "standard metadata-only XMP",
+      "JPEG comment"
+    ],
+    "pixel_patterns": [
+      "shadow ramp",
+      "saturated red",
+      "seeded RGB detail"
+    ]
+  },
+  "generated_measurements": [
+    {
+      "quality": 55,
+      "subsampling": 0,
+      "source_bytes": 3510,
+      "output_bytes": 2968,
+      "decoded_rgb_equal": true,
+      "icc_bytes_preserved": true,
+      "maximum_channel_difference": 0,
+      "dimensions_wh": [
+        61,
+        43
+      ],
+      "source_sha256": "6512042169d7b281311a0f8fa5b1202013bbb317d4ba909bd18d3ce893b0fd59",
+      "output_sha256": "03d609a6f713d50bc54f4ee526cb25c5b9da458ab3f6d32d69fb99c642e4be60",
+      "icc_sha256": "5fae317f9b7f912adb9a7813b61326a71c4dacb1f340dbb113c97ae8391a569d"
+    },
+    {
+      "quality": 92,
+      "subsampling": 0,
+      "source_bytes": 5791,
+      "output_bytes": 5249,
+      "decoded_rgb_equal": true,
+      "icc_bytes_preserved": true,
+      "maximum_channel_difference": 0,
+      "dimensions_wh": [
+        61,
+        43
+      ],
+      "source_sha256": "d11a2f5b11d12f68776c569d15ef2206e49076e67934062542a4b635ba0b8f69",
+      "output_sha256": "1fa8039cb8157674156dbefa4a453099efb3974f165e78b9cf277ad2a68d4e81",
+      "icc_sha256": "5fae317f9b7f912adb9a7813b61326a71c4dacb1f340dbb113c97ae8391a569d"
+    },
+    {
+      "quality": 98,
+      "subsampling": 2,
+      "source_bytes": 5022,
+      "output_bytes": 4480,
+      "decoded_rgb_equal": true,
+      "icc_bytes_preserved": true,
+      "maximum_channel_difference": 0,
+      "dimensions_wh": [
+        61,
+        43
+      ],
+      "source_sha256": "d7aed836589539c25858302c17b85a901c994d990786817e017b7568a3613c5e",
+      "output_sha256": "897dfd10bd185c309405c2aedfac2ada3b434685f040ae1c9f089fe3ab5b7c1f",
+      "icc_sha256": "5fae317f9b7f912adb9a7813b61326a71c4dacb1f340dbb113c97ae8391a569d"
+    }
+  ],
+  "real_dental_images_accessed": false,
+  "real_source_profiles_accessed": false,
+  "upload_package_created": false,
+  "training_performed": false,
+  "icc_privacy_approval_for_real_profiles": false,
+  "personal_gemini_risk_acceptance": false,
+  "new_qualification_committed_or_pushed": false
+}
